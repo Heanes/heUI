@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../css/style/style-2016.css"/>
     <link rel="stylesheet" type="text/css" href="../css/common.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
@@ -30,7 +33,8 @@
                         <i class="fa fa-gears admin-icon" aria-hidden="true"></i>
                         <span class="admin-title-text">管理后台</span>
                     </a>
-                    <a href="javascript:;" class="lap-handle left-menu-lap-handle" title="收缩/展开">
+                    <!-- 折叠左侧菜单 -->
+                    <a href="javascript:" class="lap-handle left-menu-lap-handle" title="收缩/展开">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -41,9 +45,27 @@
         <!-- 主体内容 -->
         <div class="main-content main-wrap clearfix">
             <!-- 左侧区域 -->
-            <div class="left-block left-wrap left-width"></div>
+            <div class="left-block left-wrap left-width">
+                <!-- 左侧菜单折叠 -->
+                <div class="left-lap">
+                    <a href="javascript:" class="lap-handle left-menu-lap-handle" id="lapHandle" title="收缩/展开">
+                        <i class="fa fa-exchange" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <!-- 左侧菜单 -->
+                <div class="menu-left-block"></div>
+            </div>
             <!-- 中心区域 -->
-            <div class="center-block center-wrap"></div>
+            <div class="center-block center-wrap">
+                <div class="tabs-container" id="tabsContainer">
+                    <ul id="tabsTitleContainer">
+                        <li>首页</li>
+                    </ul>
+                    <div class="tab-content">
+                        <iframe src="../layout/welcome.html"></iframe>
+                    </div>
+                </div>
+            </div>
             <!-- 右侧区域 -->
             <div class="right-block right-wrap"></div>
         </div>
@@ -58,6 +80,9 @@
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxcore.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxtabs.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxbuttons.js"></script>
     <script type="text/javascript" src="../js/layout.js"></script>
     <script type="text/javascript" src="../js/common/common.js"></script>
     <!-- E js E -->
