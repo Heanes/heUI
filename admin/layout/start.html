@@ -7,8 +7,8 @@
     <meta name="author" content="Heanes heanes.com email(heanes@163.com)">
     <meta name="keywords" content="软件,商务,HTML,tutorials,source codes">
     <meta name="description" content="描述">
-    <link rel="shortcut icon" href="/image/favicon/favicon.ico"/>
-    <link rel="bookmark" href="/image/favicon/favicon.ico"/>
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -34,112 +34,21 @@
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="menu-top">
-                    <ul class="menu-list" id="menuTopUl">
-                        <li class="active"><a href="javascript:;">常用功能</a></li>
-                        <li><a href="javascript:;">内容编辑</a></li>
-                        <li><a href="javascript:;">网站设置</a></li>
-                        <li><a href="javascript:;">站长维护</a></li>
-                    </ul>
-                </div>
+                <div class="menu-top"></div>
                 <div class="admin-user-info"></div>
             </div>
         </div>
         <!-- 主体内容 -->
         <div class="main-content main-wrap clearfix">
             <!-- 左侧区域 -->
-            <div class="left-block left-wrap left-width">
-                <div class="left-lap">
-                    <a href="javascript:;" class="lap-handle left-menu-lap-handle" id="lapHandle" title="收缩/展开">
-                        <i class="fa fa-exchange" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="menu-left-block">
-                    <div class="menu-left-family active">
-                        <ul class="menu-left-group">
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-list menu-icon" aria-hidden="true"></i><span class="menu-text">数据列表</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="dataList/normal.html" class="menu-link"><i class="fa fa-list-alt menu-icon" aria-hidden="true"></i><span class="menu-text">普通数据列表</span></a></li>
-                                    <li><a href="dataList/pictureList.html" class="menu-link"><i class="fa fa-picture-o menu-icon" aria-hidden="true"></i><span class="menu-text">图片列表</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-edit menu-icon" aria-hidden="true"></i><span class="menu-text">数据编辑</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="dataEdit/normal.html" class="menu-link"><i class="fa fa-file-text-o menu-icon" aria-hidden="true"></i><span class="menu-text">多类型数据编辑</span></a></li>
-                                    <li><a href="dataEdit/tab.html" class="menu-link"><i class="fa fa-file-text-o menu-icon" aria-hidden="true"></i><span class="menu-text">多类型-选项卡式据编辑</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-info-circle menu-icon" aria-hidden="true"></i><span class="menu-text">结果提示</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="javascript:;" class="menu-link"><i class="fa fa-check-square menu-icon" aria-hidden="true"></i><span class="menu-text">整页提示信息</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-desktop menu-icon" aria-hidden="true"></i><span class="menu-text">页面组件</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="layoutTabs/jqxTabs.html" class="menu-link"><i class="fa fa-window-maximize menu-icon" aria-hidden="true"></i><span class="menu-text">页内tab</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu-left-family">
-                        <ul class="menu-left-group">
-                            <li><a href="javascript:;"><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">菜单1</span></a></li>
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">菜单2</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.1</span></a></li>
-                                    <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.2</span></a></li>
-                                    <li>
-                                        <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.3</span></a>
-                                        <ul class="menu-left-group close">
-                                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.3.1</span></a></li>
-                                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.3.2</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu-left-family">
-                        <ul class="menu-left-group">
-                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">菜单3</span></a></li>
-                            <li>
-                                <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">菜单4</span></a>
-                                <ul class="menu-left-group close">
-                                    <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单4.1</span></a></li>
-                                    <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单4.2</span></a></li>
-                                    <li>
-                                        <a href="javascript:;" class="menu-parent"><i class="menu-lap triangle-right" aria-hidden="true"></i><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单4.3</span></a>
-                                        <ul class="menu-left-group close">
-                                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.3.1</span></a></li>
-                                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-table menu-icon" aria-hidden="true"></i><span class="menu-text">子菜单2.3.2</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu-left-family">
-                        <ul class="menu-left-group">
-                            <li><a href="javascript:;" class="menu-link"><i class="fa fa-th-list menu-icon" aria-hidden="true"></i><span class="menu-text">菜单3</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div class="left-block left-wrap left-width"></div>
             <!-- 中心区域 -->
-            <div class="center-block center-wrap">
-                <iframe src="welcome.html" class="right-iframe" name="iframeRightContent" id="iframeRightContent"></iframe>
-            </div>
+            <div class="center-block center-wrap"></div>
             <!-- 右侧区域 -->
             <div class="right-block right-wrap"></div>
         </div>
         <!-- 底部区域 -->
-        <div class="main-bottom-content main-wrap">
-        </div>
+        <div class="main-bottom-content main-wrap"></div>
         <!-- 底部全宽度内容区域 -->
         <div class="main-bottom-block"></div>
     </div>
