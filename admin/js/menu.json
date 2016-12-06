@@ -1,25 +1,379 @@
 [
-  {
-    "id": 1,
-    "text": "父菜单1",
-    "icon": "",
-    "href": "",
-    "iconSelected": "",
-    "color": "",
-    "backgroundColor": "",
-    "colorOnHover": "",
-    "backgroundColorOnHover": "",
-    "selectable": true,
-    "state": {
-      "selected": false,
-      "expanded": false,
-      "disabled": false,
-      "checked": false
+    {
+        "id": 100,
+        "text": "常用功能",
+        "icon": "",
+        "href": "../layout/todo.html",
+        "iconSelected": "",
+        "color": "",
+        "backgroundColor": "",
+        "colorOnHover": "",
+        "backgroundColorOnHover": "",
+        "selectable": true,
+        "state": {
+            "selected": false,
+            "expanded": true,
+            "disabled": false,
+            "checked": false
+        },
+        "subNodes": [
+            {
+                "id": 0,
+                "text": "TODO",
+                "icon": "",
+                "href": "../layout/todo.html",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false,
+                    "checked": false
+                },
+                "subNodes": []
+            },
+            {
+                "id": 1,
+                "text": "父菜单1",
+                "icon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false,
+                    "checked": false
+                },
+                "subNodes": [
+                    {
+                        "id": 2,
+                        "text": "子菜单1.1",
+                        "icon": "",
+                        "href": "../tabs/page1.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    },
+                    {
+                        "id": 3,
+                        "text": "子菜单1.2",
+                        "icon": "",
+                        "href": "../tabs/page2.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    },
+                    {
+                        "id": 4,
+                        "text": "子菜单1.3",
+                        "icon": "",
+                        "href": "../tabs/page3.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    },
+                    {
+                        "id": 4,
+                        "text": "子菜单1.4",
+                        "icon": "",
+                        "href": "https://www.taobao.com",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "父菜单2-外链",
+                "icon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false,
+                    "checked": false
+                },
+                "subNodes": [
+                    {
+                        "id": 6,
+                        "text": "子菜单2.1-美菜",
+                        "icon": "",
+                        "href": "http://www.meicai.cn/",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    },
+                    {
+                        "id": 7,
+                        "text": "子菜单2.2-百度",
+                        "icon": "",
+                        "href": "https://www.baidu.com/",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": []
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "父菜单3-样式库",
+                "icon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false,
+                    "checked": false
+                },
+                "subNodes": [
+                    {
+                        "id": 9,
+                        "text": "子菜单3.1-数据列表",
+                        "icon": "",
+                        "href": "http://www.meicai.cn/",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": [
+                            {
+                                "id": 10,
+                                "text": "子菜单3.1.1-普通",
+                                "icon": "",
+                                "href": "../dataList/normal.html",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false,
+                                    "checked": false
+                                },
+                                "subNodes": [
+
+                                ]
+                            },
+                            {
+                                "id": 11,
+                                "text": "子菜单3.1.2-图片",
+                                "icon": "",
+                                "href": "../dataList/pictureList.html",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false,
+                                    "checked": false
+                                },
+                                "subNodes": [
+
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 12,
+                        "text": "子菜单3.2-数据编辑",
+                        "icon": "",
+                        "href": "https://www.baidu.com/",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": [
+                            {
+                                "id": 13,
+                                "text": "子菜单3.2.1-多类型数据编辑",
+                                "icon": "",
+                                "href": "https://www.baidu.com/",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false,
+                                    "checked": false
+                                },
+                                "subNodes": []
+                            },
+                            {
+                                "id": 14,
+                                "text": "子菜单3.2.2-多类型-带tab",
+                                "icon": "",
+                                "href": "../dataEdit/tab.html",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false,
+                                    "checked": false
+                                },
+                                "subNodes": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "text": "子菜单3.3-消息提示",
+                        "icon": "",
+                        "href": "https://www.baidu.com/",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false,
+                            "checked": false
+                        },
+                        "subNodes": [
+                            {
+                                "id": 16,
+                                "text": "子菜单3.2.1-消息提示",
+                                "icon": "",
+                                "href": "../message/style1.html",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false,
+                                    "checked": false
+                                },
+                                "subNodes": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     },
-    "subNodes": [
-      {
-        "id": 2,
-        "text": "子菜单1.1",
+    {
+        "id": 200,
+        "text": "内容编辑",
         "icon": "",
         "href": "",
         "iconSelected": "",
@@ -29,109 +383,31 @@
         "backgroundColorOnHover": "",
         "selectable": true,
         "state": {
-          "selected": false,
-          "expanded": false,
-          "disabled": false,
-          "checked": false
+            "selected": false,
+            "expanded": true,
+            "disabled": false,
+            "checked": false
         },
-        "subNodes": []
-      },
-      {
-        "id": 3,
-        "text": "子菜单1.2",
-        "icon": "",
-        "href": "b.html",
-        "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
-        "selectable": true,
-        "state": {
-          "selected": false,
-          "expanded": false,
-          "disabled": false,
-          "checked": false
-        },
-        "subNodes": []
-      },
-      {
-        "id": 4,
-        "text": "子菜单1.3",
-        "icon": "",
-        "href": "b.html",
-        "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
-        "selectable": true,
-        "state": {
-          "selected": false,
-          "expanded": false,
-          "disabled": false,
-          "checked": false
-        },
-        "subNodes": []
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "text": "父菜单2",
-    "icon": "",
-    "href": "",
-    "iconSelected": "",
-    "color": "",
-    "backgroundColor": "",
-    "colorOnHover": "",
-    "backgroundColorOnHover": "",
-    "selectable": true,
-    "state": {
-      "selected": false,
-      "expanded": false,
-      "disabled": false,
-      "checked": false
-    },
-    "subNodes": [
-      {
-        "id": 6,
-        "text": "子菜单2.1",
-        "icon": "",
-        "href": "b.html",
-        "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
-        "selectable": true,
-        "state": {
-          "selected": false,
-          "expanded": false,
-          "disabled": false,
-          "checked": false
-        },
-        "subNodes": []
-      },
-      {
-        "id": 7,
-        "text": "子菜单2.2",
-        "icon": "",
-        "href": "b.html",
-        "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
-        "selectable": true,
-        "state": {
-          "selected": false,
-          "expanded": false,
-          "disabled": false,
-          "checked": false
-        },
-        "subNodes": []
-      }
-    ]
-  }
+        "subNodes": [
+            {
+                "id": 201,
+                "text": "子菜单",
+                "icon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false,
+                    "checked": false
+                },
+                "subNodes": []
+            }
+        ]
+    }
 ]

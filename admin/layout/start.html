@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../css/style/style-2016.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
     <title>首页-后台管理-modernUI</title>
@@ -38,8 +37,38 @@
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="menu-top"></div>
-                <div class="admin-user-info"></div>
+                <div class="menu-top">
+                    <ul class="menu-list" id="menuTopUl">
+                        <li class="active"><a href="javascript:;">常用功能</a></li>
+                        <li><a href="javascript:;">内容编辑</a></li>
+                        <li><a href="javascript:;">网站设置</a></li>
+                        <li><a href="javascript:;">站长维护</a></li>
+                    </ul>
+                </div>
+                <div class="admin-user-info">
+                    <span class="user-name">方刚</span>
+                    <span class="user-role">超级管理员</span>
+                    <select class="select-city">
+                        <optgroup label="华北">
+                            <option value="1">北京</option>
+                            <option value="2">天津</option>
+                            <option value="3">山西</option>
+                            <option value="4">黑龙江</option>
+                            <option value="5">吉林</option>
+                            <option value="6">辽宁</option>
+                            <option value="7">内蒙古</option>
+                        </optgroup>
+                        <optgroup label="华南">
+                            <option value="8">广东</option>
+                            <option value="9">广西</option>
+                            <option value="10">福建</option>
+                            <option value="11">海南</option>
+                        </optgroup>
+                        <option value="11">湖北</option>
+                        <option value="11">湖南</option>
+                        <option value="11">河南</option>
+                    </select>
+                </div>
             </div>
         </div>
         <!-- 主体内容 -->
@@ -56,10 +85,13 @@
                 <div class="menu-left-block"></div>
             </div>
             <!-- 中心区域 -->
-            <div class="center-block center-wrap">
+            <div class="center-block center-wrap iframe-container">
                 <div class="tabs-container" id="tabsContainer">
-                    <ul id="tabsTitleContainer">
-                        <li>首页</li>
+                    <ul class="tab-title-container" id="tabsTitleContainer">
+                        <li>
+                            <i class="fa fa-home menu-icon" aria-hidden="true"></i>
+                            <span class="menu-text">首页</span>
+                        </li>
                     </ul>
                     <div class="tab-content">
                         <iframe src="../layout/welcome.html"></iframe>
@@ -76,6 +108,8 @@
     </div>
     <!-- E 主要内容 E -->
 </div>
+<!-- 全局消息 -->
+<div class="message-global" id="messageGlobal" style="display:none;"></div>
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
@@ -84,6 +118,7 @@
     <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxtabs.js"></script>
     <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxbuttons.js"></script>
     <script type="text/javascript" src="../js/layout.js"></script>
+    <script type="text/javascript" src="../js/message.js"></script>
     <script type="text/javascript" src="../js/common/common.js"></script>
     <!-- E js E -->
 </cite>

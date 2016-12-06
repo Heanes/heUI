@@ -3,7 +3,6 @@
  * @author Heanes
  * @time 2016-11-29 10:16:42 周二
  */
-
 $(function () {
     /**
      * @doc 左侧菜单点击在tab中载入
@@ -13,49 +12,61 @@ $(function () {
     var $tabsContainer = $('#tabsContainer');
     $tabsContainer.jqxTabs({
         theme: 'bootstrap',
+        height: '100%',
         autoHeight: true,
-        showCloseButtons: true
-    });
+        showCloseButtons: true,
+        reorder: true,
+        scrollPosition: 'both' // 标签太多时允许滚动
+    }).jqxTabs('hideCloseButtonAt', 0); //隐藏首页删除按钮
+
     var $tabsTitleContainer = $('#tabsTitleContainer');
     var tabsLength = $tabsTitleContainer.length;
     var tabsAddCount = 0;
+    // tab关闭后处理
+    $tabsContainer.on('removed', function (event) {
+        tabsAddCount--;
+    });
+
+
     $('.menu-left-block').on('click', '.menu-left-group li a.menu-link', function () {
-        var tabTitle = $(this).text();
-        var tabSrc = $(this).attr('href');
-        var tabId = 'tabsIframe' + $(this).attr('data-id');
-        if($('#tabsContainer').find('iframe[id="' + tabId + '"]').length > 0){
-            // TODO 存在则定位
-            return false;
-        }
-        var tabContent = '<iframe src="' + tabSrc + '" id="' + tabId + '"></iframe>';
-        $tabsContainer.jqxTabs('addAt', tabsLength + tabsAddCount, tabTitle, tabContent);
-        tabsAddCount++;
+        var addResult = addJqxTabFromANode($(this), $tabsContainer, tabsLength + tabsAddCount);
+        addResult ? tabsAddCount++ : null;
+        return false;
+    })
+    .on('click', '.menu-left-group li a.menu-parent', function () {
+        // 带子菜单的节点均不跳转链接
         return false;
     });
 
-    /**
-     * @doc 点击顶部菜单切换侧边菜单
-     * @author Heanes
-     * @time 2016年08月19日12:09:15
-     */
-    var $menuTopUl = $('#menuTopUl');
-    var $menuTopList = $menuTopUl.find('li');
-    var $menuLeftFamily = $('.menu-left-family');
-    var $menuLeftGroup = $('.menu-left-group');
-    var $menuLeftGroupLiList = $menuLeftGroup.find('li');
-    $menuTopList.each(function (i, item) {
-        $(item).on('click', function () {
-            $menuTopList.removeClass('active');
-            $menuLeftFamily.removeClass('active');
-            $($menuLeftFamily[i]).addClass('active');
-            $(this).addClass('active');
-        });
 
-        if($(item).hasClass('active')){
-            $($menuLeftFamily).removeClass('active');
-            $($menuLeftFamily[i]).addClass('active');
+    /**
+     * @doc a标签点击后添加新的tab
+     * @param $aNode a标签jQuery对象
+     * @param $tabsContainer tab放置的容器
+     * @param index 序号
+     * @returns {boolean}
+     */
+    function addJqxTabFromANode($aNode, $tabsContainer, index){
+        var tabTitle = $aNode.html();
+        var tabSrc = $aNode.attr('href');
+        if(tabSrc == undefined || tabSrc == '' || tabSrc == 'javascript:;' || tabSrc == 'javascript:;' || tabSrc == 'javascript:void(0)'){
+            return false;
         }
-    });
+        var tabId = 'tabsIframe' + $aNode.attr('data-id');
+        // 查找是否已经存在此tab
+        var $existTabs = $tabsContainer.find('iframe[id="' + tabId + '"]');
+        if($existTabs.length > 0){
+            // 存在则定位
+            var existIndex = $existTabs.parent().index();
+            $tabsContainer.jqxTabs('select', existIndex);
+            return false;
+        }
+        // 否则创建
+        var tabContent = '<iframe src="' + tabSrc + '" id="' + tabId + '"></iframe>';
+        $tabsContainer.jqxTabs('addAt', index, tabTitle, tabContent);
+        return true;
+    }
+
 
     /**
      * @doc 左侧菜单缩进
@@ -103,20 +114,39 @@ $(function () {
      * @time 2016-11-29 20:32:28 周二
      */
     var getIsExpanded = function (menuData) {
-        return menuData.state != undefined ? (menuData.state.expanded != undefined && menuData.state.expanded) : false;
+        return menuData.state != undefined ?
+            (menuData.state.expanded != undefined && menuData.state.expanded) : false;
     };
+    
+    var renderTop = function (menuData, level, $target) {
+        var $menuTop = $('.menu-top').empty();
+        var $topMenuUl = $('<ul class="menu-list" id="menuTopUl">');
+        $.each(menuData, function (i, item) {
+            var $topLi = $('<li><a href="javascript:;">' + item.text + '</a></li>');
+            $topMenuUl.append($topLi);
+        });
+        $menuTop.append($topMenuUl);
+    };
+    
     /**
      * @doc 渲染左侧菜单
      * @param $target 目标
      * @param menuData 菜单数据
-     * @param isRecursive 是否是内部递归调用的
+     * @param level 层级
      * @author Heanes
      * @time 2016-11-29 16:49:23 周二
      */
-    var renderMenu = function ($target, menuData, isRecursive) {
+    var renderMenu = function ($target, menuData, level) {
         var template = '';
         var expandedStyle = '';
-        if(!isRecursive){
+        level = level || 1;
+        level++;
+        if(level == 1){
+            renderTop(menuData, level);
+            renderMenu($target, menuData.subNodes, level);
+        }
+
+        if(level == 2){
             template += '<div class="menu-left-family">';
         }else{
             expandedStyle = getIsExpanded(menuData) ? '' : 'close';
@@ -141,13 +171,13 @@ $(function () {
             str += '<i class="fa fa-list menu-icon" aria-hidden="true"></i><span class="menu-text">' + item.text + '</span>'
                 + '</a>';
             if(hasSubNode){
-                str += renderMenu($target, item.subNodes, true);
+                str += renderMenu($target, item.subNodes, level);
             }
             str += '</li>';
             template += str;
         });
         template += '</ul>';
-        if(!isRecursive) {
+        if(level == 2) {
             template += '</div>';
             $target.append(template);
             /**
@@ -172,6 +202,45 @@ $(function () {
     };
 
     /**
+     * @doc 点击顶部菜单切换侧边菜单
+     * @author Heanes
+     * @time 2016年08月19日12:09:15
+     */
+    var $menuTopUl = $('#menuTopUl');
+    var $menuTopList = $menuTopUl.find('li');
+    var $menuLeftFamily = $('.menu-left-family');
+    $menuTopList.each(function (i, item) {
+        $(item).on('click', function () {
+            $menuTopList.removeClass('active');
+            $menuLeftFamily.removeClass('active');
+            $($menuLeftFamily[i]).addClass('active');
+            $(this).addClass('active');
+        });
+
+        if($(item).hasClass('active')){
+            $($menuLeftFamily).removeClass('active');
+            $($menuLeftFamily[i]).addClass('active');
+        }
+    });
+
+    $('.menu-top').on('click', '.menu-list li a', function (event) {
+        var $currentTarget = $(event.target);
+        var $li = $currentTarget.parent();
+        var $ul = $li.parent();
+        var $liList = $ul.find('li');
+        $liList.each(function (i, item) {
+            $(item).removeClass('active');
+            if($(item).html() == $li.html()){
+                var index = $(item).index();
+                var $menuLeftFamilyList = $('.menu-left-block').find('.menu-left-family');
+                $menuLeftFamilyList.hide();
+                $menuLeftFamilyList.eq(index).show();
+                $li.addClass('active');
+            }
+        });
+    });
+
+    /**
      * @doc 获取菜单数据
      * @author Heanes
      * @time 2016-11-29 16:40:18 周二
@@ -185,15 +254,4 @@ $(function () {
     };
     var menuDataJson = getMenuData();
 
-    /**
-     * @doc iframe加载后自适应宽高（不适用于跨域）
-     * @author Heanes
-     * @time 2016-11-29 20:29:16 周二
-     */
-    $('iframe').on('load', function () {
-        var thisHeight = $(this).contents().height();
-        $(this).css('height', thisHeight);
-        var thisWidth = $(this).contents().width();
-        $(this).css('width', thisWidth);
-    });
 });
