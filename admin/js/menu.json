@@ -16,24 +16,7 @@
         },
         "subNodes": [
             {
-                "text": "TODO",
-                "nodeIcon": "",
-                "href": "../layout/todo.html",
-                "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
-                "selectable": true,
-                "state": {
-                    "selected": false,
-                    "expanded": true,
-                    "disabled": false
-                },
-                "subNodes": []
-            },
-            {
-                "text": "父菜单3-样式库",
+                "text": "样式库",
                 "nodeIcon": "",
                 "href": "",
                 "iconSelected": "",
@@ -49,7 +32,7 @@
                 },
                 "subNodes": [
                     {
-                        "text": "子菜单3.1-数据列表",
+                        "text": "数据列表",
                         "nodeIcon": "",
                         "href": "http://www.dingding.com/",
                         "iconSelected": "",
@@ -65,7 +48,7 @@
                         },
                         "subNodes": [
                             {
-                                "text": "子菜单3.1.1-普通",
+                                "text": "普通",
                                 "nodeIcon": "",
                                 "href": "../dataList/normal.html",
                                 "iconSelected": "",
@@ -83,7 +66,7 @@
                                 ]
                             },
                             {
-                                "text": "子菜单3.1.2-图片",
+                                "text": "图片",
                                 "nodeIcon": "",
                                 "href": "../dataList/pictureList.html",
                                 "iconSelected": "",
@@ -103,7 +86,7 @@
                         ]
                     },
                     {
-                        "text": "子菜单3.2-数据编辑",
+                        "text": "数据编辑",
                         "nodeIcon": "",
                         "href": "https://www.baidu.com/",
                         "iconSelected": "",
@@ -119,7 +102,7 @@
                         },
                         "subNodes": [
                             {
-                                "text": "子菜单3.2.1-多类型数据编辑",
+                                "text": "多类型数据编辑",
                                 "nodeIcon": "",
                                 "href": "https://www.baidu.com/",
                                 "iconSelected": "",
@@ -136,7 +119,7 @@
                                 "subNodes": []
                             },
                             {
-                                "text": "子菜单3.2.2-多类型-带tab",
+                                "text": "多类型-带tab",
                                 "nodeIcon": "",
                                 "href": "../dataEdit/tab.html",
                                 "iconSelected": "",
@@ -155,7 +138,7 @@
                         ]
                     },
                     {
-                        "text": "子菜单3.3-消息提示",
+                        "text": "消息提示",
                         "nodeIcon": "",
                         "href": "https://www.baidu.com/",
                         "iconSelected": "",
@@ -171,9 +154,26 @@
                         },
                         "subNodes": [
                             {
-                                "text": "子菜单3.2.1-消息提示",
+                                "text": "页面内-消息提示",
                                 "nodeIcon": "",
-                                "href": "../message/style1.html",
+                                "href": "../message/style1-inline.html",
+                                "iconSelected": "",
+                                "color": "",
+                                "backgroundColor": "",
+                                "colorOnHover": "",
+                                "backgroundColorOnHover": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "subNodes": []
+                            },
+                            {
+                                "text": "全局-消息提示",
+                                "nodeIcon": "",
+                                "href": "../message/style1-global.html",
                                 "iconSelected": "",
                                 "color": "",
                                 "backgroundColor": "",
@@ -194,7 +194,7 @@
         ]
     },
     {
-        "text": "内容编辑",
+        "text": "Demo",
         "nodeIcon": "",
         "href": "",
         "iconSelected": "",
@@ -210,9 +210,9 @@
         },
         "subNodes": [
             {
-                "text": "子菜单",
+                "text": "TODO",
                 "nodeIcon": "",
-                "href": "",
+                "href": "../layout/todo.html",
                 "iconSelected": "",
                 "color": "",
                 "backgroundColor": "",
@@ -225,25 +225,7 @@
                     "disabled": false
                 },
                 "subNodes": []
-            }
-        ]
-    },
-    {
-        "text": "demo",
-        "nodeIcon": "",
-        "href": "",
-        "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
-        "selectable": true,
-        "state": {
-            "selected": false,
-            "expanded": true,
-            "disabled": false
-        },
-        "subNodes": [
+            },
             {
                 "text": "父菜单1",
                 "nodeIcon": "",
@@ -349,7 +331,7 @@
                     {
                         "text": "子菜单2.1-美菜",
                         "nodeIcon": "",
-                        "href": "http://www.meicai.cn/",
+                        "href": "https://www.taobao.com/",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",

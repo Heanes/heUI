@@ -30,9 +30,19 @@
 .header .menu-top .menu-list li:hover{background-color:#2b91af}
 .header .menu-top .menu-list li a{display:block;color:#fff;padding:0 30px;font-size:14px}
 
-.header .admin-user-info{float:right;height:50px;line-height:50px;margin:0 10px;}
+.header .admin-select-city{float:right;height:50px;line-height:50px;margin:0 10px;}
 .header .admin-user-info .select-city{}
 .header .admin-user-info .select-city option{padding:0;}
+.header .admin-user-info{float:right;height:50px;line-height:50px;margin:0 10px;}
+.header .admin-user-info .toggle-show-info-block{position:absolute;right:0;font-size:13px;background-color:#00a2ca;padding-top:6px;display:none;max-height:400px}
+.header .admin-user-info.toggle-show:hover .toggle-show-info-block{display:block}
+.header .admin-user-info .user-detail{padding:0 10px;}
+.header .admin-user-info .user-detail dl{display:block;line-height:30px;}
+.header .admin-user-info .user-detail dt,.user-detail dd{display:inline-block;}
+.header .admin-user-info .user-detail dt{color:#fff;text-align:right;min-width:60px;}
+.header .admin-user-info .user-detail dd{color:#fff;}
+.header .admin-user-info .login-handle{text-align:center;}
+.header .admin-user-info .login-handle .login-out:hover{text-decoration:underline;}
 /************************ 左侧菜单 ************************/
 .left-block .left-lap{}
 .left-block .left-lap .lap-handle{color:#fff;background-color:#759ea9;display:block;height:30px;line-height:30px;text-align:center;}
