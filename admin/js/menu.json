@@ -154,9 +154,9 @@
                         },
                         "subNodes": [
                             {
-                                "text": "页面内-消息提示",
+                                "text": "局部展示-消息提示",
                                 "nodeIcon": "",
-                                "href": "../message/style1-inline.html",
+                                "href": "../message/style1-local.html",
                                 "iconSelected": "",
                                 "color": "",
                                 "backgroundColor": "",

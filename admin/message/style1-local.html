@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
 <link rel="stylesheet" type="text/css" href="../css/message-style1.css"/>
-<title>提示信息</title>
+<title>提示信息-局部展示</title>
 </head>
 <body>
 <div class="center wrap">
@@ -82,10 +82,20 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:;" id="showMessageSuccess">显示成功</a>
-                        <a href="javascript:;" id="showMessageInfo">显示提示</a>
-                        <a href="javascript:;" id="showMessageWarn">显示警告</a>
-                        <a href="javascript:;" id="showMessageError">显示错误</a>
+                        <!-- 运行结果 -->
+                        <div class="demo-run-result"></div>
+                        <!-- 样式 -->
+                        <div class="demo-style"></div>
+                        <!-- javascript脚本 -->
+                        <div class="demo-javascript"></div>
+                        <!-- html -->
+                        <div class="demo-html">
+                            <div class="message-container"></div>
+                            <a href="javascript:;" id="showMessageSuccess">显示成功</a>
+                            <a href="javascript:;" id="showMessageInfo">显示提示</a>
+                            <a href="javascript:;" id="showMessageWarn">显示警告</a>
+                            <a href="javascript:;" id="showMessageError">显示错误</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,7 +116,26 @@
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../js/message.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/common/$.js"></script>
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            // 显示消息
+            var $messageContainer = $('.message-container');
+            $('#showMessageSuccess').on('click', function () {
+                $.messageLocal($messageContainer, '恭喜，操作成功~ :)~');
+            });
+            $('#showMessageInfo').on('click', function () {
+                $.messageLocal($messageContainer, '提醒，你还需要做某项操作你还需要做某项操作你还需要做某项操作。', 'info');
+            });
+            $('#showMessageWarn').on('click', function () {
+                $.messageLocal($messageContainer, '警告，有某些情况出现。', 'warn');
+            });
+            $('#showMessageError').on('click', function () {
+                $.messageLocal($messageContainer, '错误，出现了问题。', 'error');
+            });
+        });
+    </script>
     <!-- E js E -->
 </cite>
 </body>

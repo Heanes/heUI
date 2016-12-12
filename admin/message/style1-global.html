@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
 <link rel="stylesheet" type="text/css" href="../css/message-style1.css"/>
-<title>提示信息</title>
+<title>提示信息-全局展示</title>
 </head>
 <body>
 <div class="center wrap">
@@ -66,6 +66,23 @@
     <script type="text/javascript" src="../js/message.js"></script>
     <script type="text/javascript" src="../js/common/$.js"></script>
     <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            // 显示消息
+            $('#showMessageSuccess').on('click', function () {
+                $.messageGlobal('恭喜，操作成功~ :)~');
+            });
+            $('#showMessageInfo').on('click', function () {
+                $.messageGlobal('提醒，你还需要做某项操作你还需要做某项操作你还需要做某项操作。', 'info');
+            });
+            $('#showMessageWarn').on('click', function () {
+                $.messageGlobal('警告，有某些情况出现。', 'warn');
+            });
+            $('#showMessageError').on('click', function () {
+                $.messageGlobal('错误，出现了问题。', 'error');
+            });
+        });
+    </script>
     <!-- E js E -->
 </cite>
 </body>
