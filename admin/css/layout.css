@@ -47,6 +47,8 @@
 .left-block .left-lap{}
 .left-block .left-lap .lap-handle{color:#fff;background-color:#759ea9;display:block;height:30px;line-height:30px;text-align:center;}
 
+.left-block{color:#fff;}
+
 .menu-left-block{}
 .menu-left-family{display:none}
 .menu-left-family.active{display:block}

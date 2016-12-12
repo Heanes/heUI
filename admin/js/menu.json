@@ -14,7 +14,7 @@
             "expanded": true,
             "disabled": false
         },
-        "subNodes": [
+        "nodes": [
             {
                 "text": "样式库",
                 "nodeIcon": "",
@@ -30,7 +30,7 @@
                     "expanded": true,
                     "disabled": false
                 },
-                "subNodes": [
+                "nodes": [
                     {
                         "text": "数据列表",
                         "nodeIcon": "",
@@ -46,7 +46,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": [
+                        "nodes": [
                             {
                                 "text": "普通",
                                 "nodeIcon": "",
@@ -62,7 +62,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": [
+                                "nodes": [
                                 ]
                             },
                             {
@@ -80,7 +80,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": [
+                                "nodes": [
                                 ]
                             }
                         ]
@@ -100,7 +100,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": [
+                        "nodes": [
                             {
                                 "text": "多类型数据编辑",
                                 "nodeIcon": "",
@@ -116,7 +116,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": []
+                                "nodes": []
                             },
                             {
                                 "text": "多类型-带tab",
@@ -133,7 +133,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": []
+                                "nodes": []
                             }
                         ]
                     },
@@ -152,7 +152,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": [
+                        "nodes": [
                             {
                                 "text": "局部展示-消息提示",
                                 "nodeIcon": "",
@@ -168,7 +168,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": []
+                                "nodes": []
                             },
                             {
                                 "text": "全局-消息提示",
@@ -185,7 +185,7 @@
                                     "expanded": true,
                                     "disabled": false
                                 },
-                                "subNodes": []
+                                "nodes": []
                             }
                         ]
                     }
@@ -208,7 +208,7 @@
             "expanded": true,
             "disabled": false
         },
-        "subNodes": [
+        "nodes": [
             {
                 "text": "TODO",
                 "nodeIcon": "",
@@ -224,7 +224,7 @@
                     "expanded": true,
                     "disabled": false
                 },
-                "subNodes": []
+                "nodes": []
             },
             {
                 "text": "父菜单1",
@@ -241,7 +241,7 @@
                     "expanded": true,
                     "disabled": false
                 },
-                "subNodes": [
+                "nodes": [
                     {
                         "text": "子菜单1.1",
                         "nodeIcon": "",
@@ -257,7 +257,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     },
                     {
                         "text": "子菜单1.2",
@@ -274,7 +274,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     },
                     {
                         "text": "子菜单1.3",
@@ -291,7 +291,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     },
                     {
                         "text": "子菜单1.4",
@@ -308,7 +308,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     }
                 ]
             },
@@ -327,7 +327,7 @@
                     "expanded": true,
                     "disabled": false
                 },
-                "subNodes": [
+                "nodes": [
                     {
                         "text": "子菜单2.1-美菜",
                         "nodeIcon": "",
@@ -343,7 +343,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     },
                     {
                         "text": "子菜单2.2-百度",
@@ -360,7 +360,7 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "subNodes": []
+                        "nodes": []
                     }
                 ]
             }

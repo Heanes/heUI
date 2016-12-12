@@ -248,7 +248,17 @@ $(function () {
     var getMenuData = function(){
         var menuDataJsonUrl="../js/menu.json";
         $.getJSON(menuDataJsonUrl, function(data){
-            renderMenu($menuLeftBlock, data);
+            //renderMenu($menuLeftBlock, data);
+            $('.left-block').treeView({
+                data: data,
+                iconCollapse: 'triangle-right',         // 合上时的图标
+                iconExpand: 'triangle-down',            // 展开时的图标
+                enableIndentLeft: true,                 // 允许向左缩进
+                onNodeSelected: function (event, node) {
+                    console.log('节点被点击：');
+                    console.log(node);
+                }
+            });
             return data;
         });
     };
