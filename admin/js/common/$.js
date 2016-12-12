@@ -18,8 +18,10 @@ $(function () {
             type: {
                 success:    'success',
                 info:       'info',
-                warn:       'error'
-            }
+                warn:       'warn',
+                error:      'error'
+            },
+            classPrefix:    'ui-heanes-'
         },
         /**
          * @doc 全局消息展示
@@ -33,9 +35,10 @@ $(function () {
         messageGlobal: function messageGlobal($content, type, delaySec, fadeOutDelay){
             var $documentTop = $(window.top.document);
             var $messageGlobal = $documentTop.find('#messageGlobal');
+            var messageClass = $.messageConstants.classPrefix + 'message';
             var messageWrapDomStr =
                 '<div class="message-wrap">'
-                + '<div class="message">'
+                + '<div class="' + messageClass + '">'
                 + '<div class="message-handle">'
                 + '<span class="btn-close">x</span>'
                 + '</div>'
@@ -44,9 +47,9 @@ $(function () {
                 + '</div>'
                 + '</div>';
             var $messageWrap = $(messageWrapDomStr);
-            var $message = $messageWrap.find('.message');
+            var $message = $messageWrap.find('.' + messageClass);
             var $messageContent = $message.find('.message-content');
-            $messageContent.append('<p>' + $content + '</p>');
+            $messageContent.append($content);
             type = type || 'success';
             switch (type){
                 case $.messageConstants.type.success:
@@ -64,9 +67,16 @@ $(function () {
             }
             $messageGlobal.empty().append($messageWrap);
             $messageGlobal.show();
-            delaySec = delaySec || 3000;
-            fadeOutDelay = fadeOutDelay || 1000;
-            $messageGlobal.delay(delaySec).fadeOut(fadeOutDelay);
+            if(delaySec != 0){
+                delaySec = delaySec || 3000;
+                fadeOutDelay = fadeOutDelay || 1000;
+                $messageGlobal.delay(delaySec).fadeOut(fadeOutDelay);
+            }
+            // 点击关闭
+            $message.on('click', '.btn-close', function (event) {
+                var $delegateTarget = $(event.delegateTarget);
+                $delegateTarget.fadeOut();
+            });
         },
 
         /**
@@ -81,9 +91,10 @@ $(function () {
          */
         messageLocal: function messageGlobal($target, $content, type, delaySec, fadeOutDelay){
             if($target == undefined || $target.length == 0) console.error('Error: the message target is null');
+            var messageClass = $.messageConstants.classPrefix + 'message';
             var messageWrapDomStr =
                 '<div class="message-wrap">'
-                + '<div class="message">'
+                + '<div class="' + messageClass + '">'
                 + '<div class="message-handle">'
                 + '<span class="btn-close">x</span>'
                 + '</div>'
@@ -92,9 +103,9 @@ $(function () {
                 + '</div>'
                 + '</div>';
             var $messageWrap = $(messageWrapDomStr);
-            var $message = $messageWrap.find('.message');
+            var $message = $messageWrap.find('.' + messageClass);
             var $messageContent = $message.find('.message-content');
-            $messageContent.append('<p>' + $content + '</p>');
+            $messageContent.append($content);
             type = type || 'success';
             switch (type){
                 case $.messageConstants.type.success:
@@ -112,9 +123,16 @@ $(function () {
             }
             $target.empty().append($messageWrap);
             $target.show();
-            delaySec = delaySec || 3000;
-            fadeOutDelay = fadeOutDelay || 1000;
-            $target.delay(delaySec).fadeOut(fadeOutDelay);
+            if(delaySec != 0){
+                delaySec = delaySec || 3000;
+                fadeOutDelay = fadeOutDelay || 1000;
+                $target.delay(delaySec).fadeOut(fadeOutDelay);
+            }
+            // 点击关闭
+            $message.on('click', '.btn-close', function (event) {
+                var $delegateTarget = $(event.delegateTarget);
+                $delegateTarget.fadeOut();
+            });
         }
         /* ------------------------------ 提示消息类 ------------------------------ */
 

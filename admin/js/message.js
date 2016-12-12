@@ -5,7 +5,7 @@
  */
 
 $(function () {
-    $('.message').on('click', '.btn-close', function (event) {
+    $('.ui-heanes-message').on('click', '.btn-close', function (event) {
         var $delegateTarget = $(event.delegateTarget);
         $delegateTarget.fadeOut();
     });
