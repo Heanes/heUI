@@ -5,6 +5,8 @@
  */
 Import([
     '../js/common/common.js',
+    // cookie相关
+    '/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js',
     // 消息提示
     '../js/$.extend/$.message.js',
     // notification 通知

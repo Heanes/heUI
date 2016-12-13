@@ -15,10 +15,12 @@ $.extend({
             error:      'error'
         },
         classPrefix:    'ui-heanes-',
+        // 为messagePlus使用
         defaultParams: {
             content:        'this is a message', // string || object(jQuery) 消息内容
             type:           'info',             // string success||error||warn||info消息类型
-            delay:          3000,               // int 展示时间，单位为毫秒
+            show:           3000,               // int 展示时间，单位为毫秒
+            autoClose:      true,               // boolean 是否自动关闭
             fadeOutDelay:   1000,               // int 消失动画延迟时间，单位为毫秒
             canBeClose:     true,               // boolean 是否能被关闭
             onClose:        undefined,          // 当消息关闭时的回调函数 todo add at 2016-12-13 14:33:02 周二
@@ -67,8 +69,8 @@ $.extend({
         }
         $messageGlobal.append($messageWrap);
         $messageGlobal.show();
-        if(paramObject.delay != 0){
-            var delay = delay || 3000;
+        if(paramObject.show != 0){
+            var delay = paramObject.show || 3000;
             var fadeOutDelay = paramObject.fadeOutDelay || 1000;
             $messageWrap.delay(delay).fadeOut(fadeOutDelay, function(){$(this).remove() });
         }
@@ -82,12 +84,12 @@ $.extend({
      * @doc 全局消息展示
      * @param $content string || object(jQuery) 消息内容
      * @param type string success||error||warn||info消息类型
-     * @param delaySec 展示时间，单位为毫秒
+     * @param show 展示时间，单位为毫秒
      * @param fadeOutDelay 消失动画延迟时间，单位为毫秒
      * @author Heanes
      * @time 2016-12-01 17:55:27 周四
      */
-    messageGlobal: function messageGlobal($content, type, delaySec, fadeOutDelay){
+    messageGlobal: function messageGlobal($content, type, show, fadeOutDelay){
         var $documentTop = $(window.top.document);
         var $messageGlobal = $documentTop.find('#messageGlobal');
         var messageClass = $.messageConstants.classPrefix + 'message';
@@ -122,10 +124,10 @@ $.extend({
         }
         $messageGlobal.append($messageWrap);
         $messageGlobal.show();
-        if(delaySec != 0){
-            delaySec = delaySec || 3000;
+        if(show != 0){
+            show = show || 3000;
             fadeOutDelay = fadeOutDelay || 1000;
-            $messageWrap.delay(delaySec).fadeOut(fadeOutDelay, function(){$(this).remove()});
+            $messageWrap.delay(show).fadeOut(fadeOutDelay, function(){$(this).remove()});
         }
         // 点击关闭
         $messageWrap.on('click', '.btn-close', function (event) {
@@ -139,12 +141,12 @@ $.extend({
      * @param $target object(jQuery) 放置消息的容器(jQuery对象)
      * @param $content string || object(jQuery) 消息内容
      * @param type string success||error||warn||info消息类型
-     * @param delaySec 展示时间
+     * @param show 展示时间
      * @param fadeOutDelay 消失动画延迟时间，单位为毫秒
      * @author Heanes
      * @time 2016-12-01 17:55:27 周四
      */
-    messageLocal: function messageLocal($target, $content, type, delaySec, fadeOutDelay){
+    messageLocal: function messageLocal($target, $content, type, show, fadeOutDelay){
         if($target == undefined || $target.length == 0) console.error('Error: the message target is null');
         var messageClass = $.messageConstants.classPrefix + 'message';
         var messageWrapDomStr =
@@ -178,10 +180,10 @@ $.extend({
         }
         $target.append($messageWrap);
         $target.show();
-        if(delaySec != 0){
-            delaySec = delaySec || 3000;
+        if(show != 0){
+            show = show || 3000;
             fadeOutDelay = fadeOutDelay || 1000;
-            $messageWrap.delay(delaySec).fadeOut(fadeOutDelay, function(){$(this).remove()});
+            $messageWrap.delay(show).fadeOut(fadeOutDelay, function(){$(this).remove()});
         }
         // 点击关闭
         $messageWrap.on('click', '.btn-close', function (event) {
