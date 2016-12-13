@@ -52,7 +52,7 @@ $(function () {
         if(tabSrc == undefined || tabSrc == '' || tabSrc == 'javascript:;' || tabSrc == 'javascript:;' || tabSrc == 'javascript:void(0)'){
             return false;
         }
-        var tabId = 'tabsIframe' + $aNode.attr('data-id');
+        var tabId = 'tabsIframe' + $aNode.attr('data-nodeId');
         // 查找是否已经存在此tab
         var $existTabs = $tabsContainer.find('iframe[id="' + tabId + '"]');
         if($existTabs.length > 0){
@@ -143,7 +143,7 @@ $(function () {
         level++;
         if(level == 1){
             renderTop(menuData, level);
-            renderMenu($target, menuData.subNodes, level);
+            renderMenu($target, menuData.nodes, level);
         }
 
         if(level == 2){
@@ -159,7 +159,7 @@ $(function () {
             var hasSubNode = false;
             var aClass = '';
             var triangleRight = '';
-            if(item.subNodes != undefined && item.subNodes.length > 0){
+            if(item.nodes != undefined && item.nodes.length > 0){
                 hasSubNode = true;
                 aClass = 'menu-parent';
                 triangleRight = '<i class="menu-lap triangle-right" aria-hidden="true"></i>';
@@ -171,7 +171,7 @@ $(function () {
             str += '<i class="fa fa-list menu-icon" aria-hidden="true"></i><span class="menu-text">' + item.text + '</span>'
                 + '</a>';
             if(hasSubNode){
-                str += renderMenu($target, item.subNodes, level);
+                str += renderMenu($target, item.nodes, level);
             }
             str += '</li>';
             template += str;
@@ -254,9 +254,12 @@ $(function () {
                 iconCollapse: 'triangle-right',         // 合上时的图标
                 iconExpand: 'triangle-down',            // 展开时的图标
                 enableIndentLeft: true,                 // 允许向左缩进
+                enableLink: true,
                 onNodeSelected: function (event, node) {
-                    console.log('节点被点击：');
-                    console.log(node);
+                    var $aNode = $('<a></a>').attr('href', node.href).attr('data-nodeId', node.nodeId).text(node.text);
+                    var addResult = addJqxTabFromANode($aNode, $tabsContainer, tabsLength + tabsAddCount);
+                    addResult ? tabsAddCount++ : null;
+                    return false;
                 }
             });
             return data;
