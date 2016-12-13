@@ -4,3 +4,13 @@
  * @author Heanes
  * @time 2016-11-29 10:17:06 周二
  */
+
+/* ------------------------------ 起始欢迎页样式 ------------------------------ */
+/**
+ * @doc 起始欢迎页样式
+ * @author Heanes
+ * @time 2016-12-13 19:55:17 周二
+ */
+.welcome-wrap{}
+.welcome-wrap .welcome-title{text-align:center;}
+.welcome-wrap{}
