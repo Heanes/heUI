@@ -16,7 +16,7 @@
         },
         "nodes": [
             {
-                "text": "样式库",
+                "text": "基本样式",
                 "nodeIcon": "",
                 "href": "",
                 "iconSelected": "",
@@ -32,9 +32,9 @@
                 },
                 "nodes": [
                     {
-                        "text": "数据列表",
+                        "text": "按钮",
                         "nodeIcon": "",
-                        "href": "http://www.dingding.com/",
+                        "href": "../button/normal.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -47,48 +47,12 @@
                             "disabled": false
                         },
                         "nodes": [
-                            {
-                                "text": "普通",
-                                "nodeIcon": "",
-                                "href": "../dataList/normal.html",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": [
-                                ]
-                            },
-                            {
-                                "text": "图片",
-                                "nodeIcon": "",
-                                "href": "../dataList/pictureList.html",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": [
-                                ]
-                            }
                         ]
                     },
                     {
-                        "text": "数据编辑",
+                        "text": "文本",
                         "nodeIcon": "",
-                        "href": "https://www.baidu.com/",
+                        "href": "../text/normal.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -101,46 +65,48 @@
                             "disabled": false
                         },
                         "nodes": [
-                            {
-                                "text": "多类型数据编辑",
-                                "nodeIcon": "",
-                                "href": "https://www.baidu.com/",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": []
-                            },
-                            {
-                                "text": "多类型-带tab",
-                                "nodeIcon": "",
-                                "href": "../dataEdit/tab.html",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": []
-                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "数据列表",
+                "nodeIcon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "普通",
+                        "nodeIcon": "",
+                        "href": "../dataList/normal.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
                         ]
                     },
                     {
-                        "text": "消息提示",
+                        "text": "图片",
                         "nodeIcon": "",
-                        "href": "https://www.baidu.com/",
+                        "href": "../dataList/pictureList.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -153,41 +119,111 @@
                             "disabled": false
                         },
                         "nodes": [
-                            {
-                                "text": "局部展示-消息提示",
-                                "nodeIcon": "",
-                                "href": "../message/style1-local.html",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": []
-                            },
-                            {
-                                "text": "全局-消息提示",
-                                "nodeIcon": "",
-                                "href": "../message/style1-global.html",
-                                "iconSelected": "",
-                                "color": "",
-                                "backgroundColor": "",
-                                "colorOnHover": "",
-                                "backgroundColorOnHover": "",
-                                "selectable": true,
-                                "state": {
-                                    "selected": false,
-                                    "expanded": true,
-                                    "disabled": false
-                                },
-                                "nodes": []
-                            }
                         ]
+                    }
+                ]
+            },
+            {
+                "text": "数据编辑",
+                "nodeIcon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "多类型数据编辑",
+                        "nodeIcon": "",
+                        "href": "../dataEdit/normal.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "多类型-带tab",
+                        "nodeIcon": "",
+                        "href": "../dataEdit/tab.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    }
+                ]
+            },
+            {
+                "text": "消息提示",
+                "nodeIcon": "",
+                "href": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "局部展示-消息提示",
+                        "nodeIcon": "",
+                        "href": "../message/style1-local.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "全局-消息提示",
+                        "nodeIcon": "",
+                        "href": "../message/style1-global.html",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
                     }
                 ]
             }
@@ -205,7 +241,7 @@
         "selectable": true,
         "state": {
             "selected": false,
-            "expanded": true,
+            "expanded": false,
             "disabled": false
         },
         "nodes": [
@@ -245,7 +281,7 @@
                     {
                         "text": "子菜单1.1",
                         "nodeIcon": "",
-                        "href": "../tabs/page1.html",
+                        "href": "../tabsDemo/page1.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -262,7 +298,7 @@
                     {
                         "text": "子菜单1.2",
                         "nodeIcon": "",
-                        "href": "../tabs/page2.html",
+                        "href": "../tabsDemo/page2.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -279,7 +315,7 @@
                     {
                         "text": "子菜单1.3",
                         "nodeIcon": "",
-                        "href": "../tabs/page3.html",
+                        "href": "../tabsDemo/page3.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -329,7 +365,7 @@
                 },
                 "nodes": [
                     {
-                        "text": "子菜单2.1-美菜",
+                        "text": "子菜单2.1-淘宝",
                         "nodeIcon": "",
                         "href": "https://www.taobao.com/",
                         "iconSelected": "",

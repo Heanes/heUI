@@ -4,3 +4,8 @@
  * @author Heanes
  * @time 2016-11-29 10:16:42 周二
  */
+
+/****************************** demo展示样式 ******************************/
+.demo-wrap{padding:20px;}
+.demo-wrap .demo-content{}
+.demo-wrap .demo-content .demo-one{margin:10px 0;}
