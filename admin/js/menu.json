@@ -2,7 +2,7 @@
     {
         "text": "常用功能",
         "nodeIcon": "",
-        "href": "../layout/todo.html",
+        "href": "",
         "iconSelected": "",
         "color": "",
         "backgroundColor": "",
@@ -15,6 +15,24 @@
             "disabled": false
         },
         "nodes": [
+            {
+                "text": "介绍",
+                "nodeIcon": "",
+                "href": "../layout/guide.html",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                ]
+            },
             {
                 "text": "基本样式",
                 "nodeIcon": "",
@@ -192,9 +210,9 @@
                 },
                 "nodes": [
                     {
-                        "text": "局部展示-消息提示",
+                        "text": "全局-消息提示",
                         "nodeIcon": "",
-                        "href": "../message/style1-local.html",
+                        "href": "../message/global-style1.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -209,9 +227,9 @@
                         "nodes": []
                     },
                     {
-                        "text": "全局-消息提示",
+                        "text": "局部展示-消息提示",
                         "nodeIcon": "",
-                        "href": "../message/style1-global.html",
+                        "href": "../message/local-style1.html",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",

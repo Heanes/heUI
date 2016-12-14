@@ -25,7 +25,7 @@
 .header .admin-logo .admin-log-href .admin-title-text{font-size:22px;}
 
 .header .menu-top{float:left;height:50px;line-height:50px}
-.header .menu-top .menu-list li{float:left;width:auto;color:#fff}
+.header .menu-top .menu-list li{display:inline-block;width:auto;color:#fff}
 .header .menu-top .menu-list li.active,
 .header .menu-top .menu-list li:hover{background-color:#2b91af}
 .header .menu-top .menu-list li a{display:block;color:#fff;padding:0 30px;font-size:14px}
@@ -94,6 +94,7 @@
 
 /************************ 底部样式 ************************/
 
-/************************ 消息样式 ************************/
+/************************ 顶部消息样式 ************************/
 .message-global{z-index:100;position:fixed;text-align:center;width:100%;}
+.message-global .message-wrap{margin-bottom:2px;}
 .message-global .ui-heanes-message{display:inline-block;padding:10px 40px 10px 20px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}

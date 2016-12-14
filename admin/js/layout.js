@@ -251,12 +251,17 @@ $(function () {
             //renderMenu($menuLeftBlock, data);
             $('.left-block').treeView({
                 data: data,
-                iconCollapse: 'triangle-right',         // 合上时的图标
-                iconExpand: 'triangle-down',            // 展开时的图标
-                enableIndentLeft: true,                 // 允许向左缩进
-                enableLink: true,
+                iconCollapse: 'triangle-right', // 合上时的图标
+                iconExpand: 'triangle-down',    // 展开时的图标
+                enableIndentLeft: true,         // 允许向左缩进
+                enableLink: true,               // 开启链接
+                enableTopSwitch: false,          // 开启顶部切换标识
+                topSwitcherTarget: '.menu-top', // 开启了顶部切换后，根节点展示在此处(填写jQuery选择器支持的字符)
+
                 onNodeSelected: function (event, node) {
-                    var $aNode = $('<a></a>').attr('href', node.href).attr('data-nodeId', node.nodeId).text(node.text);
+                    var $aNode = $('<a></a>').attr('href', node.href).attr('data-nodeId', node.nodeId)
+                        .append('<i class="tab-icon ' + node.nodeIcon + '"></i>')
+                        .append('<span class="tab-title">' + node.text + '</span>');
                     var addResult = addJqxTabFromANode($aNode, $tabsContainer, tabsLength + tabsAddCount);
                     addResult ? tabsAddCount++ : null;
                     return false;
