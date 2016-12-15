@@ -33,7 +33,8 @@ $(function () {
     // 刷新标签
     $('#refreshTab').on('click', function () {
         var tabContent = $tabsContainer.jqxTabs('getContentAt', selectedTab);
-        $(tabContent).find('iframe').attr('src', $(this).attr('src'));
+        var $tabIframe = $(tabContent).find('iframe').first();
+        $tabIframe.attr('src', $tabIframe.attr('src'));
     });
     // 关闭全部标签
     $('#closeAllTabs').on('click', function () {
