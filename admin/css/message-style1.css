@@ -6,7 +6,7 @@
  */
 .message-wrap{margin-bottom:10px;}
 .message-wrap:last-child{margin-bottom:0}
-.ui-heanes-message{position:relative;display:block;padding:18px 20px;border:1px solid;}
+.ui-heanes-message{position:relative;display:block;padding:18px 20px;border:1px solid;text-align:initial;}
 .ui-heanes-message.message-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}
 .ui-heanes-message.message-info{color:#31708f;background-color:#d9edf7;border-color:#bce8f1}
 .ui-heanes-message.message-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}

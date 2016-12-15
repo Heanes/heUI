@@ -9,14 +9,11 @@
     <meta name="description" content="描述">
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.base.css">
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/jQWidgets/4.4.0/styles/jqx.bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="http://root.heanes.com/treeView.js/css/treeView.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="../css/style/style-2016.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
     <link rel="stylesheet" type="text/css" href="../css/message-style1.css"/>
@@ -28,7 +25,7 @@
     <div class="main">
         <!-- 顶部全宽度内容区域 -->
         <div class="main-top-block">
-            <div class="header">
+            <div class="header clearfix">
                 <div class="admin-logo left-width">
                     <a href="start.html" class="admin-log-href" id="homeStartHref" target="iframeRightContent">
                         <i class="fa fa-gears admin-icon" aria-hidden="true"></i>
@@ -40,12 +37,22 @@
                     </a>
                 </div>
                 <div class="menu-top">
-                    <ul class="menu-list" id="menuTopUl">
-                        <li class="active"><a href="javascript:;">常用功能</a></li>
-                        <li><a href="javascript:;">内容编辑</a></li>
-                        <li><a href="javascript:;">网站设置</a></li>
-                        <li><a href="javascript:;">站长维护</a></li>
-                    </ul>
+                    <div class="tree-top-wrap">
+                        <ul class="tree-top-list">
+                            <li class="tree-node">
+                                <a class="node-wrap" href="javascript:;"><i class="icon node-icon fa fa-list"></i><span class="node-text">常用功能</span></a>
+                            </li>
+                            <li class="tree-node">
+                                <a class="node-wrap" href="javascript:;"><i class="icon node-icon fa fa-list"></i><span class="node-text">内容编辑</span></a>
+                            </li>
+                            <li class="tree-node">
+                                <a class="node-wrap" href="javascript:;"><i class="icon node-icon fa fa-list"></i><span class="node-text">网站设置</span></a>
+                            </li>
+                            <li class="tree-node">
+                                <a class="node-wrap" href="javascript:;"><i class="icon node-icon fa fa-list"></i><span class="node-text">站长维护</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="admin-select-city">
                     <select class="select-city">
@@ -86,7 +93,7 @@
                             </dl>
                         </div>
                         <div class="login-handle">
-                            <a href="#" class="login-out">退出登录</a>
+                            <a href="#" class="login-out"><i class="fa fa-power-off icon"></i>退出登录</a>
                         </div>
                     </div>
                 </div>
@@ -107,6 +114,10 @@
             </div>
             <!-- 中心区域 -->
             <div class="center-block center-wrap iframe-container">
+                <div class="tabs-handle">
+                    <a href="javascript:;" id="refreshTab" class="handle-icon" title="刷新标签"><i class="fa fa-refresh"></i></a>
+                    <a href="javascript:;" id="closeAllTabs" class="handle-icon" title="关闭全部标签"><i class="fa fa-close"></i></a>
+                </div>
                 <div class="tabs-container" id="tabsContainer">
                     <ul class="tab-title-container" id="tabsTitleContainer">
                         <li>
