@@ -17,7 +17,7 @@ $(function () {
         showCloseButtons: true,
         reorder: true,
         scrollPosition: 'both' // 标签太多时允许滚动
-    }).jqxTabs('hideCloseButtonAt', 0); //隐藏首页删除按钮
+    });//.jqxTabs('hideCloseButtonAt', 0); //隐藏首页删除按钮
 
     var $tabsTitleContainer = $('#tabsTitleContainer');
     var tabsLength = $tabsTitleContainer.length;
@@ -38,9 +38,11 @@ $(function () {
     });
     // 关闭全部标签
     $('#closeAllTabs').on('click', function () {
-        var tabsCount = tabsAddCount;
-        for(tabsCount; tabsCount > 0; tabsCount--){
-            $tabsContainer.jqxTabs('removeAt', tabsCount);
+        if(confirm('你确定关闭全部标签吗？')){
+            var tabsCount = tabsAddCount;
+            for(tabsCount; tabsCount >= 0; tabsCount--){
+                $tabsContainer.jqxTabs('removeAt', tabsCount);
+            }
         }
     });
 
@@ -120,5 +122,28 @@ $(function () {
         });
     };
     var menuDataJson = getMenuData();
+
+
+    /**
+     * @doc 全屏的处理
+     * @author Heanes
+     * @time 2016-12-16 10:37:27 周五
+     */
+    $('#fullScreen').on('click', function () {
+        var $icon = $(this).find('.fa');
+        $icon.toggleClass(function() {
+            if ($icon.hasClass('fa-arrows-alt')) {
+                $icon.removeClass('fa-arrows-alt');
+                return 'fa-compress';
+            } else {
+                $icon.removeClass('fa-compress');
+                return 'fa-arrows-alt';
+            }
+        });
+        $(this).closest('.layout-handle').toggleClass('effected');
+        $('.main-top-block').toggleClass('full-screen');
+        $('.left-block').toggleClass('full-screen');
+        $('.center-block.iframe-container').toggleClass('full-screen');
+    });
 
 });
