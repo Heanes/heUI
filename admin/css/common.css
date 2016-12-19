@@ -20,7 +20,6 @@
 
 /****************************** demo展示样式 ******************************/
 .demo-wrap{padding:20px;font-weight:400;}
-.demo-wrap *{font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;}
 .demo-wrap .demo-title{margin:14px 0;}
 .demo-wrap .demo-desc{color:#666;}
 .demo-wrap .demo-group{margin-top:40px;}

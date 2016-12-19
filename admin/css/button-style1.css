@@ -43,21 +43,33 @@
     background-color:#e6e6e6;
     border-color:#adadad;
 }
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{
+    color:#333;
+    background-color:#e6e6e6;
+    border-color:#adadad;
+}
+
+.btn.btn-text{
+    border:none;
+    background:none;
+    color:#428bca;
+}
+.btn.btn-text:hover, .btn.btn-text:focus {
+    color: #2a6496;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
 .btn-primary{
     color:#fff;
     background-color:#0059f7;
     border-color:#144ecc;
     outline:none;
 }
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
     color:#fff;
-    background-color:#3756cc;
-    border-color:#2846ae;
-}
-.btn-primary:active{
-    color:#fff;
-    background-color:#0535cc;
-    border-color:#0825ae;
+    background-color:#3071a9;
+    border-color:#285e8e;
 }
 .btn-success{
     color:#fff;
@@ -65,13 +77,41 @@
     border-color:#4cae4c;
     outline:none;
 }
-.btn-success:hover{
+.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success{
     color:#fff;
     background-color:#449d44;
     border-color:#398439;
 }
-.btn-success:active{
+
+.btn-info{
     color:#fff;
-    background-color:#449d44;
-    border-color:#398439;
+    background-color:#5bc0de;
+    border-color:#46b8da;
+}
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active{
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+
+.btn-warn{
+    color:#fff;
+    background-color:#f0ad4e;
+    border-color:#eea236;
+}
+.btn-warning:hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning{
+    color:#fff;
+    background-color:#ec971f;
+    border-color:#d58512;
+}
+
+.btn-danger{
+    color:#fff;
+    background-color:#d9534f;
+    border-color:#d43f3a;
+}
+
+/* 带图标的按钮相关 */
+.btn .btn-icon{
+    margin-right:4px;
 }
