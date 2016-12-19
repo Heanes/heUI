@@ -71,6 +71,66 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 在线编辑并且运行的demo工具 -->
+                        <div class="demo-group-online">
+                            <!-- 结果 -->
+                            <div class="online-group half-line">
+                                <div class="online-title">
+                                    <h3 class="title">result</h3>
+                                </div>
+                                <div class="result">
+                                    <button type="button" class="btn btn-normal">默认按钮</button>
+                                    <button type="button" class="btn btn-primary">常规按钮</button>
+                                    <button type="button" class="btn btn-text">文字按钮</button>
+                                </div>
+                            </div>
+                            <!-- html -->
+                            <div class="online-group half-line">
+                                <div class="online-title">
+                                    <h3 class="title">html</h3>
+                                </div>
+                                <div class="html">
+                                    <pre>
+                                        <code class="html">
+                                            <div class="example">
+                                                <p>html示范</p>
+                                            </div>
+                                        </code>
+                                    </pre>
+                                    <textarea class="html"></textarea>
+                                </div>
+                            </div>
+                            <!-- javascript -->
+                            <div class="online-group half-line">
+                                <div class="online-title">
+                                    <h3 class="title">javascript</h3>
+                                </div>
+                                <div class="javascript">
+                                    <pre>
+                                        <code class="javascript">
+                                        <script type="application/javascript"></script>
+                                        var a = bbb;
+                                        console.log('fdafs');
+                                        </code>
+                                    </pre>
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                            <!-- style and css -->
+                            <div class="online-group half-line">
+                                <div class="online-title">
+                                    <h3 class="title">style</h3>
+                                </div>
+                                <div class="style">
+                                    <pre>
+                                        <code class="css">
+                                        .example{background-color:#000;}
+                                        </code>
+                                    </pre>
+                                    <textarea class="css"></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,6 +151,11 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
+    <script type="application/javascript">
+        $(function () {
+        });
+    </script>
     <!-- E js E -->
 </cite>
 </body>

@@ -4,13 +4,20 @@
  * @time 2016-12-13 15:28:38 周二
  */
 Import([
-    '../js/common/common.js',
+    // ****************************** 已有插件 ******************************
     // cookie相关
     '/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js',
+    // 剪贴板复制
+    '/public/static/libs/js/clipboard.js/1.5.15/clipboard.min.js',
+    // 代码高亮
+    '/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/styles/shThemeDefault.css',
+    '/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shCore.js',
+    // ****************************** 自己开发的 ******************************
     // 消息提示
     '../js/$.extend/$.message.js',
     // notification 通知
-    '../js/$.extend/$.notification.js'
+    '../js/$.extend/$.notification.js',
+    '../js/common/common.js'
 ]);
 
 /**
@@ -22,6 +29,7 @@ function Import() {
     var jsTargetWrap = document.body.getElementsByTagName('cite')[0].children;
     var head = document.body.getElementsByTagName('head');
     var cssTargetWrap = head[head.length];
+    var $jsTarget = $('cite').find('script[id="importResource"]');
     for (var i = 0; i < arguments.length; i++) {
         var argument = arguments[i];
         if (argument.length > 0) {
@@ -30,20 +38,19 @@ function Import() {
                     var scriptDom = document.createElement('script');
                     scriptDom.type = 'text/javascript';
                     scriptDom.src = item;
-                    $('cite').find('script').first().after('<script type="text/javascript" src="' + item + '"></script>');
+                    $jsTarget.after('<script type="text/javascript" src="' + item + '"></script>');
                     //appendAfter(scriptDom, jsTargetWrap[i+1]);
                 }
                 else if (item.match(/\.css$/i)) {
-                    var cssDom = document.createElement('script');
+                    var cssDom = document.createElement('link');
                     cssDom.type = 'text/css';
                     cssDom.href = item;
-                    css.ref = 'stylesheet';
+                    cssDom.ref = 'stylesheet';
                     $('head').find('link[type="text/css"]').last().after('<link rel="stylesheet" type="text/css" href="' + item + '"></link>');
                     //appendAfter(cssDom, cssTargetWrap[i+1]);
                 }
             });
         }
-
     }
 }
 
