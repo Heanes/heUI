@@ -21,7 +21,7 @@ $.extend({
             type:           'info',             // string success||error||warn||info消息类型
             show:           3000,               // int 展示时间，单位为毫秒
             autoClose:      true,               // boolean 是否自动关闭
-            fadeOutDelay:   1000,               // int 消失动画延迟时间，单位为毫秒
+            fadeOutDelay:   500,               // int 消失动画延迟时间，单位为毫秒
             canBeClose:     true,               // boolean 是否能被关闭
             onClose:        undefined,          // 当消息关闭时的回调函数 todo add at 2016-12-13 14:33:02 周二
             showIcon:       false,              // boolean 是否显示图标
@@ -77,7 +77,8 @@ $.extend({
         // 点击关闭
         $message.on('click', '.btn-close', function (event) {
             var $delegateTarget = $(event.delegateTarget);
-            $delegateTarget.fadeOut();
+            $delegateTarget.stop();
+            $delegateTarget.fadeOut(fadeOutDelay, function(){$(this).remove()});
         });
     },
     /**
@@ -124,14 +125,16 @@ $.extend({
         }
         $messageGlobal.append($messageWrap);
         $messageGlobal.show();
+        fadeOutDelay = fadeOutDelay || 500;
+        // 超时后自动关闭
         if(show != 0){
             show = show || 3000;
-            fadeOutDelay = fadeOutDelay || 1000;
             $messageWrap.delay(show).fadeOut(fadeOutDelay, function(){$(this).remove()});
         }
         // 点击关闭
         $messageWrap.on('click', '.btn-close', function (event) {
             var $delegateTarget = $(event.delegateTarget);
+            $delegateTarget.stop();
             $delegateTarget.fadeOut(fadeOutDelay, function(){$(this).remove()});
         });
     },
@@ -180,9 +183,10 @@ $.extend({
         }
         $target.append($messageWrap);
         $target.show();
+        fadeOutDelay = fadeOutDelay || 500;
+        // 超时后自动关闭
         if(show != 0){
             show = show || 3000;
-            fadeOutDelay = fadeOutDelay || 1000;
             $messageWrap.delay(show).fadeOut(fadeOutDelay, function(){$(this).remove()});
         }
         // 点击关闭
