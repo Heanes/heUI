@@ -227,11 +227,15 @@
                     lineNumbers: true,
                     mode: mode,
                     matchBrackets: true,
-                    theme: 'eclipse'
+                    theme: 'eclipse',
+                    indentUnit: 4
                 });
                 setCodes(modeOrigin, codeEditor, codes);
                 codeEditor.on('blur', function () {
                     setCodes(modeOrigin, codeEditor, codes);
+                });
+                codeEditor.on('keypress', function() {
+                    codeEditor.showHint();  //满足自动触发自动联想功能
                 });
 
                 function setCodes(mode){
@@ -251,19 +255,15 @@
             $runCode.on('click', function () {
                 var $css = $('<style type="text/css">' + codes.css + '</style>');
                 var $javascript = $('<script type="application/javascript">').append(codes.javascript);
-                $result.empty().append($css).append($(codes.html)).append($javascript);
+                $result.empty().append($css).append('<div>' + codes.html + '</div>').append($javascript);
             });
             $runCode.trigger('click');
 
             var $copyToClipboardBtn = $codeOnline.find('.copy-to-clipboard');
             var clipboard = new Clipboard('.copy-to-clipboard', {
                 text: function(trigger){
-                    console.log(this);
-                    console.log(trigger);
-                    console.log(this.target);
                     var sourceCodeKey = $(trigger).attr('data-clipboard-source-code');
-                    var sourceCode = codes[sourceCodeKey] || '';
-                    return sourceCode;
+                    return codes[sourceCodeKey] || '';
                 }
             });
             $copyToClipboardBtn.each(function (i, item) {

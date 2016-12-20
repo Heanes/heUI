@@ -16,6 +16,12 @@ Import([
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/theme/eclipse.css',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/lib/codemirror.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0//addon/selection/selection-pointer.js',
+    // --代码高亮及实时编辑之自动完成
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/show-hint.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/show-hint.css',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/html-hint.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/javascript-hint.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/css-hint.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/vbscript/vbscript.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/xml/xml.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/javascript/javascript.js',
