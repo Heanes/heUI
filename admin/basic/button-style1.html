@@ -17,6 +17,8 @@
 <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
 <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
 <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<!-- codeMirror代码高亮样式 -->
+<link rel="stylesheet" type="text/css" href="/public/static/libs/js/codeHighLight/codeMirror/5.21.0/lib/codemirror.css"/>
 <link rel="stylesheet" type="text/css" href="../css/style/style-2016.css"/>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
@@ -95,62 +97,79 @@
                             </div>
                         </div>
                         <!-- 在线编辑并且运行的demo工具 -->
-                        <div class="demo-group-online">
-                            <!-- 结果 -->
-                            <div class="online-group half-line">
-                                <div class="online-title">
-                                    <h3 class="title">result</h3>
-                                </div>
-                                <div class="result">
-                                    <button type="button" class="btn btn-normal">默认按钮</button>
-                                    <button type="button" class="btn btn-primary">常规按钮</button>
-                                    <button type="button" class="btn btn-text">文字按钮</button>
-                                </div>
+                        <div class="code-online">
+                            <!-- 代码操作 -->
+                            <div class="code-group-handle">
+                                <a href="javascript:;" class="run-code handle-btn">
+                                    <i class="fa fa-flask"></i>
+                                    <span class="handle-text">运行</span>
+                                </a>
                             </div>
-                            <!-- html -->
-                            <div class="online-group half-line">
-                                <div class="online-title">
-                                    <h3 class="title">html</h3>
+                            <div class="code-group">
+                                <!-- 结果 -->
+                                <div class="online-group-wrap half-line">
+                                    <div class="online-title">
+                                        <div class="title-content"><h3 class="title">result</h3></div>
+                                    </div>
+                                    <div class="online-content result"></div>
                                 </div>
-                                <div class="html">
-                                    <pre>
-                                        <code class="html">
-                                            <div class="example">
-                                                <p>html示范</p>
-                                            </div>
-                                        </code>
-                                    </pre>
-                                    <textarea class="html"></textarea>
+                                <!-- html -->
+                                <div class="online-group-wrap half-line">
+                                    <div class="online-title">
+                                        <div class="title-content"><h3 class="title">html</h3></div>
+                                        <div class="code-handle">
+                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="html" title="复制代码到剪贴板">
+                                                <i class="fa fa-clipboard"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="online-content html">
+                                        <pre class="code-source-wrap">
+<code class="html">
+<button type="button" class="btn btn-normal">默认按钮</button>
+<button type="button" class="btn btn-primary">常规按钮</button>
+<button type="button" class="btn btn-text">文字按钮</button>
+</code>
+                                        </pre>
+                                        <textarea class="code-mirror-textarea" data-code-language="htmlmixed"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- javascript -->
-                            <div class="online-group half-line">
-                                <div class="online-title">
-                                    <h3 class="title">javascript</h3>
+                                <!-- javascript -->
+                                <div class="online-group-wrap half-line">
+                                    <div class="online-title">
+                                        <div class="title-content"><h3 class="title">javascript</h3></div>
+                                        <div class="code-handle">
+                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="javascript" title="复制代码到剪贴板">
+                                                <i class="fa fa-clipboard"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="online-content javascript">
+                                        <pre class="code-source-wrap">
+<code class="javascript">
+</code>
+                                        </pre>
+                                        <textarea class="code-mirror-textarea" data-code-language="javascript"></textarea>
+                                    </div>
                                 </div>
-                                <div class="javascript">
-                                    <pre>
-                                        <code class="javascript">
-                                        <script type="application/javascript"></script>
-                                        var a = bbb;
-                                        console.log('fdafs');
-                                        </code>
-                                    </pre>
-                                    <textarea></textarea>
-                                </div>
-                            </div>
-                            <!-- style and css -->
-                            <div class="online-group half-line">
-                                <div class="online-title">
-                                    <h3 class="title">style</h3>
-                                </div>
-                                <div class="style">
-                                    <pre>
-                                        <code class="css">
-                                        .example{background-color:#000;}
-                                        </code>
-                                    </pre>
-                                    <textarea class="css"></textarea>
+                                <!-- style and css -->
+                                <div class="online-group-wrap half-line">
+                                    <div class="online-title">
+                                        <div class="title-content"><h3 class="title">css</h3></div>
+                                        <div class="code-handle">
+                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="css" title="复制代码到剪贴板">
+                                                <i class="fa fa-clipboard"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="online-content style">
+                                        <pre class="code-source-wrap">
+<code class="css">
+.example{background-color:#000;}
+</code>
+                                        </pre>
+                                        <textarea class="code-mirror-textarea" data-code-language="css"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -177,6 +196,89 @@
     <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
     <script type="application/javascript">
         $(function () {
+            var $codeOnline = $('.code-online');
+            var $runCode = $codeOnline.find('.run-code');
+            var $result = $codeOnline.find('.result');
+            var codes = {
+                html: '',
+                css: '',
+                javascript: ''
+            };
+            var $codeMirrorTextarea = $codeOnline.find('.code-mirror-textarea');
+            $codeMirrorTextarea.each(function (i, item) {
+                var codeSource = $(item).parent().find('.code-source-wrap code').html();
+                codeSource = removeFirstBreakLineChar(codeSource);
+                $(item).text(codeSource);
+                var codeEditor = 'codeEditor' + i;
+                var modeOrigin = $(item).attr('data-code-language') ? $(item).attr('data-code-language') : '';
+                var mode;
+                if(modeOrigin == 'htmlmixed'){
+                    mode = {
+                        name: "htmlmixed",
+                        scriptTypes: [
+                            {matches: /\/x-handlebars-template|\/x-mustache/i, mode: null},
+                            {matches: /(text|application)\/(x-)?vb(a|script)/i, mode: "vbscript"}
+                        ]
+                    };
+                }else{
+                    mode = modeOrigin;
+                }
+                codeEditor = CodeMirror.fromTextArea(item, {
+                    lineNumbers: true,
+                    mode: mode,
+                    matchBrackets: true,
+                    theme: 'eclipse'
+                });
+                setCodes(modeOrigin, codeEditor, codes);
+                codeEditor.on('blur', function () {
+                    setCodes(modeOrigin, codeEditor, codes);
+                });
+
+                function setCodes(mode){
+                    switch (mode) {
+                        case 'htmlmixed':
+                            codes.html = codeEditor.getValue();
+                            break;
+                        case 'javascript':
+                            codes.javascript = codeEditor.getValue();
+                            break;
+                        case 'css':
+                            codes.css = codeEditor.getValue();
+                            break;
+                    }
+                }
+            });
+            $runCode.on('click', function () {
+                var $css = $('<style type="text/css">' + codes.css + '</style>');
+                var $javascript = $('<script type="application/javascript">').append(codes.javascript);
+                $result.empty().append($css).append($(codes.html)).append($javascript);
+            });
+            $runCode.trigger('click');
+
+            var $copyToClipboardBtn = $codeOnline.find('.copy-to-clipboard');
+            var clipboard = new Clipboard('.copy-to-clipboard', {
+                text: function(trigger){
+                    console.log(this);
+                    console.log(trigger);
+                    console.log(this.target);
+                    var sourceCodeKey = $(trigger).attr('data-clipboard-source-code');
+                    var sourceCode = codes[sourceCodeKey] || '';
+                    return sourceCode;
+                }
+            });
+            $copyToClipboardBtn.each(function (i, item) {
+                var $onlineGroupWrap = $(item).closest('.online-group-wrap');
+            });
+
+            /**
+             * @doc 移除首行、尾行空格
+             * @param str
+             */
+            function removeFirstBreakLineChar(str){
+                str = str.replace(/^\n/, '');
+                str = str.replace(/\n$/, '');
+                return str;
+            }
         });
     </script>
     <!-- E js E -->

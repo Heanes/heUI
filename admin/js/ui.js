@@ -8,10 +8,19 @@ Import([
     // cookie相关
     '/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js',
     // 剪贴板复制
-    '/public/static/libs/js/clipboard.js/1.5.15/clipboard.min.js',
+    '/public/static/libs/js/clipboard.js/1.5.15/clipboard.js',
     // 代码高亮
     '/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/styles/shThemeDefault.css',
     '/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shCore.js',
+    // 代码高亮及实时编辑
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/theme/eclipse.css',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/lib/codemirror.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0//addon/selection/selection-pointer.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/vbscript/vbscript.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/xml/xml.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/javascript/javascript.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/css/css.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/htmlmixed/htmlmixed.js',
     // ****************************** 自己开发的 ******************************
     // 消息提示
     '../js/$.extend/$.message.js',
