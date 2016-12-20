@@ -20,6 +20,7 @@ Import([
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/show-hint.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/show-hint.css',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/html-hint.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/xml-hint.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/javascript-hint.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/addon/hint/css-hint.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/vbscript/vbscript.js',

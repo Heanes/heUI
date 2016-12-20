@@ -271,14 +271,14 @@
             });
 
             /**
-             * @doc 移除首行、尾行换行符
+             * @doc 移除首行、尾行(暂不移除)换行符
              * @param str
              * @author Heanes
              * @time 2016-12-20 15:43:41 周二
              */
             function removeFirstBreakLineChar(str){
                 str = str.replace(/^\n/, '');
-                str = str.replace(/\n$/, '');
+                //str = str.replace(/\n$/, '');
                 return str;
             }
         });
