@@ -84,6 +84,24 @@
                         },
                         "nodes": [
                         ]
+                    },
+                    {
+                        "text": "Icon 图标",
+                        "href": "../basic/icon-style1.html",
+                        "nodeIcon": "fa fa-flag",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
                     }
                 ]
             },
@@ -210,7 +228,7 @@
                 },
                 "nodes": [
                     {
-                        "text": "Global 全局",
+                        "text": "Global 全局消息显示",
                         "href": "../message/global-style1.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
@@ -227,7 +245,7 @@
                         "nodes": []
                     },
                     {
-                        "text": "Local 局部展示",
+                        "text": "Local 局部消息显示",
                         "href": "../message/local-style1.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
@@ -262,8 +280,8 @@
                 },
                 "nodes": [
                     {
-                        "text": "Global 全局",
-                        "href": "../message/global-style1.html",
+                        "text": "Global 全局通知显示",
+                        "href": "../notification/global-style1.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
                         "color": "",
@@ -279,8 +297,8 @@
                         "nodes": []
                     },
                     {
-                        "text": "Local 局部展示",
-                        "href": "../message/local-style1.html",
+                        "text": "Local 局部通知显示",
+                        "href": "../notification/local-style1.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
                         "color": "",
