@@ -502,6 +502,7 @@
                             "expanded": true,
                             "disabled": false
                         },
+                        "target": "_blank",
                         "nodes": []
                     }
                 ]

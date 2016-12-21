@@ -54,23 +54,25 @@ $(function () {
      * @returns {boolean}
      */
     function addJqxTabFromANode($aNode, $tabsContainer, index){
+        var tabId = 'tabsIframe' + $aNode.attr('data-nodeId');
+        var tabTitleId = 'tabsTitle' + $aNode.attr('data-nodeId');
+        // 查找是否已经存在此tab（支持tab头被拖动后的定位）
+        var $existTabs = $tabsContainer.find('#' + tabTitleId);
+        if($existTabs.length > 0){
+            // 存在则定位
+            var existIndex = $existTabs.parent().parent().index();
+            $tabsContainer.jqxTabs('select', existIndex);
+            return false;
+        }
         var tabTitle = $aNode.html();
+        var $tabTitleWrap = '<div class="tab-title-wrap" id="' + tabTitleId + '">' + tabTitle + '</div>';
         var tabSrc = $aNode.attr('href');
         if(tabSrc == undefined || tabSrc == '' || tabSrc == 'javascript:;' || tabSrc == 'javascript:;' || tabSrc == 'javascript:void(0)'){
             return false;
         }
-        var tabId = 'tabsIframe' + $aNode.attr('data-nodeId');
-        // 查找是否已经存在此tab
-        var $existTabs = $tabsContainer.find('iframe[id="' + tabId + '"]');
-        if($existTabs.length > 0){
-            // 存在则定位
-            var existIndex = $existTabs.parent().index();
-            $tabsContainer.jqxTabs('select', existIndex);
-            return false;
-        }
         // 否则创建
         var tabContent = '<iframe src="' + tabSrc + '" id="' + tabId + '"></iframe>';
-        $tabsContainer.jqxTabs('addAt', index, tabTitle, tabContent);
+        $tabsContainer.jqxTabs('addAt', index, $tabTitleWrap, tabContent);
         return true;
     }
     /**
@@ -110,8 +112,12 @@ $(function () {
                 },                              // 样式相关
 
                 onNodeSelected: function (event, node) {
+                    if(node.target && node.target == '_target'){
+                        window.open(node.href);
+                        return false;
+                    }
                     var $aNode = $('<a></a>').attr('href', node.href).attr('data-nodeId', node.nodeId)
-                        .append('<i class="tab-icon ' + node.nodeIcon + '"></i>')
+                        .append('<i class="tab-title-icon ' + node.nodeIcon + '"></i>')
                         .append('<span class="tab-title">' + node.text + '</span>');
                     var addResult = addJqxTabFromANode($aNode, $tabsContainer, tabsLength + tabsAddCount);
                     addResult ? tabsAddCount++ : null;
@@ -124,6 +130,8 @@ $(function () {
     var menuDataJson = getMenuData();
 
 
+    var $leftBlock = $('.left-block');
+    var $centerBlock = $('.center-block');
     /**
      * @doc 全屏的处理
      * @author Heanes
@@ -142,8 +150,35 @@ $(function () {
         });
         $(this).closest('.layout-handle').toggleClass('effected');
         $('.main-top-block').toggleClass('full-screen');
-        $('.left-block').toggleClass('full-screen');
-        $('.center-block.iframe-container').toggleClass('full-screen');
+        $leftBlock.toggleClass('full-screen');
+        $centerBlock.toggleClass('full-screen');
+    });
+
+    /**
+     * @doc 左侧菜单缩进
+     * @author Heanes
+     * @time 2016-12-21 16:39:46 周三
+     * @type {*}
+     */
+    var lapHandleClick = false;
+    $('#lapLeftMenu').on('click', function () {
+        if(lapHandleClick){
+            $leftBlock.animate({
+                'width': '240px'
+            });
+            $centerBlock.animate({
+                'padding-left': '240px'
+            });
+            lapHandleClick = false;
+        }else{
+            $leftBlock.animate({
+                'width': '0'
+            });
+            $centerBlock.animate({
+                'padding-left': '0'
+            });
+            lapHandleClick = true;
+        }
     });
 
 });
