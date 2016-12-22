@@ -51,7 +51,7 @@
                 "nodes": [
                     {
                         "text": "Button 按钮",
-                        "href": "../basic/button-style1.html",
+                        "href": "../button/style1/button.html",
                         "nodeIcon": "fa fa-stop-circle",
                         "iconSelected": "",
                         "color": "",
@@ -69,7 +69,7 @@
                     },
                     {
                         "text": "Text 文本",
-                        "href": "../basic/text-style1.html",
+                        "href": "../text/style1/text.html",
                         "nodeIcon": "fa fa-text-width",
                         "iconSelected": "",
                         "color": "",
@@ -87,7 +87,7 @@
                     },
                     {
                         "text": "Icon 图标",
-                        "href": "../basic/icon-style1.html",
+                        "href": "../icon/style1/icon.html",
                         "nodeIcon": "fa fa-flag",
                         "iconSelected": "",
                         "color": "",
@@ -102,6 +102,110 @@
                         },
                         "nodes": [
                         ]
+                    }
+                ]
+            },
+            {
+                "text": "Message 消息提示",
+                "href": "",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "Global 全局消息显示",
+                        "href": "../message/style1/global.html",
+                        "nodeIcon": "fa fa-info-circle",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "Local 局部消息显示",
+                        "href": "../message/style1/local.html",
+                        "nodeIcon": "fa fa-info-circle",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    }
+                ]
+            },
+            {
+                "text": "Notification 通知",
+                "href": "",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "color": "",
+                "backgroundColor": "",
+                "colorOnHover": "",
+                "backgroundColorOnHover": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "Global 全局通知显示",
+                        "href": "../notification/style1/global.html",
+                        "nodeIcon": "fa fa-bullhorn",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "Local 局部通知显示",
+                        "href": "../notification/style1/local.html",
+                        "nodeIcon": "fa fa-bullhorn",
+                        "iconSelected": "",
+                        "color": "",
+                        "backgroundColor": "",
+                        "colorOnHover": "",
+                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
                     }
                 ]
             },
@@ -123,7 +227,7 @@
                 "nodes": [
                     {
                         "text": "Normal 普通",
-                        "href": "../dataList/normal.html",
+                        "href": "../dataList/style1/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "color": "",
@@ -141,7 +245,7 @@
                     },
                     {
                         "text": "Pictures 图片",
-                        "href": "../dataList/pictureList.html",
+                        "href": "../dataList/style1/pictureList.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "color": "",
@@ -177,7 +281,7 @@
                 "nodes": [
                     {
                         "text": "Normal 多类型数据编辑",
-                        "href": "../dataEdit/normal.html",
+                        "href": "../dataEdit/style1/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "color": "",
@@ -194,112 +298,8 @@
                     },
                     {
                         "text": "Tabs 多类型-带tab",
-                        "href": "../dataEdit/tab.html",
+                        "href": "../dataEdit/style1/tab.html",
                         "nodeIcon": "",
-                        "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    }
-                ]
-            },
-            {
-                "text": "Message 消息提示",
-                "href": "",
-                "nodeIcon": "",
-                "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
-                "selectable": true,
-                "state": {
-                    "selected": false,
-                    "expanded": true,
-                    "disabled": false
-                },
-                "nodes": [
-                    {
-                        "text": "Global 全局消息显示",
-                        "href": "../message/global-style1.html",
-                        "nodeIcon": "fa fa-info-circle",
-                        "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    },
-                    {
-                        "text": "Local 局部消息显示",
-                        "href": "../message/local-style1.html",
-                        "nodeIcon": "fa fa-info-circle",
-                        "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    }
-                ]
-            },
-            {
-                "text": "Notification 通知",
-                "href": "",
-                "nodeIcon": "",
-                "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
-                "selectable": true,
-                "state": {
-                    "selected": false,
-                    "expanded": true,
-                    "disabled": false
-                },
-                "nodes": [
-                    {
-                        "text": "Global 全局通知显示",
-                        "href": "../notification/global-style1.html",
-                        "nodeIcon": "fa fa-bullhorn",
-                        "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    },
-                    {
-                        "text": "Local 局部通知显示",
-                        "href": "../notification/local-style1.html",
-                        "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
                         "color": "",
                         "backgroundColor": "",
@@ -405,7 +405,7 @@
         "nodes": [
             {
                 "text": "TODO",
-                "href": "../layout/todo.html",
+                "href": "../todo/style1/todo.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "color": "",

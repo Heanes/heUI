@@ -27,13 +27,13 @@ Import([
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/xml/xml.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/javascript/javascript.js',
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/css/css.js',
-    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/htmlmixed/htmlmixed.js',
+    '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/htmlmixed/htmlmixed.js'
     // ****************************** 自己开发的 ******************************
-    // 消息提示
-    '../js/$.extend/$.message.js',
+    /*// 消息提示
+    '../../message/style1/js/$.extend/$.message.js',
     // notification 通知
-    '../js/$.extend/$.notification.js',
-    '../js/common/common.js'
+    '../../notification/style1/js/$.extend/$.notification.js',
+    '../js/common/common.js'*/
 ]);
 
 /**
@@ -46,6 +46,10 @@ function Import() {
     var head = document.body.getElementsByTagName('head');
     var cssTargetWrap = head[head.length];
     var $jsTarget = $('cite').find('script[id="importResource"]');
+    var $cssTarget = $('head').find('link[type="text/css"]').last();
+
+    var jsAdd = '';
+    var cssAdd = '';
     for (var i = 0; i < arguments.length; i++) {
         var argument = arguments[i];
         if (argument.length > 0) {
@@ -54,7 +58,8 @@ function Import() {
                     var scriptDom = document.createElement('script');
                     scriptDom.type = 'text/javascript';
                     scriptDom.src = item;
-                    $jsTarget.after('<script type="text/javascript" src="' + item + '"></script>');
+                    //$jsTarget.after('<script type="text/javascript" src="' + item + '"></script>');
+                    jsAdd += '<script type="text/javascript" src="' + item + '"></script>';
                     //appendAfter(scriptDom, jsTargetWrap[i+1]);
                 }
                 else if (item.match(/\.css$/i)) {
@@ -62,12 +67,15 @@ function Import() {
                     cssDom.type = 'text/css';
                     cssDom.href = item;
                     cssDom.ref = 'stylesheet';
-                    $('head').find('link[type="text/css"]').last().after('<link rel="stylesheet" type="text/css" href="' + item + '"></link>');
+                    //$cssTarget.after('<link rel="stylesheet" type="text/css" href="' + item + '"></link>');
+                    cssAdd += '<link rel="stylesheet" type="text/css" href="' + item + '"></link>';
                     //appendAfter(cssDom, cssTargetWrap[i+1]);
                 }
             });
         }
     }
+    jsAdd != '' ? $jsTarget.after(jsAdd) : null;
+    cssAdd != '' ? $cssTarget.after(cssAdd) : null;
 }
 
 /**
