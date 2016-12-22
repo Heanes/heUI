@@ -59,6 +59,83 @@
                                     <button type="button" class="btn btn-link">文字按钮</button>
                                 </div>
                             </div>
+                            <!-- 在线编辑并且运行的demo工具 -->
+                            <div class="code-online">
+                                <!-- 代码操作 -->
+                                <div class="code-group-handle">
+                                    <a href="javascript:;" class="run-code handle-btn">
+                                        <i class="fa fa-flask"></i>
+                                        <span class="handle-text">运行</span>
+                                    </a>
+                                </div>
+                                <div class="code-group">
+                                    <!-- 结果 -->
+                                    <div class="online-group-wrap half-line">
+                                        <div class="online-title">
+                                            <div class="title-content"><h3 class="title">result</h3></div>
+                                        </div>
+                                        <div class="online-content result"></div>
+                                    </div>
+                                    <!-- html -->
+                                    <div class="online-group-wrap half-line">
+                                        <div class="online-title">
+                                            <div class="title-content"><h3 class="title">html</h3></div>
+                                            <div class="code-handle">
+                                                <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="html" title="复制代码到剪贴板">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="online-content html">
+                                        <pre class="code-source-wrap">
+<code class="html">
+<button type="button" class="btn btn-normal">默认按钮</button>
+<button type="button" class="btn btn-primary">常规按钮</button>
+<button type="button" class="btn btn-link">文字按钮</button>
+</code>
+                                        </pre>
+                                            <textarea class="code-mirror-textarea" data-code-language="htmlmixed"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- javascript -->
+                                    <div class="online-group-wrap half-line">
+                                        <div class="online-title">
+                                            <div class="title-content"><h3 class="title">javascript</h3></div>
+                                            <div class="code-handle">
+                                                <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="javascript" title="复制代码到剪贴板">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="online-content javascript">
+                                        <pre class="code-source-wrap">
+<code class="javascript">
+</code>
+                                        </pre>
+                                            <textarea class="code-mirror-textarea" data-code-language="javascript"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- style and css -->
+                                    <div class="online-group-wrap half-line">
+                                        <div class="online-title">
+                                            <div class="title-content"><h3 class="title">css</h3></div>
+                                            <div class="code-handle">
+                                                <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="css" title="复制代码到剪贴板">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="online-content style">
+                                        <pre class="code-source-wrap">
+<code class="css">
+.example{background-color:#000;}
+</code>
+                                        </pre>
+                                            <textarea class="code-mirror-textarea" data-code-language="css"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="demo-group">
                             <div class="demo-title"><h2>有颜色</h2></div>
@@ -101,14 +178,14 @@
                                     <button type="button" class="btn btn-info">
                                         <i class="btn-icon fa fa-edit"></i>
                                     </button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="btn-icon fa fa-trash"></i>
-                                    </button>
                                     <button type="button" class="btn btn-info">
                                         <i class="btn-icon fa fa-search-plus"></i>
                                     </button>
                                     <button type="button" class="btn btn-info">
                                         <i class="btn-icon fa fa-clock-o"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="btn-icon fa fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
@@ -168,83 +245,6 @@
                                     <button type="button" class="btn btn-info is-loading">
                                         <i class="btn-icon icon-loading fa fa-spinner"></i>
                                     </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 在线编辑并且运行的demo工具 -->
-                        <div class="code-online">
-                            <!-- 代码操作 -->
-                            <div class="code-group-handle">
-                                <a href="javascript:;" class="run-code handle-btn">
-                                    <i class="fa fa-flask"></i>
-                                    <span class="handle-text">运行</span>
-                                </a>
-                            </div>
-                            <div class="code-group">
-                                <!-- 结果 -->
-                                <div class="online-group-wrap half-line">
-                                    <div class="online-title">
-                                        <div class="title-content"><h3 class="title">result</h3></div>
-                                    </div>
-                                    <div class="online-content result"></div>
-                                </div>
-                                <!-- html -->
-                                <div class="online-group-wrap half-line">
-                                    <div class="online-title">
-                                        <div class="title-content"><h3 class="title">html</h3></div>
-                                        <div class="code-handle">
-                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="html" title="复制代码到剪贴板">
-                                                <i class="fa fa-clipboard"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="online-content html">
-                                        <pre class="code-source-wrap">
-<code class="html">
-<button type="button" class="btn btn-normal">默认按钮</button>
-<button type="button" class="btn btn-primary">常规按钮</button>
-<button type="button" class="btn btn-text">文字按钮</button>
-</code>
-                                        </pre>
-                                        <textarea class="code-mirror-textarea" data-code-language="htmlmixed"></textarea>
-                                    </div>
-                                </div>
-                                <!-- javascript -->
-                                <div class="online-group-wrap half-line">
-                                    <div class="online-title">
-                                        <div class="title-content"><h3 class="title">javascript</h3></div>
-                                        <div class="code-handle">
-                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="javascript" title="复制代码到剪贴板">
-                                                <i class="fa fa-clipboard"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="online-content javascript">
-                                        <pre class="code-source-wrap">
-<code class="javascript">
-</code>
-                                        </pre>
-                                        <textarea class="code-mirror-textarea" data-code-language="javascript"></textarea>
-                                    </div>
-                                </div>
-                                <!-- style and css -->
-                                <div class="online-group-wrap half-line">
-                                    <div class="online-title">
-                                        <div class="title-content"><h3 class="title">css</h3></div>
-                                        <div class="code-handle">
-                                            <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="css" title="复制代码到剪贴板">
-                                                <i class="fa fa-clipboard"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="online-content style">
-                                        <pre class="code-source-wrap">
-<code class="css">
-.example{background-color:#000;}
-</code>
-                                        </pre>
-                                        <textarea class="code-mirror-textarea" data-code-language="css"></textarea>
-                                    </div>
                                 </div>
                             </div>
                         </div>
