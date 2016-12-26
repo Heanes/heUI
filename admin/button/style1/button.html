@@ -23,6 +23,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
 <link rel="stylesheet" type="text/css" href="css/button.css"/>
+<link rel="stylesheet" type="text/css" href="http://root.heanes.com/runCodeOnline.js/css/runCodeOnline.css"/>
 <title>按钮</title>
 </head>
 <body>
@@ -60,25 +61,25 @@
                                 </div>
                             </div>
                             <!-- 在线编辑并且运行的demo工具 -->
-                            <div class="code-online">
+                            <div class="run-code-online">
                                 <!-- 代码操作 -->
-                                <div class="code-group-handle">
+                                <div class="code-online-group-handle">
                                     <a href="javascript:;" class="run-code handle-btn">
                                         <i class="fa fa-flask"></i>
                                         <span class="handle-text">运行</span>
                                     </a>
                                 </div>
-                                <div class="code-group">
+                                <div class="code-online-group-content">
                                     <!-- 结果 -->
-                                    <div class="online-group-wrap half-line">
-                                        <div class="online-title">
+                                    <div class="code-wrap half-line">
+                                        <div class="code-title-wrap">
                                             <div class="title-content"><h3 class="title">result</h3></div>
                                         </div>
-                                        <div class="online-content result"></div>
+                                        <div class="code-content-wrap result"></div>
                                     </div>
                                     <!-- html -->
-                                    <div class="online-group-wrap half-line">
-                                        <div class="online-title">
+                                    <div class="code-wrap half-line">
+                                        <div class="code-title-wrap">
                                             <div class="title-content"><h3 class="title">html</h3></div>
                                             <div class="code-handle">
                                                 <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="html" title="复制代码到剪贴板">
@@ -86,7 +87,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="online-content html">
+                                        <div class="code-content-wrap html">
                                         <pre class="code-source-wrap">
 <code class="html">
 <button type="button" class="btn btn-normal">默认按钮</button>
@@ -98,8 +99,8 @@
                                         </div>
                                     </div>
                                     <!-- javascript -->
-                                    <div class="online-group-wrap half-line">
-                                        <div class="online-title">
+                                    <div class="code-wrap half-line">
+                                        <div class="code-title-wrap">
                                             <div class="title-content"><h3 class="title">javascript</h3></div>
                                             <div class="code-handle">
                                                 <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="javascript" title="复制代码到剪贴板">
@@ -107,7 +108,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="online-content javascript">
+                                        <div class="code-content-wrap javascript">
                                         <pre class="code-source-wrap">
 <code class="javascript">
 </code>
@@ -115,9 +116,9 @@
                                             <textarea class="code-mirror-textarea" data-code-language="javascript"></textarea>
                                         </div>
                                     </div>
-                                    <!-- style and css -->
-                                    <div class="online-group-wrap half-line">
-                                        <div class="online-title">
+                                    <!-- css -->
+                                    <div class="code-wrap half-line">
+                                        <div class="code-title-wrap">
                                             <div class="title-content"><h3 class="title">css</h3></div>
                                             <div class="code-handle">
                                                 <a href="javascript:;" class="handle-btn copy-to-clipboard" data-clipboard-source-code="css" title="复制代码到剪贴板">
@@ -125,7 +126,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="online-content style">
+                                        <div class="code-content-wrap css">
                                         <pre class="code-source-wrap">
 <code class="css">
 .example{background-color:#000;}
@@ -272,7 +273,7 @@
     <script type="application/javascript">
 
         $(function () {
-            var $codeOnline = $('.code-online');
+            var $codeOnline = $('.run-code-online');
             var $runCode = $codeOnline.find('.run-code');
             var $result = $codeOnline.find('.result');
             var codes = {
@@ -285,7 +286,6 @@
                 var codeSource = $(item).parent().find('.code-source-wrap code').html();
                 codeSource = removeFirstBreakLineChar(codeSource);
                 $(item).text(codeSource);
-                var codeEditor = 'codeEditor' + i;
                 var modeOrigin = $(item).attr('data-code-language') ? $(item).attr('data-code-language') : '';
                 var mode;
                 if(modeOrigin == 'htmlmixed'){
@@ -299,7 +299,7 @@
                 }else{
                     mode = modeOrigin;
                 }
-                codeEditor = CodeMirror.fromTextArea(item, {
+                var codeEditor = CodeMirror.fromTextArea(item, {
                     lineNumbers: true,
                     mode: mode,
                     matchBrackets: true,
@@ -341,9 +341,6 @@
                     var sourceCodeKey = $(trigger).attr('data-clipboard-source-code');
                     return codes[sourceCodeKey] || '';
                 }
-            });
-            $copyToClipboardBtn.each(function (i, item) {
-                var $onlineGroupWrap = $(item).closest('.online-group-wrap');
             });
 
             /**

@@ -4,9 +4,8 @@
  * @author Heanes
  * @time 2016-11-29 10:16:42 周二
  */
-
+html,body{margin:0;padding:0;}
 .main-content .center-block.right-content{padding:20px;}
-
 .box-normal{box-shadow:0 0 2px 2px rgba(225,225,225,0.5);border-radius:4px;}
 
 /****************************** 面包屑导航 2016-09-09 00:00:47 ******************************/
@@ -29,6 +28,7 @@
 
 /****************************** 在线运行demo展示样式 ******************************/
 /* 代码实时高亮工具codeMirror 样式重写 */
+/*
 .CodeMirror{height:inherit;}
 .code-online{margin:10px 0;font-size:0;}
 
@@ -50,4 +50,4 @@
 .code-online .online-group-wrap.half-line{display:inline-block;vertical-align:top;font-size:initial;width:50%;min-height:100px;height:200px}
 .code-online .online-group-wrap .online-content.result{padding:10px;}
 .code-online .online-group-wrap .online-content .code-source-wrap{display:none;}
-.code-online .half-line textarea{width:100%;resize:none;height:100%;}
+.code-online .half-line textarea{width:100%;resize:none;height:100%;}*/
