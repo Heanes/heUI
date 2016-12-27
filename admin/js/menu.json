@@ -4,10 +4,6 @@
         "href": "",
         "nodeIcon": "",
         "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
         "selectable": true,
         "state": {
             "selected": false,
@@ -20,10 +16,6 @@
                 "href": "../layout/guide.html",
                 "nodeIcon": "fa fa-balance-scale",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -38,10 +30,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -50,14 +38,24 @@
                 },
                 "nodes": [
                     {
+                        "text": "Icon 图标",
+                        "href": "../icon/style1/icon.html",
+                        "nodeIcon": "fa fa-flag",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
                         "text": "Button 按钮",
                         "href": "../button/style1/button.html",
                         "nodeIcon": "fa fa-stop-circle",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -72,10 +70,34 @@
                         "href": "../text/style1/text.html",
                         "nodeIcon": "fa fa-text-width",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "Form 表单",
+                "href": "",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "Input 输入框",
+                        "href": "../input/style1/input.html",
+                        "nodeIcon": "fa fa-i-cursor",
+                        "iconSelected": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -86,14 +108,66 @@
                         ]
                     },
                     {
-                        "text": "Icon 图标",
-                        "href": "../icon/style1/icon.html",
-                        "nodeIcon": "fa fa-flag",
+                        "text": "Radio 单选框",
+                        "href": "../radio/style1/radio.html",
+                        "nodeIcon": "fa fa-dot-circle-o",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Checkbox 多选框",
+                        "href": "../checkbox/style1/checkbox.html",
+                        "nodeIcon": "fa fa-check-square",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Select 下拉选择",
+                        "href": "../select/style1/select.html",
+                        "nodeIcon": "fa fa-toggle-down",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Textarea 文本域",
+                        "href": "../textarea/style1/textarea.html",
+                        "nodeIcon": "fa fa-square-o",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Switch 开关切换器",
+                        "href": "../switch/style1/switch.html",
+                        "nodeIcon": "fa fa-toggle-on",
+                        "iconSelected": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -110,10 +184,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -126,10 +196,6 @@
                         "href": "../message/style1/global.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -143,10 +209,6 @@
                         "href": "../message/style1/local.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -162,10 +224,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -178,10 +236,6 @@
                         "href": "../notification/style1/global.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -195,10 +249,6 @@
                         "href": "../notification/style1/local.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -214,10 +264,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -230,10 +276,6 @@
                         "href": "../dataList/style1/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -248,10 +290,6 @@
                         "href": "../dataList/style1/pictureList.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -268,10 +306,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -284,10 +318,6 @@
                         "href": "../dataEdit/style1/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -301,10 +331,6 @@
                         "href": "../dataEdit/style1/tab.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -320,10 +346,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -336,10 +358,6 @@
                         "href": "../404/style1/404.html",
                         "nodeIcon": "fa fa-warning",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -355,10 +373,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -371,10 +385,6 @@
                         "href": "../pageTips/browserIsTooOld/style1/browserIsTooOld.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -392,10 +402,6 @@
         "href": "",
         "nodeIcon": "",
         "iconSelected": "",
-        "color": "",
-        "backgroundColor": "",
-        "colorOnHover": "",
-        "backgroundColorOnHover": "",
         "selectable": true,
         "state": {
             "selected": false,
@@ -408,10 +414,6 @@
                 "href": "../todo/style1/todo.html",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -425,10 +427,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -441,10 +439,6 @@
                         "href": "../tabsDemo/page1.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -458,10 +452,6 @@
                         "href": "../tabsDemo/page2.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -475,10 +465,6 @@
                         "href": "../tabsDemo/page3.html",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -492,10 +478,6 @@
                         "href": "https://www.taobao.com",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -512,10 +494,6 @@
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
-                "color": "",
-                "backgroundColor": "",
-                "colorOnHover": "",
-                "backgroundColorOnHover": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
@@ -528,10 +506,6 @@
                         "href": "https://www.taobao.com/",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
@@ -545,10 +519,6 @@
                         "href": "https://www.baidu.com/",
                         "nodeIcon": "",
                         "iconSelected": "",
-                        "color": "",
-                        "backgroundColor": "",
-                        "colorOnHover": "",
-                        "backgroundColorOnHover": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
