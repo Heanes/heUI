@@ -176,6 +176,104 @@
                         },
                         "nodes": [
                         ]
+                    },
+                    {
+                        "text": "TimePicker 时间选择器",
+                        "href": "../timePicker/style1/timePicker.html",
+                        "nodeIcon": "fa fa-calendar",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "DatePicker 日期选择器",
+                        "href": "../datePicker/style1/datePicker.html",
+                        "nodeIcon": "fa fa-calendar",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "DateTimePicker 日期时间选择器",
+                        "href": "../dateTimePicker/style1/dateTimePicker.html",
+                        "nodeIcon": "fa fa-calendar",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "ColorPicker 颜色拾取器",
+                        "href": "../colorPicker/style1/colorPicker.html",
+                        "nodeIcon": "fa fa-tachometer",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Rate 评分",
+                        "href": "../rate/style1/rate.html",
+                        "nodeIcon": "fa fa-star-half-o",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "Data 数据",
+                "href": "",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "Table 表格",
+                        "href": "../table/style1/table.html",
+                        "nodeIcon": "fa fa-table",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
                     }
                 ]
             },

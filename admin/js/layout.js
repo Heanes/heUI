@@ -161,13 +161,15 @@ $(function () {
      * @type {*}
      */
     var lapHandleClick = false;
+    var $leftWith = $('.left-width');
+    var leftWidth = $leftWith.css('width');
     $('#lapLeftMenu').on('click', function () {
         if(lapHandleClick){
             $leftBlock.animate({
-                'width': '240px'
+                'width': leftWidth
             });
             $centerBlock.animate({
-                'padding-left': '240px'
+                'padding-left': leftWidth
             });
             lapHandleClick = false;
         }else{
