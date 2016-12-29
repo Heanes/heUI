@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+/**
+ * @doc 图标样式
+ * @author Heanes
+ * @time 2016-12-29 20:09:03 周四
+ */
+.fontawesome-icon-list .fa-hover a{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:block;
+    color:#222;
+    line-height:32px;
+    height:32px;
+    padding-left:10px;
+    border-radius:4px
+}
