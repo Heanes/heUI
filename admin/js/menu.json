@@ -274,11 +274,53 @@
                         },
                         "nodes": [
                         ]
+                    },
+                    {
+                        "text": "Pagination 分页",
+                        "href": "../pagination/style1/pagination.html",
+                        "nodeIcon": "fa fa-chevron-circle-right",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Progress 进度条",
+                        "href": "../progress/style1/progress.html",
+                        "nodeIcon": "fa fa-adjust",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Badge 标记",
+                        "href": "../badge/style1/badge.html",
+                        "nodeIcon": "fa fa-superscript",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
                     }
                 ]
             },
             {
-                "text": "Message 消息提示",
+                "text": "Notice 消息通知",
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
@@ -289,6 +331,45 @@
                     "disabled": false
                 },
                 "nodes": [
+                    {
+                        "text": "Notification 通知",
+                        "href": "../notification/style1/notification.html",
+                        "nodeIcon": "fa fa-bullhorn",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "Loading 加载中",
+                        "href": "../loading/style1/loading.html",
+                        "nodeIcon": "fa fa-hourglass-half",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
+                    {
+                        "text": "MessageBox 消息弹框",
+                        "href": "../messageBox/style1/messageBox.html",
+                        "nodeIcon": "fa fa-window-restore",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    },
                     {
                         "text": "Global 全局消息显示",
                         "href": "../message/style1/global.html",
@@ -318,7 +399,7 @@
                 ]
             },
             {
-                "text": "Notification 通知",
+                "text": "Navigation 导航",
                 "href": "",
                 "nodeIcon": "",
                 "iconSelected": "",
@@ -330,9 +411,9 @@
                 },
                 "nodes": [
                     {
-                        "text": "Global 全局通知显示",
-                        "href": "../notification/style1/global.html",
-                        "nodeIcon": "fa fa-bullhorn",
+                        "text": "NavMenu 导航菜单",
+                        "href": "../navMenu/style1/navMenu.html",
+                        "nodeIcon": "fa fa-link",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -340,12 +421,13 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "nodes": []
+                        "nodes": [
+                        ]
                     },
                     {
-                        "text": "Local 局部通知显示",
-                        "href": "../notification/style1/local.html",
-                        "nodeIcon": "fa fa-bullhorn",
+                        "text": "Tabs 标签切换",
+                        "href": "../tabs/style1/tabs.html",
+                        "nodeIcon": "fa fa-object-ungroup",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -353,7 +435,50 @@
                             "expanded": true,
                             "disabled": false
                         },
-                        "nodes": []
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Breadcrumb 面包屑",
+                        "href": "../breadcrumb/style1/breadcrumb.html",
+                        "nodeIcon": "fa fa-space-shuttle",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Dropdown 下拉菜单",
+                        "href": "../dropdwon/style1/dropdwon.html",
+                        "nodeIcon": "fa fa-chevron-down",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Steps 步骤",
+                        "href": "../steps/style1/steps.html",
+                        "nodeIcon": "fa fa-random",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
                     }
                 ]
             },
