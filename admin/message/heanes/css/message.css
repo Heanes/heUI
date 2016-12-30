@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/**
+ * @doc 提示信息
+ * @author Heanes
+ * @time 2015-12-01 20:12:06
+ */
+/************************ 局部消息样式 ************************/
+.message-wrap{margin-bottom:10px;}
+.message-wrap:last-child{margin-bottom:0}
+.ui-heanes-message{position:relative;display:block;border:1px solid;text-align:initial;}
+.ui-heanes-message.message-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}
+.ui-heanes-message.message-info{color:#31708f;background-color:#d9edf7;border-color:#bce8f1}
+.ui-heanes-message.message-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}
+.ui-heanes-message.message-error{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
+.ui-heanes-message .message-handle .btn-close{position:absolute;right:2px;top:2px;font-size:17px;font-weight:300;height:20px;width:20px;line-height:20px;text-align:center;vertical-align:middle;font-family:arial,sans-serif;cursor:pointer;border-radius:50%}
+.ui-heanes-message .message-handle .btn-close:hover{background-color:#d9534f;color:#fff}
+.ui-heanes-message .message-content{}
+.ui-heanes-message .message-content .message-icon-wrap,
+.ui-heanes-message .message-content .message-content-wrap{display:inline-block;padding:14px 0;}
+.ui-heanes-message .message-content .message-icon-wrap{width:48px;text-align:center;}
+.ui-heanes-message.message-success .message-content .message-icon-wrap{background-color:#13ce66;}
+.ui-heanes-message.message-info .message-content .message-icon-wrap{background-color:#50bfff;}
+.ui-heanes-message.message-warning .message-content .message-icon-wrap{background-color:#f7ba2a;}
+.ui-heanes-message.message-error .message-content .message-icon-wrap{background-color:#ff4949;}
+.ui-heanes-message .message-content .message-icon-wrap .icon-background{width:24px;height:24px;line-height:24px;border-radius:50%;background-color:#fff;margin:0 auto;}
+.ui-heanes-message .message-content .message-content-wrap{}
+.ui-heanes-message .message-content .message-content-wrap p{margin:0}
+
+/************************ 全局顶部消息样式 ************************/
+.message-global{z-index:100;position:fixed;top:0;text-align:center;width:100%;}
+.message-global .message-wrap{margin-bottom:2px;}
+.message-global .ui-heanes-message{display:inline-block;padding:10px 40px 10px 20px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}

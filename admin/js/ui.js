@@ -30,9 +30,9 @@ Import([
     '/public/static/libs/js/codeHighLight/codeMirror/5.21.0/mode/htmlmixed/htmlmixed.js'
     // ****************************** 自己开发的 ******************************
     /*// 消息提示
-    '../../message/style1/js/$.extend/$.message.js',
+    '../../message/heanes/js/$.extend/$.message.js',
     // notification 通知
-    '../../notification/style1/js/$.extend/$.notification.js',
+    '../../notification/heanes/js/$.extend/$.notification.js',
     '../js/common/common.js'*/
 ]);
 

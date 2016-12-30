@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)"/>
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes"/>
+    <meta name="description" content="描述，不超过150个字符"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style/style-2016.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="../../button/heanes/css/button.css"/>
+    <title>提示信息-全局展示</title>
+</head>
+<body>
+<div class="center wrap">
+    <!-- S 头部 S -->
+    <div class="header">
+        <!-- 顶部操作/导航/工具栏 -->
+        <div class="top-toolbar"></div>
+        <!-- 顶部导航栏 -->
+        <div class="header-nav-bar"></div>
+    </div>
+    <!-- E 头部 E-->
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="demo-wrap">
+                    <div class="demo-title"><h1>提示信息</h1></div>
+                    <div class="demo-desc">
+                        <p class="desc">显示在页面顶部的消息提示。</p>
+                    </div>
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">普通用法，默认3秒后自动消失，消失过程的动画时间默认为0.5秒。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <button type="button" class="btn btn-info show-message-success">
+                                        <i class="btn-icon fa fa-info-circle"></i><span class="btn-text">显示提示</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success show-message-info">
+                                        <i class="btn-icon fa fa-check-square"></i><span class="btn-text">显示成功</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warn show-message-warn">
+                                        <i class="btn-icon fa fa-warning"></i><span class="btn-text">显示警告</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger show-message-error">
+                                        <i class="btn-icon fa fa fa-times-circle"></i><span class="btn-text">显示错误</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>不自动关闭</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">设置为不自动关闭。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <button type="button" class="btn btn-info show-message-success-no-close">
+                                        <i class="btn-icon fa fa-info-circle"></i><span class="btn-text">显示提示</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success show-message-info-no-close">
+                                        <i class="btn-icon fa fa-check-square"></i><span class="btn-text">显示成功</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warn show-message-warn-no-close">
+                                        <i class="btn-icon fa fa-warning"></i><span class="btn-text">显示警告</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger show-message-error-no-close">
+                                        <i class="btn-icon fa fa fa-times-circle"></i><span class="btn-text">显示错误</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/ui.js" id="importResource"></script>
+    <script type="application/javascript">
+        Import([
+            // 消息提示
+            '../../js/common/common.js',
+            'js/$.extend/$.message.js',
+            'js/demo.message.js',
+            'css/message.css'
+        ]);
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>
