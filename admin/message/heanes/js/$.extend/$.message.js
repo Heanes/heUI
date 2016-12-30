@@ -9,15 +9,16 @@ $.extend({
     // 消息常量
     messageConstants: {
         type: {
-            success:    'success',
-            info:       'info',
-            warn:       'warn',
-            error:      'error'
+            success:    'success',  // 成功
+            info:       'info',     // 提示
+            warn:       'warn',     // 警告
+            error:      'error',    // 错误
+            loading:    'loading'   // 加载中
         },
         classPrefix:    'ui-heanes-',
         // 为messagePlus使用
         defaultParams: {
-            content:        'this is a message', // string || object(jQuery) 消息内容
+            content:        'This is a message', // string || object(jQuery) 消息内容
             type:           'info',             // string success||error||warn||info消息类型
             show:           3000,               // int 展示时间，单位为毫秒
             autoClose:      true,               // boolean 是否自动关闭
