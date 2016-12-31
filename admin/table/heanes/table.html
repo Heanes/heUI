@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)">
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes">
+    <meta name="description" content="描述">
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style/style-2016.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="css/table.css"/>
+    <title>Table 表格</title>
+</head>
+<body>
+<div class="center wrap">
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 顶部全宽度内容区域 -->
+        <div class="main-top-block"></div>
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 左侧区域 -->
+            <div class="left-block left-wrap left-width"></div>
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="demo-wrap">
+                    <div class="demo-title"><h1>Table 表格</h1></div>
+                    <div class="demo-desc">
+                        <p class="desc">用于数据展示的各种样式的表格。</p>
+                    </div>
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">表格的展示，注意到需要加<code class="highlight">.table</code>样式，没有直接对<code class="highlight">table</code>标签添加样式，因为考虑到某些日期选择器及其他组件会使用table，所以不应该对其有影响。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>列头1</th>
+                                            <th>列头2</th>
+                                            <th>列头3</th>
+                                            <th>列头4</th>
+                                            <th>列头5</th>
+                                            <th>列头6</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>行1-1</td>
+                                            <td>行1-2</td>
+                                            <td>行1-3</td>
+                                            <td>行1-4</td>
+                                            <td>行1-5</td>
+                                            <td>行1-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>行2-1</td>
+                                            <td>行2-2</td>
+                                            <td>行2-3</td>
+                                            <td>行2-4</td>
+                                            <td>行2-5</td>
+                                            <td>行2-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>行3-1</td>
+                                            <td>行3-2</td>
+                                            <td>行3-3</td>
+                                            <td>行3-4</td>
+                                            <td>行3-5</td>
+                                            <td>行3-6</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>有边框</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">每个单元格都带有边框。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>列头1</th>
+                                            <th>列头2</th>
+                                            <th>列头3</th>
+                                            <th>列头4</th>
+                                            <th>列头5</th>
+                                            <th>列头6</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>行1-1</td>
+                                            <td>行1-2</td>
+                                            <td>行1-3</td>
+                                            <td>行1-4</td>
+                                            <td>行1-5</td>
+                                            <td>行1-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>行2-1</td>
+                                            <td>行2-2</td>
+                                            <td>行2-3</td>
+                                            <td>行2-4</td>
+                                            <td>行2-5</td>
+                                            <td>行2-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>行3-1</td>
+                                            <td>行3-2</td>
+                                            <td>行3-3</td>
+                                            <td>行3-4</td>
+                                            <td>行3-5</td>
+                                            <td>行3-6</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>条纹状表格</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">间隔行带有间隔颜色。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>列头1</th>
+                                            <th>列头2</th>
+                                            <th>列头3</th>
+                                            <th>列头4</th>
+                                            <th>列头5</th>
+                                            <th>列头6</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>行1-1</td>
+                                            <td>行1-2</td>
+                                            <td>行1-3</td>
+                                            <td>行1-4</td>
+                                            <td>行1-5</td>
+                                            <td>行1-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>行2-1</td>
+                                            <td>行2-2</td>
+                                            <td>行2-3</td>
+                                            <td>行2-4</td>
+                                            <td>行2-5</td>
+                                            <td>行2-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>行3-1</td>
+                                            <td>行3-2</td>
+                                            <td>行3-3</td>
+                                            <td>行3-4</td>
+                                            <td>行3-5</td>
+                                            <td>行3-6</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>鼠标悬停</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">间隔行带有间隔颜色，同时鼠标浮上时做出对应变化。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>列头1</th>
+                                            <th>列头2</th>
+                                            <th>列头3</th>
+                                            <th>列头4</th>
+                                            <th>列头5</th>
+                                            <th>列头6</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>行1-1</td>
+                                            <td>行1-2</td>
+                                            <td>行1-3</td>
+                                            <td>行1-4</td>
+                                            <td>行1-5</td>
+                                            <td>行1-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>行2-1</td>
+                                            <td>行2-2</td>
+                                            <td>行2-3</td>
+                                            <td>行2-4</td>
+                                            <td>行2-5</td>
+                                            <td>行2-6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>行3-1</td>
+                                            <td>行3-2</td>
+                                            <td>行3-3</td>
+                                            <td>行3-4</td>
+                                            <td>行3-5</td>
+                                            <td>行3-6</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="right-block right-wrap"></div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="main-bottom-content main-wrap"></div>
+        <!-- 底部全宽度内容区域 -->
+        <div class="main-bottom-block"></div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/ui.js" id="importResource"></script>
+    <script type="application/javascript">
+        Import([
+            // 消息提示
+            '../../js/common/common.js'
+        ]);
+        $(function () {
+        });
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>
