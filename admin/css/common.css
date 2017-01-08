@@ -20,7 +20,7 @@ html,body{margin:0;padding:0;}
 /****************************** demo展示样式 ******************************/
 .demo-wrap{padding:20px;font-weight:400;}
 .demo-wrap .demo-title{margin:14px 0;}
-.demo-wrap .demo-desc{color:#444;}
+.demo-wrap .demo-desc{color:#444;margin-bottom:10px;line-height:20px;}
 .demo-wrap .demo-group{margin-top:40px;}
 .demo-wrap .demo-group .demo-group-title{margin:14px 0;}
 .demo-wrap .demo-content{}

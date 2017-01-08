@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/**
+ * @doc 分页样式
+ * @author Heanes
+ * @time 2017-01-07 18:28:05 周六
+ */
+.pagination{margin:10px 0;}
+
+/* 翻页 */
+.pagination .pagination-link{font-size:0;}
+.pagination .pagination-link .p{display:inline-block;padding:10px 12px;margin:0 4px;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
+.pagination .pagination-link .p:hover{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
+.pagination .pagination-link .page-link-ellipsis{padding:10px 4px;margin:0 4px;font-size:14px;}
+
+/* 分页信息 */
+.pagination .pagination-info{}
+
+/* 快速分页 */
+.pagination .pagination-quick-link{}
