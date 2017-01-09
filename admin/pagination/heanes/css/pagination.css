@@ -4,16 +4,37 @@
  * @author Heanes
  * @time 2017-01-07 18:28:05 周六
  */
-.pagination{margin:10px 0;}
-
+.pagination{margin:10px 0;display:inline-block;}
+.pagination .pagination-link,
+.pagination .pagination-info,
+.pagination .pagination-quick-link{display:inline-block;}
 /* 翻页 */
 .pagination .pagination-link{font-size:0;}
-.pagination .pagination-link .p{display:inline-block;padding:10px 12px;margin:0 4px;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
-.pagination .pagination-link .p:hover{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
-.pagination .pagination-link .page-link-ellipsis{padding:10px 4px;margin:0 4px;font-size:14px;}
+.pagination .pagination-link .p{display:inline-block;padding:10px 12px;margin:0 4px;color:#3377aa;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
+.pagination .pagination-link .p:hover,
+.pagination .pagination-link .p.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
+.pagination .pagination-link .p.page-link-ellipsis{border-width:0;padding:10px 4px;cursor:text;}
+.pagination .pagination-link .p.page-link-ellipsis:hover{color:inherit;background-color:inherit;}
+.pagination .pagination-link .p.disabled{color:#777;cursor:default;}
+.pagination .pagination-link .p.disabled:hover{color:#999;background-color:unset;}
+
+/* 紧凑型表格样式 */
+.pagination.table-tight .pagination-link{display:inline-block;}
+.pagination.table-tight .pagination-link .p{margin:0;border-radius:0;border:1px solid #ddd;border-left-width:0;}
+.pagination.table-tight .pagination-link .p:last-child{}
+.pagination.table-tight .pagination-link .p:first-child{border-left-width:1px;}
+.pagination.table-tight .pagination-link .p:hover{background-color:#eee;color:#3377aa;}
+.pagination.table-tight .pagination-link .p.current,
+.pagination.table-tight .pagination-link .p.current:hover{color:#fff;background-color:#00a1d6;border-color:#ddd;}
+.pagination.table-tight .pagination-link .p.current{border-color:#00a1d6;}
+.pagination.table-tight .pagination-link .p.disabled{color:#777;cursor:default;}
+.pagination.table-tight .pagination-link .p.disabled:hover{color:#999;background-color:unset;}
 
 /* 分页信息 */
-.pagination .pagination-info{}
+.pagination .pagination-info{font-size:0}
+.pagination .pagination-info .text{font-size:13px;}
+.pagination .pagination-info input[type="text"]{width:auto;}
 
 /* 快速分页 */
-.pagination .pagination-quick-link{}
+.pagination .pagination-quick-link{font-size:0}
+.pagination .pagination-quick-link .text{font-size:13px;}
