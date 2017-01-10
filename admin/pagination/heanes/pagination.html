@@ -70,7 +70,7 @@
                                     <!-- 分页区域 -->
                                     <div class="pagination table-tight">
                                         <div class="pagination-link">
-                                            <a href="javascript:;" class="p">上一页</a>
+                                            <a href="javascript:;" class="p p-nav prev disabled">上一页</a>
                                             <a href="javascript:;" class="p current">1</a>
                                             <a href="javascript:;" class="p">2</a>
                                             <a href="javascript:;" class="p">3</a>
@@ -78,7 +78,7 @@
                                             <a href="javascript:;" class="p">8</a>
                                             <a href="javascript:;" class="p">9</a>
                                             <a href="javascript:;" class="p">10</a>
-                                            <a href="javascript:;" class="p">下一页</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                     <!-- 分页区域 -->
                                     <div class="pagination table-tight">
                                         <div class="pagination-link">
-                                            <a href="javascript:;" class="p disabled"><<</a>
+                                            <a href="javascript:;" class="p p-nav prev disabled"><<</a>
                                             <a href="javascript:;" class="p">1</a>
                                             <a href="javascript:;" class="p">2</a>
                                             <a href="javascript:;" class="p current">3</a>
@@ -94,7 +94,7 @@
                                             <a href="javascript:;" class="p">8</a>
                                             <a href="javascript:;" class="p">9</a>
                                             <a href="javascript:;" class="p">10</a>
-                                            <a href="javascript:;" class="p">>></a>
+                                            <a href="javascript:;" class="p p-nav next">>></a>
                                         </div>
                                     </div>
                                 </div>
@@ -109,8 +109,14 @@
                                 <div class="demo-one">
                                     <!-- 分页区域 -->
                                     <div class="pagination table-tight">
+                                        <!-- 分页信息 -->
+                                        <div class="pagination-info">
+                                            <span class="text">共<strong>98</strong>条</span><span class="text">，</span>
+                                            <span class="text">第<strong>2</strong>/<strong>10</strong>页</span>
+                                        </div>
+                                        <!-- 分页 -->
                                         <div class="pagination-link">
-                                            <a href="javascript:;" class="p">上一页</a>
+                                            <a href="javascript:;" class="p p-nav prev">上一页</a>
                                             <a href="javascript:;" class="p">1</a>
                                             <a href="javascript:;" class="p current">2</a>
                                             <a href="javascript:;" class="p">3</a>
@@ -118,27 +124,58 @@
                                             <a href="javascript:;" class="p">8</a>
                                             <a href="javascript:;" class="p">9</a>
                                             <a href="javascript:;" class="p">10</a>
-                                            <a href="javascript:;" class="p">下一页</a>
-                                        </div>
-                                        <!-- 分页信息 -->
-                                        <div class="pagination-info">
-                                            <span class="text">第<strong>1</strong>/<strong>10</strong>页</span>
-                                            <span class="text">，</span>
-                                            <span class="text">共<strong>98</strong>条记录</span>
-                                            <span class="text">，</span>
-                                            <span class="text">每页<input type="text" value="20" />条<button type="button" class="btn-sure">确定</button></span>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
                                         </div>
                                         <!-- 快速跳转 -->
                                         <div class="pagination-quick-link">
-                                            <span class="text">到第<input type="text" value="2" />/10页<button type="button" class="btn-sure">确定</button> </span>
+                                            <span class="text">每页<input type="text" value="10" />条</span>
+                                            <span class="text">，</span>
+                                            <span class="text">到第<input type="text" value="2" />/10页 </span>
+                                            <span class="text"><button type="button" class="btn-sure">确定</button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination table-tight">
+                                        <!-- 分页信息 -->
+                                        <div class="pagination-info">
+                                            <span class="text">共<strong>98</strong>条</span><span class="text">，</span>
+                                            <span class="text">第<strong>3</strong>/<strong>10</strong>页</span>
+                                        </div>
+                                        <!-- 分页 -->
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev">上一页</a>
+                                            <a href="javascript:;" class="p">1</a>
+                                            <a href="javascript:;" class="p">2</a>
+                                            <a href="javascript:;" class="p current">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
+                                        </div>
+                                        <!-- 快速跳转 -->
+                                        <div class="pagination-quick-link">
+                                            <span class="text">每页
+                                                <select>
+                                                    <option value="1">10</option>
+                                                    <option value="2">20</option>
+                                                    <option value="3">40</option>
+                                                    <option value="4">60</option>
+                                                    <option value="4">80</option>
+                                                    <option value="4">100</option>
+                                                </select>
+                                                条</span>
                                             <span class="text">，</span>
                                             <span class="text">到第
                                                 <select>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3" selected>3</option>
+                                                    <option value="4">4</option>
                                                 </select>页
+                                                <button type="button" class="btn-sure">确定</button>
                                             </span>
                                         </div>
                                     </div>
