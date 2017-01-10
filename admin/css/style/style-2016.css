@@ -5,10 +5,10 @@
  * @time 2016-11-29 11:48:07 周二
  */
 
-
 /* 字体样式 */
 body,button,input,select,textarea{
-    font:14px/1.3 sans-serif,Microsoft Yahei,Arial,Verdana,tahoma,Helvetica;
+    /*font:14px/1.3 sans-serif,Microsoft Yahei,Arial,Verdana,tahoma,Helvetica;*/
+    font:14px/1.3 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
     color:#333;
 }
 *{
