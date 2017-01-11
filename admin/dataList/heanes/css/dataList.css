@@ -6,15 +6,6 @@
  * @author Heanes
  * @time 2016-09-06 11:53:56 周二
 
-/* 面包屑导航 2016-09-09 00:00:47 */
-.page-crumbs{padding:10px;margin-bottom:20px;}
-.page-crumbs.bg-normal{background-color:#f5f5f5;border:1px solid #ddd;}
-.page-crumbs .crumbs-list{margin:0;list-style:none;}
-.page-crumbs .crumbs-list li,
-.page-crumbs .crumbs-list li .crumbs-href,
-.page-crumbs .crumbs-list li .crumbs-separator{display:inline-block;vertical-align:middle;}
-.page-crumbs .crumbs-list li .crumbs-separator{margin:0 6px;}
-
 /* 查询表单 */
 .search-form{position:relative;margin-bottom:20px;background-color:#f5f5f5;}
 .search-form.bg-normal{background-color:#f5f5f5;border:1px solid #ddd;}
@@ -88,6 +79,5 @@
 .turn-page .page-info{margin-top:20px;}
 .turn-page .page-info .page-info-btn{vertical-align:top;}
 .turn-page .page-info .input-page-size{width:40px;margin:0 3px;}
-.turn-page .page-quick-link .quick-input{width:30px;margin:0 3px;}
-.turn-page .page-quick-link .quick-link-btn{vertical-align:top;margin:0 3px;}
-.turn-page .page-quick-link .quick-select{display:inline-block;width:auto;line-height:inherit;height:inherit;font-size:inherit;padding:2px 4px;}
+.turn-page .page-info .quick-input{width:30px;margin:0 3px;}
+.turn-page .page-info .quick-select{display:inline-block;width:auto;line-height:inherit;height:inherit;font-size:inherit;padding:2px 4px;}
