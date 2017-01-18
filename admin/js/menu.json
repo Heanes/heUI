@@ -1,6 +1,6 @@
 [
     {
-        "text": "Usually 常用功能",
+        "text": "Usually 常用",
         "href": "",
         "nodeIcon": "",
         "iconSelected": "",
@@ -69,6 +69,20 @@
                         "text": "Text 文本",
                         "href": "../text/heanes/text.html",
                         "nodeIcon": "fa fa-text-width",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Scrollbar 滚动条",
+                        "href": "../scrollbar/heanes/scrollbar.html",
+                        "nodeIcon": "fa fa-arrows-v",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -617,6 +631,72 @@
                         "nodes": []
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "text": "Component 组件",
+        "href": "",
+        "nodeIcon": "",
+        "iconSelected": "",
+        "selectable": true,
+        "state": {
+            "selected": false,
+            "expanded": true,
+            "disabled": false
+        },
+        "nodes": [
+            {
+                "text": "ModalDialog 弹出层",
+                "href": "../modalDialog/heanes/modalDialog.html",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": []
+            },
+            {
+                "text": "Tooltip 文字提示",
+                "href": "../tooltip/heanes/tooltip.html",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": []
+            },
+            {
+                "text": "DragLayer 拖拽层",
+                "href": "../dragLayer/heanes/dragLayer.html",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": []
+            },
+            {
+                "text": "Tree 树列表",
+                "href": "../tree/heanes/tree.html",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": []
             }
         ]
     },
