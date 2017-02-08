@@ -1,6 +1,29 @@
 @charset "UTF-8";
 /**
- * @doc
+ * @doc 滚动条样式
+ * @see http://www.xuanfengge.com/css3-webkit-scrollbar.html
  * @author Heanes
- * @time
+ * @time 2017-01-26 11:12:00 周四
  */
+.scrollbar::-webkit-scrollbar-track{
+    box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    border-radius:10px;
+    -webkit-border-radius:10px;
+}
+.scrollbar::-webkit-scrollbar{
+    width:10px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    background:rgba(0,0,0,.39);
+    border-radius:10px;
+    -webkit-border-radius:10px;
+}
+
+.scrollbar.scrollbar-mini::-webkit-scrollbar-track{
+}
+.scrollbar.scrollbar-mini::-webkit-scrollbar{
+    width:6px;
+}
+.scrollbar.scrollbar-mini::-webkit-scrollbar-thumb{
+}

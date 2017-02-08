@@ -15,24 +15,25 @@ body,button,input,select,textarea{
     box-sizing:border-box
 }
 
+/* 标题样式 */
 h1,h2,h3,h4,h5,h6{font-weight:300;}
 
 /* 文字被选中样式 */
-::selection{
+/*::selection{
     background:#3e99ff;
     color:#fff;
-}
+}*/
 ::selection{
     background:#447099;
     color:#fff;
 }
 ::-moz-selection{
     background:#447099;
-    color:#f00;
+    color:#fff;
 }
 
 /* 滚动条样式 */
-::-webkit-scrollbar-track{
+/*::-webkit-scrollbar-track{
     box-shadow:inset 0 0 6px rgba(0,0,0,.3);
     -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
     -webkit-border-radius:10px;
@@ -46,31 +47,26 @@ h1,h2,h3,h4,h5,h6{font-weight:300;}
     -webkit-border-radius:10px;
     border-radius:10px;
     background:rgba(0,0,0,.39);
-}
-/* 链接样式 */
+}*/
+
+/* S 链接样式 S */
 a{
     color:#3377aa;
     text-decoration:none
 }
-a:hover{
-    color:#326eb4;
-}
-a:active{
-    color:#8f001e
-}
-/* E 表格样式 E */
+/* a标签还未被访问的状态 */
+a:link{
 
-/* S 链接样式 S */
-a{
-    text-decoration:none;
 }
+/* a标签已被访问过的状态 */
 a:visited{
 
 }
-a:focus{
+a:hover{
+    color:#326eb4;
     text-decoration:none;
 }
-a:hover{
-    text-decoration:none;
+a:active{
+    color:#8f001e
 }
 /* E 链接样式 E */
