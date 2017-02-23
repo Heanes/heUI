@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * @doc 导入各个组件，注意不要加后缀名，sass导入.css文件讲保持原样
+ * @author Heanes
+ * @time 2017-02-17 16:38:58 周五
+ */
+
+// ------------------------------ base 基础 ------------------------------
+// button 按钮
+@import "../../src/sass/button/scss/button";
+// input 输入框
+//@import "../../doc/input/heanes/css/input";
+// text 文本
+//@import "../../doc/text/heanes/css/text";
+
+// ------------------------------ component 组件 ------------------------------

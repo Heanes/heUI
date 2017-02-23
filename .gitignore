@@ -3,3 +3,6 @@
 .idea
 .settings
 .project
+
+/dist
+node_modules
