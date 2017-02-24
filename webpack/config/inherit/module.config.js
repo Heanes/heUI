@@ -1,26 +1,37 @@
-var dirVars = require('../base/dir-vars.config.js');
+let dirVars = require('../base/dir-vars.config.js');
 module.exports = {
-  preLoaders: [{
-    test: /\.js$/,
-    loader: 'eslint-loader',
-    include: dirVars.srcRootDir,
-    exclude: [/bootstrap/],
-  }],
+  preLoaders: [
+    {
+      test: /\.js$/,
+      loader: 'eslint-loader',
+      include: dirVars.srcRootDir,
+      exclude: [/bootstrap/],
+    }
+  ],
 
   loaders: [
-    {
+    /*{
       test: require.resolve('jquery'),
       loader: 'expose-loader?$!expose-loader?jQuery',
-    },
-    {
+    },*/
+    /*{
       test: /\.js$/,
       include: dirVars.srcRootDir,
       loader: 'babel-loader',
       query: {
-        presets: [['es2015', { loose: true }]],
+        presets: [['es2015', { loose: true }], 'react'],
         cacheDirectory: true,
         plugins: ['transform-runtime'],
       },
+    },*/
+    { test: /\.json$/, loader: 'json' },
+    {
+      test: /\.js$/,
+      //exclude: /node_modules/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['es2015', 'react']
+      }
     },
     {
       test: /\.html$/,

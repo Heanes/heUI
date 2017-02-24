@@ -1,10 +1,5 @@
 @charset "UTF-8";
 /**
- * @doc 导入各个组件，注意不要加后缀名，sass导入.css文件讲保持原样
- * @author Heanes
- * @time 2017-02-17 16:38:58 周五
- */
-/**
  * @doc 按钮样式
  * @author Heanes
  * @time 2015-11-30 23:43:39
@@ -212,13 +207,4 @@
     border-radius: inherit;
     background-color: rgba(255, 255, 255, 0.35); }
 
-/**
- * @doc text
- * @author Heanes
- * @time 2017-02-24 17:26:24 周五
- */
-p.paragraph-normal,
-.paragraph-normal {
-  text-indent: 2em; }
-
-/*# sourceMappingURL=entryMain.css.map */
+/*# sourceMappingURL=button.css.map */
