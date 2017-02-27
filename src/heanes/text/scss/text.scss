@@ -1,11 +1,50 @@
 @charset "UTF-8";
 /**
- * @doc text
+ * @doc text 文本样式
  * @author Heanes
  * @time 2017-02-24 17:26:24 周五
  */
-p.paragraph-normal,
-.paragraph-normal {
-  text-indent: 2em;
-  line-height: 1.5;
+
+/**
+ * @doc 标题样式
+ * @author Heanes
+ * @time 2015-11-30 23:54:44
+ */
+@for $i from 1 through 6 {
+  .h#{$i} {
+    padding: 6px 10px;
+    color: #438aac;
+    background-color: #f1f7fd;
+    border: 1px solid #d2e8fa;
+    font-weight: normal;
+  }
+}
+
+@for $i from 3 through 6 {
+  .h#{$i} {
+    font-size:14px;
+  }
+}
+.h1{
+  font-size:17px;
+}
+
+.h2{
+  font-size:16px;
+}
+
+/**
+ * @doc 段落样式
+ * @author Heanes
+ * @time 2015-12-01 19:41:00
+ */
+.p{
+  line-height:2em;
+  text-indent:2em;
+}
+
+@for $i from 12 through 18 {
+  p.font-#{$i} {
+    font-size:#{$i}px;
+  }
 }
