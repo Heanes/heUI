@@ -39,7 +39,7 @@
                 "nodes": [
                     {
                         "text": "Icon 图标",
-                        "href": "../icon/heanes/icon.html",
+                        "href": "../icon/icon.html",
                         "nodeIcon": "fa fa-flag",
                         "iconSelected": "",
                         "selectable": true,
@@ -53,7 +53,7 @@
                     },
                     {
                         "text": "Button 按钮",
-                        "href": "../button/heanes/button.html",
+                        "href": "../button/button.html",
                         "nodeIcon": "fa fa-stop-circle",
                         "iconSelected": "",
                         "selectable": true,
@@ -67,7 +67,7 @@
                     },
                     {
                         "text": "Text 文本",
-                        "href": "../text/heanes/text.html",
+                        "href": "../text/text.html",
                         "nodeIcon": "fa fa-text-width",
                         "iconSelected": "",
                         "selectable": true,
@@ -81,7 +81,7 @@
                     },
                     {
                         "text": "Scrollbar 滚动条",
-                        "href": "../scrollbar/heanes/scrollbar.html",
+                        "href": "../scrollbar/scrollbar.html",
                         "nodeIcon": "fa fa-arrows-v",
                         "iconSelected": "",
                         "selectable": true,
@@ -109,7 +109,7 @@
                 "nodes": [
                     {
                         "text": "Input 输入框",
-                        "href": "../input/heanes/input.html",
+                        "href": "../input/input.html",
                         "nodeIcon": "fa fa-i-cursor",
                         "iconSelected": "",
                         "selectable": true,
@@ -123,7 +123,7 @@
                     },
                     {
                         "text": "Radio 单选框",
-                        "href": "../radio/heanes/radio.html",
+                        "href": "../radio/radio.html",
                         "nodeIcon": "fa fa-dot-circle-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -137,7 +137,7 @@
                     },
                     {
                         "text": "Checkbox 多选框",
-                        "href": "../checkbox/heanes/checkbox.html",
+                        "href": "../checkbox/checkbox.html",
                         "nodeIcon": "fa fa-check-square",
                         "iconSelected": "",
                         "selectable": true,
@@ -151,7 +151,7 @@
                     },
                     {
                         "text": "Select 下拉选择",
-                        "href": "../select/heanes/select.html",
+                        "href": "../select/select.html",
                         "nodeIcon": "fa fa-toggle-down",
                         "iconSelected": "",
                         "selectable": true,
@@ -165,7 +165,7 @@
                     },
                     {
                         "text": "Textarea 文本域",
-                        "href": "../textarea/heanes/textarea.html",
+                        "href": "../textarea/textarea.html",
                         "nodeIcon": "fa fa-square-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -179,7 +179,7 @@
                     },
                     {
                         "text": "Switch 开关切换器",
-                        "href": "../switch/heanes/switch.html",
+                        "href": "../switch/switch.html",
                         "nodeIcon": "fa fa-toggle-on",
                         "iconSelected": "",
                         "selectable": true,
@@ -193,7 +193,7 @@
                     },
                     {
                         "text": "TimePicker 时间选择器",
-                        "href": "../timePicker/heanes/timePicker.html",
+                        "href": "../timePicker/timePicker.html",
                         "nodeIcon": "fa fa-calendar",
                         "iconSelected": "",
                         "selectable": true,
@@ -207,7 +207,7 @@
                     },
                     {
                         "text": "DatePicker 日期选择器",
-                        "href": "../datePicker/heanes/datePicker.html",
+                        "href": "../datePicker/datePicker.html",
                         "nodeIcon": "fa fa-calendar",
                         "iconSelected": "",
                         "selectable": true,
@@ -221,7 +221,7 @@
                     },
                     {
                         "text": "DateTimePicker 日期时间选择器",
-                        "href": "../dateTimePicker/heanes/dateTimePicker.html",
+                        "href": "../dateTimePicker/dateTimePicker.html",
                         "nodeIcon": "fa fa-calendar",
                         "iconSelected": "",
                         "selectable": true,
@@ -235,7 +235,7 @@
                     },
                     {
                         "text": "ColorPicker 颜色拾取器",
-                        "href": "../colorPicker/heanes/colorPicker.html",
+                        "href": "../colorPicker/colorPicker.html",
                         "nodeIcon": "fa fa-tachometer",
                         "iconSelected": "",
                         "selectable": true,
@@ -249,7 +249,7 @@
                     },
                     {
                         "text": "Rate 评分",
-                        "href": "../rate/heanes/rate.html",
+                        "href": "../rate/rate.html",
                         "nodeIcon": "fa fa-star-half-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -277,7 +277,7 @@
                 "nodes": [
                     {
                         "text": "Table 表格",
-                        "href": "../table/heanes/table.html",
+                        "href": "../table/table.html",
                         "nodeIcon": "fa fa-table",
                         "iconSelected": "",
                         "selectable": true,
@@ -291,7 +291,7 @@
                     },
                     {
                         "text": "Pagination 分页",
-                        "href": "../pagination/heanes/pagination.html",
+                        "href": "../pagination/pagination.html",
                         "nodeIcon": "fa fa-chevron-circle-right",
                         "iconSelected": "",
                         "selectable": true,
@@ -305,7 +305,7 @@
                     },
                     {
                         "text": "Progress 进度条",
-                        "href": "../progress/heanes/progress.html",
+                        "href": "../progress/progress.html",
                         "nodeIcon": "fa fa-adjust",
                         "iconSelected": "",
                         "selectable": true,
@@ -319,7 +319,7 @@
                     },
                     {
                         "text": "Badge 标记",
-                        "href": "../badge/heanes/badge.html",
+                        "href": "../badge/badge.html",
                         "nodeIcon": "fa fa-superscript",
                         "iconSelected": "",
                         "selectable": true,
@@ -347,7 +347,7 @@
                 "nodes": [
                     {
                         "text": "Notification 通知",
-                        "href": "../notification/heanes/notification.html",
+                        "href": "../notification/notification.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
                         "selectable": true,
@@ -360,7 +360,7 @@
                     },
                     {
                         "text": "Loading 加载中",
-                        "href": "../loading/heanes/loading.html",
+                        "href": "../loading/loading.html",
                         "nodeIcon": "fa fa-hourglass-half",
                         "iconSelected": "",
                         "selectable": true,
@@ -373,7 +373,7 @@
                     },
                     {
                         "text": "MessageBox 消息弹框",
-                        "href": "../messageBox/heanes/messageBox.html",
+                        "href": "../messageBox/messageBox.html",
                         "nodeIcon": "fa fa-window-restore",
                         "iconSelected": "",
                         "selectable": true,
@@ -386,7 +386,7 @@
                     },
                     {
                         "text": "Global 全局消息显示",
-                        "href": "../message/heanes/global.html",
+                        "href": "../message/global.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
                         "selectable": true,
@@ -399,7 +399,7 @@
                     },
                     {
                         "text": "Local 局部消息显示",
-                        "href": "../message/heanes/local.html",
+                        "href": "../message/local.html",
                         "nodeIcon": "fa fa-info-circle",
                         "iconSelected": "",
                         "selectable": true,
@@ -426,7 +426,7 @@
                 "nodes": [
                     {
                         "text": "NavMenu 导航菜单",
-                        "href": "../navMenu/heanes/navMenu.html",
+                        "href": "../navMenu/navMenu.html",
                         "nodeIcon": "fa fa-link",
                         "iconSelected": "",
                         "selectable": true,
@@ -440,7 +440,7 @@
                     },
                     {
                         "text": "Tabs 标签切换",
-                        "href": "../tabs/heanes/tabs.html",
+                        "href": "../tabs/tabs.html",
                         "nodeIcon": "fa fa-object-ungroup",
                         "iconSelected": "",
                         "selectable": true,
@@ -454,7 +454,7 @@
                     },
                     {
                         "text": "Breadcrumb 面包屑",
-                        "href": "../breadcrumb/heanes/breadcrumb.html",
+                        "href": "../breadcrumb/breadcrumb.html",
                         "nodeIcon": "fa fa-space-shuttle",
                         "iconSelected": "",
                         "selectable": true,
@@ -468,7 +468,7 @@
                     },
                     {
                         "text": "Dropdown 下拉菜单",
-                        "href": "../dropdwon/heanes/dropdwon.html",
+                        "href": "../dropdwon/dropdwon.html",
                         "nodeIcon": "fa fa-chevron-down",
                         "iconSelected": "",
                         "selectable": true,
@@ -482,7 +482,7 @@
                     },
                     {
                         "text": "Steps 步骤",
-                        "href": "../steps/heanes/steps.html",
+                        "href": "../steps/steps.html",
                         "nodeIcon": "fa fa-random",
                         "iconSelected": "",
                         "selectable": true,
@@ -510,7 +510,7 @@
                 "nodes": [
                     {
                         "text": "Normal 普通",
-                        "href": "../dataList/heanes/normal.html",
+                        "href": "../dataList/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -524,7 +524,7 @@
                     },
                     {
                         "text": "Pictures 图片",
-                        "href": "../dataList/heanes/pictureList.html",
+                        "href": "../dataList/pictureList.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -552,7 +552,7 @@
                 "nodes": [
                     {
                         "text": "Normal 多类型数据编辑",
-                        "href": "../dataEdit/heanes/normal.html",
+                        "href": "../dataEdit/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -565,7 +565,7 @@
                     },
                     {
                         "text": "Tabs 多类型-带tab",
-                        "href": "../dataEdit/heanes/tab.html",
+                        "href": "../dataEdit/tab.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -648,7 +648,7 @@
         "nodes": [
             {
                 "text": "ModalDialog 弹出层",
-                "href": "../modalDialog/heanes/modalDialog.html",
+                "href": "../modalDialog/modalDialog.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -661,7 +661,7 @@
             },
             {
                 "text": "Tooltip 文字提示",
-                "href": "../tooltip/heanes/tooltip.html",
+                "href": "../tooltip/tooltip.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -674,7 +674,7 @@
             },
             {
                 "text": "DragLayer 拖拽层",
-                "href": "../dragLayer/heanes/dragLayer.html",
+                "href": "../dragLayer/dragLayer.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -687,7 +687,7 @@
             },
             {
                 "text": "Tree 树列表",
-                "href": "../tree/heanes/tree.html",
+                "href": "../tree/tree.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -714,7 +714,7 @@
         "nodes": [
             {
                 "text": "TODO",
-                "href": "../todo/heanes/todo.html",
+                "href": "../todo/todo.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,

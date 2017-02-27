@@ -1,0 +1,8 @@
+# Enforce Unix newlines
+
+# Don't diff or textually merge source maps
+*.map   binary
+
+# 不统计项目语言占比
+heanesUI.css linguist-vendored=false
+heanesUI.js linguist-vendored=false

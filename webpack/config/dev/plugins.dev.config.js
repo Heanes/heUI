@@ -11,16 +11,16 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 // 热部署插件，对应于devServer 中的"hot: true"时使用
 let hotModuleReplacementPlugin = webpack.HotModuleReplacementPlugin;
 
-pluginsConfig.push(new webpack.DefinePlugin({
+/*pluginsConfig.push(new webpack.DefinePlugin({
   IS_PRODUCTION: false,
-}));
+}));*/
 
 // 自动根据模版生成目标访问文件
-pluginsConfig.push(
+/*pluginsConfig.push(
     new HtmlWebpackPlugin({
         template: dirVars.staticRootDir + '/doc/index.html'
     })
-);
+);*/
 
 //提取出来的样式放在css文件中
 let outputCssFileName = 'css/heanesUI.css';
