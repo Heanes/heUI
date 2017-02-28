@@ -15,15 +15,15 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // 其他样式库的loader
 moduleConfig.loaders.push({
-  test: /\.css$/,
-  include: /bootstrap/,
-  loader: 'style!css',
+    include: /\.css$/,
+    exclude: /node_modules/,
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
 });
 
 moduleConfig.loaders.push({
   test: /\.css$/, //loader: 'style!css'
-  exclude: /node_modules|bootstrap/,
-  loader: ExtractTextPlugin.extract('style!css')
+  exclude: /node_modules|bootstrap|font-awesome/,
+  loader: ExtractTextPlugin.extract('style', 'css?minimize&-autoprefixer!postcss!sass')
 });
 
 moduleConfig.loaders.push({

@@ -7,12 +7,12 @@ let pageArr = require('../base/page-entries.config.js');
 
 let configPlugins = [
   /* 全局shimming */
-  new webpack.ProvidePlugin({
+  /*new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
     'window.$': 'jquery',
-  }),
+  }),*/
   /* 抽取出所有通用的部分 */
   /*new webpack.optimize.CommonsChunkPlugin({
     name: 'commons/commons',      // 需要注意的是，chunk的name不能相同！！！

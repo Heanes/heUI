@@ -10,7 +10,8 @@ let UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 }));*/
 
 //提取出来的样式放在css文件中，contenthash是根据文件内容计算
-let outputCssFileName = 'css/heanesUI.min-[contenthash:8].css';
+//let outputCssFileName = 'css/heanesUI.min-[contenthash:8].css';
+let outputCssFileName = 'css/heanesUI.min.css';
 pluginsConfig.push(
   new ExtractTextPlugin(outputCssFileName
       //, {allChunks: true}

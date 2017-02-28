@@ -54,7 +54,14 @@ module.exports = {
       // 专供iconfont方案使用的，后面会带一串时间戳，需要特别匹配到
       test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
       include: dirVars.srcRootDir,
-      loader: 'file-loader?name=static/fonts/[name].[ext]',
+      loader: 'file-loader?name=static/fonts/[name].[ext]&publicPath=../',
+    },
+    {
+      // 专供font-awesome方案使用的，后面会带一串时间戳，需要特别匹配到，需要注意publicPath可以按字符串添加到[path]所代表的路径前
+      // @see https://github.com/webpack-contrib/file-loader#filename-template-placeholders
+      test: /\.(woff|woff2|svg|eot|otf|ttf)\??.*$/,
+      include: /font-awesome/,
+      loader: 'file-loader?name=[path][name].[ext]&publicPath=../',
     },
     {
       // 专供bootstrap方案使用的，忽略bootstrap自带的字体文件

@@ -10,16 +10,16 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 moduleConfig.loaders.push({
   test: /\.css$/,
-  exclude: /node_modules|bootstrap/,
-  loader: ExtractTextPlugin.extract('style!css'),
+  exclude: /node_modules/,
+  loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
 });
 
 // 其他样式库的loader
-moduleConfig.loaders.push({
+/*moduleConfig.loaders.push({
   test: /\.css$/, //loader: 'style!css'
-  include: /bootstrap/,
+  include: /bootstrap|font-awesome/,
   loader: ExtractTextPlugin.extract('style!css'),
-});
+});*/
 
 moduleConfig.loaders.push({
   test: /\.scss$/, //loader: 'style!css!sass'
