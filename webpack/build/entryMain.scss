@@ -1,17 +1,9 @@
 @charset "UTF-8";
 /**
- * @doc 导入各个组件，注意不要加后缀名，sass导入.css文件讲保持原样
+ * @doc 入口
  * @author Heanes
  * @time 2017-02-17 16:38:58 周五
  */
 
-// ------------------------------ base 基础 ------------------------------
-// button 按钮
-@import "../../src/heanes/button/scss/button.scss";
-// text 文本
-@import "../../src/heanes/text/scss/text.scss";
-
-// ------------------------------ component 组件 ------------------------------
-
-
-// ------------------------------ resource 外部资源 ------------------------------
+// heanes style
+@import "../../src/heanes/heaneUI.scss";

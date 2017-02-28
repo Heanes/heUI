@@ -38,6 +38,20 @@
                 },
                 "nodes": [
                     {
+                        "text": "Color 颜色",
+                        "href": "../color/color.html",
+                        "nodeIcon": "fa fa-dashboard",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
                         "text": "Icon 图标",
                         "href": "../icon/icon.html",
                         "nodeIcon": "fa fa-flag",
@@ -83,6 +97,20 @@
                         "text": "Scrollbar 滚动条",
                         "href": "../scrollbar/scrollbar.html",
                         "nodeIcon": "fa fa-arrows-v",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": [
+                        ]
+                    },
+                    {
+                        "text": "Code 代码",
+                        "href": "../code/code.html",
+                        "nodeIcon": "fa fa-code",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {

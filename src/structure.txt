@@ -1,5 +1,9 @@
 basic 基础
+    icon 图标
     button 按钮
     text 文本
-    icon 图标
-    code 代码
+    code 代码(待定)
+    scrollbar 滚动条
+component 组件
+    table 表格
+    input 输入框

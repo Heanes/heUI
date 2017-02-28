@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * @doc 导入各个组件(注意sass导入.css文件讲保持原样)
+ * @author Heanes
+ * @time 2017-02-28 14:57:33 周二
+ */
+
+// ------------------------------ variable 变量定义 ------------------------------
+@import "./common/custom.scss";
+@import "./common/variables.scss";
+
+// ------------------------------ reset || normalize 重设或者规范基础样式 ------------------------------
+@import "./common/reset.scss";
+//@import "./common/normalize.scss";
+
+// ------------------------------ base 基础 ------------------------------
+// button 按钮
+@import "./button/scss/button.scss";
+// text 文本
+@import "./text/scss/text.scss";
+// scrollbar 滚动条
+@import "./scrollbar/scss/scrollbar.scss";
+
+// ------------------------------ component 组件 ------------------------------
+// table 表格
+@import "./table/scss/table.scss";
+
+// ------------------------------ resource 外部资源 ------------------------------

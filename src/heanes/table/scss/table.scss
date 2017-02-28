@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/**
+ * @doc table 表格样式
+ * @author Heanes
+ * @time 2017-02-28 16:45:22 周二
+ */
+/**
+ * @doc 表格样式
+ * @author Heanes
+ * @time 2015-12-02 17:06:26
+ */
+table {
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table tr th,
+.table tr td{
+  padding:8px;
+  vertical-align:top;
+  text-align:left;
+}
+.table tbody tr td{
+  border-top:1px solid #ddd;
+}
+
+.table thead tr th{
+  font-weight:600;
+  border-bottom:2px solid #ddd;
+}
+
+/* 表格带边框 */
+.table.table-bordered,
+.table.table-bordered tr th,
+.table.table-bordered tr td{
+  border:1px solid #ddd;
+}
+.table.table-bordered thead tr th{
+  border-bottom:2px solid #ddd;
+}
+
+/* 带条纹（每间隔行背景色） */
+.table.table-striped tbody tr:nth-child(2n+1){
+  background-color:#f9f9f9;
+}
+.table.table-hover tbody tr:hover{
+  background-color:#f9f9f9;
+}
+/* 紧缩表格 */
+.table.table-condensed tr th,
+.table.table-condensed tr td{
+  padding:4px;
+}
+/* 带状态指示的背景颜色 */
+.table .active{
+  background-color:#f5f5f5;
+}
+.table.table-hover .active:hover{
+  background-color:#eee;
+}
+.table .success{
+  background-color:#d6e9c6;
+}
+.table.table-hover .success:hover{
+  background-color:#cae9ba;
+}
+.table .info{
+  background-color:#ace9f1;
+}
+.table.table-hover .info:hover{
+  background-color:#8de6f1;
+}
+.table .warn{
+  background-color:#faebcc;
+}
+.table.table-hover .warn:hover{
+  background-color:#faf2bf;
+}
+.table .danger{
+  background-color:#ebccd1;
+}
+.table.table-hover .danger:hover{
+  background-color:#ebc2c7;
+}
