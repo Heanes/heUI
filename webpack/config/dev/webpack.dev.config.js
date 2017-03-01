@@ -23,7 +23,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         port: 8080, // 端口
-        contentBase: './dist',//本地服务器所加载的页面所在的目录
+        contentBase: './',//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
         progress:true,
         hot: true,

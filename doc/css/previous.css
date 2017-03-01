@@ -108,9 +108,24 @@ html, body {
 .demo-wrap .demo-content .demo-one {
   margin: 10px 0; }
 
+.example:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: glow;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate; }
+
 /* 滚动条demo样式 */
 .demo-wrap .demo-content .demo-one.demo-scrollbar {
-  width: 250px; }
+  width: 260px; }
+
+.demo-wrap .demo-content .demo-one.demo-scrollbar .scrollbar {
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #ddd; }
 
 /****************************** 在线运行demo展示样式 ******************************/
 /* 代码实时高亮工具codeMirror 样式重写 */
