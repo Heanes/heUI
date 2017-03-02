@@ -88,7 +88,7 @@ $(function () {
                 data: data,
                 iconCollapse: 'triangle-right', // 合上时的图标
                 iconExpand: 'triangle-down',    // 展开时的图标
-                enableIndentLeft: false,         // 允许向左缩进
+                enableIndentLeft: false,        // 允许向左缩进
                 enableLink: true,               // 开启链接
                 enableTopSwitch: true,          // 开启顶部切换标识
                 showTopNavIcon: false,          // 顶部导航是否显示图标
@@ -117,7 +117,7 @@ $(function () {
                     },
                     leftNodeExpanded: {
                         bgColor: '#eee',        // 侧边树的节点展开时背景色 leftNodeExpanded.bgColor
-                        color: '#353535'           // 侧边树的节点展开时字体色 leftNodeExpanded.color
+                        color: '#353535'        // 侧边树的节点展开时字体色 leftNodeExpanded.color
                     }
                 },                              // 样式相关
 
