@@ -25,7 +25,7 @@ module.exports = {
         port: 8080, // 端口
         contentBase: './',//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
-        progress:true,
+        progress: true,
         hot: true,
         inline: true, // 可以监控js变化
         stats: {

@@ -15,26 +15,28 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // 其他样式库的loader
 moduleConfig.loaders.push({
-    include: /\.css$/,
+    test: /\.css$/,
     exclude: /node_modules/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
 });
 
 moduleConfig.loaders.push({
-  test: /\.css$/, //loader: 'style!css'
+  test: /\.css$/,
   exclude: /node_modules|bootstrap|font-awesome/,
-  loader: ExtractTextPlugin.extract('style', 'css?minimize&-autoprefixer!postcss!sass')
+  include: dirVars.srcRootDir,
+  loader: ExtractTextPlugin.extract('style-loader', 'css?minimize&-autoprefixer!postcss')
 });
 
 moduleConfig.loaders.push({
-  test: /\.scss$/, //loader: 'style!css!sass'
+  test: /\.scss$/,
+  include: dirVars.srcRootDir|/weback/,
   //这里用了样式分离出来的插件，如果不想分离出来，可以直接这样写 loader:'style!css!sass'
   loader: ExtractTextPlugin.extract('style', 'css?minimize&-autoprefixer!postcss!sass')
 });
 
 moduleConfig.loaders.push({
   test: /\.less$/,
-  include: dirVars.srcRootDir,
+  include: dirVars.srcRootDir|/weback/,
   loader: 'style!css?minimize&-autoprefixer!postcss!less',
 });
 

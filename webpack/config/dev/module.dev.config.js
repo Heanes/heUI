@@ -14,23 +14,24 @@ moduleConfig.loaders.push({
   loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
 });
 
-// 其他样式库的loader
-/*moduleConfig.loaders.push({
-  test: /\.css$/, //loader: 'style!css'
-  include: /bootstrap|font-awesome/,
-  loader: ExtractTextPlugin.extract('style!css'),
-});*/
+moduleConfig.loaders.push({
+  test: /\.css$/,
+  exclude: /node_modules|bootstrap|font-awesome/,
+  include: dirVars.srcRootDir,
+  loader: ExtractTextPlugin.extract('style-loader', 'css?-autoprefixer!postcss'),
+});
 
 moduleConfig.loaders.push({
-  test: /\.scss$/, //loader: 'style!css!sass'
+  test: /\.scss$/,
   //这里用了样式分离出来的插件，如果不想分离出来，可以直接这样写 loader:'style!css!sass'
-  loader: ExtractTextPlugin.extract('style', 'css!sass')
+  include: dirVars.srcRootDir|/weback/,
+  loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!postcss!sass')
 });
 
 moduleConfig.loaders.push({
   test: /\.less$/,
-  include: dirVars.srcRootDir,
-  loader: 'style!css!less',
+  include: dirVars.srcRootDir|/weback/,
+  loader: 'style!css?-autoprefixer!postcss!less',
 });
 
 module.exports = moduleConfig;
