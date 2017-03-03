@@ -8,6 +8,7 @@ node_modules
 doc/**/*.map
 src/**/*.css
 src/**/*.map
+src/**/*.html
 webpack/**/*.css
 webpack/**/*.map
 /*.log
