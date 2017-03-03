@@ -10,10 +10,10 @@
 @import "./common/variables.scss";
 
 // ------------------------------ reset || normalize 重设或者规范基础样式 ------------------------------
-// reset
-@import "./common/reset.scss";
+// reset 暂时不用reset.css
+//@import "./common/reset.scss";
 // normalize
-//@import "./common/normalize.scss";
+@import "./common/normalize.scss";
 
 // ------------------------------ transition && animation 动画 ------------------------------
 // transition 过渡动画

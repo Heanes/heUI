@@ -17,8 +17,7 @@
 // 5. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
 //    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
 // 6. Change the default tap highlight to be completely transparent in iOS.
-@import "variables.scss";
-@import "mixins.scss";
+
 html {
   box-sizing: border-box; // 1
   font-family: sans-serif; // 2
@@ -36,9 +35,9 @@ html {
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
-//@at-root {
-//  @-ms-viewport { width: device-width; }
-//}
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
 
 
 // Body

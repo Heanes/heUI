@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * @doc hover相关的mixin混合定义
+ * @author Heanes
+ * @time 2017-03-03 14:44:10 周五
+ */
+@mixin hover {
+  &:hover {
+    @content
+  }
+}
+
+@mixin hover-class {
+  &.hover {
+    @content
+  }
+}
+@mixin hover-additive {
+  &.hover,
+  &:hover{
+    @content
+  }
+}
+
+@mixin focus {
+  &:focus {
+    @content
+  }
+}
+
+@mixin focus-class {
+  &.focus {
+    @content
+  }
+}
+@mixin focus-additive {
+  &.focus,
+  &:focus{
+    @content
+  }
+}
+
+@mixin active {
+  &:active {
+    @content
+  }
+}
+
+@mixin active-class {
+  &.active {
+    @content
+  }
+}
+@mixin active-additive {
+  &.active,
+  &:active{
+    @content
+  }
+}
+
+@mixin hover-focus {
+  @include focus {
+    @content
+  }
+  @include hover {
+    @content
+  }
+}
