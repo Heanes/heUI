@@ -96,11 +96,11 @@ $(function () {
                 showSingleNodeIcon: true,       // 无子树节点是否显示图标
                 style: {
                     topActive: {
-                        bgColor: '#346190',     // 顶部切换的激活后背景色 topActive.bgColor
+                        bgColor: '#254f7b',     // 顶部切换的激活后背景色 topActive.bgColor
                         color: '#fff'           // 顶部切换的激活后字体色 topActive.color
                     },
                     topHover: {
-                        bgColor: '#346190',     // 侧边树的鼠标浮上背景色 topHover.bgColor #E7E7E7
+                        bgColor: '#254f7b',     // 侧边树的鼠标浮上背景色 topHover.bgColor #E7E7E7
                         color: '#fff'           // 侧边树的鼠标浮上字体色 topHover.color
                     },
                     left: {
@@ -122,7 +122,7 @@ $(function () {
                 },                              // 样式相关
 
                 onNodeSelected: function (event, node) {
-                    if(node.target && node.target == '_target'){
+                    if(node.target && node.target == '_blank'){
                         window.open(node.href);
                         return false;
                     }

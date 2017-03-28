@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)">
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes">
+    <meta name="description" content="描述">
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/reset/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/css/base/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style/style-2016.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+    <title>Pagination 分页</title>
+</head>
+<body>
+<div class="center wrap">
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 顶部全宽度内容区域 -->
+        <div class="main-top-block"></div>
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 左侧区域 -->
+            <div class="left-block left-wrap left-width"></div>
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="demo-wrap">
+                    <div class="demo-title"><h1>Pagination 分页</h1></div>
+                    <div class="demo-desc">
+                        <p class="desc"></p>
+                    </div>
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">基础分页。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination">
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev">上一页</a>
+                                            <a href="javascript:;" class="p">1</a>
+                                            <a href="javascript:;" class="p current">2</a>
+                                            <a href="javascript:;" class="p">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>简洁分页</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">节省空间的分页。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination table-tight">
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev disabled">上一页</a>
+                                            <a href="javascript:;" class="p current">1</a>
+                                            <a href="javascript:;" class="p">2</a>
+                                            <a href="javascript:;" class="p">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination table-tight">
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev disabled"><<</a>
+                                            <a href="javascript:;" class="p">1</a>
+                                            <a href="javascript:;" class="p">2</a>
+                                            <a href="javascript:;" class="p current">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">>></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>多种功能</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">带统计信息，带每页大小及快速跳转功能的分页。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination table-tight">
+                                        <!-- 分页信息 -->
+                                        <div class="pagination-info">
+                                            <span class="text">共<strong>98</strong>条</span><span class="text">，</span>
+                                            <span class="text">第<strong>2</strong>/<strong>10</strong>页</span>
+                                        </div>
+                                        <!-- 分页 -->
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev">上一页</a>
+                                            <a href="javascript:;" class="p">1</a>
+                                            <a href="javascript:;" class="p current">2</a>
+                                            <a href="javascript:;" class="p">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
+                                        </div>
+                                        <!-- 快速跳转 -->
+                                        <div class="pagination-quick-link">
+                                            <span class="text">每页<input type="text" value="10" />条</span>
+                                            <span class="text">，</span>
+                                            <span class="text">到第<input type="text" value="2" />/10页 </span>
+                                            <span class="text"><button type="button" class="btn-sure">确定</button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-one">
+                                    <!-- 分页区域 -->
+                                    <div class="pagination table-tight">
+                                        <!-- 分页信息 -->
+                                        <div class="pagination-info">
+                                            <span class="text">共<strong>98</strong>条</span><span class="text">，</span>
+                                            <span class="text">第<strong>3</strong>/<strong>10</strong>页</span>
+                                        </div>
+                                        <!-- 分页 -->
+                                        <div class="pagination-link">
+                                            <a href="javascript:;" class="p p-nav prev">上一页</a>
+                                            <a href="javascript:;" class="p">1</a>
+                                            <a href="javascript:;" class="p">2</a>
+                                            <a href="javascript:;" class="p current">3</a>
+                                            <span class="p page-link-ellipsis">...</span>
+                                            <a href="javascript:;" class="p">8</a>
+                                            <a href="javascript:;" class="p">9</a>
+                                            <a href="javascript:;" class="p">10</a>
+                                            <a href="javascript:;" class="p p-nav next">下一页</a>
+                                        </div>
+                                        <!-- 快速跳转 -->
+                                        <div class="pagination-quick-link">
+                                            <span class="text">每页
+                                                <select>
+                                                    <option value="1">10</option>
+                                                    <option value="2">20</option>
+                                                    <option value="3">40</option>
+                                                    <option value="4">60</option>
+                                                    <option value="4">80</option>
+                                                    <option value="4">100</option>
+                                                </select>
+                                                条</span>
+                                            <span class="text">，</span>
+                                            <span class="text">到第
+                                                <select>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3" selected>3</option>
+                                                    <option value="4">4</option>
+                                                </select>页
+                                                <button type="button" class="btn-sure">确定</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="right-block right-wrap"></div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="main-bottom-content main-wrap"></div>
+        <!-- 底部全宽度内容区域 -->
+        <div class="main-bottom-block"></div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/ui.js" id="importResource"></script>
+    <script type="application/javascript">
+        Import([
+            // 消息提示
+            '../../js/common/common.js',
+            'js/pagination.js'
+        ]);
+        $(function () {
+        });
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>

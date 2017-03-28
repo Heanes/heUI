@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)">
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes">
+    <meta name="description" content="描述">
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/heanesUI.css"/>
+    <title>Scrollbar 滚动条</title>
+    <style>
+        /* 滚动条demo样式 */
+        .demo-wrap .demo-content .demo-one.demo-scrollbar{width:250px;}
+        .demo-wrap .demo-content .demo-one.demo-scrollbar .scrollbar{height:200px;overflow:auto;border:1px solid #ddd;}
+    </style>
+</head>
+<body>
+<div class="center wrap">
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 顶部全宽度内容区域 -->
+        <div class="main-top-block"></div>
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 左侧区域 -->
+            <div class="left-block left-wrap left-width"></div>
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <select id="searchDepartment"></select>
+                <select id="searchGroup"></select>
+                <div class="demo-wrap">
+                    <div class="demo-title"><h1>Scrollbar 滚动条</h1></div>
+                    <div class="demo-desc">
+                        <p class="desc"></p>
+                    </div>
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">定制滚动条样式。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one demo-scrollbar">
+                                    <div class="scrollbar">
+                                        <div style="height:400px;"></div>
+                                    </div>
+                                </div>
+                                <div class="demo-one demo-scrollbar">
+                                    <div class="scrollbar scrollbar-mini">
+                                        <div style="height:400px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>鼠标浮上时才显示</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc">定制滚动条样式。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one demo-scrollbar">
+                                    <div class="scrollbar scrollbar-hover">
+                                        <div style="height:400px;"></div>
+                                    </div>
+                                </div>
+                                <div class="demo-one demo-scrollbar">
+                                    <div class="scrollbar scrollbar-mini scrollbar-hover">
+                                        <div style="height:400px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="right-block right-wrap"></div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="main-bottom-content main-wrap"></div>
+        <!-- 底部全宽度内容区域 -->
+        <div class="main-bottom-block"></div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/dist/js/heanesUI.js"></script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>

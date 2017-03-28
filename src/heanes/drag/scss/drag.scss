@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/**
+ * @doc drag可拖拽区块
+ * @author Heanes
+ * @time 2017-03-03 18:50:25 周五
+ */
+$content-width: 300px;
+$content-height: 200px;
+$drag-content-padding: 0;
+
+$drag-wrap-borer-width: 0px;
+$drag-wrap-borer-style: solid;
+$drag-wrap-borer-color: #aaa;
+
+$drag-content-borer-width: 1px;
+$drag-content-borer-style: solid;
+$drag-content-borer-color: #a0b3d6;
+
+$drag-wrap-box-shadow: 2px 2px 4px rgba(130, 130, 130, .5);
+
+$drag-move-bar-height: 24px;
+$drag-move-bar-bg-color: rgba(190, 206, 235, 0.47);
+$drag-move-bar-borer-width: 1px;
+$drag-move-bar-borer-style: solid;
+$drag-move-bar-border-color: #a0b3d6;
+$drag-border-bg-color: rgba(240, 243, 249, 0.44);
+$drag-border-width: 10px;
+
+.drag-wrap {
+  width: $content-width + ($drag-content-padding * 2) + ($drag-border-width * 2) + ($drag-wrap-borer-width * 2) + ($drag-content-borer-width * 2);
+  height: $content-height + ($drag-content-padding * 2) + ($drag-border-width * 2) + $drag-move-bar-height + ($drag-wrap-borer-width * 2) + ($drag-content-borer-width * 2);
+}
+
+.drag-wrap {
+  position: relative;
+  border: $drag-wrap-borer-width $drag-wrap-borer-style $drag-wrap-borer-color;
+  box-shadow: $drag-wrap-box-shadow;
+}
+
+.drag-wrap .drag-operate-wrap {
+
+}
+
+.drag-wrap .drag-operate-wrap .drag-move-bar {
+  position: absolute;
+  width: $content-width + (2 * $drag-content-padding) + ($drag-content-borer-width * 2);
+  height: $drag-move-bar-height + $drag-move-bar-borer-width;
+  left: $drag-border-width;
+  top: $drag-border-width;
+  background-color: $drag-move-bar-bg-color;
+  border: $drag-move-bar-borer-width $drag-move-bar-borer-style $drag-move-bar-border-color;
+  border-bottom: 0;
+  cursor: move;
+  font-size: 14px;
+  font-weight: normal;
+}
+.drag-wrap .drag-operate-wrap .drag-move-bar h2{
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: $drag-move-bar-height;
+  padding: 0 3px;
+}
+
+.drag-wrap .drag-content {
+  position: absolute;
+  padding: $drag-content-padding;
+  bottom: $drag-border-width;
+  left: $drag-border-width;
+  border: $drag-content-borer-width $drag-wrap-borer-style $drag-content-borer-color;
+}
+
+.drag-wrap .drag-operate-wrap .drag-border {
+  background-color: $drag-border-bg-color;
+  &.drag-border-top,
+  &.drag-border-bottom,
+  &.drag-border-right,
+  &.drag-border-left {
+    position: absolute;
+  }
+  &.drag-border-top,
+  &.drag-border-bottom {
+    left: $drag-border-width;
+    width: $content-width + ($drag-content-padding * 2);
+    height: $drag-border-width;
+    cursor: ns-resize;
+  }
+  &.drag-border-top {
+    top: 0;
+  }
+  &.drag-border-bottom {
+    bottom: 0;
+  }
+  &.drag-border-right,
+  &.drag-border-left {
+    top: $drag-border-width;
+    width: $drag-border-width;
+    height: $content-height + ($drag-content-padding * 2) + $drag-move-bar-height;
+    cursor: e-resize;
+  }
+  &.drag-border-right {
+    right: 0;
+  }
+  &.drag-border-left {
+    left: 0;
+  }
+  &.drag-border-top-left,
+  &.drag-border-top-right,
+  &.drag-border-bottom-left,
+  &.drag-border-bottom-right {
+    position: absolute;
+    width: $drag-border-width;
+    height: $drag-border-width;
+  }
+  &.drag-border-top-left,
+  &.drag-border-top-right {
+    top: 0;
+  }
+  &.drag-border-top-left,
+  &.drag-border-bottom-left {
+    left: 0;
+  }
+  &.drag-border-top-right,
+  &.drag-border-bottom-right {
+    right: 0;
+  }
+  &.drag-border-bottom-left,
+  &.drag-border-bottom-right {
+    bottom: 0;
+  }
+  &.drag-border-top-left,
+  &.drag-border-bottom-right {
+    cursor: nw-resize;
+  }
+  &.drag-border-bottom-left,
+  &.drag-border-top-right {
+    cursor: ne-resize;
+  }
+}

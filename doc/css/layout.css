@@ -90,18 +90,18 @@ iframe {
 
 /************************ 顶部 ************************/
 .header {
-  background-color: #424f63;
+  background-color: #273245;
   color: #fff; }
 
 .header .admin-logo {
   position: relative;
   float: left;
   height: 100%;
-  background-color: #424f63; }
+  background-color: #273245; }
 
 .header .admin-logo .lap-handle {
   position: absolute;
-  right: 5px;
+  right: 8px;
   top: 16px;
   color: #fff;
   font-size: 14px;
@@ -122,9 +122,21 @@ iframe {
   vertical-align: middle;
   margin-bottom: 8px; }
 
+/* 图片型logo */
+.header .admin-logo .admin-log-href img.admin-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0; }
+
 .header .admin-logo .admin-log-href .admin-title-text {
   font-size: 22px;
   display: inline-block; }
+
+.header .admin-logo .admin-log-href .admin-title-text .system-version {
+  font-style: normal;
+  font-size: 12px;
+  vertical-align: top;
+  margin-left: 8px; }
 
 .header .menu-top {
   float: left;
@@ -170,7 +182,7 @@ iframe {
   padding: 0 10px; }
 
 .header .admin-user-info .user-detail dl:hover {
-  background-color: #346190; }
+  background-color: #254f7b; }
 
 .header .admin-user-info .user-detail dt, .user-detail dd {
   display: inline-block; }
