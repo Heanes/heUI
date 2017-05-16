@@ -124,8 +124,9 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  // 我决定将所有ul dl ol 的内外边距都设为0
+  padding: 0;
+  margin: 0;
 }
 
 ol ol,
