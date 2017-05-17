@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/**
+ * @doc 一些常用的缩写样式
+ * @author Heanes
+ * @time 2017-05-16 17:05:42 周二
+ */
+/*一些基本样式的简写方式*/
+/* 清除浮动 */
+/*.clear{clear:both;height:1px;margin-top:-1px;overflow:hidden}*/
+/* 清除浮动 */
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both;overflow:hidden}
+.clearfix{zoom:1;display:table;width:100%;/* for ie6 & ie7 */}
+.clear{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden}
+/* 文字对齐 */
+.text-center{text-align:center}
+.text-left{text-align:left}
+.text-right{text-align:right}
+.middle{vertical-align:middle;}
+/* 背景 */
+.bgRed{background-color:#f00;}
+.bgRed:hover{background-color:#f00;}
+.white{color:white}
+
+/* 外边距 */
+@for $i from 0 through 30 {
+  .margin#{$i}{margin:#{$i}px;}
+  .marginx#{$i}{margin-left:#{$i}px;margin-right:#{$i}px;}
+  .marginy#{$i}{margin-top:#{$i}px;margin-bottom:#{$i}px;}
+  .ml{margin-left:#{$i}px;}
+  .mr{margin-right:#{$i}px;}
+  .mt{margin-top:#{$i}px;}
+  .mb{margin-bottom:#{$i}px;}
+}
+
+/* 内边距 */
+@for $i from 0 through 30 {
+  .padding#{$i}{margin:#{$i}px;}
+  .paddingx#{$i}{padding-left:#{$i}px;padding-right:#{$i}px;}
+  .paddingy#{$i}{padding-left:#{$i}px;padding-right:#{$i}px;}
+  .pl{padding-left:#{$i}px;}
+  .pr{padding-right:#{$i}px;}
+  .pt{padding-top:#{$i}px;}
+  .pb{padding-bottom:#{$i}px;}
+}
