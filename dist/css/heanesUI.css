@@ -738,6 +738,175 @@ table {
 
 .table.table-hover .danger:hover {
   background-color: #ebc2c7; }
+
+/**
+ * @doc 分页样式
+ * @author Heanes
+ * @time 2017-01-07 18:28:05 周六
+ */
+.pagination {
+  margin: 10px 0;
+  display: inline-block; }
+
+.pagination .pagination-link, .pagination .pagination-info, .pagination .pagination-quick-link {
+  display: inline-block; }
+
+/* 翻页 */
+.pagination .pagination-link {
+  font-size: 0; }
+
+.pagination .pagination-link .pg {
+  display: inline-block;
+  padding: 10px 12px;
+  margin: 0 4px;
+  color: #3377aa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: .2s all;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 14px; }
+
+.pagination .pagination-link .pg:hover, .pagination .pagination-link .pg.current {
+  color: #fff;
+  background-color: #00a1d6;
+  border-color: #00a1d6;
+  text-decoration: none; }
+
+.pagination .pagination-link .pg.page-link-ellipsis {
+  border-width: 0;
+  padding: 10px 8px;
+  cursor: text; }
+
+.pagination .pagination-link .pg.page-link-ellipsis:hover {
+  color: inherit;
+  background-color: inherit; }
+
+.pagination .pagination-link .pg.disabled {
+  color: #777;
+  cursor: default; }
+
+.pagination .pagination-link .pg.disabled:hover {
+  color: #777;
+  background-color: #eee; }
+
+/* 紧凑型表格样式 */
+.pagination.table-tight .pagination-link {
+  display: inline-block; }
+
+.pagination.table-tight .pagination-link .pg {
+  margin: 0;
+  border-radius: 0;
+  border: 1px solid #ddd;
+  border-left-width: 0; }
+
+.pagination.table-tight .pagination-link .pg:first-child {
+  border-left-width: 1px; }
+
+.pagination.table-tight .pagination-link .pg:hover {
+  background-color: #eee;
+  color: #3377aa; }
+
+.pagination.table-tight .pagination-link .pg.page-link-ellipsis {
+  padding: 10px 12px; }
+
+.pagination.table-tight .pagination-link .pg.current, .pagination.table-tight .pagination-link .pg.current:hover {
+  color: #fff;
+  background-color: #00a1d6;
+  border-color: #ddd; }
+
+.pagination.table-tight .pagination-link .pg.current {
+  border-color: #00a1d6; }
+
+.pagination.table-tight .pagination-link .pg.disabled {
+  color: #777;
+  cursor: default; }
+
+.pagination.table-tight .pagination-link .pg.disabled:hover {
+  color: #777;
+  background-color: unset; }
+
+/* 分页信息 */
+.pagination .btn-sure {
+  display: inline-block;
+  -webkit-appearance: none;
+  padding: 4px 6px;
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none; }
+
+.pagination .btn-sure:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+
+.pagination .btn-sure:hover, .pagination .btn-sure:active, .pagination .btn-sure:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad; }
+
+.pagination input[type="text"] {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  -moz-transition: border linear .2s,box-shadow linear .2s;
+  -o-transition: border linear .2s,box-shadow linear .2s;
+  transition: border linear .2s,box-shadow linear .2s;
+  display: inline-block;
+  padding: 0;
+  font-size: inherit;
+  height: 28px;
+  color: #555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.pagination input[type="text"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+
+.pagination .pagination-info {
+  font-size: 0; }
+
+.pagination .pagination-info .text {
+  font-size: 13px; }
+
+.pagination .pagination-info input[type="text"] {
+  width: 30px;
+  text-align: center; }
+
+/* 快速分页 */
+.pagination .pagination-quick-link {
+  font-size: 0; }
+
+.pagination .pagination-quick-link .text {
+  font-size: 13px; }
+
+.pagination .pagination-quick-link input[type="text"] {
+  width: 30px;
+  text-align: center; }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

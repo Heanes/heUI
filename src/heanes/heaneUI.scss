@@ -10,7 +10,7 @@
 @import "./common/variables.scss";
 
 // ------------------------------ reset || normalize 重设或者规范基础样式 ------------------------------
-// reset 暂时不用reset.css
+// reset 原生样式重置 (暂时不用reset.css)
 //@import "./common/reset.scss";
 // normalize
 @import "./common/normalize.scss";
@@ -29,8 +29,14 @@
 // scrollbar 滚动条
 @import "./scrollbar/scss/scrollbar.scss";
 
+// ------------------------------ form 表单 ------------------------------
+// input 输入框
+@import "./input/scss/input.scss";
+
 // ------------------------------ component 组件 ------------------------------
 // table 表格
 @import "./table/scss/table.scss";
+// pagination 分页
+//@import "./pagination/scss/pagination.scss";
 
 // ------------------------------ resource 外部资源 ------------------------------
