@@ -10,26 +10,26 @@
 .pagination .pagination-quick-link{display:inline-block;}
 /* 翻页 */
 .pagination .pagination-link{font-size:0;}
-.pagination .pagination-link .p{display:inline-block;padding:10px 12px;margin:0 4px;color:#3377aa;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
-.pagination .pagination-link .p:hover,
-.pagination .pagination-link .p.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
-.pagination .pagination-link .p.page-link-ellipsis{border-width:0;padding:10px 8px;cursor:text;}
-.pagination .pagination-link .p.page-link-ellipsis:hover{color:inherit;background-color:inherit;}
-.pagination .pagination-link .p.disabled{color:#777;cursor:default;}
-.pagination .pagination-link .p.disabled:hover{color:#777;background-color:#eee;}
+.pagination .pagination-link .pg{display:inline-block;padding:10px 12px;margin:0 4px;color:#3377aa;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
+.pagination .pagination-link .pg:hover,
+.pagination .pagination-link .pg.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
+.pagination .pagination-link .pg.page-link-ellipsis{border-width:0;padding:10px 8px;cursor:text;}
+.pagination .pagination-link .pg.page-link-ellipsis:hover{color:inherit;background-color:inherit;}
+.pagination .pagination-link .pg.disabled{color:#777;cursor:default;}
+.pagination .pagination-link .pg.disabled:hover{color:#777;background-color:#eee;}
 
 /* 紧凑型表格样式 */
 .pagination.table-tight .pagination-link{display:inline-block;}
-.pagination.table-tight .pagination-link .p{margin:0;border-radius:0;border:1px solid #ddd;border-left-width:0;}
-.pagination.table-tight .pagination-link .p:last-child{}
-.pagination.table-tight .pagination-link .p:first-child{border-left-width:1px;}
-.pagination.table-tight .pagination-link .p:hover{background-color:#eee;color:#3377aa;}
-.pagination.table-tight .pagination-link .p.page-link-ellipsis{padding:10px 12px;}
-.pagination.table-tight .pagination-link .p.current,
-.pagination.table-tight .pagination-link .p.current:hover{color:#fff;background-color:#00a1d6;border-color:#ddd;}
-.pagination.table-tight .pagination-link .p.current{border-color:#00a1d6;}
-.pagination.table-tight .pagination-link .p.disabled{color:#777;cursor:default;}
-.pagination.table-tight .pagination-link .p.disabled:hover{color:#777;background-color:unset;}
+.pagination.table-tight .pagination-link .pg{margin:0;border-radius:0;border:1px solid #ddd;border-left-width:0;}
+.pagination.table-tight .pagination-link .pg:last-child{}
+.pagination.table-tight .pagination-link .pg:first-child{border-left-width:1px;}
+.pagination.table-tight .pagination-link .pg:hover{background-color:#eee;color:#3377aa;}
+.pagination.table-tight .pagination-link .pg.page-link-ellipsis{padding:10px 12px;}
+.pagination.table-tight .pagination-link .pg.current,
+.pagination.table-tight .pagination-link .pg.current:hover{color:#fff;background-color:#00a1d6;border-color:#ddd;}
+.pagination.table-tight .pagination-link .pg.current{border-color:#00a1d6;}
+.pagination.table-tight .pagination-link .pg.disabled{color:#777;cursor:default;}
+.pagination.table-tight .pagination-link .pg.disabled:hover{color:#777;background-color:unset;}
 
 /* 分页信息 */
 .pagination .btn-sure{
