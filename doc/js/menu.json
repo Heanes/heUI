@@ -13,7 +13,7 @@
         "nodes": [
             {
                 "text": "Guide 介绍",
-                "href": "../layout/guide.html",
+                "href": "layout/guide.html",
                 "nodeIcon": "fa fa-balance-scale",
                 "iconSelected": "",
                 "selectable": true,
@@ -26,20 +26,20 @@
                 ]
             },
             {
-                "text": "Basic 基本样式",
+                "text": "Basic 基础",
                 "href": "",
-                "nodeIcon": "",
+                "nodeIcon": "fa fa-desktop",
                 "iconSelected": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Color 颜色",
-                        "href": "../color/color.html",
+                        "href": "color/color.html",
                         "nodeIcon": "fa fa-dashboard",
                         "iconSelected": "",
                         "selectable": true,
@@ -53,7 +53,7 @@
                     },
                     {
                         "text": "Icon 图标",
-                        "href": "../icon/icon.html",
+                        "href": "icon/icon.html",
                         "nodeIcon": "fa fa-flag",
                         "iconSelected": "",
                         "selectable": true,
@@ -67,7 +67,7 @@
                     },
                     {
                         "text": "Button 按钮",
-                        "href": "../button/button.html",
+                        "href": "button/button.html",
                         "nodeIcon": "fa fa-stop-circle",
                         "iconSelected": "",
                         "selectable": true,
@@ -81,7 +81,7 @@
                     },
                     {
                         "text": "Text 文本",
-                        "href": "../text/text.html",
+                        "href": "text/text.html",
                         "nodeIcon": "fa fa-text-width",
                         "iconSelected": "",
                         "selectable": true,
@@ -95,7 +95,7 @@
                     },
                     {
                         "text": "Scrollbar 滚动条",
-                        "href": "../scrollbar/scrollbar.html",
+                        "href": "scrollbar/scrollbar.html",
                         "nodeIcon": "fa fa-arrows-v",
                         "iconSelected": "",
                         "selectable": true,
@@ -109,16 +109,30 @@
                     },
                     {
                         "text": "Code 代码",
-                        "href": "../code/code.html",
+                        "href": "",
                         "nodeIcon": "fa fa-code",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
-                            "expanded": true,
+                            "expanded": false,
                             "disabled": false
                         },
                         "nodes": [
+                            {
+                                "text": "Code 代码",
+                                "href": "code/code.html",
+                                "nodeIcon": "fa fa-code",
+                                "iconSelected": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "nodes": [
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -126,18 +140,18 @@
             {
                 "text": "Form 表单",
                 "href": "",
-                "nodeIcon": "",
+                "nodeIcon": "fa fa-list-alt",
                 "iconSelected": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Input 输入框",
-                        "href": "../input/input.html",
+                        "href": "input/input.html",
                         "nodeIcon": "fa fa-i-cursor",
                         "iconSelected": "",
                         "selectable": true,
@@ -151,7 +165,7 @@
                     },
                     {
                         "text": "Radio 单选框",
-                        "href": "../radio/radio.html",
+                        "href": "radio/radio.html",
                         "nodeIcon": "fa fa-dot-circle-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -165,7 +179,7 @@
                     },
                     {
                         "text": "Checkbox 多选框",
-                        "href": "../checkbox/checkbox.html",
+                        "href": "checkbox/checkbox.html",
                         "nodeIcon": "fa fa-check-square",
                         "iconSelected": "",
                         "selectable": true,
@@ -179,7 +193,7 @@
                     },
                     {
                         "text": "Select 下拉选择",
-                        "href": "../select/select.html",
+                        "href": "select/select.html",
                         "nodeIcon": "fa fa-toggle-down",
                         "iconSelected": "",
                         "selectable": true,
@@ -193,7 +207,7 @@
                     },
                     {
                         "text": "Textarea 文本域",
-                        "href": "../textarea/textarea.html",
+                        "href": "textarea/textarea.html",
                         "nodeIcon": "fa fa-square-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -207,7 +221,7 @@
                     },
                     {
                         "text": "Switch 开关切换器",
-                        "href": "../switch/switch.html",
+                        "href": "switch/switch.html",
                         "nodeIcon": "fa fa-toggle-on",
                         "iconSelected": "",
                         "selectable": true,
@@ -221,49 +235,77 @@
                     },
                     {
                         "text": "TimePicker 时间选择器",
-                        "href": "../timePicker/timePicker.html",
+                        "href": "timePicker/timePicker.html",
                         "nodeIcon": "fa fa-calendar",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
-                            "expanded": true,
+                            "expanded": false,
                             "disabled": false
                         },
                         "nodes": [
+                            {
+                                "text": "TimePicker 时间选择器",
+                                "href": "timePicker/timePicker.html",
+                                "nodeIcon": "fa fa-calendar",
+                                "iconSelected": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "nodes": [
+                                ]
+                            }
                         ]
                     },
                     {
                         "text": "DatePicker 日期选择器",
-                        "href": "../datePicker/datePicker.html",
+                        "href": "datePicker/datePicker.html",
                         "nodeIcon": "fa fa-calendar",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
                             "selected": false,
-                            "expanded": true,
+                            "expanded": false,
                             "disabled": false
                         },
                         "nodes": [
-                        ]
-                    },
-                    {
-                        "text": "DateTimePicker 日期时间选择器",
-                        "href": "../dateTimePicker/dateTimePicker.html",
-                        "nodeIcon": "fa fa-calendar",
-                        "iconSelected": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": [
+                            {
+                                "text": "DatePicker 日期选择器",
+                                "href": "datePicker/datePicker.html",
+                                "nodeIcon": "fa fa-calendar",
+                                "iconSelected": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "nodes": [
+                                ]
+                            },
+                            {
+                                "text": "DateTimePicker 日期时间选择器",
+                                "href": "dateTimePicker/dateTimePicker.html",
+                                "nodeIcon": "fa fa-calendar",
+                                "iconSelected": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "nodes": [
+                                ]
+                            }
                         ]
                     },
                     {
                         "text": "ColorPicker 颜色拾取器",
-                        "href": "../colorPicker/colorPicker.html",
+                        "href": "colorPicker/colorPicker.html",
                         "nodeIcon": "fa fa-tachometer",
                         "iconSelected": "",
                         "selectable": true,
@@ -277,7 +319,7 @@
                     },
                     {
                         "text": "Rate 评分",
-                        "href": "../rate/rate.html",
+                        "href": "rate/rate.html",
                         "nodeIcon": "fa fa-star-half-o",
                         "iconSelected": "",
                         "selectable": true,
@@ -299,13 +341,13 @@
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Table 表格",
-                        "href": "../table/table.html",
+                        "href": "table/table.html",
                         "nodeIcon": "fa fa-table",
                         "iconSelected": "",
                         "selectable": true,
@@ -319,7 +361,7 @@
                     },
                     {
                         "text": "Pagination 分页",
-                        "href": "../pagination/pagination.html",
+                        "href": "pagination/pagination.html",
                         "nodeIcon": "fa fa-chevron-circle-right",
                         "iconSelected": "",
                         "selectable": true,
@@ -333,7 +375,7 @@
                     },
                     {
                         "text": "Progress 进度条",
-                        "href": "../progress/progress.html",
+                        "href": "progress/progress.html",
                         "nodeIcon": "fa fa-adjust",
                         "iconSelected": "",
                         "selectable": true,
@@ -347,7 +389,7 @@
                     },
                     {
                         "text": "Badge 标记",
-                        "href": "../badge/badge.html",
+                        "href": "badge/badge.html",
                         "nodeIcon": "fa fa-superscript",
                         "iconSelected": "",
                         "selectable": true,
@@ -364,18 +406,18 @@
             {
                 "text": "Notice 消息通知",
                 "href": "",
-                "nodeIcon": "",
+                "nodeIcon": "fa fa-bell",
                 "iconSelected": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Notification 通知",
-                        "href": "../notification/notification.html",
+                        "href": "notification/notification.html",
                         "nodeIcon": "fa fa-bullhorn",
                         "iconSelected": "",
                         "selectable": true,
@@ -388,7 +430,7 @@
                     },
                     {
                         "text": "Loading 加载中",
-                        "href": "../loading/loading.html",
+                        "href": "loading/loading.html",
                         "nodeIcon": "fa fa-hourglass-half",
                         "iconSelected": "",
                         "selectable": true,
@@ -401,7 +443,7 @@
                     },
                     {
                         "text": "MessageBox 消息弹框",
-                        "href": "../messageBox/messageBox.html",
+                        "href": "messageBox/messageBox.html",
                         "nodeIcon": "fa fa-window-restore",
                         "iconSelected": "",
                         "selectable": true,
@@ -414,8 +456,8 @@
                     },
                     {
                         "text": "Global 全局消息显示",
-                        "href": "../message/global.html",
-                        "nodeIcon": "fa fa-info-circle",
+                        "href": "message/global.html",
+                        "nodeIcon": "fa fa-commenting",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -427,8 +469,8 @@
                     },
                     {
                         "text": "Local 局部消息显示",
-                        "href": "../message/local.html",
-                        "nodeIcon": "fa fa-info-circle",
+                        "href": "message/local.html",
+                        "nodeIcon": "fa fa-comments-o",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -443,18 +485,18 @@
             {
                 "text": "Navigation 导航",
                 "href": "",
-                "nodeIcon": "",
+                "nodeIcon": "fa fa-location-arrow",
                 "iconSelected": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "NavMenu 导航菜单",
-                        "href": "../navMenu/navMenu.html",
+                        "href": "navMenu/navMenu.html",
                         "nodeIcon": "fa fa-link",
                         "iconSelected": "",
                         "selectable": true,
@@ -468,7 +510,7 @@
                     },
                     {
                         "text": "Tabs 标签切换",
-                        "href": "../tabs/tabs.html",
+                        "href": "tabs/tabs.html",
                         "nodeIcon": "fa fa-object-ungroup",
                         "iconSelected": "",
                         "selectable": true,
@@ -482,8 +524,8 @@
                     },
                     {
                         "text": "Breadcrumb 面包屑",
-                        "href": "../breadcrumb/breadcrumb.html",
-                        "nodeIcon": "fa fa-space-shuttle",
+                        "href": "breadcrumb/breadcrumb.html",
+                        "nodeIcon": "fa fa-terminal",
                         "iconSelected": "",
                         "selectable": true,
                         "state": {
@@ -496,7 +538,7 @@
                     },
                     {
                         "text": "Dropdown 下拉菜单",
-                        "href": "../dropdwon/dropdwon.html",
+                        "href": "dropdwon/dropdwon.html",
                         "nodeIcon": "fa fa-chevron-down",
                         "iconSelected": "",
                         "selectable": true,
@@ -510,7 +552,7 @@
                     },
                     {
                         "text": "Steps 步骤",
-                        "href": "../steps/steps.html",
+                        "href": "steps/steps.html",
                         "nodeIcon": "fa fa-random",
                         "iconSelected": "",
                         "selectable": true,
@@ -527,18 +569,18 @@
             {
                 "text": "DataList 数据列表",
                 "href": "",
-                "nodeIcon": "",
+                "nodeIcon": "fa fa-list-ol",
                 "iconSelected": "",
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Normal 普通",
-                        "href": "../dataList/normal.html",
+                        "href": "dataList/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -552,7 +594,7 @@
                     },
                     {
                         "text": "Pictures 图片",
-                        "href": "../dataList/pictureList.html",
+                        "href": "dataList/pictureList.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -574,13 +616,13 @@
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "Normal 多类型数据编辑",
-                        "href": "../dataEdit/normal.html",
+                        "href": "dataEdit/normal.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -593,61 +635,7 @@
                     },
                     {
                         "text": "Tabs 多类型-带tab",
-                        "href": "../dataEdit/tab.html",
-                        "nodeIcon": "",
-                        "iconSelected": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    }
-                ]
-            },
-            {
-                "text": "404 页面不存在",
-                "href": "",
-                "nodeIcon": "",
-                "iconSelected": "",
-                "selectable": true,
-                "state": {
-                    "selected": false,
-                    "expanded": true,
-                    "disabled": false
-                },
-                "nodes": [
-                    {
-                        "text": "404-样式1",
-                        "href": "../404/style1/404.html",
-                        "nodeIcon": "fa fa-warning",
-                        "iconSelected": "",
-                        "selectable": true,
-                        "state": {
-                            "selected": false,
-                            "expanded": true,
-                            "disabled": false
-                        },
-                        "nodes": []
-                    }
-                ]
-            },
-            {
-                "text": "Other 其他",
-                "href": "",
-                "nodeIcon": "",
-                "iconSelected": "",
-                "selectable": true,
-                "state": {
-                    "selected": false,
-                    "expanded": true,
-                    "disabled": false
-                },
-                "nodes": [
-                    {
-                        "text": "浏览器版本太低",
-                        "href": "../pageTips/browserIsTooOld/style1/browserIsTooOld.html",
+                        "href": "dataEdit/tab.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -676,7 +664,7 @@
         "nodes": [
             {
                 "text": "ModalDialog 弹出层",
-                "href": "../modalDialog/modalDialog.html",
+                "href": "modalDialog/modalDialog.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -689,7 +677,7 @@
             },
             {
                 "text": "Tooltip 文字提示",
-                "href": "../tooltip/tooltip.html",
+                "href": "tooltip/tooltip.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -702,7 +690,7 @@
             },
             {
                 "text": "DragLayer 拖拽层",
-                "href": "../dragLayer/dragLayer.html",
+                "href": "dragLayer/dragLayer.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -715,7 +703,7 @@
             },
             {
                 "text": "Tree 树列表",
-                "href": "../tree/tree.html",
+                "href": "tree/tree.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -725,6 +713,74 @@
                     "disabled": false
                 },
                 "nodes": []
+            }
+        ]
+    },
+    {
+        "text": "Other 其他",
+        "href": "",
+        "nodeIcon": "",
+        "iconSelected": "",
+        "selectable": true,
+        "state": {
+            "selected": false,
+            "expanded": false,
+            "disabled": false
+        },
+        "nodes": [
+            {
+                "text": "404 页面不存在",
+                "href": "",
+                "nodeIcon": "fa fa-exclamation-triangle",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": false,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "404-样式1",
+                        "href": "404/style1/404.html",
+                        "nodeIcon": "fa fa-warning",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    }
+                ]
+            },
+            {
+                "text": "浏览器版本升级提示",
+                "href": "",
+                "nodeIcon": "",
+                "iconSelected": "",
+                "selectable": true,
+                "state": {
+                    "selected": false,
+                    "expanded": true,
+                    "disabled": false
+                },
+                "nodes": [
+                    {
+                        "text": "样式1",
+                        "href": "pageTips/browserIsTooOld/style1/browserIsTooOld.html",
+                        "nodeIcon": "",
+                        "iconSelected": "",
+                        "selectable": true,
+                        "state": {
+                            "selected": false,
+                            "expanded": true,
+                            "disabled": false
+                        },
+                        "nodes": []
+                    }
+                ]
             }
         ]
     },
@@ -742,7 +798,7 @@
         "nodes": [
             {
                 "text": "TODO",
-                "href": "../todo/todo.html",
+                "href": "todo/todo.html",
                 "nodeIcon": "",
                 "iconSelected": "",
                 "selectable": true,
@@ -761,13 +817,13 @@
                 "selectable": true,
                 "state": {
                     "selected": false,
-                    "expanded": true,
+                    "expanded": false,
                     "disabled": false
                 },
                 "nodes": [
                     {
                         "text": "子菜单1.1",
-                        "href": "../tabsDemo/page1.html",
+                        "href": "tabsDemo/page1.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -780,7 +836,7 @@
                     },
                     {
                         "text": "子菜单1.2",
-                        "href": "../tabsDemo/page2.html",
+                        "href": "tabsDemo/page2.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,
@@ -793,7 +849,7 @@
                     },
                     {
                         "text": "子菜单1.3",
-                        "href": "../tabsDemo/page3.html",
+                        "href": "tabsDemo/page3.html",
                         "nodeIcon": "",
                         "iconSelected": "",
                         "selectable": true,

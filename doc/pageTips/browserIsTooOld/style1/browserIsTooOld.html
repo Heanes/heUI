@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ie浏览器版本过低iealert提示jquery插件</title>
-<meta content="text/html; charset=utf-8" http-equiv="content-type">
-<script type="text/javascript" src="/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/iealert.js"></script>
-<link rel="stylesheet" type="text/css" href="iealert/browser-is-too-old.css">
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("body").iealert();
-    });
-</script>
+    <title>ie浏览器版本过低iealert提示jquery插件</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="iealert/browser-is-too-old.css">
 </head>
 <body>
 <div id="ie-alert-overlay" style="_height:497px"></div>
@@ -31,5 +24,13 @@
 <div style="display:none;background:#d4bfff;margin:200px auto;border:1px dashed #ff3fff;padding:20px;width:500px">
     <h1>默认是低于ie8浏览器都会弹出提示框，大家想看到效果就用ie6、ie7来打开运行</h1>
 </div>
+<script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/iealert.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //$("body").iealert();
+    });
+</script>
 </body>
 </html>
