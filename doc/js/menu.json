@@ -120,8 +120,22 @@
                         },
                         "nodes": [
                             {
-                                "text": "Code 代码",
-                                "href": "code/code.html",
+                                "text": "syntaxhighlighter",
+                                "href": "code/code_syntaxhighlighter.html",
+                                "nodeIcon": "fa fa-code",
+                                "iconSelected": "",
+                                "selectable": true,
+                                "state": {
+                                    "selected": false,
+                                    "expanded": true,
+                                    "disabled": false
+                                },
+                                "nodes": [
+                                ]
+                            },
+                            {
+                                "text": "pretiffy",
+                                "href": "code/code_pretiffy.html",
                                 "nodeIcon": "fa fa-code",
                                 "iconSelected": "",
                                 "selectable": true,
