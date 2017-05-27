@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/**
+ * @doc color 颜色
+ * @author Heanes
+ * @time 2017-05-26 15:40:02 周五
+ */
+$color-set:(
+  // 常用颜色
+  primary: #428bca,
+  success: #38b03f,
+  info: #03b8cf,
+  important: #bd7b46,
+  warn: #f1a325,
+  danger: #ca6451,
+  error: #ea644a,
+  primary-pale: #ebf2f9,
+  success-pale: #ddf4df,
+  info-pale: #ddf3f5,
+  important-pale: #f7ebe1,
+  warn-pale: #fff0d5,
+  danger-pale: #ffe5e0,
+  error-pale: #ffbaad,
+
+  // 灰度颜色
+  gray-darker: #222,
+  gray-dark: #333,
+  //"gray": #808080,
+  gray-light: #ddd,
+  gray-lighter: #e5e5e5,
+  gray-pale: #f1f1f1,
+);
+$border-color-set:(
+  // 常用颜色
+  primary: #0462f7,
+  success: #2c8931,
+  info: #028b9d,
+  important: #996337,
+  warn: #d5890e,
+  danger: #e53d1c,
+  error: #f00,
+  primary-pale: #c4d8ed,
+  success-pale: #b6e8bb,
+  info-pale: #b6e5e9,
+  important-pale: #ecd0b9,
+  warn-pale: #fff0d5,
+  danger-pale: #ffe5e0,
+  error-pale: #ffbaad,
+
+  // 灰度颜色
+  gray-darker: #222,
+  gray-dark: #333,
+  //"gray": #808080,
+  gray-light: #ddd,
+  gray-lighter: #e5e5e5,
+  gray-pale: #f1f1f1,
+);
+
+@each $name in map-keys($color-set){
+  .bg-color-#{$name}{
+    background-color:map-get($color-set, $name);
+  }
+  .color-#{$name}{
+    color:map-get($color-set, $name);
+  }
+}
+@each $name in map-keys($border-color-set){
+  .border-color-#{$name}{
+    border-color:map-get($border-color-set, $name);
+  }
+}

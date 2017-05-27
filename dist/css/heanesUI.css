@@ -277,6 +277,182 @@ template {
  * @time 2017-03-02 16:29:53 周四
  */
 /**
+ * @doc color 颜色
+ * @author Heanes
+ * @time 2017-05-26 15:40:02 周五
+ */
+.bg-color-primary {
+  background-color: #428bca; }
+
+.color-primary {
+  color: #428bca; }
+
+.bg-color-success {
+  background-color: #38b03f; }
+
+.color-success {
+  color: #38b03f; }
+
+.bg-color-info {
+  background-color: #03b8cf; }
+
+.color-info {
+  color: #03b8cf; }
+
+.bg-color-important {
+  background-color: #bd7b46; }
+
+.color-important {
+  color: #bd7b46; }
+
+.bg-color-warn {
+  background-color: #f1a325; }
+
+.color-warn {
+  color: #f1a325; }
+
+.bg-color-danger {
+  background-color: #ca6451; }
+
+.color-danger {
+  color: #ca6451; }
+
+.bg-color-error {
+  background-color: #ea644a; }
+
+.color-error {
+  color: #ea644a; }
+
+.bg-color-primary-pale {
+  background-color: #ebf2f9; }
+
+.color-primary-pale {
+  color: #ebf2f9; }
+
+.bg-color-success-pale {
+  background-color: #ddf4df; }
+
+.color-success-pale {
+  color: #ddf4df; }
+
+.bg-color-info-pale {
+  background-color: #ddf3f5; }
+
+.color-info-pale {
+  color: #ddf3f5; }
+
+.bg-color-important-pale {
+  background-color: #f7ebe1; }
+
+.color-important-pale {
+  color: #f7ebe1; }
+
+.bg-color-warn-pale {
+  background-color: #fff0d5; }
+
+.color-warn-pale {
+  color: #fff0d5; }
+
+.bg-color-danger-pale {
+  background-color: #ffe5e0; }
+
+.color-danger-pale {
+  color: #ffe5e0; }
+
+.bg-color-error-pale {
+  background-color: #ffbaad; }
+
+.color-error-pale {
+  color: #ffbaad; }
+
+.bg-color-gray-darker {
+  background-color: #222; }
+
+.color-gray-darker {
+  color: #222; }
+
+.bg-color-gray-dark {
+  background-color: #333; }
+
+.color-gray-dark {
+  color: #333; }
+
+.bg-color-gray-light {
+  background-color: #ddd; }
+
+.color-gray-light {
+  color: #ddd; }
+
+.bg-color-gray-lighter {
+  background-color: #e5e5e5; }
+
+.color-gray-lighter {
+  color: #e5e5e5; }
+
+.bg-color-gray-pale {
+  background-color: #f1f1f1; }
+
+.color-gray-pale {
+  color: #f1f1f1; }
+
+.border-color-primary {
+  border-color: #0462f7; }
+
+.border-color-success {
+  border-color: #2c8931; }
+
+.border-color-info {
+  border-color: #028b9d; }
+
+.border-color-important {
+  border-color: #996337; }
+
+.border-color-warn {
+  border-color: #d5890e; }
+
+.border-color-danger {
+  border-color: #e53d1c; }
+
+.border-color-error {
+  border-color: #f00; }
+
+.border-color-primary-pale {
+  border-color: #c4d8ed; }
+
+.border-color-success-pale {
+  border-color: #b6e8bb; }
+
+.border-color-info-pale {
+  border-color: #b6e5e9; }
+
+.border-color-important-pale {
+  border-color: #ecd0b9; }
+
+.border-color-warn-pale {
+  border-color: #fff0d5; }
+
+.border-color-danger-pale {
+  border-color: #ffe5e0; }
+
+.border-color-error-pale {
+  border-color: #ffbaad; }
+
+.border-color-gray-darker {
+  border-color: #222; }
+
+.border-color-gray-dark {
+  border-color: #333; }
+
+.border-color-gray-light {
+  border-color: #ddd; }
+
+.border-color-gray-lighter {
+  border-color: #e5e5e5; }
+
+.border-color-gray-pale {
+  border-color: #f1f1f1; }
+
+/**
  * @doc 按钮样式
  * @author Heanes
  * @time 2015-11-30 23:43:39
