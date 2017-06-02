@@ -39,14 +39,129 @@
                     <div class="demo-wrap">
                         <div class="demo-title"><h1>prettify 代码高亮插件</h1></div>
                         <div class="demo-desc">
-                            <p class="desc">来自google的一款代码高亮插件</p>
+                            <p class="desc">来自google的一款代码高亮插件，<strong style="font-size:15px;">不</strong>依赖jQuery</p>
+                            <p><strong>GitHub源代码：</strong><a href="https://github.com/google/code-prettify">https://github.com/google/code-prettify</a></p>
+                            <p><strong>GitHub源代码：</strong><a href="https://code.google.com/archive/p/google-code-prettify/">https://code.google.com/archive/p/google-code-prettify(需要翻墙)</a></p>
+                            <p><strong>使用示例：</strong></p>
+                            <p>1. 在head位置引入css文件：</p>
+                            <p>
+                                <pre class="prettyprint linenums lang-html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;prettify/2013_06_21/styles/prettify-bootstrap-light.css&quot;/&gt;</pre>
+                            </p>
+                            <p>2. 在body底部位置引入js文件：</p>
+                            <p>
+                                <pre class="prettyprint linenums lang-html">&lt;script type=&quot;text/javascript&quot; src=&quot;prettify/2013_06_21/src/prettify.js&quot;&gt;&lt;/script&gt;</pre>
+                            </p>
+                            <p>3. 调用prettify：</p>
+                            <p>
+                            <pre class="prettyprint linenums lang-html">&lt;script type=&quot;application/javascript&quot;&gt;
+    prettyPrint();
+&lt;/script&gt;</pre>
+                            </p>
+                            <p>4. 需要高亮的代码示例：</p>
+                            <p>
+                                <pre class="prettyprint linenums lang-html">&lt;pre class=&quot;prettyprint linenums lang-php&quot;&gt;echo &#x27;Hello World&#x27;;&lt;/pre&gt;</pre>
+                            </p>
+                            <p>注意：class名为<q>prettyprint</q>，<q>linenums</q>表示有行号，<q>lang-html</q>表示代码语言为html</p>
                         </div>
                         <div class="demo-show">
                             <div class="demo-group">
-                                <div class="demo-group-title"><h3 id="code">代码段</h3></div>
+                                <div class="demo-group-title"><h3 id="code">代码段示例</h3></div>
                                 <div class="demo-content">
+                                    <div class="demo-one-desc"><h3>php：</h3></div>
                                     <div class="demo-one">
                                         <pre class="prettyprint linenums lang-php">echo 'Hello World';</pre>
+                                    </div>
+                                    <div class="demo-one">
+                                        <pre class="prettyprint linenums lang-php">
+/**
+ * @doc 将数组或字符串转为驼峰风格
+ * @param string|array $mix 要被转化的字符或数组，将会递归更改
+ * @param string $type key|value|all 转换位置，key代表数组的键，value代表数组的值，all代表都转换
+ * @return null|string|array
+ * @author Heanes fang <heanes@163.com>
+ * @time 2016-06-27 11:25:29 周一
+ */
+function convertToCamelStyle($mix, $type = 'key'){
+    if(!isset($mix)){
+        return '';
+    }
+    if(!is_array($mix)){
+        $words = explode('_', trim($mix));
+        $str = '';
+        foreach ($words as $word) {
+            $str .= ucfirst($word);
+        }
+        return lcfirst($str);
+    }
+    if(is_array($mix)){
+        $newArray = [];
+        foreach ($mix as $index => &$item) {
+            if(is_array($item)){
+                $item = convertToCamelStyle($item, $type);
+            }
+            if($type == 'key' || $type == 'all'){
+                $indexStr = '';
+                $indexArr = explode('_', trim($index));
+                foreach ($indexArr as $indexTemp) {
+                    $indexStr .= ucfirst($indexTemp);
+                }
+                $index = lcfirst($indexStr);
+            }
+            if(!is_array($item)){
+                if($type == 'value' || $type == 'all'){
+                    $itemStr = '';
+                    $itemArr = explode('_', trim($item));
+                    foreach ($itemArr as $itemTemp) {
+                        $itemStr .= ucfirst($itemTemp);
+                    }
+                    $item = lcfirst($itemStr);
+                }
+            }
+            $newArray[$index] = $item;
+        }
+        return $newArray;
+    }
+    return '';
+}
+                                        </pre>
+                                    </div>
+                                    <div class="demo-one-desc"><h3>java：</h3></div>
+                                    <div class="demo-one">
+                                        <pre class="prettyprint linenums lang-java">import java.lang.reflect.*;
+
+class DynamicProxyHandler implements InvocationHandler {
+  private Object proxied;
+  public DynamicProxyHandler(Object proxied) {
+    this.proxied = proxied;
+  }
+  public Object
+  invoke(Object proxy, Method method, Object[] args)
+  throws Throwable {
+    System.out.println("**** proxy: " + proxy.getClass() +
+      ", method: " + method + ", args: " + args);
+    if(args != null)
+      for(Object arg : args)
+        System.out.println("  " + arg);
+    return method.invoke(proxied, args);
+  }
+}
+
+class SimpleDynamicProxy {
+  public static void consumer(Interface iface) {
+    iface.doSomething();
+    iface.somethingElse("bonobo");
+  }
+  public static void main(String[] args) {
+    RealObject real = new RealObject();
+    consumer(real);
+    // Insert a proxy and call again:
+    Interface proxy = (Interface)Proxy.newProxyInstance(
+      Interface.class.getClassLoader(),
+      new Class[]{ Interface.class },
+      new DynamicProxyHandler(real));
+    consumer(proxy);
+  }
+}</pre>
                                     </div>
                                 </div>
                             </div>
@@ -64,8 +179,9 @@
     <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
     <script type="text/javascript" src="/public/static/libs/js/codeHighLight/prettify/2013_06_21/src/prettify.js"></script>
     <script type="application/javascript">
+        prettyPrint();
         $(function(){
-            prettyPrint();
+            ;
         })
     </script>
     <!-- E js E -->
