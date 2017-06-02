@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/styles/shThemeDefault.css"/>
     <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
-    <title>Code syntaxhighlighter 代码高亮插件</title>
+    <title>syntaxhighlighter 代码高亮插件</title>
 </head>
 <body>
 <div class="wrap">
@@ -41,17 +41,263 @@
                     <div class="demo-wrap">
                         <div class="demo-title"><h1>syntaxhighlighter 代码高亮插件</h1></div>
                         <div class="demo-desc">
-                            <p class="desc">Desc。</p>
+                            <p class="desc">一款代码高亮插件，<strong style="font-size:15px;">不</strong>依赖jQuery</p>
+                            <p><strong>官网：</strong><a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a></p>
+                            <p><strong>GitHub源代码：</strong><a href="https://github.com/syntaxhighlighter/syntaxhighlighter">https://github.com/syntaxhighlighter/syntaxhighlighter</a></p>
+                            <p><strong>使用示例：</strong></p>
+                            <p>1. 在head位置引入css文件（支持主题定义）：</p>
+                            <p>
+                            <pre class="brush: html">&lt;link href=&quot;css/shCore.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;link href=&quot;css/shThemeDefault.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</pre>
+                            </p>
+                            <p>2. 在body底部位置引入js文件，注意根据不同语言（支持的语言见<a href="#supportLanguage">底部</a>）需要，要引入对应的js文件：</p>
+                            <p>
+                            <pre class="brush: html">&lt;script type=&quot;text/javascript&quot; src=&quot;syntaxhighlighter/3.0.83/scripts/shCore.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;syntaxhighlighter/3.0.83/scripts/shBrushXml.js&quot;&gt;&lt;/script&gt;</pre>
+                            </p>
+                            <p>3. 调用SyntaxHighlighter：</p>
+                            <p>
+                            <pre class="brush: html">&lt;script type=&quot;text/javascript&quot;&gt;
+     SyntaxHighlighter.all()
+&lt;/script&gt;</pre>
+                            </p>
+                            <p>4. 需要高亮的代码示例：</p>
+                            <p>
+                            <pre class="brush: html">&lt;pre class=&quot;brush: php&quot;&gt;echo &#x27;Hello World&#x27;;&lt;/pre&gt;</pre>
+                            </p>
+                            <p>注意：class名为<q>brush: php</q>，<q>php</q>表示代码语言为php</p>
                         </div>
                         <div class="demo-show">
                             <div class="demo-group">
-                                <div class="demo-group-title"><h3 id="code">代码段</h3></div>
+                                <div class="demo-group-title"><h3 id="code">代码段示例</h3></div>
                                 <div class="demo-content">
+                                    <div class="demo-one-desc"><h3>php：</h3></div>
                                     <div class="demo-one">
-                                        <pre class="prettyprint linenums lang-php">echo 'Hello World';</pre>
+                                        <pre class="brush: php">echo 'Hello World';</pre>
+                                    </div>
+                                    <div class="demo-one">
+                                        <pre class="brush: php">
+/**
+ * @doc 将数组或字符串转为驼峰风格
+ * @param string|array $mix 要被转化的字符或数组，将会递归更改
+ * @param string $type key|value|all 转换位置，key代表数组的键，value代表数组的值，all代表都转换
+ * @return null|string|array
+ * @author Heanes fang <heanes@163.com>
+ * @time 2016-06-27 11:25:29 周一
+ */
+function convertToCamelStyle($mix, $type = 'key'){
+    if(!isset($mix)){
+        return '';
+    }
+    if(!is_array($mix)){
+        $words = explode('_', trim($mix));
+        $str = '';
+        foreach ($words as $word) {
+            $str .= ucfirst($word);
+        }
+        return lcfirst($str);
+    }
+    if(is_array($mix)){
+        $newArray = [];
+        foreach ($mix as $index => &$item) {
+            if(is_array($item)){
+                $item = convertToCamelStyle($item, $type);
+            }
+            if($type == 'key' || $type == 'all'){
+                $indexStr = '';
+                $indexArr = explode('_', trim($index));
+                foreach ($indexArr as $indexTemp) {
+                    $indexStr .= ucfirst($indexTemp);
+                }
+                $index = lcfirst($indexStr);
+            }
+            if(!is_array($item)){
+                if($type == 'value' || $type == 'all'){
+                    $itemStr = '';
+                    $itemArr = explode('_', trim($item));
+                    foreach ($itemArr as $itemTemp) {
+                        $itemStr .= ucfirst($itemTemp);
+                    }
+                    $item = lcfirst($itemStr);
+                }
+            }
+            $newArray[$index] = $item;
+        }
+        return $newArray;
+    }
+    return '';
+}</pre>
+                                    </div>
+                                    <div class="demo-one-desc"><h3>java：</h3></div>
+                                    <div class="demo-one">
+                                        <pre class="brush: java">import java.lang.reflect.*;
+
+class DynamicProxyHandler implements InvocationHandler {
+  private Object proxied;
+  public DynamicProxyHandler(Object proxied) {
+    this.proxied = proxied;
+  }
+  public Object
+  invoke(Object proxy, Method method, Object[] args)
+  throws Throwable {
+    System.out.println("**** proxy: " + proxy.getClass() +
+      ", method: " + method + ", args: " + args);
+    if(args != null)
+      for(Object arg : args)
+        System.out.println("  " + arg);
+    return method.invoke(proxied, args);
+  }
+}
+
+class SimpleDynamicProxy {
+  public static void consumer(Interface iface) {
+    iface.doSomething();
+    iface.somethingElse("bonobo");
+  }
+  public static void main(String[] args) {
+    RealObject real = new RealObject();
+    consumer(real);
+    // Insert a proxy and call again:
+    Interface proxy = (Interface)Proxy.newProxyInstance(
+      Interface.class.getClassLoader(),
+      new Class[]{ Interface.class },
+      new DynamicProxyHandler(real));
+    consumer(proxy);
+  }
+}</pre>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="demo-desc">
+                            <a id="supportLanguage"></a>
+                            <p>以下是支持的高亮语言：</p>
+                            <table class="table table-condensed table-bordered table-hover table-striped" style="max-width:600px;">
+                                <thead>
+                                <tr>
+                                    <th>Brush name</th>
+                                    <th>Brush aliases</th>
+                                    <th>File name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/actionscript3.html">ActionScript3</a></td>
+                                    <td>as3, actionscript3</td>
+                                    <td class="last">shBrushAS3.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/bash.html">Bash/shell</a></td>
+                                    <td>bash, shell</td>
+                                    <td class="last">shBrushBash.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/coldfusion.html">ColdFusion</a></td>
+                                    <td>cf, coldfusion</td>
+                                    <td class="last">shBrushColdFusion.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/csharp.html">C#</a></td>
+                                    <td>c-sharp, csharp</td>
+                                    <td class="last">shBrushCSharp.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/cpp.html">C++</a></td>
+                                    <td>cpp, c</td>
+                                    <td class="last">shBrushCpp.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/css.html">CSS</a></td>
+                                    <td>css</td>
+                                    <td class="last">shBrushCss.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/delphi.html">Delphi</a></td>
+                                    <td>delphi, pas, pascal</td>
+                                    <td class="last">shBrushDelphi.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/diff.html">Diff</a></td>
+                                    <td>diff, patch</td>
+                                    <td class="last">shBrushDiff.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/erlang.html">Erlang</a></td>
+                                    <td>erl, erlang</td>
+                                    <td class="last">shBrushErlang.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/groovy.html">Groovy</a></td>
+                                    <td>groovy</td>
+                                    <td class="last">shBrushGroovy.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/javascript.html">JavaScript</a></td>
+                                    <td>js, jscript, javascript</td>
+                                    <td class="last">shBrushJScript.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/java.html">Java</a></td>
+                                    <td>java</td>
+                                    <td class="last">shBrushJava.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/javafx.html">JavaFX</a></td>
+                                    <td>jfx, javafx</td>
+                                    <td class="last">shBrushJavaFX.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/perl.html">Perl</a></td>
+                                    <td>perl, pl</td>
+                                    <td class="last">shBrushPerl.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/php.html">PHP</a></td>
+                                    <td>php</td>
+                                    <td class="last">shBrushPhp.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/plain.html">Plain Text</a></td>
+                                    <td>plain, text</td>
+                                    <td class="last">shBrushPlain.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/powershell.html">PowerShell</a></td>
+                                    <td>ps, powershell</td>
+                                    <td class="last">shBrushPowerShell.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/python.html">Python</a></td>
+                                    <td>py, python</td>
+                                    <td class="last">shBrushPython.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/ruby.html">Ruby</a></td>
+                                    <td>rails, ror, ruby</td>
+                                    <td class="last">shBrushRuby.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/scala.html">Scala</a></td>
+                                    <td>scala</td>
+                                    <td class="last">shBrushScala.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/sql.html">SQL</a></td>
+                                    <td>sql</td>
+                                    <td class="last">shBrushSql.js</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/vb.html">Visual Basic</a></td>
+                                    <td>vb, vbnet</td>
+                                    <td class="last">shBrushVb.js</td>
+                                </tr>
+                                <tr class="last">
+                                    <td><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/xml.html">XML</a></td>
+                                    <td>xml, xhtml, xslt, html, xhtml</td>
+                                    <td class="last">shBrushXml.js</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -65,8 +311,9 @@
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
     <script type="text/javascript" src="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shCore.js"></script>
-    <script type="text/javascript" src="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shAutoloader.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
     <script type="text/javascript" src="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/codeHighLight/syntaxhighlighter/3.0.83/scripts/shBrushJava.js"></script>
     <script type="application/javascript">
         SyntaxHighlighter.config.bloggerMode = true;
         SyntaxHighlighter.config.toolbar = false;
