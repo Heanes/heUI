@@ -18,13 +18,15 @@
 
 /****************************** demo展示样式 ******************************/
 .demo-wrap{padding:20px;font-weight:400;}
-.demo-wrap .demo-title{margin:14px 0;}
-.demo-wrap .demo-desc{color:#444;margin-bottom:10px;line-height:20px;}
+.demo-wrap .demo-title{margin:14px 0;border-bottom:1px solid #eee;}
+.demo-wrap .demo-desc{color:#444;margin-bottom:10px;line-height:20px;text-indent:2em;}
 .demo-wrap .demo-group{margin-top:40px;}
-.demo-wrap .demo-group .demo-group-title{margin:14px 0;}
-.demo-wrap .demo-content{}
-.demo-wrap .demo-content .demo-one{margin:10px 0;}
-.example:focus {
+.demo-wrap .demo-group .demo-group-title{margin:14px 0;padding:0 10px;border-bottom:1px solid #eee;}
+.demo-wrap .demo-group .demo-desc{padding:10px;text-indent:2em;}
+.demo-wrap .demo-group .demo-content{padding:10px;}
+.demo-wrap .demo-group .demo-content .demo-one{margin:10px 0;padding:10px;}
+.demo-wrap .demo-group .demo-content .demo-one-desc{border-bottom:1px solid #eee;}
+.demo-wrap .demo-group .demo-content .demo-one:hover {
   outline: 0;
   box-shadow: 0 1px 15px rgba(0,0,0,.5);
   animation: glow 1s ease-in-out;
