@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <!-- style -->
-    <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>-->
+    <link rel="stylesheet" type="text/css" href="//localhost:8080/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <title>Input 输入框</title>
 </head>
@@ -91,6 +92,11 @@
                                 </div>
                                 <div class="demo-one">
                                     <label>
+                                        <input type="text" class="validate-warning" value="可能有问题的输入" placeholder="请输入" />
+                                    </label>
+                                </div>
+                                <div class="demo-one">
+                                    <label>
                                         <input type="text" class="validate-success" value="符合要求的输入" placeholder="请输入" />
                                     </label>
                                 </div>
@@ -112,6 +118,7 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//localhost:8080/js/heanesUI.js"></script>
     <!-- E js E -->
 </cite>
 </body>

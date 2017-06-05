@@ -47,7 +47,7 @@
   margin: 14px 0;
   border-bottom: 1px solid #eee; }
 
-.demo-wrap .demo-desc {
+.demo-wrap > .demo-desc {
   color: #444;
   margin-bottom: 10px;
   line-height: 20px;
