@@ -47,13 +47,23 @@ $(function () {
     });
 
     /**
+     * @doc a标签点击后添加新的tab（覆写的简便方法）
+     * @param $aNode a标签jQuery对象
+     * @returns {boolean}
+     */
+    function addJqxTabFromANode($aNode){
+        var placeIndex = tabsLength + tabsAddCount;
+        addJqxTabFromANodeAtIndex($aNode, $tabsContainer, placeIndex);
+    }
+
+    /**
      * @doc a标签点击后添加新的tab
      * @param $aNode a标签jQuery对象
      * @param $tabsContainer tab放置的容器
      * @param index 序号
      * @returns {boolean}
      */
-    function addJqxTabFromANode($aNode, $tabsContainer, index){
+    function addJqxTabFromANodeAtIndex($aNode, $tabsContainer, index){
         var tabId = 'tabsIframe' + $aNode.attr('data-nodeId');
         var tabTitleId = 'tabsTitle' + $aNode.attr('data-nodeId');
         // 查找是否已经存在此tab（支持tab头被拖动后的定位）
@@ -73,6 +83,8 @@ $(function () {
         // 否则创建
         var tabContent = '<iframe src="' + tabSrc + '" id="' + tabId + '"></iframe>';
         $tabsContainer.jqxTabs('addAt', index, $tabTitleWrap, tabContent);
+
+        tabsAddCount++;
         return true;
     }
     /**
@@ -84,7 +96,7 @@ $(function () {
         var menuDataJsonUrl="js/menu.json";
         $.getJSON(menuDataJsonUrl, function(data){
             //renderMenu($menuLeftBlock, data);
-            $('.left-block').treeView({
+            var $treeView = $('.left-block').treeView({
                 data: data,
                 iconCollapse: 'triangle-right', // 合上时的图标
                 iconExpand: 'triangle-down',    // 展开时的图标
@@ -121,7 +133,7 @@ $(function () {
                     }
                 },                              // 样式相关
 
-                onNodeSelected: function (event, node) {
+                onNodeClick: function (event, node) {
                     if(node.target && node.target == '_blank'){
                         window.open(node.href);
                         return false;
@@ -129,11 +141,19 @@ $(function () {
                     var $aNode = $('<a></a>').attr('href', node.href).attr('data-nodeId', node.nodeId)
                         .append('<i class="tab-title-icon ' + node.nodeIcon + '"></i>')
                         .append('<span class="tab-title">' + node.text + '</span>');
-                    var addResult = addJqxTabFromANode($aNode, $tabsContainer, tabsLength + tabsAddCount);
-                    addResult ? tabsAddCount++ : null;
+                    addJqxTabFromANode($aNode);
                     return false;
                 }
             });
+
+            //@Todo url带子树路径
+            var hash =window.location.hash;
+            var menuHash = hash.match(/menu=(\d+|,){1,}/g);
+            var nodeIdsStr = menuHash[0].replace('menu=', '');
+            var nodeIdArr = nodeIdsStr.split(',');
+            console.log(nodeIdArr);
+
+
             return data;
         });
     };
