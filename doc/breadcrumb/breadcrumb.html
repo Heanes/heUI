@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <!-- style -->
-    <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="//localhost:8080/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <title>Breadcrumb 面包屑导航</title>
 </head>
@@ -47,14 +47,37 @@
                                     <p class="desc">普通样式的面包屑导航。</p>
                                 </div>
                                 <div class="demo-content">
+                                    <div class="demo-one-desc">
+                                        <p class="desc">纯文本的面包屑。</p>
+                                    </div>
                                     <div class="demo-one">
                                         <div class="breadcrumb-wrap">
-                                            <div class="breadcrumb-cell breadcrumb-root">
+                                            <div class="breadcrumb-cell breadcrumb-node breadcrumb-root">
                                                 <i class="fa fa-rocket"></i>
                                                 <span class="breadcrumb-text">起始节点</span>
                                             </div>
                                             <div class="breadcrumb-cell breadcrumb-delimiter">
-                                                <span>&gt;</span>
+                                                <span>/</span>
+                                            </div>
+                                            <div class="breadcrumb-cell breadcrumb-node">
+                                                <i class="fa fa-rocket"></i>
+                                                <span class="breadcrumb-text">一级菜单</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one-desc">
+                                        <p class="desc">带链接的面包屑，常用语页面导航。</p>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="breadcrumb-wrap">
+                                            <div class="breadcrumb-cell breadcrumb-node breadcrumb-root">
+                                                <span class="breadcrumb-text"><a href="javascript:void(0);">首页</a></span>
+                                            </div>
+                                            <div class="breadcrumb-cell breadcrumb-delimiter">
+                                                <span>/</span>
+                                            </div>
+                                            <div class="breadcrumb-cell breadcrumb-node">
+                                                <span class="breadcrumb-text"><a href="javascript:void(0);">一级菜单</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +94,7 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
+    <script type="text/javascript" src="//localhost:8080/js/heanesUI.js"></script>
     <script type="application/javascript">
         $(function () {
             ;

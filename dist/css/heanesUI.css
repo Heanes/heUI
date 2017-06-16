@@ -851,7 +851,7 @@ input[type="text"] {
   color: #555;
   vertical-align: middle;
   border-radius: 4px; }
-  input[type="text"].hover, input[type="text"]:active, input[type="text"].active, input[type="text"].focus {
+  input[type="text"].hover, input[type="text"]:active, input[type="text"].active, input[type="text"]:focus, input[type="text"].focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
     outline: thin dotted \9;
@@ -859,28 +859,33 @@ input[type="text"] {
 
 /* 不可输入的样式 */
 input.disabled {
-  opacity: .5;
+  opacity: .45;
   pointer-events: none; }
 
 input[type="checkbox"], input[type="radio"] {
   vertical-align: top; }
 
 /* 验证失败 */
-input.validate-error {
-  border-color: #f00;
-  background-color: #fbf9bb; }
+input[type="text"].validate-error {
+  background-color: #fbf9bb;
+  border-color: #f00; }
+  input[type="text"].validate-error:focus, input[type="text"].validate-error:active {
+    border-color: rgba(255, 0, 0, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6); }
 
-input.validate-error:focus {
-  border-color: rgba(255, 0, 0, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6); }
+/* 验证警告 */
+input[type="text"].validate-warning {
+  border-color: #d5890e; }
+  input[type="text"].validate-warning:focus, input[type="text"].validate-warning:active {
+    border-color: rgba(213, 132, 0, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(144, 93, 9, 0.6); }
 
 /* 验证成功 */
-input.validate-success {
+input[type="text"].validate-success {
   border-color: #32bc61; }
-
-input.validate-success:focus {
-  border-color: #2b542c;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
+  input[type="text"].validate-success:focus, input[type="text"].validate-success:active {
+    border-color: rgba(43, 84, 44, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(103, 177, 104, 0.8); }
 
 /**
  * @doc table 表格样式
@@ -962,6 +967,21 @@ table {
 
 .table.table-hover .danger:hover {
   background-color: #ebc2c7; }
+
+/**
+ * @doc breadcrumb 面包屑导航
+ * @author Heanes
+ * @time 2017-06-05 19:17:33 周一
+ */
+.breadcrumb-wrap {
+  background-color: #f5f5f5;
+  padding: 0 10px; }
+
+.breadcrumb-wrap .breadcrumb-cell {
+  display: inline-block; }
+
+.breadcrumb-wrap .breadcrumb-node {
+  padding: 10px 0; }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
