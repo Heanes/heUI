@@ -221,6 +221,10 @@ iframe {
 .tree-top-wrap .tree-top-list li .node-text {
   padding: 0 0 0 4px; }
 
+/* 防止菜单文字被xuan'zh */
+.tree-list-wrap {
+  user-select: none; }
+
 /************************ 右侧样式 ************************/
 .iframe-container {
   overflow: hidden;
