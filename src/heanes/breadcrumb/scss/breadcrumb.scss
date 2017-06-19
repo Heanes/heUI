@@ -5,7 +5,6 @@
  * @time 2017-06-05 19:17:33 周一
  */
 .breadcrumb-wrap{
-  background-color:#f5f5f5;
   padding:0 10px;
 }
 .breadcrumb-wrap .breadcrumb-cell{
@@ -13,4 +12,11 @@
 }
 .breadcrumb-wrap .breadcrumb-node{
   padding:10px 0;
+}
+.breadcrumb-wrap .breadcrumb-delimiter{
+
+}
+.breadcrumb-wrap .breadcrumb-delimiter .separator{
+  color:map_get($color-set, gray-light);
+  padding:0 2px;
 }

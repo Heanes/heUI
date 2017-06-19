@@ -578,4 +578,12 @@
 .black {
   background-color: #000000; }
 
+/**
+ * @doc 面包屑导航页样式
+ * @author Heanes
+ * @time 2017-06-17 10:49:36 周六
+ */
+.breadcrumb-wrap {
+  background-color: #f5f5f5; }
+
 /*# sourceMappingURL=css.css.map */
