@@ -12,7 +12,9 @@
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/static/libs/js/ladda/1.0.1/ladda.min.css">
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
+    <link rel="stylesheet" href="/public/static/libs/js/bootstrapTable/1.11.1/bootstrap-table.css">
     <title>Loading 加载中</title>
 </head>
 <body>
@@ -40,6 +42,185 @@
                             </div>
                             <div class="demo-content">
                                 <div class="demo-one">
+                                    <button class="btn btn-primary">按钮</button>
+                                    <button class="btn btn-success">按钮</button>
+                                </div>
+                                <div class="demo-one" id="effectBlock">
+                                    <button class="btn btn-primary">按钮</button>
+                                    <button class="btn btn-success">按钮</button>
+                                    <input type="text" id="demoInput" autofocus/>
+                                </div>
+                                <div class="demo-one">
+                                    <div class="friend-link-wrap">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:" class="link-box">
+                                                    <img class="link-img" src="image/bank.gif">
+                                                    <span class="link-text">链接1</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:" class="link-box">
+                                                    <img class="link-img" src="image/bank.gif">
+                                                    <span class="link-text">链接2</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:" class="link-box">
+                                                    <img class="link-img" src="image/bank.gif">
+                                                    <span class="link-text">链接3</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc"></p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <table id="tableList"></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-show">
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h2>基础用法</h2></div>
+                            <div class="demo-desc">
+                                <p class="desc"></p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <div class="receipts-delivered-print">
+                                        <div class="receipts-title">
+                                            <div class="cell">
+                                                <h1 class="self-company-name">美菜 MEICAI.CN</h1>
+                                            </div>
+                                            <div class="cell">
+                                                <h1 class="self-warehouse-name">收货确认单（<span id="warehouseName">北京仓库1</span>）</h1>
+                                            </div>
+                                            <div class="cell">
+                                                <h1 class="self-service-phone">客服电话：4006-135-135</h1>
+                                            </div>
+                                        </div>
+                                        <div class="receipts-delivery-info">
+                                            <div class="cell">
+                                                <dl class="data-dl">
+                                                    <dd><span id="companyLevel">B</span>-<span id="companyId">2434</span>-<span id="companyName">美味卷饼屋</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>收货人：</dt>
+                                                    <dd><span id="receiverName">王丽</span>(<span id="receiverMobile">15010691715</span>)</dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>地址：</dt>
+                                                    <dd><span id="receiverAddress">北京市某某地某某地某某地某某街道某某楼某某大厦某某室</span></dd>
+                                                </dl>
+                                            </div>
+                                            <div class="cell">
+                                                <dl class="delivery-type">
+                                                    <dd><span id="deliveryType">货到付款</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>配送：</dt>
+                                                    <dd><span id="driverNo">010000034</span>-<span id="driverName">高天杰</span>(<span id="driverMobile">15010691715</span>)</dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>销售：</dt>
+                                                    <dd><span id="sellerName">郭嘉</span>(<span id="sellerMobile">15010691715</span>)</dd>
+                                                </dl>
+                                            </div>
+                                            <div class="cell">
+                                                <dl class="data-dl">
+                                                    <dd class="h2-field"><span id="deliveryBatchId">199</span>-<span id="deliveryBatchName">晨鲜送</span>-<span id="routeName">刘家窑1-5</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>订单号：</dt>
+                                                    <dd><span id="omcOrderId">12313435</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>配送日期：</dt>
+                                                    <dd><span id="deliveryDateStr">2017-06-15</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt>打印时间：</dt>
+                                                    <dd><span id="printTimeStr">2017-07-08 17:00:36</span></dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="receipts-data-table">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <td>#</td>
+                                                    <td>商品编码</td>
+                                                    <td>商品名称</td>
+                                                    <td>下单量</td>
+                                                    <td>发货量</td>
+                                                    <td>单价(优惠)</td>
+                                                    <td>应付金额</td>
+                                                    <td>备注</td>
+                                                </tr>
+                                                </thead>
+                                                <thead>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>5454</td>
+                                                    <td>可口可乐（24/箱）</td>
+                                                    <td>50瓶</td>
+                                                    <td>50瓶</td>
+                                                    <td>77.02</td>
+                                                    <td>154.04</td>
+                                                    <td>2箱2瓶</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>5454</td>
+                                                    <td>可口可乐（24/箱）</td>
+                                                    <td>50瓶</td>
+                                                    <td>50瓶</td>
+                                                    <td>77.02</td>
+                                                    <td>154.04</td>
+                                                    <td>2箱2瓶</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>5454</td>
+                                                    <td>可口可乐（24/箱）</td>
+                                                    <td>50瓶</td>
+                                                    <td>50瓶</td>
+                                                    <td>77.02</td>
+                                                    <td>154.04</td>
+                                                    <td>2箱2瓶</td>
+                                                </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                        <div class="receipts-summary">
+                                            <div class="cell 5th">
+                                                <dl class="data-dl">
+                                                    <dt><span>已优惠：</span></dt>
+                                                    <dd><span id="discountedTotalMoney">19.98</span></dd>
+                                                </dl>
+                                                <dl class="data-dl">
+                                                    <dt><span>收货人签字/日期：</span></dt>
+                                                    <dd><span id="receive-mark-date"></span></dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="receipts-remark">
+                                            <h4 class="remark-content">备注：受实际生产影响，已优惠可能与下单时优惠有差异。零钱收取规则：分钱全面，2角以内免收，3至7角按5角收，8至9角按1元收</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,14 +240,63 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/ui.js" id="importResource"></script>
+    <script type="text/javascript" src="/public/static/libs/js/ladda/1.0.1/spin.min.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/ladda/1.0.1/ladda.min.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/bootstrapTable/1.11.1/bootstrap-table.js"></script>
     <script type="application/javascript">
-        Import([
-            // 消息提示
-            '../../js/common/common.js',
-            'js/$.extend/$.loading.js'
-        ]);
         $(function () {
+            //$('#demoInput').focus();
+            var $btn = $('#effectBlock').find('.btn');
+            $.each($btn, function (i, item) {
+                Ladda.bind(item, { timeout: 2000 } );
+            });
+
+            var testDataList = [];
+
+            for(var i = 0; i < 20; i++){
+                var dataObj = {
+                    // 配送批次
+                    batch_id: i,
+                    // 生产批次
+                    product_batch: i,
+                    // 线路ID
+                    route_id: i,
+                    // 线路名称
+                    route_name: '线路' + i,
+                    // 集货区
+                    f_stock_area: i,
+                    // 集货排
+                    f_ship_line: i,
+                    // 集货位
+                    ship_loc_code: i,
+                    // SKU
+                    sku_id: i,
+                    // SSU
+                    ssu_id: i,
+                    // 商品名称
+                    ssu_name: '商品名称' + i,
+                    //变化量，分拣数量
+                    sorted_qty: 2,
+                    // 操作人
+                    c_u: 1,
+                    // 操作人
+                    c_user_name: '方刚' + i,
+                    // 门店
+                    company_id: 1000 + i,
+                    // 门店名称
+                    company_name: '门店名称' + i,
+                    // 订单号
+                    omc_order_id: 1324353 + i,
+                    // 订单OI
+                    oi_id: (1324353 + i) * 100,
+                    // 下单量
+                    expect_num: 30
+                };
+                testDataList.push(dataObj);
+            }
+
+            console.log(JSON.stringify(testDataList));
+
         });
     </script>
     <!-- E js E -->

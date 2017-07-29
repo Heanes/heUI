@@ -147,11 +147,11 @@ $(function () {
             });
 
             //@Todo url带子树路径
-            var hash =window.location.hash;
+            /*var hash =window.location.hash;
             var menuHash = hash.match(/menu=(\d+|,){1,}/g);
             var nodeIdsStr = menuHash[0].replace('menu=', '');
             var nodeIdArr = nodeIdsStr.split(',');
-            console.log(nodeIdArr);
+            console.log(nodeIdArr);*/
 
 
             return data;
