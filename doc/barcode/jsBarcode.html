@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)"/>
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes"/>
+    <meta name="description" content="描述，不超过150个字符"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/css.css"/>
+    <title>JsBarcode一维码(条形码) 插件</title>
+</head>
+<body>
+<div class="wrap">
+    <!-- S 头部 S -->
+    <div class="header">
+        <!-- 顶部操作/导航/工具栏 -->
+        <div class="top-toolbar"></div>
+        <!-- 顶部导航栏 -->
+        <div class="header-nav-bar"></div>
+    </div>
+    <!-- E 头部 E-->
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="page-content">
+                    <div class="demo-wrap">
+                        <div class="demo-title"><h1>JsBarcode</h1></div>
+                        <div class="demo-desc">
+                            <p class="desc">一款一维码(条形码)。</p>
+                        </div>
+                        <div class="demo-show">
+                            <div class="demo-group">
+                                <div class="demo-group-title"><h2>JsBarcode</h2></div>
+                                <div class="demo-desc">
+                                    <p class="desc">示例。</p>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-one">
+                                        <div class="bar-code-wrap">
+                                            <div class="item-desc">
+                                                <p>svg形式</p>
+                                            </div>
+                                            <div class="bar-code-item">
+                                                <svg class="bar-code"></svg>
+                                            </div>
+                                            <div class="item-desc">
+                                                <p>img形式</p>
+                                            </div>
+                                            <div class="bar-code-item">
+                                                <img class="bar-code" src="" />
+                                            </div>
+                                            <div class="item-desc">
+                                                <p>canvas形式</p>
+                                            </div>
+                                            <div class="bar-code-item">
+                                                <canvas class="bar-code"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="bar-code-config">
+                                            <div class="form-group">
+                                                <label for="barcodeConfigText">条码表示的字符：</label>
+                                                <input type="text" value="Heanes" id="barcodeConfigText"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigShowText">条码下方显示的字符：</label>
+                                                <input type="text" value="Heanes" id="barcodeConfigShowText"/>
+                                                <span class="input-tips">不填时与条码表示的字符一致</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigFormat">format：</label>
+                                                <input type="text" value="code128" id="barcodeConfigFormat"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigWidth">条之间的宽度：</label>
+                                                <input type="text" value="2" id="barcodeConfigWidth"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigHeight">高度：</label>
+                                                <input type="text" value="90" id="barcodeConfigHeight"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigDisplayValue">是否在条形码下方显示文字：</label>
+                                                <select id="barcodeConfigDisplayValue">
+                                                    <option value="true">是</option>
+                                                    <option value="false">否</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigTextAlign">文本的水平对齐方式：</label>
+                                                <select id="barcodeConfigTextAlign">
+                                                    <option value="center">居中</option>
+                                                    <option value="left">居左</option>
+                                                    <option value="right">居右</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigTextPosition">文本的垂直对齐方式：</label>
+                                                <select id="barcodeConfigTextPosition">
+                                                    <option value="bottom">居下</option>
+                                                    <option value="top">居上</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigBackground">条形码的背景颜色：</label>
+                                                <input type="text" value="#fff" id="barcodeConfigBackground"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigLineColor">条形码和文本的颜色：</label>
+                                                <input type="text" value="#000" id="barcodeConfigLineColor"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigMargin">条形码周围的空白边距</label>
+                                                <input type="number" value="10" id="barcodeConfigMargin"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigTextMargin">条形码和文本之间的间距</label>
+                                                <input type="number" value="2" id="barcodeConfigTextMargin"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigFont">文本的字体</label>
+                                                <input type="text" value="sans-serif" id="barcodeConfigFont"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigFontOptions">文字加粗体或变斜体</label>
+                                                <input type="text" value="bold" id="barcodeConfigFontOptions"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barcodeConfigFontSize">文本的大小</label>
+                                                <input type="number" value="30" id="barcodeConfigFontSize"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-success" id="barcodeGenerateBtn">生成</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/jsBarcode/3.8.0/JsBarcode.all.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            let $barCodeConfig = $('.bar-code-config'),
+                $barcodeConfigText = $barCodeConfig.find('#barcodeConfigText'),
+                $barcodeConfigShowText = $barCodeConfig.find('#barcodeConfigShowText'),
+                $barcodeConfigFormat = $barCodeConfig.find('#barcodeConfigFormat'),
+                $barcodeConfigWidth = $barCodeConfig.find('#barcodeConfigWidth'),
+                $barcodeConfigHeight = $barCodeConfig.find('#barcodeConfigHeight'),
+                $barcodeConfigDisplayValue = $barCodeConfig.find('#barcodeConfigDisplayValue'),
+                $barcodeConfigTextAlign = $barCodeConfig.find('#barcodeConfigTextAlign'),
+                $barcodeConfigTextPosition = $barCodeConfig.find('#barcodeConfigTextPosition'),
+                $barcodeConfigBackground = $barCodeConfig.find('#barcodeConfigBackground'),
+                $barcodeConfigLineColor = $barCodeConfig.find('#barcodeConfigLineColor'),
+                $barcodeConfigMargin = $barCodeConfig.find('#barcodeConfigMargin'),
+                $barcodeConfigTextMargin = $barCodeConfig.find('#barcodeConfigTextMargin'),
+                $barcodeConfigFont = $barCodeConfig.find('#barcodeConfigFont'),
+                $barcodeConfigFontOptions = $barCodeConfig.find('#barcodeConfigFontOptions'),
+                $barcodeConfigFontSize = $barCodeConfig.find('#barcodeConfigFontSize')
+            ;
+            let barcodeConfigDefaultOption = {
+                format: 'code128',
+                width: 1.2,                 //设置条之间的宽度
+                height: 90,                 //高度
+                displayValue: true,         //是否在条形码下方显示文字
+                fontOptions: "bold",        //使文字加粗体或变斜体
+                font: "sans-serif",         //设置文本的字体
+                text: '',                   //覆盖显示的文本
+                textAlign: "center",        //设置文本的水平对齐方式
+                textPosition: "bottom",     //设置文本的垂直对齐方式
+                textMargin: 0,              //设置条形码和文本之间的间距
+                fontSize: 24,               //设置文本的大小
+                background: "#fff",         //设置条形码的背景
+                lineColor: "#000",          //设置条和文本的颜色。
+                margin: 0                   //设置条形码周围的空白边距
+            };
+
+            $barcodeConfigText.on('input', function () {
+                $barcodeConfigShowText.val($(this).val());
+            });
+
+            $('#barcodeGenerateBtn').on('click', function () {
+                let barcodeConfigOption = {
+                    format: $barcodeConfigFormat.val(),
+                    width: parseInt($barcodeConfigWidth.val()),             //设置条之间的宽度
+                    height: parseInt($barcodeConfigHeight.val()),           //高度
+                    displayValue: $barcodeConfigDisplayValue.val(),         //是否在条形码下方显示文字
+                    fontOptions: $barcodeConfigFontOptions.val(),           //使文字加粗体或变斜体
+                    font: $barcodeConfigFont.val(),                         //设置文本的字体
+                    text: $barcodeConfigShowText.val(),                     //覆盖显示的文本
+                    textAlign: $barcodeConfigTextAlign.val(),               //设置文本的水平对齐方式
+                    textPosition: $barcodeConfigTextPosition.val(),         //设置文本的垂直位置
+                    textMargin: parseInt($barcodeConfigTextMargin.val()),   //设置条形码和文本之间的间距
+                    fontSize: parseInt($barcodeConfigFontSize.val()),       //设置文本的大小
+                    background: $barcodeConfigBackground.val(),             //设置条形码的背景
+                    lineColor: $barcodeConfigLineColor.val(),               //设置条和文本的颜色。
+                    margin: parseInt($barcodeConfigMargin.val())            //设置条形码周围的空白边距
+                };
+                console.log(barcodeConfigOption);
+                $('.bar-code').empty().JsBarcode($barcodeConfigText.val(), barcodeConfigOption);
+
+            }).trigger('click');
+        });
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>

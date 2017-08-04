@@ -93,6 +93,9 @@
   overflow: auto;
   border: 1px solid #ddd; }
 
+.page-content .content-wrap {
+  padding: 20px; }
+
 /**
  * @doc 页面样式
  * @author Heanes
@@ -645,9 +648,44 @@
   font-size: 14px; }
 
 /**
+ * @doc 一维码/条形码
+ * @author Heanes
+ * @time 2017-08-04 16:11:25 周五
+ */
+.bar-code-wrap, .bar-code-config {
+  display: inline-block;
+  vertical-align: top; }
+
+.bar-code-wrap .item-desc {
+  text-align: center;
+  color: #bbb; }
+
+.bar-code-wrap .item-desc p {
+  margin: 0; }
+
+.bar-code-wrap .bar-code-item {
+  width: 240px;
+  height: 160px;
+  text-align: center;
+  border-bottom: 2px dashed #888;
+  margin-bottom: 8px; }
+
+.bar-code-wrap .bar-code-item .bar-code {
+  max-width: 100%;
+  max-height: 100%; }
+
+.bar-code-config .form-group {
+  margin-bottom: 10px; }
+
+.bar-code-config .form-group label {
+  min-width: 180px;
+  text-align: right;
+  margin-right: 10px; }
+
+/**
  * @doc 友情链接
  * @author fanggang
- @time 2017-07-24 14:49:37 周一
+ * @time 2017-07-24 14:49:37 周一
  */
 .friend-link-wrap ul {
   overflow: hidden; }
