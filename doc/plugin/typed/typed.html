@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)"/>
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes"/>
+    <meta name="description" content="描述，不超过150个字符"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
+    <title>Element 组件</title>
+</head>
+<body>
+<div class="wrap">
+    <!-- S 头部 S -->
+    <div class="header">
+        <!-- 顶部操作/导航/工具栏 -->
+        <div class="top-toolbar"></div>
+        <!-- 顶部导航栏 -->
+        <div class="header-nav-bar"></div>
+    </div>
+    <!-- E 头部 E-->
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="page-content">
+                    <div class="demo-wrap">
+                        <div class="demo-title"><h1>Element 元素</h1></div>
+                        <div class="demo-desc">
+                            <p class="desc">Desc。</p>
+                        </div>
+                        <div class="demo-show">
+                            <div class="demo-group">
+                                <div class="demo-group-title"><h2>Description title</h2></div>
+                                <div class="demo-desc">
+                                    <p class="desc">Description。</p>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-one">
+                                        <p class="typed-p"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/typed/2.0.5/typed.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            /*$(".typed-p").typed({
+                strings: ["First sentence.", "Second sentence."],
+                typeSpeed: 0
+            });*/
+
+            var options = {
+                strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+                typeSpeed: 40
+            }
+
+            var typed = new Typed(".typed-p", options);
+        });
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>

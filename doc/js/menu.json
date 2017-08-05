@@ -768,6 +768,33 @@
             "nodes": []
           }
         ]
+      },
+      {
+        "text": "Typed 打字效果",
+        "href": "",
+        "nodeIcon": "",
+        "iconSelected": "",
+        "selectable": true,
+        "state": {
+          "selected": false,
+          "expanded": true,
+          "disabled": false
+        },
+        "nodes": [
+          {
+            "text": "typed.js",
+            "href": "plugin/typed/typed.html",
+            "nodeIcon": "",
+            "iconSelected": "",
+            "selectable": true,
+            "state": {
+              "selected": false,
+              "expanded": true,
+              "disabled": false
+            },
+            "nodes": []
+          }
+        ]
       }
     ]
   },
