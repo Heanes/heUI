@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="Heanes heanes.com email(heanes@163.com)"/>
+    <meta name="keywords" content="软件,商务,HTML,tutorials,source codes"/>
+    <meta name="description" content="描述，不超过150个字符"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
+    <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/css.css"/>
+    <title>Element 组件</title>
+</head>
+<body>
+<div class="wrap">
+    <!-- S 头部 S -->
+    <div class="header">
+        <!-- 顶部操作/导航/工具栏 -->
+        <div class="top-toolbar"></div>
+        <!-- 顶部导航栏 -->
+        <div class="header-nav-bar"></div>
+    </div>
+    <!-- E 头部 E-->
+    <!-- S 主要内容 S -->
+    <div class="main">
+        <!-- 主体内容 -->
+        <div class="main-content main-wrap clearfix">
+            <!-- 中心区域 -->
+            <div class="center-block center-wrap">
+                <div class="page-content">
+                    <div class="demo-wrap">
+                        <div class="demo-title"><h1>Qrcode 二维码</h1></div>
+                        <div class="demo-desc">
+                            <p class="desc">js生成二维码的插件工具。</p>
+                        </div>
+                        <div class="demo-show">
+                            <div class="demo-group">
+                                <div class="demo-group-title"><h2>示例</h2></div>
+                                <div class="demo-desc">
+                                    <p class="desc">see <a href="https://larsjung.de/jquery-qrcode/">https://larsjung.de/jquery-qrcode/</a>。</p>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-one">
+                                        <div class="qrcode-wrap">
+                                            <div class="qrcode-input-wrap">
+                                                <input type="text" id="inpuText" value="https://ui.heanes.com" placeholder="请输入字符来生成二维码"/>
+                                                <input type="button" class="btn btn-primary" value="确认" id="confirmGenerateBtn">
+                                            </div>
+                                            <div class="qrcode-show-wrap">
+                                                <div class="show-times-count-wrap">
+                                                    <p class="show-times-count">已刷新<span class="show-times-count-value" id="showTimesCountValue">0</span>次 <button class="btn btn-small btn-info" id="stopAutoRefreshBtn">停止自动刷新</button></p>
+                                                </div>
+                                                <div id="qrcodeShow" class="qrcode-show"></div>
+                                                <div class="show-time-last">
+                                                    <p>剩余时间<strong id="showTimeLast" class="show-time-last-value">5</strong>秒<span class="refresh-qrcode-btn" id="refreshQrcodeBtn">刷新</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E 主要内容 E -->
+</div>
+<cite>
+    <!-- S js S -->
+    <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/qrcode/jquery-qrcode/0.14.0/jquery-qrcode.min.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            $('#confirmGenerateBtn').on('click', function () {
+                var text = $('#inputText').val() || 'https://ui.heanes.com';
+                renderQrCode($('#qrcodeShow'), text);
+            })
+                .trigger('click');
+            function renderQrCode($qrCodeContainer, text) {
+                var $img = $('<img src="/public/static/image/logo/logo.png"/>');
+                $qrCodeContainer.empty().qrcode({
+                    // render method: 'canvas', 'image' or 'div'
+                    render: 'canvas',
+                    // version range somewhere in 1 .. 40
+                    minVersion: 4,
+                    maxVersion: 40,
+
+                    // error correction level: 'L', 'M', 'Q' or 'H'
+                    ecLevel: 'H',
+
+                    // offset in pixel if drawn onto existing canvas
+                    left: 0,
+                    top: 0,
+                    // size in pixel
+                    size: 300,
+                    // code color or image element
+                    fill: '#000',
+                    // background color or image element, null for transparent background
+                    background: '#fff',
+                    // content
+                    text: text,
+                    // corner radius relative to module width: 0.0 .. 0.5
+                    radius: 0,
+                    // quiet zone in modules
+                    quiet: 2,
+                    // modes
+                    // 0: normal
+                    // 1: label strip
+                    // 2: label box
+                    // 3: image strip
+                    // 4: image box
+                    mode: 4,
+
+                    mSize: 0.2,
+                    mPosX: 0.5,
+                    mPosY: 0.5,
+
+                    label: '',
+                    fontname: 'sans',
+                    fontcolor: '#000',
+                    image: $img[0]
+                });
+            }
+
+            /**
+             * @doc 计时器嵌套的处理
+             * @author fanggang
+             * @time 2017-03-17 13:14:05 周五
+             */
+            var clockShowQrCode, clockShowTimeLast;
+            var isClear = false;
+            function clearIntervalAll(){
+                clearInterval(clockShowQrCode);
+                clearInterval(clockShowTimeLast);
+                isClear = true;
+            }
+            $('#stopAutoRefreshBtn').on('click', function () {
+                if(isClear){
+                    showDynamicQrCode($qrcodeShow, $showTimeLast, 5, $showTimesCountValue);
+                    $(this).text('停止自动刷新');
+                }else{
+                    clearIntervalAll();
+                    $(this).text('开始自动刷新');
+                }
+            });
+
+            /**
+             * @doc 显示自动刷新剩余时间
+             * @author Heanes
+             * @time 2017-08-07 14:18:29 周一
+             */
+            function showLeftSeconds($showTimeLast){
+                var leftSeconds = parseInt($showTimeLast.text());
+                if(leftSeconds < 0){
+                    leftSeconds = 5;
+                    $showTimeLast.text(leftSeconds);
+                }else{
+                    $showTimeLast.text(leftSeconds - 1);
+                }
+            }
+
+            /**
+             * @doc 获取显示的字符
+             * @author Heanes
+             * @time 2017-08-07 12:59:11 周一
+             */
+            function getShowString() {
+                return Math.random().toString(36).substr(2);
+            }
+
+            /**
+             * @doc 显示二维码
+             * @author Heanes
+             * @time 2017-08-07 12:48:40 周一
+             */
+            function showQrCode(qrCodeText, $qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue) {
+                renderQrCode($qrCodeContainer, qrCodeText);
+                $showTimeLast.text(showSeconds);
+                $showTimesCountValue.text(parseInt($showTimesCountValue.text()) + 1);
+                clearInterval(clockShowTimeLast);
+                clockShowTimeLast = setInterval(function () {
+                    showLeftSeconds($showTimeLast);
+                }, 1000);
+            }
+
+            /**
+             * @doc 显示动态二维码
+             * @param $qrCodeContainer 显示二维码的容器
+             * @param $showTimeLast 显示倒计时的容器
+             * @param showSeconds 显示的秒数
+             * @param $showTimesCountValue 显示一共刷新次数的容器
+             * @author Heanes
+             * @time 2017-03-18 13:23:33 周六
+             */
+            function showDynamicQrCode($qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue) {
+                clearInterval(clockShowQrCode);
+                clockShowQrCode = setInterval(function(){
+                    showQrCode(getShowString(), $qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue);
+                }, showSeconds * 1000);
+                showQrCode(getShowString(), $qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue);
+                bindClickToShowQrcode($('#refreshQrcodeBtn'), $qrcodeShow, $showTimeLast, 5, $showTimesCountValue);
+                bindClickToShowQrcode($qrcodeShow, $qrcodeShow, $showTimeLast, 5, $showTimesCountValue);
+            }
+
+            /**
+             * @doc 绑定点击刷新二维码事件
+             * @param $bindTargetDom
+             * @param $qrCodeContainer
+             * @param $showTimeLast
+             * @param showSeconds
+             * @param $showTimesCountValue
+             */
+            function bindClickToShowQrcode($bindTargetDom, $qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue) {
+                $bindTargetDom.unbind('click')
+                    .on('click', function () {
+                        showDynamicQrCode($qrCodeContainer, $showTimeLast, showSeconds, $showTimesCountValue);
+                    });
+            }
+            var $qrcodeShow = $('#qrcodeShow'), $showTimeLast = $('#showTimeLast'), $showTimesCountValue = $('#showTimesCountValue');
+            showDynamicQrCode($qrcodeShow, $showTimeLast, 6, $showTimesCountValue);
+
+        });
+    </script>
+    <!-- E js E -->
+</cite>
+</body>
+</html>

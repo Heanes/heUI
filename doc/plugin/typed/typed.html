@@ -48,7 +48,9 @@
                                 </div>
                                 <div class="demo-content">
                                     <div class="demo-one">
-                                        <p class="typed-p"></p>
+                                        <p class="typed-p-wrap" style="font-size:40px;">
+                                        <span class="typed-p"></span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -66,17 +68,18 @@
     <script type="text/javascript" src="/public/static/libs/js/typed/2.0.5/typed.js"></script>
     <script type="application/javascript">
         $(function () {
-            /*$(".typed-p").typed({
-                strings: ["First sentence.", "Second sentence."],
+            /*$('.typed-p').typed({
+                strings: ['First sentence.', 'Second sentence.'],
                 typeSpeed: 0
             });*/
 
             var options = {
-                strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-                typeSpeed: 40
-            }
+                strings: ['这是第一段话', '接着是第二段'],
+                typeSpeed: 300,
+                backSpeed: 200,
+            };
 
-            var typed = new Typed(".typed-p", options);
+            var typed = new Typed('.typed-p', options);
         });
     </script>
     <!-- E js E -->

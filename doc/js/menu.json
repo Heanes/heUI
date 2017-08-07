@@ -745,7 +745,7 @@
       {
         "text": "Barcode 一维码(条形码)",
         "href": "",
-        "nodeIcon": "",
+        "nodeIcon": "fa fa-barcode",
         "iconSelected": "",
         "selectable": true,
         "state": {
@@ -756,8 +756,35 @@
         "nodes": [
           {
             "text": "jsBarcode",
-            "href": "barcode/jsBarcode.html",
-            "nodeIcon": "",
+            "href": "plugin/barcode/jsBarcode.html",
+            "nodeIcon": "fa fa-barcode",
+            "iconSelected": "",
+            "selectable": true,
+            "state": {
+              "selected": false,
+              "expanded": true,
+              "disabled": false
+            },
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "text": "Qrcode 二维码",
+        "href": "",
+        "nodeIcon": "fa fa-qrcode",
+        "iconSelected": "",
+        "selectable": true,
+        "state": {
+          "selected": false,
+          "expanded": true,
+          "disabled": false
+        },
+        "nodes": [
+          {
+            "text": "qrcode",
+            "href": "plugin/qrcode/jquery-qrcode.html",
+            "nodeIcon": "fa fa-qrcode",
             "iconSelected": "",
             "selectable": true,
             "state": {

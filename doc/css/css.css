@@ -683,6 +683,82 @@
   margin-right: 10px; }
 
 /**
+ * @doc typed.js样式
+ * @author Heanes
+ * @time 2017-08-07 11:00:47 周一
+ */
+/* 光标闪烁 */
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/**
+ * @doc jquery-qrcode二维码
+ * @author Heanes
+ * @time 2017-08-07 11:30:09 周一
+ */
+.qrcode-wrap {
+  width: 600px;
+  margin: 10px auto;
+  text-align: center; }
+
+.qrcode-wrap .qrcode-input-wrap {
+  margin: 10px auto; }
+
+.qrcode-wrap .qrcode-show {
+  display: inline-block; }
+
+.qrcode-show-wrap .show-times-count-wrap {
+  margin-bottom: 10px; }
+
+.qrcode-show-wrap .show-times-count-wrap .show-times-count {
+  text-align: center;
+  color: #000; }
+
+.qrcode-show-wrap .show-times-count-wrap .show-times-count .show-times-count-value {
+  padding: 0 4px;
+  color: #66afe9; }
+
+.qrcode-show-wrap .show-time-last {
+  color: #000;
+  text-align: center;
+  margin-top: 8px; }
+
+.qrcode-show-wrap .show-time-last .show-time-last-value {
+  color: #f00; }
+
+.qrcode-show-wrap .refresh-qrcode-btn {
+  margin: 0 2px;
+  cursor: pointer;
+  color: #66afe9; }
+
+.qrcode-show-wrap .show-time-last-value {
+  padding: 0 4px; }
+
+/**
  * @doc 友情链接
  * @author fanggang
  * @time 2017-07-24 14:49:37 周一

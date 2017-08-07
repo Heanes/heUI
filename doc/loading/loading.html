@@ -15,7 +15,13 @@
     <link rel="stylesheet" type="text/css" href="/public/static/libs/js/ladda/1.0.1/ladda.min.css">
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <link rel="stylesheet" href="/public/static/libs/js/bootstrapTable/1.11.1/bootstrap-table.css">
+    <link rel="stylesheet" href="/public/static/libs/js/printArea/2.4.1/css/jquery.printarea.css">
     <title>Loading 加载中</title>
+    <style>
+        .print-preview{max-width:220px;margin:0 auto;overflow:hidden;}
+        .print-preview .item{width:220px;height:140px;}
+        .bar-code{max-width:100%;max-height:100%;}
+    </style>
 </head>
 <body>
 <div class="wrap">
@@ -45,10 +51,26 @@
                                     <button class="btn btn-primary">按钮</button>
                                     <button class="btn btn-success">按钮</button>
                                 </div>
-                                <div class="demo-one" id="effectBlock">
+                                <div class="demo-one" id="effectBlock1">
                                     <button class="btn btn-primary">按钮</button>
                                     <button class="btn btn-success">按钮</button>
-                                    <input type="text" id="demoInput" autofocus/>
+                                </div>
+                                <div class="demo-one" id="effectBlock" style="text-align:center;">
+                                    <div class="print-preview-wrap">
+                                        <div class="print-preview">
+                                            <div class="item">
+                                                <svg class="bar-code"></svg>
+                                            </div>
+                                            <div class="item">
+                                                <img class="bar-code" />
+                                            </div>
+                                            <div class="item">
+                                                <canvas class="bar-code"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" value="FA-10-10-01" id="printAreaText"/>
+                                    <button class="btn btn-success" id="printAreaBtn">打印</button>
                                 </div>
                                 <div class="demo-one">
                                     <div class="friend-link-wrap">
@@ -243,59 +265,40 @@
     <script type="text/javascript" src="/public/static/libs/js/ladda/1.0.1/spin.min.js"></script>
     <script type="text/javascript" src="/public/static/libs/js/ladda/1.0.1/ladda.min.js"></script>
     <script type="text/javascript" src="/public/static/libs/js/bootstrapTable/1.11.1/bootstrap-table.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/jsBarcode/3.8.0/JsBarcode.all.js"></script>
+    <script type="text/javascript" src="/public/static/libs/js/printArea/2.4.1/js/jquery.printarea.js"></script>
     <script type="application/javascript">
         $(function () {
-            //$('#demoInput').focus();
+            var $printPreview = $('.print-preview');
+            $('#printAreaText').on('input', function () {
+                $('.bar-code').JsBarcode($(this).val(), {
+                    format: 'code128',
+                    width: 1.2,                 //设置条之间的宽度
+                    height: 90,                 //高度
+                    displayValue: true,         //是否在条形码下方显示文字
+                    fontOptions: "bold",        //使文字加粗体或变斜体
+                    font: "sans-serif",         //设置文本的字体
+                    text:'',                    //覆盖显示的文本
+                    textAlign: "center",        //设置文本的水平对齐方式
+                    textPosition: "bottom",     //设置文本的垂直位置
+                    textMargin: 0,              //设置条形码和文本之间的间距
+                    fontSize: 24,               //设置文本的大小
+                    background: "#fff",         //设置条形码的背景
+                    lineColor: "#000",          //设置条和文本的颜色。
+                    margin:0                    //设置条形码周围的空白边距
+                });
+
+            }).trigger('input');
+            $('#printAreaBtn').on('click', function () {
+                $printPreview.printArea({
+                });
+            });
+
+
             var $btn = $('#effectBlock').find('.btn');
             $.each($btn, function (i, item) {
                 Ladda.bind(item, { timeout: 2000 } );
             });
-
-            var testDataList = [];
-
-            for(var i = 0; i < 20; i++){
-                var dataObj = {
-                    // 配送批次
-                    batch_id: i,
-                    // 生产批次
-                    product_batch: i,
-                    // 线路ID
-                    route_id: i,
-                    // 线路名称
-                    route_name: '线路' + i,
-                    // 集货区
-                    f_stock_area: i,
-                    // 集货排
-                    f_ship_line: i,
-                    // 集货位
-                    ship_loc_code: i,
-                    // SKU
-                    sku_id: i,
-                    // SSU
-                    ssu_id: i,
-                    // 商品名称
-                    ssu_name: '商品名称' + i,
-                    //变化量，分拣数量
-                    sorted_qty: 2,
-                    // 操作人
-                    c_u: 1,
-                    // 操作人
-                    c_user_name: '方刚' + i,
-                    // 门店
-                    company_id: 1000 + i,
-                    // 门店名称
-                    company_name: '门店名称' + i,
-                    // 订单号
-                    omc_order_id: 1324353 + i,
-                    // 订单OI
-                    oi_id: (1324353 + i) * 100,
-                    // 下单量
-                    expect_num: 30
-                };
-                testDataList.push(dataObj);
-            }
-
-            console.log(JSON.stringify(testDataList));
 
         });
     </script>
