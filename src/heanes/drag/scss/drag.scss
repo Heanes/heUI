@@ -35,7 +35,9 @@ $drag-border-width: 10px;
   position: relative;
   border: $drag-wrap-borer-width $drag-wrap-borer-style $drag-wrap-borer-color;
   box-shadow: $drag-wrap-box-shadow;
+  display:inline-block;
 }
+
 
 .drag-wrap .drag-operate-wrap {
 
@@ -53,6 +55,8 @@ $drag-border-width: 10px;
   cursor: move;
   font-size: 14px;
   font-weight: normal;
+
+  background-color:#f00;
 }
 .drag-wrap .drag-operate-wrap .drag-move-bar h2{
   font-size: 13px;
@@ -70,6 +74,9 @@ $drag-border-width: 10px;
   border: $drag-content-borer-width $drag-wrap-borer-style $drag-content-borer-color;
 }
 
+/* 当窗体大小变得太小时，原始内容应出现滚动条 */
+.drag-wrap .drag-content > *{overflow:auto;}
+
 .drag-wrap .drag-operate-wrap .drag-border {
   background-color: $drag-border-bg-color;
   &.drag-border-top,
@@ -81,13 +88,15 @@ $drag-border-width: 10px;
   &.drag-border-top,
   &.drag-border-bottom {
     left: $drag-border-width;
-    width: $content-width + ($drag-content-padding * 2);
+    width: $content-width + ($drag-content-padding * 2) + ($drag-move-bar-borer-width * 2);
     height: $drag-border-width;
     cursor: ns-resize;
   }
+  // 上边框，从上方拖动[高度]
   &.drag-border-top {
     top: 0;
   }
+  // 下边框，从上方拖动[高度]
   &.drag-border-bottom {
     bottom: 0;
   }
@@ -95,14 +104,16 @@ $drag-border-width: 10px;
   &.drag-border-left {
     top: $drag-border-width;
     width: $drag-border-width;
-    height: $content-height + ($drag-content-padding * 2) + $drag-move-bar-height;
+    height: $content-height + ($drag-content-padding * 2) + $drag-move-bar-height + ($drag-move-bar-borer-width * 2);
     cursor: e-resize;
   }
-  &.drag-border-right {
-    right: 0;
-  }
+  // 左边框，从左方拖动[宽度]
   &.drag-border-left {
     left: 0;
+  }
+  // 右边框，从右方拖动[宽度]
+  &.drag-border-right {
+    right: 0;
   }
   &.drag-border-top-left,
   &.drag-border-top-right,
@@ -135,5 +146,40 @@ $drag-border-width: 10px;
   &.drag-border-bottom-left,
   &.drag-border-top-right {
     cursor: ne-resize;
+  }
+
+  // 为调试方便而上色
+  // 上边框，从上方拖动[高度]
+  &.drag-border-top {
+    background-color:#efdfed;
+  }
+  // 下边框，从上方拖动[高度]
+  &.drag-border-bottom {
+    background-color:#449dfe;
+  }
+  // 左边框，从左方拖动[宽度]
+  &.drag-border-left {
+    background-color:#cdef75;
+  }
+  // 右边框，从右方拖动[宽度]
+  &.drag-border-right {
+    background-color:#a7bbef;
+  }
+  // 左上角，从左上方同时拖动宽高
+  &.drag-border-top-left {
+    background-color:#a7bbef;
+  }
+  // 右上角，从右上方同时拖动宽高
+  &.drag-border-top-right {
+    background-color:#d866ef;
+  }
+
+  // 左下角，从左下方同时拖动宽高
+  &.drag-border-bottom-left {
+    background-color:#89ef5a;
+  }
+  // 右下角，从右下方同时拖动宽高
+  &.drag-border-bottom-right {
+    background-color:#ef7f44;
   }
 }

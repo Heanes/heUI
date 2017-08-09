@@ -9,7 +9,7 @@ $(function () {
     // 拖拽总区域
     let $dragWrap = $('.drag-wrap');
     let $dragContent = $('.drag-content');
-    let $content = $dragContent.find('.content');
+    let $originContent = $dragContent.children().eq(0);
 
     // 添加窗体头部，拖拽操作区
     //let $dragBar = $('<div class="drag-move-bar"></div>');
@@ -18,10 +18,17 @@ $(function () {
     // 添加侧边框，可以改变窗体宽/高
     //let $dragBorder = $('<div class="drag-border"></div>');
     let $dragBorder = $('.drag-border');
+    // 边框，改变窗体大小操作区
+    let $dragBorderTop = $('.drag-border-top');
+    let $dragBorderBottom = $('.drag-border-bottom');
+    let $dragBorderLeft = $('.drag-border-left');
+    let $dragBorderRight = $('.drag-border-right');
 
+    // 记录初始状态
     let inlineData = {
         dragFlag: false,
         resizeFlag: false,
+        resizeBorderPlace: '',
         left: 0,
         top: 0,
         currentX: 0,
@@ -30,128 +37,225 @@ $(function () {
             outerWidth: 0,
             outerHeight: 0
         },
+        dragMoveBarWindow: {
+            outerWidth: 0
+        },
         dragContentWindow: {
             outerWidth: 0,
             outerHeight: 0
         },
-        contentWindow: {
+        originContentWindow: {
             outerWidth: 0,
             outerHeight: 0
         },
+        // 垂直边框的高度
+        dragBorderVerticalWindow:{
+            outerHeight: 0
+        },
+        // 水平边框的高度
+        dragBorderHorizontalWindow:{
+            outerWidth: 0
+        }
 
     };
 
-    /****************************** 拖拽窗体 ******************************/
+    let defaultOption = {
+        draggable: true,         // 是否可以拖拽
+        resizable: true,       // 是否可以改变窗体大小
+    };
+
+
+    let userOption = {
+        draggable: true,
+    };
+
+    let options = $.extend(true, {}, defaultOption, userOption);
+
+    /****************************** 鼠标移动，拖拽窗体位置 ******************************/
+    // 标题栏按下鼠标时，拖拽
     $dragMoveBar.on('mousedown', function (event) {
-        inlineData.dragFlag = true;
-        if(!event){
-            event = window.event;
-            //防止IE文字选中
-            bar.onselectstart = function(){
-                return false;
-            }
+        if(!options.draggable){
+            return false;
         }
-        let e = event;
+        inlineData.dragFlag = true;
+
+        let e = event ? event: window.event;
+
         inlineData.currentX = e.clientX;
         inlineData.currentY = e.clientY;
         let targetPosition = getTargetPosition($dragWrap);
         inlineData.left = targetPosition.left;
         inlineData.top = targetPosition.top;
     });
-    $(document).on('mouseup', function (event) {
-        inlineData.dragFlag = false;
-        inlineData.resizeFlag = false;
-        //$dragWrap.css({position: 'relative'});
+
+    // 全局 - 鼠标移动
+    $(document).on('mousemove', function (event) {
+        preventTextSelectable();
+        let e = event ? event: window.event;
+
+        // 拖拽窗体部分
+        if(options.draggable){
+            if (inlineData.dragFlag) {
+                let moveOffset = {
+                    offsetX: e.clientX - inlineData.currentX,
+                    offsetY: e.clientY - inlineData.currentY
+                };
+                let nowPosition = {
+                    top: inlineData.top + moveOffset.offsetY,
+                    left: inlineData.left + moveOffset.offsetX
+                };
+                moveTargetPosition($dragWrap, nowPosition);
+            }
+        }
+
+        // 改变窗体大小部分
+        if(options.resizable){
+            if (inlineData.resizeFlag) {
+                let moveOffset = {
+                    offsetX: e.clientX - inlineData.currentX,
+                    offsetY: e.clientY - inlineData.currentY
+                };
+                let nowPosition = {};
+                console.log('moveOffset： ');
+                console.log(moveOffset);
+                console.log(inlineData);
+                let dragWrapNowSize = {}, dragContentNowSize = {}, contentNowSize = {},
+                    dragMoveBarNowSize = {}, dragBorderVerticalNowSize = {}, dragBorderHorizontalNowSize = {};
+                // 左右上下四个角拖动时
+                let cornerFlag = false;
+                let offsetX = moveOffset.offsetX, offsetY = moveOffset.offsetY;
+                if(inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'top-right' || inlineData.resizeBorderPlace === 'bottom-left' || inlineData.resizeBorderPlace === 'bottom-right'){
+                    cornerFlag = true;
+                }
+                // 上下边框拖动时改变高度
+                if(cornerFlag || inlineData.resizeBorderPlace === 'top' || inlineData.resizeBorderPlace === 'bottom'){
+                    // 鼠标向上移动时，y轴竖直方向偏移量为负值
+                    if(inlineData.resizeBorderPlace === 'top' || inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'top-right'){
+                        offsetY = 0 - offsetY;
+                    }
+                    dragWrapNowSize.height = inlineData.dragWrapWindow.outerHeight + offsetY;
+                    dragContentNowSize.height = inlineData.dragContentWindow.outerHeight + offsetY;
+                    contentNowSize.height = inlineData.originContentWindow.outerHeight + offsetY;
+                    dragBorderVerticalNowSize .height = inlineData.dragBorderVerticalWindow.outerHeight + offsetY;
+
+                    // 当时从上方或左方拖动时才改变水平方向定位
+                    if(inlineData.resizeBorderPlace === 'top' || inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'top-right'){
+                        nowPosition.top = inlineData.top + moveOffset.offsetY;
+                    }
+                    console.log('nowPosition:' + nowPosition);
+                }
+                // 左右边框拖动改变宽度
+                if(cornerFlag || inlineData.resizeBorderPlace === 'left' || inlineData.resizeBorderPlace === 'right' || inlineData.resizeBorderPlace === 'bottom-left'){
+                    // 鼠标向左移动时，x轴水平方向偏移量为负值
+                    if(inlineData.resizeBorderPlace === 'left' || inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'bottom-left'){
+                        offsetX = 0 - offsetX;
+                    }
+                    // 鼠标向上移动时，偏移量为负值
+                    dragWrapNowSize.width = inlineData.dragWrapWindow.outerWidth + offsetX;
+                    dragContentNowSize.width = inlineData.dragContentWindow.outerWidth + offsetX;
+                    dragMoveBarNowSize.width = inlineData.dragMoveBarWindow.outerWidth + offsetX;
+                    contentNowSize.width = inlineData.originContentWindow.outerWidth + offsetX;
+                    dragBorderHorizontalNowSize.width = inlineData.dragBorderHorizontalWindow.outerWidth + offsetX;
+
+                    // 当时从上方或左方拖动时才改变竖直方向定位
+                    if(inlineData.resizeBorderPlace === 'left' || inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'bottom-left'){
+                        nowPosition.left = inlineData.left + moveOffset.offsetX;
+                    }
+                }
+
+                // 更改窗体位置
+                if(inlineData.resizeBorderPlace === 'top' || inlineData.resizeBorderPlace === 'left' || inlineData.resizeBorderPlace === 'top-left' || inlineData.resizeBorderPlace === 'top-right' || inlineData.resizeBorderPlace === 'bottom-left'){
+                    moveTargetPosition($dragWrap, nowPosition);
+                }
+
+                // 改变窗体大小
+                changeTargetWindowSize($dragWrap, dragWrapNowSize);
+                changeTargetWindowSize($dragContent, dragContentNowSize);
+                changeTargetWindowSize($originContent, contentNowSize);
+                changeTargetWindowSize($dragMoveBar, dragMoveBarNowSize);
+                changeTargetWindowSize($dragBorderTop, dragBorderHorizontalNowSize);
+                changeTargetWindowSize($dragBorderBottom, dragBorderHorizontalNowSize);
+                changeTargetWindowSize($dragBorderLeft, dragBorderVerticalNowSize);
+                changeTargetWindowSize($dragBorderRight, dragBorderVerticalNowSize);
+
+
+            }
+        }
     });
 
-    $(document).on('mousemove', function (event) {
-        let e = event ? event: window.event;
-        if (inlineData.dragFlag) {
-            let moveOffset = {
-                offsetX: e.clientX - inlineData.currentX,
-                offsetY: e.clientY - inlineData.currentY
-            };
-            let nowPosition = {
-                top: inlineData.top + moveOffset.offsetY,
-                left: inlineData.left + moveOffset.offsetX
-            };
-            moveTargetPosition($dragWrap, nowPosition);
+    // 全局 - 释放鼠标
+    $(document).on('mouseup', function (event) {
+        if(options.draggable){
+            inlineData.dragFlag = false;
+        }
+        if(options.resizable){
+            inlineData.resizeFlag = false;
         }
     });
 
     /****************************** 改变窗体大小 ******************************/
+    // 边框部分按下鼠标时，改变窗体大小
     $dragBorder.on('mousedown', function (event) {
-        inlineData.resizeFlag = true;
-        if(!event){
-            event = window.event;
-            //防止IE文字选中
-            bar.onselectstart = function(){
-                return false;
-            }
+        if(!options.draggable){
+            return false;
         }
-        let e = event;
+        inlineData.resizeFlag = true;
+
+        let e = event ? event: window.event;
+        let $target = $(e.target);
+
+        // 判断是哪个边框被按下
+        if($target.hasClass('drag-border-top')){
+            inlineData.resizeBorderPlace = 'top';
+        }
+        if($target.hasClass('drag-border-bottom')){
+            inlineData.resizeBorderPlace = 'bottom';
+        }
+        if($target.hasClass('drag-border-left')){
+            inlineData.resizeBorderPlace = 'left';
+        }
+        if($target.hasClass('drag-border-right')){
+            inlineData.resizeBorderPlace = 'right';
+        }
+
+        if($target.hasClass('drag-border-top-left')){
+            inlineData.resizeBorderPlace = 'top-left';
+        }
+        if($target.hasClass('drag-border-top-right')){
+            inlineData.resizeBorderPlace = 'top-right';
+        }
+        if($target.hasClass('drag-border-bottom-left')){
+            inlineData.resizeBorderPlace = 'bottom-left';
+        }
+        if($target.hasClass('drag-border-bottom-right')){
+            inlineData.resizeBorderPlace = 'bottom-right';
+        }
+
         inlineData.currentX = e.clientX;
         inlineData.currentY = e.clientY;
+        let targetPosition = getTargetPosition($dragWrap);
+        inlineData.left = targetPosition.left;
+        inlineData.top = targetPosition.top;
+
         let dragWrapWindowOuterSize = getTargetWindowOuterSize($dragWrap);
         let dragContentWindowOuterSize = getTargetWindowOuterSize($dragContent);
-        let contentWindowOuterSize = getTargetWindowOuterSize($content);
+        let contentWindowOuterSize = getTargetWindowOuterSize($originContent);
+        let dragMoveBarWindowOuterSize = getTargetWindowOuterSize($dragMoveBar);
+        let dragBorderTopOuterSize = getTargetWindowOuterSize($dragBorderTop);
+        let dragBorderLeftOuterSize = getTargetWindowOuterSize($dragBorderLeft);
+        // 拖拽整体
         inlineData.dragWrapWindow.outerWidth = dragWrapWindowOuterSize.outerWidth;
         inlineData.dragWrapWindow.outerHeight = dragWrapWindowOuterSize.outerHeight;
+        // 拖拽内容外套
         inlineData.dragContentWindow.outerWidth = dragContentWindowOuterSize.outerWidth;
         inlineData.dragContentWindow.outerHeight = dragContentWindowOuterSize.outerHeight;
-        inlineData.contentWindow.outerWidth = contentWindowOuterSize.outerWidth;
-        inlineData.contentWindow.outerHeight = contentWindowOuterSize.outerHeight;
-    });
-    $dragBorder.on('mousemove', function (event) {
-        let e = event ? event: window.event;
-        if (inlineData.resizeFlag) {
-            $dragWrap.bind('selectstart', false);
-            let moveOffset = {
-                offsetX: e.clientX - inlineData.currentX,
-                offsetY: e.clientY - inlineData.currentY
-            };
-            let dragWrapNowSize = {}, dragContentNowSize = {}, contentNowSize = {};
-            if($dragBorder.hasClass('drag-border-top') || $dragBorder.hasClass('drag-border-bottom')){
-                dragWrapNowSize = {
-                    width: inlineData.dragWrapWindow.outerWidth + moveOffset.offsetX
-                };
-                dragContentNowSize = {
-                    width: inlineData.dragContentWindow.outerWidth + moveOffset.offsetX
-                };
-                contentNowSize = {
-                    width: inlineData.contentWindow.outerWidth + moveOffset.offsetX
-                };
-            }
-            if($dragBorder.hasClass('drag-border-left') || $dragBorder.hasClass('drag-border-right')){
-                dragWrapNowSize = {
-                    height: inlineData.dragWrapWindow.outerHeight + moveOffset.offsetY
-                };
-                dragContentNowSize = {
-                    height: inlineData.dragContentWindow.outerHeight + moveOffset.offsetY
-                };
-                contentNowSize = {
-                    height: inlineData.contentWindow.outerHeight + moveOffset.offsetY
-                };
-            }
-            if($dragBorder.hasClass('drag-border-top-left') || $dragBorder.hasClass('drag-border-top-right')
-             || $dragBorder.hasClass('drag-border-bottom-left') || $dragBorder.hasClass('drag-border-bottom-right')){
-                dragWrapNowSize = {
-                    width: inlineData.dragWrapWindow.outerWidth + moveOffset.offsetX,
-                    height: inlineData.dragWrapWindow.outerHeight + moveOffset.offsetY,
-                };
-                dragContentNowSize = {
-                    width: inlineData.dragContentWindow.outerWidth + moveOffset.offsetX,
-                    height: inlineData.dragContentWindow.outerHeight + moveOffset.offsetY,
-                };
-                contentNowSize = {
-                    width: inlineData.contentWindow.outerWidth + moveOffset.offsetX,
-                    height: inlineData.contentWindow.outerHeight + moveOffset.offsetY,
-                };
-            }
-            changeTargetWindowSize($dragWrap, dragWrapNowSize);
-            changeTargetWindowSize($dragContent, dragContentNowSize);
-            changeTargetWindowSize($content, contentNowSize);
-        }
+        // 原始内容
+        inlineData.originContentWindow.outerWidth = contentWindowOuterSize.outerWidth;
+        inlineData.originContentWindow.outerHeight = contentWindowOuterSize.outerHeight;
+        inlineData.dragMoveBarWindow.outerWidth = dragMoveBarWindowOuterSize.outerWidth;
+        // 边框的宽高
+        inlineData.dragBorderVerticalWindow.outerHeight = dragBorderLeftOuterSize.outerHeight;
+        inlineData.dragBorderHorizontalWindow.outerWidth = dragBorderTopOuterSize.outerWidth;
     });
 
     /**
@@ -161,12 +265,6 @@ $(function () {
      */
     function changeTargetWindowSize($target, size) {
         if(size){
-            if(size.width && size.height){
-                $target.css({
-                    width: size.width,
-                    height: size.height
-                });
-            }
             if(size.width){
                 $target.css({width: size.width});
             }
@@ -182,11 +280,21 @@ $(function () {
      * @param position
      */
     function moveTargetPosition($target, position){
-        $target.css({
-            position: 'absolute',
-            top: position.top + 'px',
-            left: position.left + 'px'
-        });
+        if(position.top || position.left){
+            $target.css({
+                position: 'absolute',
+            });
+        }
+        if(position.top){
+            $target.css({
+                top: position.top + 'px',
+            });
+        }
+        if(position.left){
+            $target.css({
+                left: position.left + 'px'
+            });
+        }
     }
 
     /**
@@ -207,7 +315,7 @@ $(function () {
     /**
      * @doc 获取指定目标dom的可视窗体的宽高
      * @param $target
-     * @returns {{width: number, height: number}}
+     * @returns {{outerWidth: number, outerHeight: number}}
      */
     function getTargetWindowOuterSize($target) {
         if($target){
@@ -216,5 +324,19 @@ $(function () {
             return {outerWidth: outerWidth, outerHeight: outerHeight};
         }
 
+    }
+
+    /**
+     * @doc 阻止可选中文本
+     */
+    function preventTextSelectable($dom) {
+        $dragWrap.on('selectstart', function(){ return false; });
+    }
+
+    /**
+     * @doc 恢复可选中文本
+     */
+    function recoverTextSelectable($dom) {
+        $dragWrap.on('selectstart', function(){ return false; });
     }
 });
