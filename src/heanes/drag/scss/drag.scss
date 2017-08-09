@@ -4,8 +4,8 @@
  * @author Heanes
  * @time 2017-03-03 18:50:25 周五
  */
-$content-width: 300px;
-$content-height: 200px;
+$content-width: 600px;
+$content-height: 400px;
 $drag-content-padding: 0;
 
 $drag-wrap-borer-width: 0px;
@@ -18,11 +18,14 @@ $drag-content-borer-color: #a0b3d6;
 
 $drag-wrap-box-shadow: 2px 2px 4px rgba(130, 130, 130, .5);
 
-$drag-move-bar-height: 24px;
-$drag-move-bar-bg-color: rgba(190, 206, 235, 0.47);
+$drag-move-bar-height: 40px;
+$drag-move-bar-bg-color: #258cef;
+$drag-move-bar-color: #fff;
 $drag-move-bar-borer-width: 1px;
 $drag-move-bar-borer-style: solid;
 $drag-move-bar-border-color: #a0b3d6;
+$drag-move-bar-font-size: 14px;
+
 $drag-border-bg-color: rgba(240, 243, 249, 0.44);
 $drag-border-width: 10px;
 
@@ -43,27 +46,28 @@ $drag-border-width: 10px;
 
 }
 
-.drag-wrap .drag-operate-wrap .drag-move-bar {
+.drag-wrap .drag-operate-wrap .drag-move-bar{
   position: absolute;
   width: $content-width + (2 * $drag-content-padding) + ($drag-content-borer-width * 2);
   height: $drag-move-bar-height + $drag-move-bar-borer-width;
   left: $drag-border-width;
   top: $drag-border-width;
-  background-color: $drag-move-bar-bg-color;
   border: $drag-move-bar-borer-width $drag-move-bar-borer-style $drag-move-bar-border-color;
   border-bottom: 0;
-  cursor: move;
-  font-size: 14px;
-  font-weight: normal;
-
-  background-color:#f00;
-}
-.drag-wrap .drag-operate-wrap .drag-move-bar h2{
-  font-size: 13px;
-  font-weight: normal;
   margin-bottom: 0;
+  font-size: $drag-move-bar-font-size;
+  font-weight: normal;
   line-height: $drag-move-bar-height;
-  padding: 0 3px;
+  padding: 0 10px;
+  background-color: $drag-move-bar-bg-color;
+  color:$drag-move-bar-color;
+  cursor: move;
+}
+
+.drag-wrap .drag-operate-wrap .drag-move-bar *{
+  font-size: $drag-move-bar-font-size;
+  font-weight: normal;
+  margin:0;
 }
 
 .drag-wrap .drag-content {
@@ -155,7 +159,7 @@ $drag-border-width: 10px;
   }
   // 下边框，从上方拖动[高度]
   &.drag-border-bottom {
-    background-color:#449dfe;
+    background-color:#ceb455;
   }
   // 左边框，从左方拖动[宽度]
   &.drag-border-left {

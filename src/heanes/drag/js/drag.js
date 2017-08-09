@@ -60,8 +60,8 @@ $(function () {
     };
 
     let defaultOption = {
-        draggable: true,         // 是否可以拖拽
-        resizable: true,       // 是否可以改变窗体大小
+        draggable: true,        // 是否可以拖拽
+        resizable: true,        // 是否可以改变窗体大小
     };
 
 

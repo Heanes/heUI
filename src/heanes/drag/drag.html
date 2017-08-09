@@ -9,7 +9,7 @@
     <meta name="description" content="描述">
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="//localhost:8080/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/heanesUI.css"/>
     <link rel="stylesheet" href="./scss/drag.css"/>
     <title>Drag 拖拽</title>
     <style>
@@ -17,7 +17,8 @@
         /* 拖拽区域 */
         /*.drag-block{background-color: #efefef;}
         .drag-wrap .drag-content{width: 302px;height: 202px;background-color: #d2ebfd}*/
-        .something-content-demo{width: 300px;height: 200px;padding: 10px;font-size: 18px;background-color: #fff;}
+        .something-content-demo{width: 600px;height: 400px;padding: 10px;font-size: 18px;background-color: #fff;}
+        .content-title{}
     </style>
 </head>
 <body>
@@ -48,7 +49,7 @@
                                     <div class="drag-wrap drag-block">
                                         <div class="drag-operate-wrap">
                                             <div class="drag-move-bar">
-                                                <h2>拖拽一下试试</h2>
+                                                <h2 class="content-title">拖拽一下试试</h2>
                                             </div>
                                             <div class="drag-border drag-border-top-left"></div>
                                             <div class="drag-border drag-border-top"></div>
@@ -61,8 +62,11 @@
                                         </div>
                                         <div class="drag-content">
                                             <div class="something-content-demo">
-                                                <p>This is test text just hold the place.</p>
-                                                <p>This is test text just hold the place.</p>
+                                                <p>This is test text just hold the place. This is long paragraph.</p>
+                                                <p>This is test text just hold the place. This is long paragraph.</p>
+                                                <p>This is test text just hold the place. This is long paragraph.</p>
+                                                <p>This is test text just hold the place. This is long paragraph.</p>
+                                                <p>This is test text just hold the place. This is long paragraph.</p>
                                             </div>
                                         </div>
                                     </div>
