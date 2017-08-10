@@ -84,10 +84,10 @@ $(function () {
 
     // 全局 - 鼠标移动
     $(document).on('mousemove', function (event) {
-        preventTextSelectable();
         let e = event ? event: window.event;
 
         if(options.draggable || options.resizable){
+            preventTextSelectable($dom);
             let moveOffset = {
                 offsetX: e.clientX - inlineData.currentX,
                 offsetY: e.clientY - inlineData.currentY
@@ -323,13 +323,13 @@ $(function () {
      * @doc 阻止可选中文本
      */
     function preventTextSelectable($dom) {
-        $dragWrap.on('selectstart', function(){ return false; });
+        $dom.on('selectstart', function(){ return false; });
     }
 
     /**
      * @doc 恢复可选中文本
      */
     function recoverTextSelectable($dom) {
-        $dragWrap.on('selectstart', function(){ return false; });
+        // todo
     }
 });

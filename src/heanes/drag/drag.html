@@ -40,9 +40,16 @@
                             <div class="demo-group-title"><h2>基础用法</h2></div>
                             <div class="demo-desc">
                                 <p class="desc">可拖拽的区域。</p>
+                                <div class="something-content-demo" id="draggableContent">
+                                    <p>This is test text just hold the place. This is long paragraph.</p>
+                                    <p>This is test text just hold the place. This is long paragraph.</p>
+                                    <p>This is test text just hold the place. This is long paragraph.</p>
+                                    <p>This is test text just hold the place. This is long paragraph.</p>
+                                    <p>This is test text just hold the place. This is long paragraph.</p>
+                                </div>
                             </div>
                             <div class="demo-content">
-                                <div class="demo-one">
+                                <!--<div class="demo-one">
                                     <div class="drag-wrap">
                                         <div class="drag-operate-wrap">
                                             <div class="drag-move-bar">
@@ -67,7 +74,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -87,7 +94,16 @@
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="//localhost:8080/js/heanesUI.js"></script>
-    <script type="text/javascript" src="./js/drag0.js"></script>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#draggableContent').draggable({
+                draggable: true,        // 是否可以拖拽
+                resizable: true,        // 是否可以改变窗体大小
+                title: '<h2 class="content-title">拖拽一下试试</h2>', // 拖拽窗体的标题
+            });
+        });
+    </script>
     <!-- E js E -->
 </cite>
 </body>

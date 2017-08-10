@@ -97,6 +97,7 @@
                 let e = event ? event: window.event;
 
                 if(options.draggable || options.resizable){
+                    preventTextSelectable(that.__inElement.$dragWrap);
                     let moveOffset = {
                         offsetX: e.clientX - that.inlineData.currentX,
                         offsetY: e.clientY - that.inlineData.currentY
@@ -422,14 +423,14 @@
      * @doc 阻止可选中文本
      */
     function preventTextSelectable($dom) {
-        $dragWrap.on('selectstart', function(){ return false; });
+        $dom.on('selectstart', function(){ return false; });
     }
 
     /**
      * @doc 恢复可选中文本
      */
     function recoverTextSelectable($dom) {
-        $dragWrap.on('selectstart', function(){ return false; });
+        // todo
     }
 
     function logError(message) {
