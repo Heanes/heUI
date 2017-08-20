@@ -28,6 +28,7 @@ $drag-move-bar-font-size: 14px;
 
 $drag-border-bg-color: rgba(240, 243, 249, 0.44);
 $drag-border-width: 10px;
+$drag-border-radius: 8px;
 
 .drag-wrap {
   width: $content-width + ($drag-content-padding * 2) + ($drag-border-width * 2) + ($drag-wrap-borer-width * 2) + ($drag-content-borer-width * 2);
@@ -39,11 +40,7 @@ $drag-border-width: 10px;
   border: $drag-wrap-borer-width $drag-wrap-borer-style $drag-wrap-borer-color;
   box-shadow: $drag-wrap-box-shadow;
   display:inline-block;
-}
-
-
-.drag-wrap .drag-operate-wrap {
-
+  border-radius:$drag-border-radius;
 }
 
 .drag-wrap .drag-operate-wrap .drag-move-bar{
@@ -150,6 +147,24 @@ $drag-border-width: 10px;
   &.drag-border-bottom-left,
   &.drag-border-top-right {
     cursor: ne-resize;
+  }
+
+  // 左上角，从左上方同时拖动宽高
+  &.drag-border-top-left {
+    border-top-left-radius: $drag-border-radius;
+  }
+  // 右上角，从右上方同时拖动宽高
+  &.drag-border-top-right {
+    border-top-right-radius: $drag-border-radius;
+  }
+
+  // 左下角，从左下方同时拖动宽高
+  &.drag-border-bottom-left {
+    border-bottom-left-radius: $drag-border-radius;
+  }
+  // 右下角，从右下方同时拖动宽高
+  &.drag-border-bottom-right {
+    border-bottom-right-radius: $drag-border-radius;
   }
 
   // 为调试方便而上色

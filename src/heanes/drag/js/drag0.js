@@ -87,7 +87,7 @@ $(function () {
         let e = event ? event: window.event;
 
         if(options.draggable || options.resizable){
-            preventTextSelectable($dom);
+            preventTextSelectable($dragWrap);
             let moveOffset = {
                 offsetX: e.clientX - inlineData.currentX,
                 offsetY: e.clientY - inlineData.currentY

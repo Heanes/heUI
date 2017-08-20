@@ -12,6 +12,10 @@
         draggable: true,                                    // 是否可以拖拽
         resizable: true,                                    // 是否可以改变窗体大小
         title: '<h2 class="content-title">拖拽一下试试</h2>', // 拖拽窗体的标题
+        dragBorder: {
+            width: '10px',
+            borderRadius: '4px'
+        }
     };
 
     let Draggable = function (element, options) {
