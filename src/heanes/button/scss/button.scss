@@ -275,6 +275,58 @@
 }
 
 /**
+ * @doc 标签式按钮
+ * @author Heanes
+ * @time 2017-08-26 19:04:00 周六
+ */
+.btn.btn-labeled{
+  position:relative;
+  padding-left:48px;
+}
+.btn.btn-labeled{
+  .btn-inside-icon{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:40px;
+    &:before{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      display:block;
+      width:100%;
+      text-align:center;
+    }
+  }
+  @at-root &.btn-info .btn-inside-icon{
+    background-color:#44a3bf;
+  }
+}
+.btn.btn-labeled .btn-inside-icon{
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:40px;
+
+
+}
+
+
+
+/**
+ * @doc 圆形按钮
+ * @author Heanes
+ * @time 2017-08-26 18:50:14 周六
+ */
+.btn-circular{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/**
  * @doc 动画相关
  * @author Heanes
  * @time 2016-12-21 17:46:18 周三

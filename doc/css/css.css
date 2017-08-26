@@ -590,6 +590,15 @@
   background-color: #f5f5f5; }
 
 /**
+ * @doc 按钮
+ * @author Heanes
+ * @time 2017-08-26 18:55:00 周六
+ */
+.btn-circular {
+  width: 90px;
+  height: 90px; }
+
+/**
  * @doc 收货确认单
  * @author Heanes
  * @time 2017-07-08 17:37:22 周六
