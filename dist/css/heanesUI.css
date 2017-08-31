@@ -127,7 +127,7 @@ a {
   -webkit-text-decoration-skip: objects; }
   a:hover {
     color: #014c8c;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -1043,6 +1043,51 @@ table {
   margin: 10px 0;
   display: inline-block; }
 
+.pagination > .page-item {
+  display: inline; }
+
+.pagination > .page-item > .page-link {
+  position: relative;
+  float: left;
+  margin-right: 6px;
+  padding: 8px 12px;
+  line-height: 1.42857143;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #0275d8; }
+
+.pagination > .page-item > .page-link.current, .pagination > .page-item > .page-link.ellipsis, .pagination > .page-item > .page-link.disabled {
+  cursor: default;
+  color: #666; }
+
+.pagination > .page-item > .page-link.disabled {
+  opacity: .8; }
+
+.pagination > .page-item > .page-link.current, .pagination > .page-item > .page-link:not(.disabled):not(.ellipsis):hover {
+  background-color: #00a1d6;
+  color: #fff;
+  border-color: #00a1d6;
+  z-index: 2; }
+
+.pagination.tight > .page-item > .page-link {
+  margin: 0 0 0 -1px; }
+
+/**
+ * @doc 带圆角边框的
+ * @author Heanes
+ * @time 2017-08-31 16:46:01 周四
+ */
+.pagination:not(.tight).border-radius > .page-item > .page-link {
+  border-radius: 4px; }
+
+.pagination.tight.border-radius > .page-item:first-child > .page-link {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+.pagination.tight.border-radius > .page-item:last-child > .page-link {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
 .pagination .pagination-link, .pagination .pagination-info, .pagination .pagination-quick-link {
   display: inline-block; }
 
@@ -1066,8 +1111,7 @@ table {
 .pagination .pagination-link .pg:hover, .pagination .pagination-link .pg.current {
   color: #fff;
   background-color: #00a1d6;
-  border-color: #00a1d6;
-  text-decoration: none; }
+  border-color: #00a1d6; }
 
 .pagination .pagination-link .pg.page-link-ellipsis {
   border-width: 0;

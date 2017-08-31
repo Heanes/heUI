@@ -4,7 +4,39 @@
  * @author Heanes
  * @time 2017-01-07 18:28:05 周六
  */
+$paginationColor:#0275d8;
+$paginationBgColor:#fff;
+$paginationBorderColor:#ddd;
+$paginationHoverColor:#fff;
+$paginationHoverBgColor:#00a1d6;
+$paginationHoverBorderColor:#00a1d6;
+
+$paginationItemMargin:6px;
+$paginationItemPadding:8px 12px;
+
 .pagination{margin:10px 0;display:inline-block;}
+.pagination > .page-item{display:inline;}
+.pagination > .page-item > .page-link{position:relative;float:left;margin-right:$paginationItemMargin;padding:$paginationItemPadding;line-height:1.42857143;border:1px solid $paginationBorderColor;background-color:$paginationBgColor;color:$paginationColor;}
+.pagination > .page-item > .page-link.current,
+.pagination > .page-item > .page-link.ellipsis,
+.pagination > .page-item > .page-link.disabled{cursor:default;color:#666;}
+.pagination > .page-item > .page-link.disabled{opacity:.8;}
+.pagination > .page-item > .page-link.current,
+.pagination > .page-item > .page-link:not(.disabled):not(.ellipsis):hover{background-color:$paginationHoverBgColor;color:$paginationHoverColor;border-color:$paginationHoverBorderColor;z-index:2;}
+
+.pagination.tight > .page-item > .page-link{margin:0 0 0 -1px;}
+
+/**
+ * @doc 带圆角边框的
+ * @author Heanes
+ * @time 2017-08-31 16:46:01 周四
+ */
+$paginationBorderRadius: 4px;
+.pagination:not(.tight).border-radius > .page-item > .page-link{border-radius:$paginationBorderRadius;}
+.pagination.tight.border-radius > .page-item:first-child > .page-link{border-top-left-radius:$paginationBorderRadius;border-bottom-left-radius:$paginationBorderRadius;}
+.pagination.tight.border-radius > .page-item:last-child > .page-link{border-top-right-radius:$paginationBorderRadius;border-bottom-right-radius:$paginationBorderRadius;}
+
+
 .pagination .pagination-link,
 .pagination .pagination-info,
 .pagination .pagination-quick-link{display:inline-block;}
@@ -12,7 +44,7 @@
 .pagination .pagination-link{font-size:0;}
 .pagination .pagination-link .pg{display:inline-block;padding:10px 12px;margin:0 4px;color:#3377aa;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
 .pagination .pagination-link .pg:hover,
-.pagination .pagination-link .pg.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;text-decoration:none;}
+.pagination .pagination-link .pg.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
 .pagination .pagination-link .pg.page-link-ellipsis{border-width:0;padding:10px 8px;cursor:text;}
 .pagination .pagination-link .pg.page-link-ellipsis:hover{color:inherit;background-color:inherit;}
 .pagination .pagination-link .pg.disabled{color:#777;cursor:default;}
