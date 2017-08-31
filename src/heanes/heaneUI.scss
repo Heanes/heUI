@@ -38,8 +38,10 @@
 // ------------------------------ component 组件 ------------------------------
 // table 表格
 @import "./table/scss/table.scss";
+
+// ------------------------------ navigation 导航 ------------------------------
 // pagination 分页
-//@import "./pagination/scss/pagination.scss";
+@import "./pagination/scss/pagination.scss";
 
 // breadcrumb 面包屑导航
 @import "./breadcrumb/scss/breadcrumb.scss";
