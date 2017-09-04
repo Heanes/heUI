@@ -69,7 +69,7 @@
 
 .demo-wrap .demo-group .demo-content .demo-one {
   margin: 10px 0;
-  padding-left: 40px; }
+  padding: 10px 0 10px 40px; }
 
 .demo-wrap .demo-group .demo-content .demo-one-desc {
   border-bottom: 1px solid #eee;

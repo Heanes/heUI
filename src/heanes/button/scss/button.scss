@@ -145,7 +145,7 @@
   }
 }
 
-.btn-warn{
+.btn-warning{
   color:#fff;
   background-color:#f0ad4e;
   border-color:#eea236;
@@ -155,7 +155,7 @@
   &.focus,
   &:active,
   &.active,
-  &.open > .dropdown-toggle.btn-warn{
+  &.open > .dropdown-toggle.btn-warning{
     color:#fff;
     background-color:#ec971f;
     border-color:#d58512;
@@ -260,7 +260,7 @@
   &.btn-success{
     color:#5cb85c;
   }
-  &.btn-warn{
+  &.btn-warning{
     color:#f0ad4e;
   }
   &.btn-danger{

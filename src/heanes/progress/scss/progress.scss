@@ -14,6 +14,29 @@ $progressBarHeight:20px;
 $progressBarMinHeight:16px;
 $progressBarFontSize:12px;
 
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes{
+  from{
+    background-position:40px 0;
+  }
+  to{
+    background-position:0 0;
+  }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes{
+  from{
+    background-position:40px 0;
+  }
+  to{
+    background-position:0 0;
+  }
+}
+
 .progress{
   display:inline-block;
   width:$progressBarWidth;
@@ -36,4 +59,32 @@ $progressBarFontSize:12px;
   color:$progressBarLabelColor;
   transition:width .6s ease;
   font-size:$progressBarFontSize;
+
+  &.progress-bar-success{
+    background-color:map-get($color-set, "success");
+  }
+  &.progress-bar-info{
+    background-color:map-get($color-set, "info");
+  }
+  &.progress-bar-warning{
+    background-color:map-get($color-set, "warning");
+  }
+  &.progress-bar-danger{
+    background-color:map-get($color-set, "danger");
+  }
+
+  // 条纹
+  &.progress-bar-striped{
+    background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+  }
+
+  // 动态条纹
+  &.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+  }
 }

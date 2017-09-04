@@ -305,10 +305,10 @@ template {
 .color-important {
   color: #bd7b46; }
 
-.bg-color-warn {
+.bg-color-warning {
   background-color: #f1a325; }
 
-.color-warn {
+.color-warning {
   color: #f1a325; }
 
 .bg-color-danger {
@@ -347,10 +347,10 @@ template {
 .color-important-pale {
   color: #f7ebe1; }
 
-.bg-color-warn-pale {
+.bg-color-warning-pale {
   background-color: #fff0d5; }
 
-.color-warn-pale {
+.color-warning-pale {
   color: #fff0d5; }
 
 .bg-color-danger-pale {
@@ -407,7 +407,7 @@ template {
 .border-color-important {
   border-color: #996337; }
 
-.border-color-warn {
+.border-color-warning {
   border-color: #d5890e; }
 
 .border-color-danger {
@@ -428,7 +428,7 @@ template {
 .border-color-important-pale {
   border-color: #ecd0b9; }
 
-.border-color-warn-pale {
+.border-color-warning-pale {
   border-color: #fff0d5; }
 
 .border-color-danger-pale {
@@ -546,11 +546,11 @@ template {
     background-color: #31b0d5;
     border-color: #269abc; }
 
-.btn-warn {
+.btn-warning {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236; }
-  .btn-warn:hover, .btn-warn.hover, .btn-warn:focus, .btn-warn.focus, .btn-warn:active, .btn-warn.active, .btn-warn.open > .dropdown-toggle.btn-warn {
+  .btn-warning:hover, .btn-warning.hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .btn-warning.open > .dropdown-toggle.btn-warning {
     color: #fff;
     background-color: #ec971f;
     border-color: #d58512; }
@@ -638,7 +638,7 @@ template {
     color: #5bc0de; }
   .btn-outline.btn-success {
     color: #5cb85c; }
-  .btn-outline.btn-warn {
+  .btn-outline.btn-warning {
     color: #f0ad4e; }
   .btn-outline.btn-danger {
     color: #d9534f; }
@@ -1039,6 +1039,18 @@ table {
  * @author Heanes
  * @time 2017-08-31 17:59:57 周四
  */
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0; }
+  to {
+    background-position: 0 0; } }
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0; }
+  to {
+    background-position: 0 0; } }
+
 .progress {
   display: inline-block;
   width: 400px;
@@ -1060,6 +1072,23 @@ table {
   color: #fff;
   transition: width .6s ease;
   font-size: 12px; }
+  .progress .progress-bar.progress-bar-success {
+    background-color: #38b03f; }
+  .progress .progress-bar.progress-bar-info {
+    background-color: #03b8cf; }
+  .progress .progress-bar.progress-bar-warning {
+    background-color: #f1a325; }
+  .progress .progress-bar.progress-bar-danger {
+    background-color: #ca6451; }
+  .progress .progress-bar.progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px; }
+  .progress .progress-bar.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite; }
 
 /**
  * @doc 分页样式
