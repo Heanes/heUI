@@ -264,6 +264,14 @@ template {
   display: none !important; }
 
 /**
+ * @doc type
+ * @author Heanes
+ * @time 2017-09-05 17:57:28 周二
+ */
+small, .small {
+  font-size: 80%; }
+
+/**
  * @doc 过渡动画
  * @author Heanes
  * @time 2017-03-02 16:30:31 周四
@@ -835,6 +843,40 @@ p.font-17 {
 
 p.font-18 {
   font-size: 18px; }
+
+/**
+ * @doc 对齐
+ * @author Heanes
+ * @time 2017-09-05 19:29:05 周二
+ */
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+/**
+ * @doc 大小写
+ * @author Heanes
+ * @time 2017-09-05 19:29:05 周二
+ */
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
 
 /**
  * @doc 变量定义

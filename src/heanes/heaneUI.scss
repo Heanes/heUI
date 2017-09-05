@@ -15,6 +15,9 @@
 // normalize
 @import "./common/normalize.scss";
 
+// ------------------------------ variable 变量定义 ------------------------------
+@import "./common/type.scss";
+
 // ------------------------------ transition && animation 动画 ------------------------------
 // transition 过渡动画
 @import "./common/transition.scss";

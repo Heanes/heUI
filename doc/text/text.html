@@ -83,8 +83,102 @@
                         </div>
                         <div class="demo-group">
                             <div class="demo-group-title"><h3 id="quote">引用</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">对于被引用的文本使用 <code>&lt;q&gt;</code> 标签。</p>
+                            </div>
                             <div class="demo-content">
-                                <q>引用内容</q>
+                                <div class="demo-one">
+                                    <q>引用内容</q>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="del">被删除的文本</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">对于被删除的文本使用 <code>&lt;del&gt;</code> 标签。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <del>这是一段被删除的文本</del>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="ins">插入文本</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">额外插入的文本使用 <code>&lt;ins&gt;</code> 标签。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <ins>这是一段被插入的文本</ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="small">小号文本</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">
+                                    对于不需要强调的inline或block类型的文本，使用 <code>&lt;small&gt;</code> 标签包裹，其内的文本将被设置为父容器字体大小的 85%。标题元素中嵌套的 <code>&lt;small&gt;</code> 元素被设置不同的 font-size 。
+                                </p>
+                                <p>你还可以为行内元素赋予 .small 类以代替任何 <code>&lt;small&gt;</code> 元素。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <small>这是小号字体</small>
+                                </div>
+                                <div class="demo-one">
+                                    <div class="small">这是样式为small的小号字体</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="strong">着重</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">通过增加 <code>font-weight</code> 值强调一段文本。使用 <code>&lt;strong&gt;</code> 标签。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <p>一段文本中，包含<strong>着重强调</strong>的内容</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="italic">斜体</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">用斜体强调一段文本。使用 <code>&lt;i&gt;</code> 标签。<small>注：i是italic的缩写。</small></p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <i>斜体内容</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="textAlign">对齐</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">通过文本对齐类，可以简单方便的将文字重新对齐。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <p class="text-left">左对齐</p>
+                                    <p class="text-center">居中对齐</p>
+                                    <p class="text-right">右对齐</p>
+                                    <p class="text-justify">两端对齐</p>
+                                    <p class="text-nowrap">不允许换行。所以要来一段长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的段落</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-group">
+                            <div class="demo-group-title"><h3 id="lowerOrUpperCased">改变大小写</h3></div>
+                            <div class="demo-desc">
+                                <p class="desc">通过这几个类可以改变文本的大小写。</p>
+                            </div>
+                            <div class="demo-content">
+                                <div class="demo-one">
+                                    <p class="text-lowercase">Lowercased text. 转为小写</p>
+                                    <p class="text-uppercase">Uppercased text. 转为大写</p>
+                                    <p class="text-capitalize">Capitalized text. 转为首字母大写</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -97,12 +191,9 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxcore.js"></script>
-    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxtabs.js"></script>
-    <script type="text/javascript" src="/public/static/libs/js/jQWidgets/4.4.0/jqxbuttons.js"></script>
     <script type="text/javascript">
         $(function () {
-            window.top.location.hash = 'menu=1,4';
+            ;
         });
     </script>
     <!-- E js E -->
