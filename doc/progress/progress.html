@@ -138,8 +138,35 @@
                                     <div class="demo-one">
                                         <div class="progress-demo-wrap">
                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                    <span class="sr-only">80% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress-demo-wrap">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                                                     <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress-demo-wrap">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress-demo-wrap">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                    <span class="sr-only">20% Complete</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,18 +174,46 @@
                                 </div>
                             </div>
                             <div class="demo-group">
-                                <div class="demo-group-title"><h2>条纹效果</h2></div>
+                                <div class="demo-group-title"><h2>条纹动画效果</h2></div>
                                 <div class="demo-desc">
                                     <p class="desc">为 <code>.progress-bar-striped</code> 添加 <code>.active</code> 类，使其呈现出由右向左运动的动画效果。IE9 及更低版本的浏览器不支持。</p>
                                 </div>
-                                <div class="demo-content">
+                                <div class="demo-content toggle-bar-content">
                                     <div class="demo-one">
-                                        <div class="progress-demo-wrap">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                20%
+                                                <span class="sr-only">20% Complete</span>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                40%
+                                                <span class="sr-only">40% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                60%
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                80%
+                                                <span class="sr-only">80% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-one">
+                                        <div class="toggle-wrap">
+                                            <button class="btn btn-default btn-large toggle-active" id="toggleAnimationBtn">启停动画</button>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +232,10 @@
     <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
     <script type="application/javascript">
         $(function () {
-            ;
+            $('#toggleAnimationBtn').on('click', function () {
+                $('.toggle-bar-content').find('.progress-bar-striped').toggleClass('active');
+                $(this).toggleClass('active');
+            });
         });
     </script>
     <!-- E js E -->
