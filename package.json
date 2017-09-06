@@ -6,7 +6,6 @@
     "server": "webpack-dev-server --config ./webpack/config/dev/webpack.dev.config.js --progress --colors",
     "predev": "rm -rf dist",
     "dev": "webpack --config ./webpack/config/dev/webpack.dev.config.js --progress --colors",
-    "postdev": "npm run package",
     "prepackage": "rm -rf dist",
     "package": "webpack --config ./webpack/config/product/webpack.product.config.js --progress --colors",
     "prebuild": "echo '******开始构建开发环境的代码*********'",
