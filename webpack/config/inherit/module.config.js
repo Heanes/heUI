@@ -1,4 +1,5 @@
 let dirVars = require('../base/dir-vars.config.js');
+let pathLibs = 'public/static/libs/';
 module.exports = {
   preLoaders: [
     {
@@ -61,7 +62,7 @@ module.exports = {
       // @see https://github.com/webpack-contrib/file-loader#filename-template-placeholders
       test: /\.(woff|woff2|svg|eot|otf|ttf)\??.*$/,
       include: /font-awesome/,
-      loader: 'file-loader?name=[path][name].[ext]&publicPath=../',
+      loader: 'file-loader?name=fonts/[name].[ext]&useRelativePath=true&publicPath=../',
     },
     {
       // 专供bootstrap方案使用的，忽略bootstrap自带的字体文件

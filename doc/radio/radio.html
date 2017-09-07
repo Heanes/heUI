@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <!-- style -->
-    <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="//localhost:8080/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
     <title>Radio 单选框</title>
 </head>
@@ -36,14 +36,18 @@
                         <div class="demo-group">
                             <div class="demo-group-title"><h2>基础用法</h2></div>
                             <div class="demo-desc">
-                                <p class="desc">基础的单选按钮</p>
+                                <p class="desc">基础的单选按钮。</p>
+                                <p class="desc">注意这类元素应用 <code>&lt;label&gt;</code> 来包裹住<code>&lt;input type="radio"&gt;</code>，这样点击文字时即可触发单选按钮</p>
                             </div>
                             <div class="demo-content">
                                 <div class="demo-one">
-                                    <input type="radio" name="single-select" id="radio1">
-                                    <label for="radio1">请选择</label>
-                                    <input type="radio" name="single-select" id="radio2">
-                                    <label for="radio2">请选择</label>
+                                    <label for="radio1">
+                                        <input type="radio" name="single-select" id="radio1">请选择
+                                    </label>
+
+                                    <label for="radio2">
+                                        <input type="radio" name="single-select" id="radio2">请选择
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -63,12 +67,7 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/ui.js" id="importResource"></script>
     <script type="application/javascript">
-        Import([
-            // 消息提示
-            '../../js/common/common.js'
-        ]);
         $(function () {
         });
     </script>
