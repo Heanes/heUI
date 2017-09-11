@@ -71,13 +71,6 @@
   margin: 10px 0;
   padding: 10px 20px; }
 
-.demo-wrap .demo-group .demo-content .demo-one-desc {
-  padding-left: 20px; }
-
-.demo-wrap .demo-group .demo-content .demo-one-desc + .demo-one {
-  padding-left: 40px;
-  padding-right: 40px; }
-
 .demo-wrap .demo-group .demo-content .demo-one:hover {
   outline: 0;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);

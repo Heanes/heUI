@@ -6,50 +6,98 @@
  */
 
 // ------------------------------ variable 变量定义 ------------------------------
+/**
+ * @doc custom
+ */
 @import "./common/custom.scss";
+/**
+ * @doc variables
+ */
 @import "./common/variables.scss";
 
 // ------------------------------ reset || normalize 重设或者规范基础样式 ------------------------------
 // reset 原生样式重置 (暂时不用reset.css)
 //@import "./common/reset.scss";
 // normalize
+/**
+ * @doc normalize
+ */
 @import "./common/normalize.scss";
 
 // ------------------------------ variable 变量定义 ------------------------------
+/**
+ * @doc type
+ */
 @import "./common/type.scss";
 
 // ------------------------------ transition && animation 动画 ------------------------------
 // transition 过渡动画
+/**
+ * @doc transition 过渡动画
+ */
 @import "./common/transition.scss";
 // animation 三维动画
+/**
+ * @doc animation 三维动画
+ */
 @import "./common/animation.scss";
 
 // ------------------------------ base 基础 ------------------------------
 // color 颜色
+/**
+ * @doc color 颜色
+ */
 @import "./color/scss/color.scss";
 // button 按钮
+/**
+ * @doc button 按钮
+ */
 @import "./button/scss/button.scss";
 // text 文本
+/**
+ * @doc text 文本
+ */
 @import "./text/scss/text.scss";
 // scrollbar 滚动条
+/**
+ * @doc scrollbar 滚动条
+ */
 @import "./scrollbar/scss/scrollbar.scss";
 // code 代码
+/**
+ * @doc code 代码
+ */
 @import "./code/scss/code.scss";
 
 // ------------------------------ form 表单 ------------------------------
 // input 输入框
+/**
+ * @doc input 输入框
+ */
 @import "./input/scss/input.scss";
 
 // ------------------------------ component 组件 ------------------------------
 // table 表格
+/**
+ * @doc table 表格
+ */
 @import "./table/scss/table.scss";
 // progress 进度条
+/**
+ * @doc progress 进度条
+ */
 @import "./progress/scss/progress.scss";
 
 // ------------------------------ navigation 导航 ------------------------------
 // pagination 分页
+/**
+ * @doc pagination 分页
+ */
 @import "./pagination/scss/pagination.scss";
 
 // breadcrumb 面包屑导航
+/**
+ * @doc breadcrumb 面包屑导航
+ */
 @import "./breadcrumb/scss/breadcrumb.scss";
 // ------------------------------ resource 外部资源 ------------------------------
