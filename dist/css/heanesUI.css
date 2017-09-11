@@ -10,14 +10,23 @@
  * @time 2017-02-28 14:57:33 周二
  */
 /**
+ * @doc custom
+ */
+/**
  * @doc 用户自定义变量-覆盖variables.scss默认值
  * @author Heanes
  * @time 2017-02-17 10:41:19 周五
  */
 /**
+ * @doc variables
+ */
+/**
  * @doc 变量定义
  * @author Heanes
  * @time 2017-02-17 10:41:19 周五
+ */
+/**
+ * @doc normalize
  */
 /**
  * @doc 变量定义
@@ -264,12 +273,18 @@ template {
 
 /**
  * @doc type
+ */
+/**
+ * @doc type
  * @author Heanes
  * @time 2017-09-05 17:57:28 周二
  */
 small, .small {
   font-size: 80%; }
 
+/**
+ * @doc transition 过渡动画
+ */
 /**
  * @doc 过渡动画
  * @author Heanes
@@ -279,9 +294,15 @@ small, .small {
   transition: all .3s ease;;
 }*/
 /**
+ * @doc animation 三维动画
+ */
+/**
  * @doc 动画
  * @author Heanes
  * @time 2017-03-02 16:29:53 周四
+ */
+/**
+ * @doc color 颜色
  */
 /**
  * @doc color 颜色
@@ -459,6 +480,9 @@ small, .small {
 .border-color-gray-pale {
   border-color: #f1f1f1; }
 
+/**
+ * @doc button 按钮
+ */
 /**
  * @doc 按钮样式
  * @author Heanes
@@ -744,6 +768,9 @@ small, .small {
     background-color: rgba(255, 255, 255, 0.35); }
 
 /**
+ * @doc text 文本
+ */
+/**
  * @doc text 文本样式
  * @author Heanes
  * @time 2017-02-24 17:26:24 周五
@@ -878,6 +905,9 @@ p.font-18 {
   text-transform: capitalize; }
 
 /**
+ * @doc scrollbar 滚动条
+ */
+/**
  * @doc 变量定义
  * @author Heanes
  * @time 2017-02-17 10:41:19 周五
@@ -942,6 +972,9 @@ p.font-18 {
   border-radius: 3px; }
 
 /**
+ * @doc code 代码
+ */
+/**
  * $doc code 代码样式
  * $author Heanes
  * $time 2017-09-06 10:15:10 周三
@@ -989,6 +1022,9 @@ kbd {
     font-weight: bold;
     box-shadow: none; }
 
+/**
+ * @doc input 输入框
+ */
 /**
  * @doc 文本框
  * @author Heanes
@@ -1042,6 +1078,9 @@ input[type="text"].validate-success {
     border-color: rgba(43, 84, 44, 0.8);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(103, 177, 104, 0.8); }
 
+/**
+ * @doc table 表格
+ */
 /**
  * @doc table 表格样式
  * @author Heanes
@@ -1125,6 +1164,9 @@ table {
 
 /**
  * @doc progress 进度条
+ */
+/**
+ * @doc progress 进度条
  * @author Heanes
  * @time 2017-08-31 17:59:57 周四
  */
@@ -1179,6 +1221,9 @@ table {
     -o-animation: progress-bar-stripes 2s linear infinite;
     animation: progress-bar-stripes 2s linear infinite; }
 
+/**
+ * @doc pagination 分页
+ */
 /**
  * @doc 分页样式
  * @author Heanes
@@ -1336,17 +1381,17 @@ table {
 
 /**
  * @doc breadcrumb 面包屑导航
+ */
+/**
+ * @doc breadcrumb 面包屑导航
  * @author Heanes
  * @time 2017-06-05 19:17:33 周一
  */
-.breadcrumb-wrap {
-  padding: 0 10px; }
-
 .breadcrumb-wrap .breadcrumb-cell {
   display: inline-block; }
 
 .breadcrumb-wrap .breadcrumb-node {
-  padding: 10px 0; }
+  padding: 4px 0; }
 
 .breadcrumb-wrap .breadcrumb-delimiter .separator {
   color: #ddd;
