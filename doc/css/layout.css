@@ -152,9 +152,6 @@ iframe {
   line-height: 50px;
   margin: 0 6px; }
 
-.header .admin-select-city .select-city {
-  margin-top: 14px; }
-
 .header .admin-select-city .select-city option {
   padding: 0; }
 
@@ -221,7 +218,7 @@ iframe {
 .tree-top-wrap .tree-top-list li .node-text {
   padding: 0 0 0 4px; }
 
-/* 防止菜单文字被xuan'zh */
+/* 防止菜单文字被选中 */
 .tree-list-wrap {
   user-select: none; }
 
