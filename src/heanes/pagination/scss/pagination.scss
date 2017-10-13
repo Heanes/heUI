@@ -17,6 +17,7 @@ $paginationItemPadding:8px 12px;
 .pagination{margin:10px 0;display:inline-block;}
 .pagination > .page-item{display:inline;}
 .pagination > .page-item > .page-link{position:relative;float:left;margin-right:$paginationItemMargin;padding:$paginationItemPadding;line-height:1.42857143;border:1px solid $paginationBorderColor;background-color:$paginationBgColor;color:$paginationColor;}
+.pagination > .page-item:last-child > .page-link{margin-right:0;}
 .pagination > .page-item > .page-link.current,
 .pagination > .page-item > .page-link.ellipsis,
 .pagination > .page-item > .page-link.disabled{cursor:default;color:#666;}

@@ -242,10 +242,11 @@
   font-size:13px;
   border-radius:4px;
 }
-.btn-mini{
-  padding:2px 2px;
+.btn-mini,.btn-xs{
+  padding:1px 5px;
   font-size:12px;
   border-radius:4px;
+  line-height: 1.5;
 }
 
 /**

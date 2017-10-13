@@ -33,7 +33,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -131,7 +131,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -327,7 +327,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -397,23 +397,10 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
-          {
-            "text": "Notification 通知",
-            "href": "notification/notification.html",
-            "nodeIcon": "fa fa-bullhorn",
-            "iconSelected": "",
-            "selectable": true,
-            "state": {
-              "selected": false,
-              "expanded": true,
-              "disabled": false
-            },
-            "nodes": []
-          },
           {
             "text": "Loading 加载中",
             "href": "loading/loading.html",
@@ -428,21 +415,8 @@
             "nodes": []
           },
           {
-            "text": "MessageBox 消息弹框",
-            "href": "messageBox/messageBox.html",
-            "nodeIcon": "fa fa-window-restore",
-            "iconSelected": "",
-            "selectable": true,
-            "state": {
-              "selected": false,
-              "expanded": true,
-              "disabled": false
-            },
-            "nodes": []
-          },
-          {
             "text": "Global 全局消息显示",
-            "href": "message/global.html",
+            "href": "message/globalMessage.html",
             "nodeIcon": "fa fa-commenting",
             "iconSelected": "",
             "selectable": true,
@@ -454,9 +428,35 @@
             "nodes": []
           },
           {
-            "text": "Local 局部消息显示",
-            "href": "message/local.html",
+            "text": "Inline 局部消息显示",
+            "href": "message/inlineMessage.html",
             "nodeIcon": "fa fa-comments-o",
+            "iconSelected": "",
+            "selectable": true,
+            "state": {
+              "selected": false,
+              "expanded": true,
+              "disabled": false
+            },
+            "nodes": []
+          },
+          {
+            "text": "MessageBox 消息弹框",
+            "href": "message/messageBox.html",
+            "nodeIcon": "fa fa-window-restore",
+            "iconSelected": "",
+            "selectable": true,
+            "state": {
+              "selected": false,
+              "expanded": true,
+              "disabled": false
+            },
+            "nodes": []
+          },
+          {
+            "text": "Notification 通知",
+            "href": "notification/notification.html",
+            "nodeIcon": "fa fa-bullhorn",
             "iconSelected": "",
             "selectable": true,
             "state": {
@@ -476,7 +476,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -560,7 +560,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -602,7 +602,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -722,7 +722,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -847,7 +847,7 @@
     "selectable": true,
     "state": {
       "selected": false,
-      "expanded": false,
+      "expanded": true,
       "disabled": false
     },
     "nodes": [
@@ -859,7 +859,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -915,7 +915,7 @@
     "selectable": true,
     "state": {
       "selected": false,
-      "expanded": false,
+      "expanded": true,
       "disabled": false
     },
     "nodes": [
@@ -940,7 +940,7 @@
         "selectable": true,
         "state": {
           "selected": false,
-          "expanded": false,
+          "expanded": true,
           "disabled": false
         },
         "nodes": [
@@ -990,7 +990,7 @@
                 "selectable": true,
                 "state": {
                   "selected": false,
-                  "expanded": false,
+                  "expanded": true,
                   "disabled": false
                 },
                 "nodes": [
