@@ -415,8 +415,8 @@
             "nodes": []
           },
           {
-            "text": "Global 全局消息显示",
-            "href": "message/globalMessage.html",
+            "text": "MessageGlobal 全局消息显示",
+            "href": "message/messageGlobal.html",
             "nodeIcon": "fa fa-commenting",
             "iconSelected": "",
             "selectable": true,
@@ -428,8 +428,8 @@
             "nodes": []
           },
           {
-            "text": "Inline 局部消息显示",
-            "href": "message/inlineMessage.html",
+            "text": "MessageLocal 局部消息显示",
+            "href": "message/messageLocal.html",
             "nodeIcon": "fa fa-comments-o",
             "iconSelected": "",
             "selectable": true,

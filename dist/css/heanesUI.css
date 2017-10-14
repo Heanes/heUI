@@ -634,14 +634,14 @@ small, .small {
  * @author Heanes
  * @time 2016-12-21 18:00:18 周三
  */
-.btn-ex-large {
+.btn-ex-large, .btn-xl {
   padding: 20px 26px;
-  font-size: 17px;
+  font-size: 20px;
   border-radius: 4px; }
 
-.btn-large {
+.btn-large, .btn-lg {
   padding: 11px 19px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 4px; }
 
 .btn-medium {
@@ -649,7 +649,7 @@ small, .small {
   font-size: 15px;
   border-radius: 4px; }
 
-.btn-small {
+.btn-small, .btn-sm {
   padding: 4px 4px;
   font-size: 13px;
   border-radius: 4px; }
@@ -1022,6 +1022,19 @@ kbd {
     font-size: 100%;
     font-weight: bold;
     box-shadow: none; }
+
+/**
+ * @doc form 表单
+ */
+/**
+ * @doc 表单
+ * @author Heanes
+ * @time 2017-10-14 19:10:45 周六
+ */
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle; }
 
 /**
  * @doc input 输入框
@@ -1400,6 +1413,119 @@ table {
 .breadcrumb-wrap .breadcrumb-delimiter .separator {
   color: #ddd;
   padding: 0 2px; }
+
+/**
+ * @doc loading 加载中
+ */
+/**
+ * @doc message 消息提示
+ */
+/**
+ * @doc 提示信息
+ * @author Heanes
+ * @time 2015-12-01 20:12:06
+ */
+/************************ 局部消息样式 ************************/
+.message-wrap {
+  margin-bottom: 10px; }
+  .message-wrap:last-child {
+    margin-bottom: 0; }
+
+.message {
+  position: relative;
+  display: block;
+  border: 1px solid;
+  text-align: initial;
+  /**
+   * @doc success 成功样式
+   */
+  /**
+   * @doc info 信息样式
+   */
+  /**
+   * @doc warning 警告样式
+   */
+  /**
+   * @doc error 错误样式
+   */ }
+  .message.message-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6; }
+    .message.message-success .message-content .message-icon-wrap {
+      background-color: #13ce66; }
+  .message.message-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1; }
+    .message.message-info .message-content .message-icon-wrap {
+      background-color: #50bfff; }
+  .message.message-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc; }
+    .message.message-warning .message-content .message-icon-wrap {
+      background-color: #f7ba2a; }
+  .message.message-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1; }
+    .message.message-error .message-content .message-icon-wrap {
+      background-color: #ff4949; }
+  .message .message-content p {
+    margin: 0; }
+  .message .message-content .message-icon-wrap, .message .message-content .message-content-wrap {
+    display: inline-block;
+    padding: 14px 0; }
+  .message .message-content .message-icon-wrap {
+    width: 48px;
+    text-align: center; }
+    .message .message-content .message-icon-wrap .icon-background {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 auto; }
+  .message .message-handle .btn-close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 17px;
+    font-weight: 300;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+    border-radius: 50%; }
+    .message .message-handle .btn-close:hover {
+      background-color: #d9534f;
+      color: #fff; }
+
+/**
+ * @doc 提示信息
+ * @author Heanes
+ * @time 2015-12-01 20:12:06
+ */
+/************************ 全局顶部消息样式 ************************/
+.message-global {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%; }
+
+.message-global .message-wrap {
+  margin-bottom: 2px; }
+
+.message-global .message {
+  display: inline-block;
+  padding: 10px 40px 10px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

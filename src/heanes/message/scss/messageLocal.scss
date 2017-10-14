@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/**
+ * @doc 提示信息
+ * @author Heanes
+ * @time 2015-12-01 20:12:06
+ */
+/************************ 局部消息样式 ************************/
+
+.message-wrap{
+  margin-bottom:10px;
+  &:last-child{
+    margin-bottom:0
+  }
+}
+
+.message{
+  position:relative;
+  display:block;
+  border:1px solid;
+  text-align:initial;
+
+  // success 成功样式
+  /**
+   * @doc success 成功样式
+   */
+  &.message-success{
+    color:#3c763d;
+    background-color:#dff0d8;
+    border-color:#d6e9c6;
+    .message-content{
+      .message-icon-wrap{
+        background-color:#13ce66;
+      }
+    }
+  }
+
+  // info 信息样式
+  /**
+   * @doc info 信息样式
+   */
+  &.message-info{
+    color:#31708f;
+    background-color:#d9edf7;
+    border-color:#bce8f1;
+    .message-content{
+      .message-icon-wrap{
+        background-color:#50bfff;
+      }
+    }
+  }
+
+  // warning 警告样式
+  /**
+   * @doc warning 警告样式
+   */
+  &.message-warning{
+    color:#8a6d3b;
+    background-color:#fcf8e3;
+    border-color:#faebcc;
+    .message-content{
+      .message-icon-wrap{
+        background-color:#f7ba2a;
+      }
+    }
+  }
+
+  // error 错误样式
+  /**
+   * @doc error 错误样式
+   */
+  &.message-error{
+    color:#a94442;
+    background-color:#f2dede;
+    border-color:#ebccd1;
+    .message-content{
+      .message-icon-wrap{
+        background-color:#ff4949;
+      }
+    }
+  }
+
+  // message 内容
+  .message-content{
+    p{
+      margin:0;
+    }
+
+    .message-icon-wrap,
+    .message-content-wrap{
+      display:inline-block;
+      padding:14px 0;
+    }
+
+    .message-icon-wrap{
+      width:48px;
+      text-align:center;
+      .icon-background{
+        width:24px;
+        height:24px;
+        line-height:24px;
+        border-radius:50%;
+        background-color:#fff;
+        margin:0 auto;
+      }
+    }
+  }
+
+  // message 操作区
+  .message-handle{
+    .btn-close{
+      position:absolute;
+      right:2px;
+      top:2px;
+      font-size:17px;
+      font-weight:300;
+      height:20px;
+      width:20px;
+      line-height:20px;
+      text-align:center;
+      vertical-align:middle;
+      font-family:arial, sans-serif;
+      cursor:pointer;
+      border-radius:50%;
+      &:hover{
+        background-color:#d9534f;
+        color:#fff
+      }
+    }
+  }
+}

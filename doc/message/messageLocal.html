@@ -16,18 +16,10 @@
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
-    <title>InlineMessage 局部提示信息</title>
+    <title>MessageLocal 局部提示信息</title>
 </head>
 <body>
 <div class="wrap">
-    <!-- S 头部 S -->
-    <div class="header">
-        <!-- 顶部操作/导航/工具栏 -->
-        <div class="top-toolbar"></div>
-        <!-- 顶部导航栏 -->
-        <div class="header-nav-bar"></div>
-    </div>
-    <!-- E 头部 E-->
     <!-- S 主要内容 S -->
     <div class="main">
         <!-- 主体内容 -->
@@ -39,7 +31,7 @@
                     <div class="demo-content">
                         <div class="demo-one">
                             <div class="message-wrap">
-                                <div class="ui-heanes-message message-success">
+                                <div class="message message-success">
                                     <div class="message-handle">
                                         <span class="btn-close">x</span>
                                     </div>
@@ -58,7 +50,7 @@
                         </div>
                         <div class="demo-one">
                             <div class="message-wrap">
-                                <div class="ui-heanes-message message-info">
+                                <div class="message message-info">
                                     <div class="message-handle">
                                         <span class="btn-close">x</span>
                                     </div>
@@ -77,7 +69,7 @@
                         </div>
                         <div class="demo-one">
                             <div class="message-wrap">
-                                <div class="ui-heanes-message message-warning">
+                                <div class="message message-warning">
                                     <div class="message-handle">
                                         <span class="btn-close">x</span>
                                     </div>
@@ -96,7 +88,7 @@
                         </div>
                         <div class="demo-one">
                             <div class="message-wrap">
-                                <div class="ui-heanes-message message-error">
+                                <div class="message message-error">
                                     <div class="message-handle">
                                         <span class="btn-close">x</span>
                                     </div>
@@ -186,14 +178,7 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="../js/ui.js" id="importResource"></script>
     <script type="application/javascript">
-        Import([
-            // 消息提示
-            '../../js/common/common.js',
-            'js/$.extend/$.message.js',
-            'css/message.css'
-        ]);
         $(function () {
             // 显示消息
             var $messageContainer = $('.message-container');
@@ -211,7 +196,7 @@
                 $.messageLocal($messageContainer, '错误，出现了问题。', 'error');
             });
 
-            $('.ui-heanes-message').on('click', '.btn-close', function (event) {
+            $('.message').on('click', '.btn-close', function (event) {
                 var $delegateTarget = $(event.delegateTarget);
                 $delegateTarget.fadeOut();
             });

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/**
+ * @doc 提示信息
+ * @author Heanes
+ * @time 2015-12-01 20:12:06
+ */
+/************************ 全局顶部消息样式 ************************/
+.message-global{
+  z-index:100;
+  position:fixed;
+  top:0;
+  text-align:center;
+  width:100%;
+}
+
+.message-global .message-wrap{
+  margin-bottom:2px;
+}
+
+.message-global .message{
+  display:inline-block;
+  padding:10px 40px 10px 20px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+}

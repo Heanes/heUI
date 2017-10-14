@@ -70,6 +70,11 @@
 @import "./code/scss/code.scss";
 
 // ------------------------------ form 表单 ------------------------------
+// form 表单
+/**
+ * @doc form 表单
+ */
+@import "./form/scss/form.scss";
 // input 输入框
 /**
  * @doc input 输入框
@@ -100,4 +105,19 @@
  * @doc breadcrumb 面包屑导航
  */
 @import "./breadcrumb/scss/breadcrumb.scss";
+
+// ------------------------------ notice 消息通知 ------------------------------
+// loading 加载中
+/**
+ * @doc loading 加载中
+ */
+//@import "./form/scss/form.scss";
+
+// message 消息提示
+/**
+ * @doc message 消息提示
+ */
+@import "./message/scss/messageLocal.scss";
+@import "./message/scss/messageGlobal.scss";
+
 // ------------------------------ resource 外部资源 ------------------------------

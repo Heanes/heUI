@@ -222,14 +222,14 @@
  * @author Heanes
  * @time 2016-12-21 18:00:18 周三
  */
-.btn-ex-large{
+.btn-ex-large,.btn-xl{
   padding:20px 26px;
-  font-size:17px;
+  font-size:20px;
   border-radius:4px;
 }
-.btn-large{
+.btn-large,.btn-lg{
   padding:11px 19px;
-  font-size:16px;
+  font-size:18px;
   border-radius:4px;
 }
 .btn-medium{
@@ -237,7 +237,7 @@
   font-size:15px;
   border-radius:4px;
 }
-.btn-small{
+.btn-small,.btn-sm{
   padding:4px 4px;
   font-size:13px;
   border-radius:4px;
