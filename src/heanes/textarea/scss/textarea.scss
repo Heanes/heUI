@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/**
+ * @doc textarea
+ * @author Heanes
+ * @time 2017-10-16 17:54:29 周一
+ */
+textarea{
+  &.form-control{
+    height:auto;
+  }
+  vertical-align:middle;
+}

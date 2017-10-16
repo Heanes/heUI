@@ -81,6 +81,12 @@
  */
 @import "./input/scss/input.scss";
 
+// textarea 文本域
+/**
+ * @doc textarea 文本域
+ */
+@import "./textarea/scss/textarea.scss";
+
 // ------------------------------ component 组件 ------------------------------
 // table 表格
 /**
@@ -106,13 +112,14 @@
  */
 @import "./breadcrumb/scss/breadcrumb.scss";
 
-// ------------------------------ notice 消息通知 ------------------------------
+// ------------------------------ loading 过渡层 ------------------------------
 // loading 加载中
 /**
  * @doc loading 加载中
  */
-//@import "./form/scss/form.scss";
+@import "./loading/scss/loading.scss";
 
+// ------------------------------ notice 消息通知 ------------------------------
 // message 消息提示
 /**
  * @doc message 消息提示
