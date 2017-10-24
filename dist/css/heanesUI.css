@@ -1045,10 +1045,12 @@ kbd {
  * @author Heanes
  * @time 2017-10-14 19:10:45 周六
  */
-.form-inline .form-group {
+.form-group.inline {
   display: inline-block;
   margin-bottom: 0;
   vertical-align: middle; }
+  .form-group.inline .form-control {
+    width: auto; }
 
 label {
   display: inline-block;
@@ -1150,6 +1152,8 @@ input[type="text"].validate-success {
  */
 textarea {
   vertical-align: middle; }
+  textarea.form-control {
+    height: auto; }
 
 /**
  * @doc table 表格
@@ -1474,6 +1478,11 @@ table {
 
 /**
  * @doc loading 加载中
+ */
+/**
+ * @doc loading 加载中
+ * @author Heanes
+ * @time 2017-10-16 20:17:22 周一
  */
 /**
  * @doc message 消息提示

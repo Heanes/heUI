@@ -73,6 +73,33 @@ $left-block-color:#292929;
 .menu-left-block{}
 /* 防止菜单文字被选中 */
 .tree-list-wrap{user-select:none;}
+
+
+/**
+ * @doc 树的样式覆写
+ * @author Heanes
+ * @time 2017-10-20 19:33:13 周六
+*/
+.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover{
+  width: 300px;
+  height: 32px;
+  >.node-wrap{
+    position:fixed;
+    width:300px;
+  }
+}
+
+.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover > .tree-group{
+  position:fixed;
+  margin-top:32px;
+}
+
+.tree-search .tree-search-input{
+  width:200px;
+  height:30px;
+  line-height:30px;
+}
+
 /************************ 右侧样式 ************************/
 $tab-title-wrap-color:#555;
 $tab-title-wrap-selected-color:#0088cc;
