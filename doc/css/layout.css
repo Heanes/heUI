@@ -142,7 +142,7 @@ iframe {
   float: left;
   height: 50px;
   line-height: 50px;
-  max-width: 1020px;
+  max-width: 840px;
   overflow-x: auto;
   white-space: nowrap; }
 
@@ -198,10 +198,10 @@ iframe {
   line-height: 28px;
   padding: 6px 0; }
 
-.header .admin-user-info .login-handle .login-out:hover {
+.header .admin-user-info .login-handle .handle-href:hover {
   text-decoration: underline; }
 
-.header .admin-user-info .login-handle .login-out .icon {
+.header .admin-user-info .login-handle .handle-href .icon {
   margin-right: 10px; }
 
 /************************ 左侧菜单 ************************/

@@ -44,7 +44,7 @@ $header-admin-user-info-detail-dl-hover-bgcolor:#254f7b;
 .header .admin-logo .admin-log-href .admin-title-text{font-size:22px;display:inline-block;}
 .header .admin-logo .admin-log-href .admin-title-text .system-version{font-style:normal;font-size:12px;vertical-align:top;margin-left:8px;}
 
-.header .menu-top{float:left;height:50px;line-height:50px;max-width:1020px;overflow-x:auto;white-space:nowrap;}
+.header .menu-top{float:left;height:50px;line-height:50px;max-width:840px;overflow-x:auto;white-space:nowrap;}
 
 .header .admin-select-city{float:right;height:50px;line-height:50px;margin:0 6px;}
 .header .admin-select-city .select-city{}
@@ -59,8 +59,8 @@ $header-admin-user-info-detail-dl-hover-bgcolor:#254f7b;
 .header .admin-user-info .user-detail dt{color:#fff;text-align:right;min-width:60px;}
 .header .admin-user-info .user-detail dd{color:#fff;}
 .header .admin-user-info .login-handle{text-align:center;font-size:14px;line-height:28px;padding:6px 0;}
-.header .admin-user-info .login-handle .login-out:hover{text-decoration:underline;}
-.header .admin-user-info .login-handle .login-out .icon{margin-right:10px;}
+.header .admin-user-info .login-handle .handle-href:hover{text-decoration:underline;}
+.header .admin-user-info .login-handle .handle-href .icon{margin-right:10px;}
 /************************ 左侧菜单 ************************/
 $left-block-bgcolor:#f2f2f2;
 $left-block-color:#292929;
