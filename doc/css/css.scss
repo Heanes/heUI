@@ -76,35 +76,6 @@
 .btn-circular{width:90px;height:90px;}
 
 /**
- * @doc 收货确认单
- * @author Heanes
- * @time 2017-07-08 17:37:22 周六
- */
-.receipts-delivered-print{height:595px;margin:0 auto;}
-
-.receipts-delivered-print{}
-.receipts-delivered-print .receipts-title{display:table;width:100%;}
-.receipts-delivered-print .receipts-title .cell{display:table-cell;width:33.333%;}
-.receipts-delivered-print .receipts-title .cell .self-service-phone{font-size:20px;}
-.receipts-delivered-print .receipts-title .cell h1{font-size:22px;}
-
-.receipts-delivered-print .receipts-delivery-info{}
-.receipts-delivered-print .receipts-delivery-info .cell{display:table-cell;width:33.333%;}
-.receipts-delivered-print .receipts-delivery-info .cell .h2-field{font-size:22px;font-weight:600;}
-.receipts-delivered-print .receipts-delivery-info .cell .delivery-type{text-align:center;margin-bottom:8px;}
-.receipts-delivered-print .cell dl.data-dl{margin-bottom:8px;}
-.receipts-delivered-print .cell dl.data-dl{display:table;}
-.receipts-delivered-print .cell dl.data-dl dt{min-width:70px;text-align:right;font-weight:normal;}
-.receipts-delivered-print .cell dl.data-dl dt,
-.receipts-delivered-print .cell dl.data-dl dd{display:table-cell;}
-
-
-.receipts-delivered-print .receipts-summary .cell{display:table-cell;width:20%;}
-
-.receipts-delivered-print .receipts-remark{}
-.receipts-delivered-print .receipts-remark .remark-content{font-weight:normal;font-size:14px;}
-
-/**
  * @doc 一维码/条形码
  * @author Heanes
  * @time 2017-08-04 16:11:25 周五

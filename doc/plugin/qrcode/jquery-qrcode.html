@@ -55,7 +55,7 @@
                                             </div>
                                             <div class="qrcode-show-wrap">
                                                 <div class="show-times-count-wrap">
-                                                    <p class="show-times-count">已刷新<span class="show-times-count-value" id="showTimesCountValue">0</span>次 <button class="btn btn-small btn-info" id="stopAutoRefreshBtn">停止自动刷新</button></p>
+                                                    <p class="show-times-count">已刷新<span class="show-times-count-value" id="showTimesCountValue">0</span>次 <button class="btn btn-small btn-info" id="toggleAutoRefreshBtn">停止自动刷新</button></p>
                                                 </div>
                                                 <div id="qrcodeShow" class="qrcode-show"></div>
                                                 <div class="show-time-last">
@@ -143,10 +143,11 @@
                 clearInterval(clockShowTimeLast);
                 isClear = true;
             }
-            $('#stopAutoRefreshBtn').on('click', function () {
+            $('#toggleAutoRefreshBtn').on('click', function () {
                 if(isClear){
                     showDynamicQrCode($qrcodeShow, $showTimeLast, 5, $showTimesCountValue);
                     $(this).text('停止自动刷新');
+                    isClear = false;
                 }else{
                     clearIntervalAll();
                     $(this).text('开始自动刷新');
