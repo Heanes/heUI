@@ -142,7 +142,8 @@ $tab-handle-color:#444;
 .iframe-container .tabs-container .tab-title-container{padding:0 10px !important;box-sizing:content-box;}
 .iframe-container .tabs-container .tab-title-container .tab-title-wrap{color:$tab-title-wrap-color;}
 .iframe-container .tabs-container .tab-title-container .tab-title-icon{margin-right:4px}
-.iframe-container .tabs-container .tab-content{height:100%;}
+.iframe-container .tabs-container .tab-content{height:100%;-webkit-overflow-scrolling:touch;}
+.iframe-container .tabs-container .jqx-tabs-content-element{height:100%;-webkit-overflow-scrolling:touch;}
 
 .jqx-tabs-selection-tracker-top,.iframe-container .tabs-container .tab-title-container .jqx-tabs-title-selected-top .tab-title-wrap{color:$tab-title-wrap-selected-color;}
 .jqx-widget-bootstrap, .jqx-widget-header-bootstrap, .jqx-fill-state-normal-bootstrap, .jqx-widget-content-bootstrap, .jqx-fill-state-hover-bootstrap, .jqx-fill-state-pressed-bootstrap{font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif}
