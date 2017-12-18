@@ -252,4 +252,126 @@ $(function () {
         }
     }
 
+
+    /**
+     * @doc 右上角宽度适应
+     */
+    var $userInfoWrap = $('.user-info-wrap')
+        , $userInfoCell = $('.user-info-cell');
+    $userInfoCell.css('width', $userInfoWrap.outerWidth(true));
+
+
+    /**
+     * @doc 获取页面最大z-index值
+     * @author Heanes
+     * @time 2017年12月15日16:59:43 周五
+     */
+    function getMaxZIndex() {
+        var
+            maxZ = 0,
+            divs = document.getElementsByTagName("*");
+
+        for(var i = 0; i < divs.length; i++) {
+            maxZ = Math.max(maxZ,parseInt(getClass(divs[i],'z-index')) || 0);
+        }
+
+        //兼容获取非行间样式
+        function getClass(obj, name)
+        {
+            if(obj.currentStyle)
+            {
+                return obj.currentStyle[name]; //IE下获取非行间样式
+            } else{
+                return getComputedStyle(obj, false)[name]; //FF、Chorme下获取非行间样式
+            }
+        }
+        console.log(maxZ);
+        return maxZ;
+    }
+
+
+    /**
+     * @doc 拖拽功能
+     * @type {*|jQuery|HTMLElement}
+     * @time 2017-12-18 18:16:59 周一
+     */
+    var $vSplitBar = $('.v-split-bar'),
+        $vSplitBarPlaceholder = $('.v-split-bar-placeholder'),
+        inSplitBarFlag = false,
+        startX = 0, barOldX = 0,
+        leftBlockOldWidth = 0,
+        centerBlockOldPaddingLeft = 0;
+
+    $vSplitBar.on('mousedown', function (event) {
+        let e = event ? event : window.event;
+        inSplitBarFlag = true;
+        $vSplitBar.addClass('dragged');
+        $vSplitBarPlaceholder.addClass('dragged');
+        barOldX = getTargetPosition($vSplitBar)['left'];
+        startX = e.clientX;
+        leftBlockOldWidth = $leftBlock.css('width');
+        centerBlockOldPaddingLeft = $centerBlock.css('padding-left');
+    });
+
+    $(document).on('mousemove', function (event) {
+        let e = event ? event : window.event;
+        if(inSplitBarFlag){
+            var offsetX = e.clientX - startX;
+            var targetPosition = {
+                left: barOldX + offsetX
+            };
+            moveTargetPosition($vSplitBar, targetPosition);
+            vSplitBarDragChangeHandle(offsetX)
+        }
+    });
+
+    $(document).on('mouseup', function (event) {
+        inSplitBarFlag = false;
+        $vSplitBar.removeClass('dragged');
+        $vSplitBarPlaceholder.removeClass('dragged')
+    });
+
+    
+    function vSplitBarDragChangeHandle(offset) {
+        $leftBlock.css('width', parseInt(leftBlockOldWidth) + offset);
+        $centerBlock.css('padding-left', parseInt(centerBlockOldPaddingLeft) + offset);
+    }
+
+    /**
+     * @doc 获取目标dom的定位值
+     * @param $target
+     * @returns {{top: number, left: number}}
+     */
+    function getTargetPosition($target) {
+        let positionTop = 0;
+        let positionLeft = 0;
+        if ($target) {
+            positionTop = $target.offset().top;
+            positionLeft = $target.offset().left;
+        }
+        return {top: positionTop, left: positionLeft};
+    }
+
+    /**
+     * @doc 移动目标dom到指定位置
+     * @param $target
+     * @param position
+     */
+    function moveTargetPosition($target, position) {
+        if (position.top || position.left) {
+            $target.css({
+                position: 'absolute',
+            });
+        }
+        if (position.top) {
+            $target.css({
+                top: position.top + 'px',
+            });
+        }
+        if (position.left) {
+            $target.css({
+                left: position.left + 'px'
+            });
+        }
+    }
 });

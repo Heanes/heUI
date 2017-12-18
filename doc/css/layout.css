@@ -346,4 +346,24 @@ iframe {
 .center-block.iframe-container.full-screen .tabs-handle {
   top: 2px; }
 
+.v-split-bar {
+  position: absolute;
+  top: 0;
+  left: 280px;
+  width: 4px;
+  height: 100%;
+  z-index: 3;
+  cursor: ew-resize; }
+  .v-split-bar:hover, .v-split-bar.dragged {
+    background-color: #8f949a;
+    z-index: 3; }
+
+.v-split-bar-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; }
+  .v-split-bar-placeholder.dragged {
+    z-index: 2; }
+
 /*# sourceMappingURL=layout.css.map */
