@@ -104,8 +104,7 @@ iframe {
 
 .header .admin-logo {
   position: relative;
-  height: 100%;
-  background-color: #369; }
+  height: 100%; }
 
 .header .admin-logo .lap-handle {
   position: absolute;
@@ -164,7 +163,6 @@ iframe {
 
 .header .admin-select-city {
   display: inline-block;
-  height: 50px;
   line-height: 50px;
   margin: 0 6px;
   text-align: center; }
@@ -174,7 +172,6 @@ iframe {
 
 .header .admin-user-info {
   display: inline-block;
-  height: 50px;
   line-height: 50px;
   background-color: inherit; }
 
@@ -245,14 +242,14 @@ iframe {
  * @author Heanes
  * @time 2017-10-20 19:33:13 周六
 */
-.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover {
+.tree-left-wrap.contracted .tree-list-wrap > .tree-group > .tree-node:hover {
   width: 300px;
   height: 32px; }
-  .tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover > .node-wrap {
+  .tree-left-wrap.contracted .tree-list-wrap > .tree-group > .tree-node:hover > .node-wrap {
     position: fixed;
     width: 300px; }
 
-.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover > .tree-group {
+.tree-left-wrap.contracted .tree-list-wrap > .tree-group > .tree-node:hover > .tree-group {
   position: fixed;
   margin-top: 32px; }
 
@@ -366,6 +363,7 @@ iframe {
   display: none; }
   .v-split-bar-placeholder.dragged {
     z-index: 2;
-    display: block; }
+    display: block;
+    border: 1px; }
 
 /*# sourceMappingURL=layout.css.map */

@@ -155,8 +155,8 @@ $(function () {
                     }
                     //console.log('顶部被点击，左侧会切换');
                 },
-                onTreeIndentLeft: function (event) {
-                    leftTreeIndent();
+                onLeftTreeContract: function (event) {
+                    leftTreeIndent(leftBlockDraggedWidth);
                     //console.log('左侧树缩进');
                 },
             });
@@ -205,11 +205,11 @@ $(function () {
      * @time 2016-12-21 16:39:46 周三
      * @type {*}
      */
-    var $leftWith = $('.left-width');
     var $leftWrap = $('.left-wrap');
     var leftWrapWidth = $leftWrap.css('width');
     var lapHandleClick = false;
-    $('#lapLeftMenu').on('click', function () {
+    var $lapLeftMenu = $('.lap-left-menu');
+    $lapLeftMenu.on('click', function () {
         if(lapHandleClick){
             $leftBlock.animate({
                 'width': leftWrapWidth
@@ -228,17 +228,17 @@ $(function () {
             });
             lapHandleClick = true;
         }
+        return false;
     });
 
     var leftTreeIndentFlag = false;
-    var leftWidth = $leftWith.css('width');
-    function leftTreeIndent() {
+    function leftTreeIndent(width) {
         if(leftTreeIndentFlag){
             $leftBlock.animate({
-                'width': leftWidth
+                'width': width
             });
             $centerBlock.animate({
-                'padding-left': leftWidth
+                'padding-left': width
             });
             leftTreeIndentFlag = false;
         }else{
@@ -299,22 +299,23 @@ $(function () {
         $vSplitBarPlaceholder = $('.v-split-bar-placeholder'),
         inSplitBarFlag = false,
         startX = 0, barOldX = 0,
-        leftBlockOldWidth = 0,
+        leftBlockOldWidth = $leftWrap.outerWidth(true),
+        leftBlockDraggedWidth = leftBlockOldWidth,
         centerBlockOldPaddingLeft = 0;
 
     $vSplitBar.on('mousedown', function (event) {
-        let e = event ? event : window.event;
+        var e = event ? event : window.event;
         inSplitBarFlag = true;
         $vSplitBar.addClass('dragged');
         $vSplitBarPlaceholder.addClass('dragged');
         barOldX = getTargetPosition($vSplitBar)['left'];
         startX = e.clientX;
-        leftBlockOldWidth = $leftBlock.css('width');
+        leftBlockOldWidth = $leftWrap.outerWidth(true);
         centerBlockOldPaddingLeft = $centerBlock.css('padding-left');
     });
 
     $(document).on('mousemove', function (event) {
-        let e = event ? event : window.event;
+        var e = event ? event : window.event;
         if(inSplitBarFlag){
             var offsetX = e.clientX - startX;
             var targetPosition = {
@@ -333,7 +334,8 @@ $(function () {
 
     
     function vSplitBarDragChangeHandle(offset) {
-        $leftBlock.css('width', parseInt(leftBlockOldWidth) + offset);
+        leftBlockDraggedWidth = parseInt(leftBlockOldWidth) + offset;
+        $leftBlock.css('width', leftBlockDraggedWidth);
         $centerBlock.css('padding-left', parseInt(centerBlockOldPaddingLeft) + offset);
     }
 
@@ -343,8 +345,8 @@ $(function () {
      * @returns {{top: number, left: number}}
      */
     function getTargetPosition($target) {
-        let positionTop = 0;
-        let positionLeft = 0;
+        var positionTop = 0;
+        var positionLeft = 0;
         if ($target) {
             positionTop = $target.offset().top;
             positionLeft = $target.offset().left;

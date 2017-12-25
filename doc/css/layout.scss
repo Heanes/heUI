@@ -57,7 +57,7 @@ $header-admin-logo-bgcolor: #369;
 $header-admin-user-info-detail-dl-hover-bgcolor:#254f7b;
 
 .header{background-color:$header-bg-color;color:$header-color;}
-.header .admin-logo{position:relative;height:100%;background-color:$header-admin-logo-bgcolor;}
+.header .admin-logo{position:relative;height:100%;}
 .header .admin-logo .lap-handle{position:absolute;right:8px;top:16px;color:#fff;font-size:14px;font-weight:600;}
 .header .admin-logo .admin-log-href{display:block;line-height:50px;text-align:center;margin-right:30px}
 .header .admin-logo .admin-log-href .admin-icon,
@@ -79,10 +79,10 @@ $header-admin-user-info-detail-dl-hover-bgcolor:#254f7b;
   margin-left:6px;
   text-align:right;
 }
-.header .admin-select-city{display:inline-block;height:50px;line-height:50px;margin:0 6px;text-align:center;}
+.header .admin-select-city{display:inline-block;line-height:50px;margin:0 6px;text-align:center;}
 .header .admin-select-city .select-city{}
 .header .admin-select-city .select-city option{padding:0;}
-.header .admin-user-info{display:inline-block;height:50px;line-height:50px;background-color:inherit;}
+.header .admin-user-info{display:inline-block;line-height:50px;background-color:inherit;}
 .header .admin-user-info .toggle-show-info-block{display:none;position:absolute;right:0;font-size:13px;line-height:26px;padding-top:6px;background-color:inherit;max-height:400px;text-align:left;}
 .header .admin-user-info.toggle-show:hover .toggle-show-info-block{display:block;}
 .header .admin-user-info .user-detail{}
@@ -113,7 +113,7 @@ $left-block-color:#292929;
  * @author Heanes
  * @time 2017-10-20 19:33:13 周六
 */
-.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover{
+.tree-left-wrap.contracted .tree-list-wrap > .tree-group > .tree-node:hover{
   width: 300px;
   height: 32px;
   >.node-wrap{
@@ -122,7 +122,7 @@ $left-block-color:#292929;
   }
 }
 
-.tree-left-wrap.lapped .tree-list-wrap > .tree-group > .tree-node:hover > .tree-group{
+.tree-left-wrap.contracted .tree-list-wrap > .tree-group > .tree-node:hover > .tree-group{
   position:fixed;
   margin-top:32px;
 }
@@ -191,5 +191,6 @@ $layout-handle-effected-color:#444;
   &.dragged{
     z-index:2;
     display:block;
+    border:1px;
   }
 }
