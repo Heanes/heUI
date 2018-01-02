@@ -502,7 +502,6 @@ small, .small {
       touch-action: manipulation;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-image: none;
@@ -576,11 +575,11 @@ small, .small {
     background-color: #31b0d5;
     border-color: #269abc; }
 
-.btn-warning {
+.btn-warn, .btn-warning {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236; }
-  .btn-warning:hover, .btn-warning.hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .btn-warning.open > .dropdown-toggle.btn-warning {
+  .btn-warn:hover, .btn-warn.hover, .btn-warn:focus, .btn-warn.focus, .btn-warn:active, .btn-warn.active, .btn-warn.open > .dropdown-toggle.btn-warning, .btn-warn.open > .dropdown-toggle.btn-warn, .btn-warning:hover, .btn-warning.hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .btn-warning.open > .dropdown-toggle.btn-warning, .btn-warning.open > .dropdown-toggle.btn-warn {
     color: #fff;
     background-color: #ec971f;
     border-color: #d58512; }
@@ -669,7 +668,7 @@ small, .small {
     color: #5bc0de; }
   .btn-outline.btn-success {
     color: #5cb85c; }
-  .btn-outline.btn-warning {
+  .btn-outline.btn-warning, .btn-outline .btn-warn {
     color: #f0ad4e; }
   .btn-outline.btn-danger {
     color: #d9534f; }
@@ -1077,6 +1076,7 @@ label {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
   .form-control[disabled], .form-control[readonly] {
     background-color: #eee;
@@ -1099,6 +1099,7 @@ input[type="text"], input[type="number"], select {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
   transition: border linear .2s, box-shadow linear .2s;
   display: inline-block;
   padding: 4px 6px;
@@ -1278,6 +1279,7 @@ table {
   line-height: 20px;
   vertical-align: middle;
   color: #fff;
+  -webkit-transition: width .6s ease;
   transition: width .6s ease;
   font-size: 12px; }
   .progress .progress-bar.progress-bar-success {
@@ -1372,6 +1374,7 @@ table {
   color: #3377aa;
   border: 1px solid #ddd;
   border-radius: 4px;
+  -webkit-transition: .2s all;
   transition: .2s all;
   text-align: center;
   line-height: 1;
@@ -1495,9 +1498,11 @@ table {
  */
 /************************ 局部消息样式 ************************/
 .message-wrap {
-  margin-bottom: 10px; }
-  .message-wrap:last-child {
-    margin-bottom: 0; }
+  margin-bottom: 10px;
+  word-break: break-all;
+  /*&:last-child{
+    margin-bottom:0
+  }*/ }
 
 .message {
   position: relative;
@@ -1519,43 +1524,58 @@ table {
   .message.message-success {
     color: #3c763d;
     background-color: #dff0d8;
-    border-color: #d6e9c6; }
-    .message.message-success .message-content .message-icon-wrap {
+    border-color: #c5e2ac; }
+    .message.message-success .message-content-section .message-icon-wrap {
       background-color: #13ce66; }
   .message.message-info {
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1; }
-    .message.message-info .message-content .message-icon-wrap {
+    .message.message-info .message-content-section .message-icon-wrap {
       background-color: #50bfff; }
   .message.message-warning {
     color: #8a6d3b;
     background-color: #fcf8e3;
     border-color: #faebcc; }
-    .message.message-warning .message-content .message-icon-wrap {
+    .message.message-warning .message-content-section .message-icon-wrap {
       background-color: #f7ba2a; }
   .message.message-error {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1; }
-    .message.message-error .message-content .message-icon-wrap {
+    .message.message-error .message-content-section .message-icon-wrap {
       background-color: #ff4949; }
-  .message .message-content p {
-    margin: 0; }
-  .message .message-content .message-icon-wrap, .message .message-content .message-content-wrap {
-    display: inline-block;
-    padding: 14px 0; }
-  .message .message-content .message-icon-wrap {
-    width: 48px;
-    text-align: center; }
-    .message .message-content .message-icon-wrap .icon-background {
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      border-radius: 50%;
-      background-color: #fff;
-      margin: 0 auto; }
-  .message .message-handle .btn-close {
+  .message .message-content-section {
+    display: table;
+    width: 100%; }
+    .message .message-content-section p {
+      margin: 0; }
+    .message .message-content-section .message-icon-wrap, .message .message-content-section .message-content-wrap {
+      display: table-cell;
+      vertical-align: middle; }
+    .message .message-content-section .message-icon-wrap {
+      width: 64px;
+      height: 64px;
+      text-align: center;
+      padding: 14px; }
+      .message .message-content-section .message-icon-wrap .icon-background {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto; }
+    .message .message-content-section .message-content-wrap {
+      padding: 14px 20px 14px 14px; }
+      .message .message-content-section .message-content-wrap .message-title {
+        font-size: 1.4em;
+        line-height: 1em;
+        margin-bottom: 10px; }
+        .message .message-content-section .message-content-wrap .message-title h2 {
+          font-size: 1em;
+          margin-bottom: 0;
+          line-height: 1em; }
+  .message .message-handle-section .btn-close {
     position: absolute;
     right: 2px;
     top: 2px;
@@ -1569,7 +1589,7 @@ table {
     font-family: arial, sans-serif;
     cursor: pointer;
     border-radius: 50%; }
-    .message .message-handle .btn-close:hover {
+    .message .message-handle-section .btn-close:hover {
       background-color: #d9534f;
       color: #fff; }
 

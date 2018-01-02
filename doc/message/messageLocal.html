@@ -14,9 +14,9 @@
     <link rel="shortcut icon" href="/public/static/image/favicon/favicon.ico"/>
     <link rel="bookmark" href="/public/static/image/favicon/favicon.ico"/>
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../../dist/css/heanesUI.css"/>
+    <link rel="stylesheet" type="text/css" href="//localhost:8080/css/heanesUI.css"/>
     <link rel="stylesheet" type="text/css" href="../css/css.css"/>
-    <title>MessageLocal 局部提示信息</title>
+    <title>message 局部提示信息</title>
 </head>
 <body>
 <div class="wrap">
@@ -32,17 +32,22 @@
                         <div class="demo-one">
                             <div class="message-wrap">
                                 <div class="message message-success">
-                                    <div class="message-handle">
+                                    <div class="message-handle-section">
                                         <span class="btn-close">x</span>
                                     </div>
-                                    <div class="message-content">
+                                    <div class="message-content-section">
                                         <div class="message-icon-wrap">
                                             <div class="icon-background">
                                                 <i class="fa fa-check"></i>
                                             </div>
                                         </div>
                                         <div class="message-content-wrap">
-                                            <p>恭喜你，操作成功。</p>
+                                            <div class="message-title">
+                                                <h2>提示信息</h2>
+                                            </div>
+                                            <div class="message-content">
+                                                <p>恭喜你，操作成功。</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,17 +56,22 @@
                         <div class="demo-one">
                             <div class="message-wrap">
                                 <div class="message message-info">
-                                    <div class="message-handle">
+                                    <div class="message-handle-section">
                                         <span class="btn-close">x</span>
                                     </div>
-                                    <div class="message-content">
+                                    <div class="message-content-section">
                                         <div class="message-icon-wrap">
                                             <div class="icon-background">
                                                 <i class="fa fa-info"></i>
                                             </div>
                                         </div>
                                         <div class="message-content-wrap">
-                                            <p>提醒，你还需要做某项操作。</p>
+                                            <div class="message-title">
+                                                <h2>提示信息</h2>
+                                            </div>
+                                            <div class="message-content">
+                                                <p>提醒，你还需要做某项操作。</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -70,17 +80,22 @@
                         <div class="demo-one">
                             <div class="message-wrap">
                                 <div class="message message-warning">
-                                    <div class="message-handle">
+                                    <div class="message-handle-section">
                                         <span class="btn-close">x</span>
                                     </div>
-                                    <div class="message-content">
+                                    <div class="message-content-section">
                                         <div class="message-icon-wrap">
                                             <div class="icon-background">
                                                 <i class="fa fa-warning"></i>
                                             </div>
                                         </div>
                                         <div class="message-content-wrap">
-                                            <p>警告，有某些情况出现。</p>
+                                            <div class="message-title">
+                                                <h2>提示信息</h2>
+                                            </div>
+                                            <div class="message-content">
+                                                <p>警告，有某些情况出现。</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,17 +104,22 @@
                         <div class="demo-one">
                             <div class="message-wrap">
                                 <div class="message message-error">
-                                    <div class="message-handle">
+                                    <div class="message-handle-section">
                                         <span class="btn-close">x</span>
                                     </div>
-                                    <div class="message-content">
+                                    <div class="message-content-section">
                                         <div class="message-icon-wrap">
                                             <div class="icon-background">
                                                 <i class="fa fa-close"></i>
                                             </div>
                                         </div>
                                         <div class="message-content-wrap">
-                                            <p>错误，出现了问题。</p>
+                                            <div class="message-title">
+                                                <h2>提示信息</h2>
+                                            </div>
+                                            <div class="message-content">
+                                                <p>错误，出现了问题。</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -127,17 +147,17 @@
                                     </div>
                                     <div class="demo-content">
                                         <div class="demo-one">
-                                            <div class="message-container"></div>
-                                            <button type="button" class="btn btn-info">
+                                            <div class="message-container demo-message-container-normal"></div>
+                                            <button type="button" class="btn btn-info show-message-info-normal">
                                                 <i class="btn-icon fa fa-info-circle"></i><span class="btn-text">显示提示</span>
                                             </button>
-                                            <button type="button" class="btn btn-success">
+                                            <button type="button" class="btn btn-success show-message-success-normal">
                                                 <i class="btn-icon fa fa-check-square"></i><span class="btn-text">显示成功</span>
                                             </button>
-                                            <button type="button" class="btn btn-warn">
+                                            <button type="button" class="btn btn-warn show-message-warn-normal">
                                                 <i class="btn-icon fa fa-warning"></i><span class="btn-text">显示警告</span>
                                             </button>
-                                            <button type="button" class="btn btn-danger">
+                                            <button type="button" class="btn btn-danger show-message-error-normal">
                                                 <i class="btn-icon fa fa fa-times-circle"></i><span class="btn-text">显示错误</span>
                                             </button>
                                         </div>
@@ -150,17 +170,17 @@
                                     </div>
                                     <div class="demo-content">
                                         <div class="demo-one">
-                                            <div class="message-container"></div>
-                                            <button type="button" class="btn btn-info show-message-success-no-close">
+                                            <div class="message-container demo-message-container-not-auto-close"></div>
+                                            <button type="button" class="btn btn-info show-message-info-not-auto-close">
                                                 <i class="btn-icon fa fa-info-circle"></i><span class="btn-text">显示提示</span>
                                             </button>
-                                            <button type="button" class="btn btn-success show-message-info-no-close">
+                                            <button type="button" class="btn btn-success show-message-success-not-auto-close">
                                                 <i class="btn-icon fa fa-check-square"></i><span class="btn-text">显示成功</span>
                                             </button>
-                                            <button type="button" class="btn btn-warn show-message-warn-no-close">
+                                            <button type="button" class="btn btn-warn show-message-warn-not-auto-close">
                                                 <i class="btn-icon fa fa-warning"></i><span class="btn-text">显示警告</span>
                                             </button>
-                                            <button type="button" class="btn btn-danger show-message-error-no-close">
+                                            <button type="button" class="btn btn-danger show-message-error-not-auto-close">
                                                 <i class="btn-icon fa fa fa-times-circle"></i><span class="btn-text">显示错误</span>
                                             </button>
                                         </div>
@@ -178,28 +198,49 @@
 <cite>
     <!-- S js S -->
     <script type="text/javascript" src="/public/static/libs/js/jquery/2.1.4/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/$.extend/$.message.js"></script>
     <script type="application/javascript">
         $(function () {
             // 显示消息
-            var $messageContainer = $('.message-container');
-            $.messageLocal($messageContainer, '恭喜，操作成功~ :)~');
-            $('#showMessageSuccess').on('click', function () {
-                $.messageLocal($messageContainer, '恭喜，操作成功~ :)~');
+            var $messageContainerNormal = $('.demo-message-container-normal');
+            $('.show-message-info-normal').on('click', function () {
+                $.message($messageContainerNormal, 'info', '提醒，你还需要做某项操作你还需要做某项操作你还需要做某项操作。');
             });
-            $('#showMessageInfo').on('click', function () {
-                $.messageLocal($messageContainer, '提醒，你还需要做某项操作你还需要做某项操作你还需要做某项操作。', 'info');
+            $('.show-message-success-normal').on('click', function () {
+                $.message($messageContainerNormal, 'success', '恭喜，操作成功~ :)~');
             });
-            $('#showMessageWarn').on('click', function () {
-                $.messageLocal($messageContainer, '警告，有某些情况出现。', 'warn', 0);
+            $('.show-message-warn-normal').on('click', function () {
+                $.message($messageContainerNormal, 'warn', '警告，有某些情况出现。');
             });
-            $('#showMessageError').on('click', function () {
-                $.messageLocal($messageContainer, '错误，出现了问题。', 'error');
+            $('.show-message-error-normal').on('click', function () {
+                $.message($messageContainerNormal, 'error', '错误，出现了问题。');
             });
 
-            $('.message').on('click', '.btn-close', function (event) {
+            var $messageContainerDemoNotAutoClose = $('.demo-message-container-not-auto-close');
+            $('.show-message-info-not-auto-close').on('click', function () {
+                $.message($messageContainerDemoNotAutoClose, 'info', '提醒，你还需要做某项操作你还需要做某项操作你还需要做某项操作。', '提示消息', false);
+            });
+            $('.show-message-success-not-auto-close').on('click', function () {
+                $.message($messageContainerDemoNotAutoClose, 'success', '恭喜，操作成功~ :)~', '提示消息', false);
+            });
+            $('.show-message-warn-not-auto-close').on('click', function () {
+                $.message($messageContainerDemoNotAutoClose, 'warn', '警告，有某些情况出现。', '提示消息', false);
+            });
+            $('.show-message-error-not-auto-close').on('click', function () {
+                $.message($messageContainerDemoNotAutoClose, 'error', '错误，出现了问题。', '提示消息', false);
+            });
+
+            /*$('.message').on('click', '.btn-close', function (event) {
                 var $delegateTarget = $(event.delegateTarget);
                 $delegateTarget.fadeOut();
-            });
+            });*/
+
+            function asss(i, j) {
+
+            }
+            function asss(i, j, k) {
+
+            }
         });
     </script>
     <!-- E js E -->

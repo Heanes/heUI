@@ -4,13 +4,34 @@
  * @author Heanes
  * @time 2015-12-01 20:12:06
  */
+$messageSuccessColor: #3c763d;
+$messageSuccessBgColor: #dff0d8;
+$messageSuccessBorderColor: #c5e2ac;
+$messageSuccessIconBgColor: #13ce66;
+
+$messageInfoColor: #31708f;
+$messageInfoBgColor: #d9edf7;
+$messageInfoBorderColor: #bce8f1;
+$messageInfoIconBgColor: #50bfff;
+
+$messageWarnColor: #8a6d3b;
+$messageWarnBgColor: #fcf8e3;
+$messageWarnBorderColor: #faebcc;
+$messageWarnIconBgColor: #f7ba2a;
+
+$messageErrorColor: #a94442;
+$messageErrorBgColor: #f2dede;
+$messageErrorBorderColor: #ebccd1;
+$messageErrorIconBgColor: #ff4949;
+
 /************************ 局部消息样式 ************************/
 
 .message-wrap{
   margin-bottom:10px;
-  &:last-child{
+  word-break:break-all;
+  /*&:last-child{
     margin-bottom:0
-  }
+  }*/
 }
 
 .message{
@@ -18,18 +39,19 @@
   display:block;
   border:1px solid;
   text-align:initial;
+  min-width:300px;
 
   // success 成功样式
   /**
    * @doc success 成功样式
    */
   &.message-success{
-    color:#3c763d;
-    background-color:#dff0d8;
-    border-color:#d6e9c6;
-    .message-content{
+    color:$messageSuccessColor;
+    background-color:$messageSuccessBgColor;
+    border-color:$messageSuccessBorderColor;
+    .message-content-section{
       .message-icon-wrap{
-        background-color:#13ce66;
+        background-color:$messageSuccessIconBgColor;
       }
     }
   }
@@ -39,12 +61,12 @@
    * @doc info 信息样式
    */
   &.message-info{
-    color:#31708f;
-    background-color:#d9edf7;
-    border-color:#bce8f1;
-    .message-content{
+    color:$messageInfoColor;
+    background-color:$messageInfoBgColor;
+    border-color:$messageInfoBorderColor;
+    .message-content-section{
       .message-icon-wrap{
-        background-color:#50bfff;
+        background-color:$messageInfoIconBgColor;
       }
     }
   }
@@ -54,12 +76,12 @@
    * @doc warning 警告样式
    */
   &.message-warning{
-    color:#8a6d3b;
-    background-color:#fcf8e3;
-    border-color:#faebcc;
-    .message-content{
+    color:$messageWarnColor;
+    background-color:$messageWarnBgColor;
+    border-color:$messageWarnBorderColor;
+    .message-content-section{
       .message-icon-wrap{
-        background-color:#f7ba2a;
+        background-color:$messageWarnIconBgColor;
       }
     }
   }
@@ -69,44 +91,62 @@
    * @doc error 错误样式
    */
   &.message-error{
-    color:#a94442;
-    background-color:#f2dede;
-    border-color:#ebccd1;
-    .message-content{
+    color:$messageErrorColor;
+    background-color:$messageErrorBgColor;
+    border-color:$messageErrorBorderColor;
+    .message-content-section{
       .message-icon-wrap{
-        background-color:#ff4949;
+        background-color:$messageErrorIconBgColor;
       }
     }
   }
 
   // message 内容
-  .message-content{
+  .message-content-section{
+    display:table;
+    width:100%;
     p{
       margin:0;
     }
 
     .message-icon-wrap,
     .message-content-wrap{
-      display:inline-block;
-      padding:14px 0;
+      display:table-cell;
+      vertical-align:middle;
     }
 
     .message-icon-wrap{
-      width:48px;
+      width:64px;
+      height:64px;
       text-align:center;
+      padding:14px;
       .icon-background{
-        width:24px;
-        height:24px;
-        line-height:24px;
+        width:30px;
+        height:30px;
+        line-height:30px;
         border-radius:50%;
         background-color:#fff;
         margin:0 auto;
       }
     }
+
+    .message-content-wrap{
+      padding:14px 40px 14px 14px;
+      .message-title{
+        font-size:1.4em;
+        line-height:1em;
+        margin-bottom:10px;
+        & h2{
+          font-size:1em;
+          margin-bottom:0;
+          line-height:1em;
+        }
+      }
+    }
   }
 
   // message 操作区
-  .message-handle{
+  .message-handle-section{
     .btn-close{
       position:absolute;
       right:2px;

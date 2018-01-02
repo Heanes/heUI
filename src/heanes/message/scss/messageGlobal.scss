@@ -14,12 +14,14 @@
 }
 
 .message-global .message-wrap{
-  margin-bottom:2px;
+  &:first-child{
+    margin-top:20px;
+  }
 }
 
 .message-global .message{
   display:inline-block;
-  padding:10px 40px 10px 20px;
+  /*padding:10px 40px 10px 20px;
   border-bottom-left-radius:5px;
-  border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;*/
 }
