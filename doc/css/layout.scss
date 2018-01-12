@@ -149,6 +149,7 @@ $tab-handle-color:#444;
 .jqx-tabs-selection-tracker-top,.iframe-container .tabs-container .tab-title-container .jqx-tabs-title-selected-top .tab-title-wrap{color:$tab-title-wrap-selected-color;}
 .jqx-widget-bootstrap, .jqx-widget-header-bootstrap, .jqx-fill-state-normal-bootstrap, .jqx-widget-content-bootstrap, .jqx-fill-state-hover-bootstrap, .jqx-fill-state-pressed-bootstrap{font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif}
 /* tabs相关操作 */
+.iframe-container .jqx-tabs-content{height:100% !important;}
 .iframe-container .tabs-handle{position:absolute;right:0;top:56px;z-index:1;text-align:right;background-color:$tab-handle-bgcolor;height:26px;line-height:26px;padding:0 6px;}
 .iframe-container .tabs-handle .handle{margin-right:4px;color:$tab-handle-color;}
 .iframe-container .jqx-tabs-arrow-background:last-child{right:50px !important;}

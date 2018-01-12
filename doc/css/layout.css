@@ -294,6 +294,9 @@ iframe {
   font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif; }
 
 /* tabs相关操作 */
+.iframe-container .jqx-tabs-content {
+  height: 100% !important; }
+
 .iframe-container .tabs-handle {
   position: absolute;
   right: 0;
