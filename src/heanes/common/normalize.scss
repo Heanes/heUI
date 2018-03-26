@@ -33,6 +33,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit; // 1
+  word-wrap:break-word; // By Heanes, I think NOT break word style will make the page width too big, when it happens, it becomes ugly.
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.

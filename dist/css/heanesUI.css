@@ -53,7 +53,8 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 *, *::before, *::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  word-wrap: break-word; }
 
 body {
   margin: 0;
@@ -1199,7 +1200,7 @@ table {
   border-bottom: 2px solid #ddd; }
 
 /* 带条纹（每间隔行背景色） */
-.table.table-striped tbody tr:nth-child(2n+1) {
+.table.table-striped tbody tr:nth-child(2n) {
   background-color: #f9f9f9; }
 
 .table.table-hover tbody tr:hover {
@@ -1509,6 +1510,7 @@ table {
   display: block;
   border: 1px solid;
   text-align: initial;
+  min-width: 300px;
   /**
    * @doc success 成功样式
    */
@@ -1566,7 +1568,7 @@ table {
         background-color: #fff;
         margin: 0 auto; }
     .message .message-content-section .message-content-wrap {
-      padding: 14px 20px 14px 14px; }
+      padding: 14px 40px 14px 14px; }
       .message .message-content-section .message-content-wrap .message-title {
         font-size: 1.4em;
         line-height: 1em;
@@ -1588,7 +1590,9 @@ table {
     vertical-align: middle;
     font-family: arial, sans-serif;
     cursor: pointer;
-    border-radius: 50%; }
+    border-radius: 50%;
+    background-color: #e48784;
+    color: #fff; }
     .message .message-handle-section .btn-close:hover {
       background-color: #d9534f;
       color: #fff; }
@@ -1606,14 +1610,14 @@ table {
   text-align: center;
   width: 100%; }
 
-.message-global .message-wrap {
-  margin-bottom: 2px; }
+.message-global .message-wrap:first-child {
+  margin-top: 20px; }
 
 .message-global .message {
   display: inline-block;
-  padding: 10px 40px 10px 20px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; }
+  /*padding:10px 40px 10px 20px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;*/ }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

@@ -8,15 +8,13 @@
 .message-global{
   z-index:100;
   position:fixed;
-  top:0;
+  top:20px;
   text-align:center;
   width:100%;
 }
 
 .message-global .message-wrap{
-  &:first-child{
-    margin-top:20px;
-  }
+
 }
 
 .message-global .message{

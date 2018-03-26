@@ -1,4 +1,5 @@
 @charset "UTF-8";
+$tableTdBgColor:#f9f9f9;
 /**
  * @doc table 表格样式
  * @author Heanes
@@ -46,11 +47,11 @@ table {
 }
 
 /* 带条纹（每间隔行背景色） */
-.table.table-striped tbody tr:nth-child(2n+1){
-  background-color:#f9f9f9;
+.table.table-striped tbody tr:nth-child(2n){
+  background-color:$tableTdBgColor;
 }
 .table.table-hover tbody tr:hover{
-  background-color:#f9f9f9;
+  background-color:$tableTdBgColor;
 }
 /* 紧缩表格 */
 .table.table-condensed tr th,
