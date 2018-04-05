@@ -14,7 +14,7 @@ Import([
     '../../message/heanes/js/$.extend/$.message.js',
     // notification 通知
     '../../notification/heanes/js/$.extend/$.notification.js',
-    '../js/common/common.js'*/
+    '../static/js/common/common.js'*/
 ]);
 
 /**
