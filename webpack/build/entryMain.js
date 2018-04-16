@@ -7,4 +7,4 @@
 import css from './entryMain.scss';
 
 // external resource 外部资源
-import fontAwesome from '../../public/static/libs/fonts/font-awesome/4.7.0/css/font-awesome.min.css';
+import fontAwesome from '../../public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css';

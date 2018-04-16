@@ -6,9 +6,9 @@
 Import([
     // ****************************** 已有插件 ******************************
     // cookie相关
-    '/public/static/libs/js/jquery.cookie/1.4.1/jquery.cookie.js',
+    '/public/static/vendor/js/jquery.cookie/1.4.1/jquery.cookie.js',
     // 剪贴板复制
-    '/public/static/libs/js/clipboard.js/1.5.15/clipboard.js',
+    '/public/static/vendor/js/clipboard.js/1.5.15/clipboard.js',
     // ****************************** 自己开发的 ******************************
     /*// 消息提示
     '../../message/heanes/js/$.extend/$.message.js',

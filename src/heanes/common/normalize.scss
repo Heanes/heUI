@@ -17,6 +17,7 @@
 // 5. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
 //    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
 // 6. Change the default tap highlight to be completely transparent in iOS.
+// 7. By Heanes, I think NOT break word style will make the page width too big, when it happens, it becomes ugly.
 @import "variables.scss";
 @import "mixins.scss";
 html {
@@ -27,13 +28,14 @@ html {
   -webkit-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
   -webkit-tap-highlight-color: rgba(0,0,0,0); // 6
+  word-wrap:break-word; // 7
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit; // 1
-  word-wrap:break-word; // By Heanes, I think NOT break word style will make the page width too big, when it happens, it becomes ugly.
+  word-wrap: inherit; // 7
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
