@@ -1,5 +1,15 @@
 @charset "UTF-8";
 /**
+ * @doc 重设样式
+ * @author Heanes
+ * @time 2018-05-21 19:07:41 周一
+ */
+/* demo里text-indent缩进问题 */
+.syntaxhighlighter{
+  text-indent:0;
+}
+
+/**
  * @doc 公共样式
  * @author Heanes
  * @time 2016-11-29 10:16:42 周二
@@ -10,7 +20,7 @@
 /****************************** demo展示样式 ******************************/
 .demo-wrap{padding:20px;font-weight:400;}
 .demo-wrap .demo-title{margin:14px 0;border-bottom:1px solid #eee;}
-.demo-wrap>.demo-desc{color:#444;margin-bottom:10px;line-height:20px;text-indent:2em;}
+.demo-wrap>.demo-desc{color:#444;margin-bottom:10px;line-height:20px;padding-left:2em}
 .demo-wrap .demo-group{margin-top:40px;}
 .demo-wrap .demo-group .demo-group-title{margin:14px 0;padding:0 10px;border-bottom:1px solid #eee;}
 .demo-wrap .demo-group .demo-desc{padding-left:20px;}

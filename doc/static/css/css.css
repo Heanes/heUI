@@ -5,6 +5,15 @@
  * @time 2017-02-27 10:41:27 周一
  */
 /**
+ * @doc 重设样式
+ * @author Heanes
+ * @time 2018-05-21 19:07:41 周一
+ */
+/* demo里text-indent缩进问题 */
+.syntaxhighlighter {
+  text-indent: 0; }
+
+/**
  * @doc 公共样式
  * @author Heanes
  * @time 2016-11-29 10:16:42 周二
@@ -29,7 +38,7 @@
   color: #444;
   margin-bottom: 10px;
   line-height: 20px;
-  text-indent: 2em; }
+  padding-left: 2em; }
 
 .demo-wrap .demo-group {
   margin-top: 40px; }
