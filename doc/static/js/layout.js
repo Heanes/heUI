@@ -106,7 +106,7 @@ $(function () {
                 enableTreeSearch: true,         // 开启树菜单搜索
                 treeSearchPlaceholder: '搜索(名称及链接)',// 树菜单搜索的提示字符
                 showTopNavIcon: false,          // 顶部导航是否显示图标
-                topSwitcherTarget: $('.menu-top'),// 开启了顶部切换后，根节点展示在此处，根节点展示在此处(填写jQuery Dom)
+                $topTreeContainer: $('.menu-top'),// 开启了顶部切换后，根节点展示在此处，根节点展示在此处(填写jQuery Dom)
                 showSingleNodeIcon: true,       // 无子树节点是否显示图标
                 style: {
                     topActive: {
