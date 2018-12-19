@@ -47,84 +47,84 @@
 /**
  * @doc color 颜色
  */
-@import "./color/scss/color.scss";
+@import "./color/css/color.scss";
 // button 按钮
 /**
  * @doc button 按钮
  */
-@import "./button/scss/button.scss";
+@import "./button/css/button.scss";
 // text 文本
 /**
  * @doc text 文本
  */
-@import "./text/scss/text.scss";
+@import "./text/css/text.scss";
 // scrollbar 滚动条
 /**
  * @doc scrollbar 滚动条
  */
-@import "./scrollbar/scss/scrollbar.scss";
+@import "./scrollbar/css/scrollbar.scss";
 // code 代码
 /**
  * @doc code 代码
  */
-@import "./code/scss/code.scss";
+@import "./code/css/code.scss";
 
 // ------------------------------ form 表单 ------------------------------
 // form 表单
 /**
  * @doc form 表单
  */
-@import "./form/scss/form.scss";
+@import "./form/css/form.scss";
 // input 输入框
 /**
  * @doc input 输入框
  */
-@import "./input/scss/input.scss";
+@import "./input/css/input.scss";
 
 // textarea 文本域
 /**
  * @doc textarea 文本域
  */
-@import "./textarea/scss/textarea.scss";
+@import "./textarea/css/textarea.scss";
 
 // ------------------------------ component 组件 ------------------------------
 // table 表格
 /**
  * @doc table 表格
  */
-@import "./table/scss/table.scss";
+@import "./table/css/table.scss";
 // progress 进度条
 /**
  * @doc progress 进度条
  */
-@import "./progress/scss/progress.scss";
+@import "./progress/css/progress.scss";
 
 // ------------------------------ navigation 导航 ------------------------------
 // pagination 分页
 /**
  * @doc pagination 分页
  */
-@import "./pagination/scss/pagination.scss";
+@import "./pagination/css/pagination.scss";
 
 // breadcrumb 面包屑导航
 /**
  * @doc breadcrumb 面包屑导航
  */
-@import "./breadcrumb/scss/breadcrumb.scss";
+@import "./breadcrumb/css/breadcrumb.scss";
 
 // ------------------------------ loading 过渡层 ------------------------------
 // loading 加载中
 /**
  * @doc loading 加载中
  */
-@import "./loading/scss/loading.scss";
+@import "./loading/css/loading.scss";
 
 // ------------------------------ notice 消息通知 ------------------------------
 // message 消息提示
 /**
  * @doc message 消息提示
  */
-@import "./message/scss/messageLocal.scss";
-@import "./message/scss/messageGlobal.scss";
+@import "./message/css/messageLocal.scss";
+@import "./message/css/messageGlobal.scss";
 
 // ------------------------------ resource 外部资源 ------------------------------
