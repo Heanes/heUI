@@ -1,9 +1,9 @@
 let optimization = {
-    //runtimeChunk: 'single',
-    runtimeChunk: {
+    // runtimeChunk: 'single',
+    /*runtimeChunk: {
         name: 'manifest'    // 公共基础资源包
-    },
-    splitChunks:  {
+    },*/
+    /*splitChunks:  {
         cacheGroups: {
             // 第三方npm管理的包
             vendors: {
@@ -22,6 +22,6 @@ let optimization = {
                 priority: 1
             }
         }
-    }
+    }*/
 };
 module.exports = optimization;

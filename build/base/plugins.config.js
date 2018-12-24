@@ -38,9 +38,9 @@ pageEntries.forEach(item => {
 
 let plugins = [
     // 清理构建目录
-    new CleanWebpackPlugin([dirVars.distDirName], {
+    /*new CleanWebpackPlugin([dirVars.distDirName], {
         root: dirVars.rootDir,       //根目录
-    }),
+    }),*/
 
     // 添加banner
     pluginBanner,

@@ -332,7 +332,7 @@ $(function () {
         $vSplitBarPlaceholder.removeClass('dragged')
     });
 
-    
+
     function vSplitBarDragChangeHandle(offset) {
         leftBlockDraggedWidth = parseInt(leftBlockOldWidth) + offset;
         $leftBlock.css('width', leftBlockDraggedWidth);

@@ -16,7 +16,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 4,
-                        name: 'img/[name].[hash:8].[ext]',
+                        name: 'img/[name].[ext]',
                     },
                 }
             ],
@@ -30,7 +30,7 @@ module.exports = {
             options: {
                 limit: 4,
                 //useRelativePath: true,
-                name: 'media/[name].[hash:8].[ext]'
+                name: 'media/[name].[ext]'
             }
         },
         {
@@ -40,7 +40,7 @@ module.exports = {
             options: {
                 limit: 4,
                 //useRelativePath: true,
-                name: 'fonts/[name].[hash:8].[ext]'
+                name: 'fonts/[name].[ext]'
             }
         },
 
@@ -54,7 +54,7 @@ module.exports = {
                     options: {
                         limit: 4,
                         publicPath: '../',
-                        name: 'fonts/[name].[hash:8].[ext]',
+                        name: 'fonts/[name].[ext]',
                     },
                 }
             ],

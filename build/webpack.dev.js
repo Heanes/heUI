@@ -50,6 +50,9 @@ module.exports = new Promise((resolve, reject) => {
                     : undefined
             }));
 
+            // 更改代理的端口，仅针对代理到localhost的
+            webpackConfig.devServer.proxy['/dist/']['target'] += `:${port}`;
+
             resolve(webpackConfig)
         }
     })

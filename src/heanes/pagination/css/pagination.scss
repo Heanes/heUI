@@ -14,62 +14,141 @@ $paginationHoverBorderColor:#00a1d6;
 $paginationItemMargin:6px;
 $paginationItemPadding:8px 12px;
 
-.pagination{margin:10px 0;display:inline-block;}
-.pagination > .page-item{display:inline;}
-.pagination > .page-item > .page-link{position:relative;float:left;margin-right:$paginationItemMargin;padding:$paginationItemPadding;line-height:1.42857143;border:1px solid $paginationBorderColor;background-color:$paginationBgColor;color:$paginationColor;}
-.pagination > .page-item:last-child > .page-link{margin-right:0;}
-.pagination > .page-item > .page-link.current,
-.pagination > .page-item > .page-link.ellipsis,
-.pagination > .page-item > .page-link.disabled{cursor:default;color:#666;}
-.pagination > .page-item > .page-link.disabled{opacity:.8;}
-.pagination > .page-item > .page-link.current,
-.pagination > .page-item > .page-link:not(.disabled):not(.ellipsis):hover{background-color:$paginationHoverBgColor;color:$paginationHoverColor;border-color:$paginationHoverBorderColor;z-index:2;}
+.pagination{
+  display: inline-block;
+  vertical-align: middle;
 
-.pagination.tight > .page-item > .page-link{margin:0 0 0 -1px;}
+  .pagination-link {
+    margin: 10px 0;
+    display: inline-block;
 
-/**
- * @doc 带圆角边框的
- * @author Heanes
- * @time 2017-08-31 16:46:01 周四
- */
-$paginationBorderRadius: 4px;
-.pagination:not(.tight).border-radius > .page-item > .page-link{border-radius:$paginationBorderRadius;}
-.pagination.tight.border-radius > .page-item:first-child > .page-link{border-top-left-radius:$paginationBorderRadius;border-bottom-left-radius:$paginationBorderRadius;}
-.pagination.tight.border-radius > .page-item:last-child > .page-link{border-top-right-radius:$paginationBorderRadius;border-bottom-right-radius:$paginationBorderRadius;}
+    .page-item {
+      display: inline;
 
+      .page-link {
+        position: relative;
+        float: left;
+        //margin-right: $paginationItemMargin;
+        padding: $paginationItemPadding;
+        line-height: 1.42857143;
+        border: 1px solid $paginationBorderColor;
+        background-color: $paginationBgColor;
+        color: $paginationColor;
+      }
 
-.pagination .pagination-link,
-.pagination .pagination-info,
-.pagination .pagination-quick-link{display:inline-block;}
-/* 翻页 */
-.pagination .pagination-link{font-size:0;}
-.pagination .pagination-link .pg{display:inline-block;padding:10px 12px;margin:0 4px;color:#3377aa;border:1px solid #ddd;border-radius:4px;transition:.2s all;text-align:center;line-height:1;cursor:pointer;font-size:14px;}
-.pagination .pagination-link .pg:hover,
-.pagination .pagination-link .pg.current{color:#fff;background-color:#00a1d6;border-color:#00a1d6;}
-.pagination .pagination-link .pg.page-link-ellipsis{border-width:0;padding:10px 8px;cursor:text;}
-.pagination .pagination-link .pg.page-link-ellipsis:hover{color:inherit;background-color:inherit;}
-.pagination .pagination-link .pg.disabled{color:#777;cursor:default;}
-.pagination .pagination-link .pg.disabled:hover{color:#777;background-color:#eee;}
+      &.current,
+      &.ellipsis,
+      &.disabled {
+        .page-link{
+          cursor: default;
+          color: #666;
+        }
+      }
 
-/* 紧凑型表格样式 */
-.pagination.table-tight .pagination-link{display:inline-block;}
-.pagination.table-tight .pagination-link .pg{margin:0;border-radius:0;border:1px solid #ddd;border-left-width:0;}
-.pagination.table-tight .pagination-link .pg:last-child{}
-.pagination.table-tight .pagination-link .pg:first-child{border-left-width:1px;}
-.pagination.table-tight .pagination-link .pg:hover{background-color:#00a1d6;color:#fff;border-color:#00a1d6;}
-.pagination.table-tight .pagination-link .pg.page-link-ellipsis{padding:10px 12px;}
-.pagination.table-tight .pagination-link .pg.current,
-.pagination.table-tight .pagination-link .pg.current:hover{color:#fff;background-color:#00a1d6;border-color:#ddd;}
-.pagination.table-tight .pagination-link .pg.current{border-color:#00a1d6;}
-.pagination.table-tight .pagination-link .pg.disabled{color:#777;cursor:default;}
-.pagination.table-tight .pagination-link .pg.disabled:hover{color:#777;background-color:unset;}
+      &.disabled {
+        .page-link{
+          opacity: .8;
+        }
+      }
 
-/* 分页信息 */
-.pagination .pagination-info{font-size:0}
-.pagination .pagination-info .text{font-size:13px;}
-.pagination .pagination-info input[type="text"]{width:30px;text-align:center}
+      &.current,
+      &:not(.disabled):not(.ellipsis):hover{
+        .page-link{
+          background-color: $paginationHoverBgColor;
+          color: $paginationHoverColor;
+          border-color: $paginationHoverBorderColor;
+          z-index: 2;
+        }
+      }
+      // 有多个时才设置外边距
+      & + .page-item{
+        .page-link{
+          margin-left: $paginationItemMargin;
+        }
+      }
 
-/* 快速分页 */
-.pagination .pagination-quick-link{font-size:0}
-.pagination .pagination-quick-link .text{font-size:13px;}
-.pagination .pagination-quick-link input[type="text"]{width:30px;text-align:center}
+    }
+
+    /**
+     * @doc 紧缩型
+     * @author Heanes
+     * @time 2018-12-21 15:00:22 周五
+     */
+    &.tight{
+      .page-item{
+        .page-link {
+          margin: 0 0 0 -1px;
+        }
+      }
+    }
+
+    /**
+     * @doc 带圆角边框的
+     * @author Heanes
+     * @time 2017-08-31 16:46:01 周四
+     */
+    $paginationBorderRadius: 4px;
+    &.border-radius{
+      &:not(.tight){
+        .page-item{
+          .page-link{
+            border-radius:$paginationBorderRadius;
+          }
+        }
+      }
+      &.tight{
+        .page-item{
+          &:first-child{
+            .page-link{
+              border-top-left-radius: $paginationBorderRadius;
+              border-bottom-left-radius: $paginationBorderRadius;
+            }
+          }
+          &:last-child{
+            .page-link {
+              border-top-right-radius: $paginationBorderRadius;
+              border-bottom-right-radius: $paginationBorderRadius;
+            }
+          }
+        }
+      }
+    }
+  }
+  /**
+     * @doc 更多操作功能型
+     * @author Heanes
+     * @time 2018-12-21 15:04:08 周五
+     */
+  .pagination-link,
+  .pagination-info,
+  .pagination-quick-link{
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+  // 分页信息
+  .pagination-info{
+    font-size:0;
+    .text {
+      font-size: 13px;
+    }
+
+    input[type="text"] {
+      width: 30px;
+      text-align: center
+    }
+  }
+
+  // 快速分页
+  .pagination-quick-link{
+    font-size:0;
+    .text {
+      font-size: 13px;
+    }
+
+    input[type="text"] {
+      width: 30px;
+      text-align: center
+    }
+  }
+}

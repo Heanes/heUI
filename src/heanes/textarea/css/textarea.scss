@@ -5,8 +5,8 @@
  * @time 2017-10-16 17:54:29 周一
  */
 textarea{
+  vertical-align:middle;
   &.form-control{
     height:auto;
   }
-  vertical-align:middle;
 }

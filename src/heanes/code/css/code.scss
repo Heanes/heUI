@@ -15,7 +15,8 @@ $pre-color:                   $gray-dark;
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
 
-code,.code{
+code,
+.code{
   padding:2px 4px;
   font-size:90%;
   color:$code-color;
@@ -23,7 +24,8 @@ code,.code{
   border-radius:$border-radius-base;
 }
 
-pre,.pre {
+pre,
+.pre {
   display: block;
   padding: (($line-height-computed - 1) / 2);
   margin: 0 0 ($line-height-computed / 2);

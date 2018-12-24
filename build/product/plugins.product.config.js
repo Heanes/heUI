@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 pluginsConfig.push(
     // 压缩css
     new MiniCssExtractPlugin({
-        filename: `css/[name].css`,
+        filename: `css/[name].min.css`,
     })
 );
 
