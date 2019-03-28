@@ -1,7 +1,7 @@
 /*!
  * ui.heanes.com 1.0.0
  * @author: Heanes
- * @time: 2018-12-10 18:49:14 周一
+ * @time: 2018-12-23 18:56:59 周天
  * (c) 2014-2018 Heanes
  * Released under the MIT License.
  */
@@ -11,8 +11,8 @@
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(../fonts/fontawesome-webfont.674f50d2.eot);
-  src: url(../fonts/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../fonts/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(../fonts/fontawesome-webfont.fee66e71.woff) format("woff"), url(../fonts/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(../fonts/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
+  src: url(../fonts/fontawesome-webfont.eot);
+  src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../fonts/fontawesome-webfont.woff2) format("woff2"), url(../fonts/fontawesome-webfont.woff) format("woff"), url(../fonts/fontawesome-webfont.ttf) format("truetype"), url(../fonts/fontawesome-webfont.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2874,31 +2874,31 @@ small, .small {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 10px; }
-
-.button-group .btn {
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px; }
-  .button-group .btn:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px; }
-
-.button-group .btn:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  margin-right: 0; }
+  .button-group .btn {
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 1px; }
+    .button-group .btn:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    .button-group .btn:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      margin-right: 0; }
 
 /**
  * @doc 按钮大小
  * @author Heanes
  * @time 2016-12-21 18:00:18 周三
  */
-.btn-ex-large, .btn-xl {
+.btn-ex-large,
+.btn-xl {
   padding: 20px 26px;
   font-size: 20px;
   border-radius: 4px; }
 
-.btn-large, .btn-lg {
+.btn-large,
+.btn-lg {
   padding: 11px 19px;
   font-size: 18px;
   border-radius: 4px; }
@@ -2908,12 +2908,14 @@ small, .small {
   font-size: 15px;
   border-radius: 4px; }
 
-.btn-small, .btn-sm {
+.btn-small,
+.btn-sm {
   padding: 4px 4px;
   font-size: 13px;
   border-radius: 4px; }
 
-.btn-mini, .btn-xs {
+.btn-mini,
+.btn-xs {
   padding: 1px 5px;
   font-size: 12px;
   border-radius: 4px;
@@ -2929,7 +2931,8 @@ small, .small {
     color: #5bc0de; }
   .btn-outline.btn-success {
     color: #5cb85c; }
-  .btn-outline.btn-warning, .btn-outline .btn-warn {
+  .btn-outline.btn-warning,
+  .btn-outline .btn-warn {
     color: #f0ad4e; }
   .btn-outline.btn-danger {
     color: #d9534f; }
@@ -2946,30 +2949,21 @@ small, .small {
 .btn.btn-labeled {
   position: relative;
   padding-left: 48px; }
-
-.btn.btn-labeled .btn-inside-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 40px; }
-  .btn.btn-labeled .btn-inside-icon:before {
+  .btn.btn-labeled .btn-inside-icon {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 100%;
-    text-align: center; }
-
-.btn.btn-labeled.btn-info .btn-inside-icon {
-  background-color: #44a3bf; }
-
-.btn.btn-labeled .btn-inside-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 40px; }
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40px; }
+    .btn.btn-labeled .btn-inside-icon:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 100%;
+      text-align: center; }
+  .btn.btn-labeled.btn-info .btn-inside-icon {
+    background-color: #44a3bf; }
 
 /**
  * @doc 圆形按钮
@@ -2977,8 +2971,6 @@ small, .small {
  * @time 2017-08-26 18:50:14 周六
  */
 .btn-circular {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%; }
 
 /**
@@ -3020,10 +3012,11 @@ small, .small {
  * @author Heanes
  * @time 2017-10-15 09:14:21 周天
  */
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
   cursor: not-allowed;
   filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
   box-shadow: none;
   opacity: .65; }
 
@@ -3046,63 +3039,45 @@ fieldset[disabled] a.btn {
  */
 .h1 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
+  font-weight: 600; }
 
 .h2 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
+  font-weight: 600; }
 
 .h3 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
+  font-weight: 600; }
 
 .h4 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
+  font-weight: 600; }
 
 .h5 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
+  font-weight: 600; }
 
 .h6 {
   padding: 6px 10px;
-  color: #438aac;
-  background-color: #f1f7fd;
-  border: 1px solid #d2e8fa;
-  font-weight: normal; }
-
-.h3 {
-  font-size: 14px; }
-
-.h4 {
-  font-size: 14px; }
-
-.h5 {
-  font-size: 14px; }
-
-.h6 {
-  font-size: 14px; }
+  font-weight: 600; }
 
 .h1 {
-  font-size: 17px; }
+  font-size: 28px; }
 
 .h2 {
+  font-size: 22px; }
+
+.h3 {
+  font-size: 18px; }
+
+.h4 {
   font-size: 16px; }
+
+.h5 {
+  font-size: 14px; }
+
+.h6 {
+  font-size: 12px; }
 
 /**
  * @doc 段落样式
@@ -3244,14 +3219,16 @@ p.font-18 {
  * $author Heanes
  * $time 2017-09-06 10:15:10 周三
  */
-code, .code {
+code,
+.code {
   padding: 2px 4px;
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
   border-radius: 4px; }
 
-pre, .pre {
+pre,
+.pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
@@ -3263,7 +3240,8 @@ pre, .pre {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 4px; }
-  pre code, .pre code {
+  pre code,
+  .pre code {
     padding: 0;
     font-size: inherit;
     color: inherit;
@@ -3322,10 +3300,7 @@ label {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
   .form-control[disabled], .form-control[readonly] {
     background-color: #eee;
@@ -3333,7 +3308,6 @@ label {
   .form-control:focus {
     border-color: #66afe9;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
 /**
@@ -3428,18 +3402,15 @@ table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px; }
-
-.table tr th,
-.table tr td {
-  padding: 8px;
-  vertical-align: top; }
-
-.table tbody tr td {
-  border-top: 1px solid #ddd; }
-
-.table thead tr th {
-  font-weight: 600;
-  border-bottom: 2px solid #ddd; }
+  .table tr th,
+  .table tr td {
+    padding: 8px;
+    vertical-align: top; }
+  .table tr thead tr td {
+    border-top: 1px solid #ddd; }
+  .table tr tbody tr td {
+    font-weight: 600;
+    border-bottom: 2px solid #ddd; }
 
 /* 表格带边框 */
 .table.table-bordered,
@@ -3543,13 +3514,9 @@ table {
   .progress .progress-bar.progress-bar-danger {
     background-color: #ca6451; }
   .progress .progress-bar.progress-bar-striped {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 40px 40px; }
   .progress .progress-bar.active {
-    -webkit-animation: progress-bar-stripes 2s linear infinite;
-    -o-animation: progress-bar-stripes 2s linear infinite;
     animation: progress-bar-stripes 2s linear infinite; }
 
 /**
@@ -3561,164 +3528,77 @@ table {
  * @time 2017-01-07 18:28:05 周六
  */
 .pagination {
-  margin: 10px 0;
-  display: inline-block; }
-
-.pagination > .page-item {
-  display: inline; }
-
-.pagination > .page-item > .page-link {
-  position: relative;
-  float: left;
-  margin-right: 6px;
-  padding: 8px 12px;
-  line-height: 1.42857143;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  color: #0275d8; }
-
-.pagination > .page-item:last-child > .page-link {
-  margin-right: 0; }
-
-.pagination > .page-item > .page-link.current,
-.pagination > .page-item > .page-link.ellipsis,
-.pagination > .page-item > .page-link.disabled {
-  cursor: default;
-  color: #666; }
-
-.pagination > .page-item > .page-link.disabled {
-  opacity: .8; }
-
-.pagination > .page-item > .page-link.current,
-.pagination > .page-item > .page-link:not(.disabled):not(.ellipsis):hover {
-  background-color: #00a1d6;
-  color: #fff;
-  border-color: #00a1d6;
-  z-index: 2; }
-
-.pagination.tight > .page-item > .page-link {
-  margin: 0 0 0 -1px; }
-
-/**
- * @doc 带圆角边框的
- * @author Heanes
- * @time 2017-08-31 16:46:01 周四
- */
-.pagination:not(.tight).border-radius > .page-item > .page-link {
-  border-radius: 4px; }
-
-.pagination.tight.border-radius > .page-item:first-child > .page-link {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-.pagination.tight.border-radius > .page-item:last-child > .page-link {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-.pagination .pagination-link,
-.pagination .pagination-info,
-.pagination .pagination-quick-link {
-  display: inline-block; }
-
-/* 翻页 */
-.pagination .pagination-link {
-  font-size: 0; }
-
-.pagination .pagination-link .pg {
   display: inline-block;
-  padding: 10px 12px;
-  margin: 0 4px;
-  color: #3377aa;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: .2s all;
-  text-align: center;
-  line-height: 1;
-  cursor: pointer;
-  font-size: 14px; }
-
-.pagination .pagination-link .pg:hover,
-.pagination .pagination-link .pg.current {
-  color: #fff;
-  background-color: #00a1d6;
-  border-color: #00a1d6; }
-
-.pagination .pagination-link .pg.page-link-ellipsis {
-  border-width: 0;
-  padding: 10px 8px;
-  cursor: text; }
-
-.pagination .pagination-link .pg.page-link-ellipsis:hover {
-  color: inherit;
-  background-color: inherit; }
-
-.pagination .pagination-link .pg.disabled {
-  color: #777;
-  cursor: default; }
-
-.pagination .pagination-link .pg.disabled:hover {
-  color: #777;
-  background-color: #eee; }
-
-/* 紧凑型表格样式 */
-.pagination.table-tight .pagination-link {
-  display: inline-block; }
-
-.pagination.table-tight .pagination-link .pg {
-  margin: 0;
-  border-radius: 0;
-  border: 1px solid #ddd;
-  border-left-width: 0; }
-
-.pagination.table-tight .pagination-link .pg:first-child {
-  border-left-width: 1px; }
-
-.pagination.table-tight .pagination-link .pg:hover {
-  background-color: #00a1d6;
-  color: #fff;
-  border-color: #00a1d6; }
-
-.pagination.table-tight .pagination-link .pg.page-link-ellipsis {
-  padding: 10px 12px; }
-
-.pagination.table-tight .pagination-link .pg.current,
-.pagination.table-tight .pagination-link .pg.current:hover {
-  color: #fff;
-  background-color: #00a1d6;
-  border-color: #ddd; }
-
-.pagination.table-tight .pagination-link .pg.current {
-  border-color: #00a1d6; }
-
-.pagination.table-tight .pagination-link .pg.disabled {
-  color: #777;
-  cursor: default; }
-
-.pagination.table-tight .pagination-link .pg.disabled:hover {
-  color: #777;
-  background-color: unset; }
-
-/* 分页信息 */
-.pagination .pagination-info {
-  font-size: 0; }
-
-.pagination .pagination-info .text {
-  font-size: 13px; }
-
-.pagination .pagination-info input[type="text"] {
-  width: 30px;
-  text-align: center; }
-
-/* 快速分页 */
-.pagination .pagination-quick-link {
-  font-size: 0; }
-
-.pagination .pagination-quick-link .text {
-  font-size: 13px; }
-
-.pagination .pagination-quick-link input[type="text"] {
-  width: 30px;
-  text-align: center; }
+  vertical-align: middle;
+  /**
+     * @doc 更多操作功能型
+     * @author Heanes
+     * @time 2018-12-21 15:04:08 周五
+     */ }
+  .pagination .pagination-link {
+    margin: 10px 0;
+    display: inline-block;
+    /**
+     * @doc 紧缩型
+     * @author Heanes
+     * @time 2018-12-21 15:00:22 周五
+     */
+    /**
+     * @doc 带圆角边框的
+     * @author Heanes
+     * @time 2017-08-31 16:46:01 周四
+     */ }
+    .pagination .pagination-link .page-item {
+      display: inline; }
+      .pagination .pagination-link .page-item .page-link {
+        position: relative;
+        float: left;
+        padding: 8px 12px;
+        line-height: 1.42857143;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #0275d8; }
+      .pagination .pagination-link .page-item.current .page-link, .pagination .pagination-link .page-item.ellipsis .page-link, .pagination .pagination-link .page-item.disabled .page-link {
+        cursor: default;
+        color: #666; }
+      .pagination .pagination-link .page-item.disabled .page-link {
+        opacity: .8; }
+      .pagination .pagination-link .page-item.current .page-link, .pagination .pagination-link .page-item:not(.disabled):not(.ellipsis):hover .page-link {
+        background-color: #00a1d6;
+        color: #fff;
+        border-color: #00a1d6;
+        z-index: 2; }
+      .pagination .pagination-link .page-item + .page-item .page-link {
+        margin-left: 6px; }
+    .pagination .pagination-link.tight .page-item .page-link {
+      margin: 0 0 0 -1px; }
+    .pagination .pagination-link.border-radius:not(.tight) .page-item .page-link {
+      border-radius: 4px; }
+    .pagination .pagination-link.border-radius.tight .page-item:first-child .page-link {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    .pagination .pagination-link.border-radius.tight .page-item:last-child .page-link {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+  .pagination .pagination-link,
+  .pagination .pagination-info,
+  .pagination .pagination-quick-link {
+    display: inline-block;
+    vertical-align: middle; }
+  .pagination .pagination-info {
+    font-size: 0; }
+    .pagination .pagination-info .text {
+      font-size: 13px; }
+    .pagination .pagination-info input[type="text"] {
+      width: 30px;
+      text-align: center; }
+  .pagination .pagination-quick-link {
+    font-size: 0; }
+    .pagination .pagination-quick-link .text {
+      font-size: 13px; }
+    .pagination .pagination-quick-link input[type="text"] {
+      width: 30px;
+      text-align: center; }
 
 /**
  * @doc breadcrumb 面包屑导航
@@ -3867,12 +3747,11 @@ table {
   top: 20px;
   text-align: center;
   width: 100%; }
-
-.message-global .message {
-  display: inline-block;
-  /*padding:10px 40px 10px 20px;
-  border-bottom-left-radius:5px;
-  border-bottom-right-radius:5px;*/ }
+  .message-global .message {
+    display: inline-block;
+    /*padding:10px 40px 10px 20px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;*/ }
 
 
 /*# sourceMappingURL=heanesUI.css.map*/

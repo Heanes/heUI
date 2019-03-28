@@ -83,6 +83,16 @@ $header-admin-user-info-detail-dl-hover-bgcolor:#254f7b;
 .header .admin-select-city .select-city{}
 .header .admin-select-city .select-city option{padding:0;}
 .header .admin-user-info{display:inline-block;line-height:50px;background-color:inherit;}
+.header .admin-user-info .user-info .user-name,
+.header .admin-user-info .user-info .user-role{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .admin-user-info .user-info .user-role{
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .header .admin-user-info .toggle-show-info-block{display:none;position:absolute;right:0;font-size:13px;line-height:26px;padding-top:6px;background-color:inherit;max-height:400px;text-align:left;}
 .header .admin-user-info.toggle-show:hover .toggle-show-info-block{display:block;}
 .header .admin-user-info .user-detail{}

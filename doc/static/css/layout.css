@@ -175,6 +175,16 @@ iframe {
   line-height: 50px;
   background-color: inherit; }
 
+.header .admin-user-info .user-info .user-name,
+.header .admin-user-info .user-info .user-role {
+  display: inline-block;
+  vertical-align: middle; }
+
+.header .admin-user-info .user-info .user-role {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 .header .admin-user-info .toggle-show-info-block {
   display: none;
   position: absolute;
