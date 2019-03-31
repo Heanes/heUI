@@ -1,8 +1,8 @@
 /*!
- * ui.heanes.com 1.0.0
+ * ui.heanes.com 1.0.1
  * @author: Heanes
- * @time: 2018-12-23 18:56:59 周天
- * (c) 2014-2018 Heanes
+ * @time: 2019-03-31 17:37:22 周天
+ * (c) 2014-2019 Heanes
  * Released under the MIT License.
  */
 /******/ (function(modules) { // webpackBootstrap
@@ -71,7 +71,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "9532cf75de2d7ae5b12b";
+/******/ 	var hotCurrentHash = "bc634dea600e3a0f6721";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -801,9 +801,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css":
+/***/ "./public/static/vendor/fonts/font-awesome/5.8.1-free-web/css/all.min.css":
 /*!********************************************************************************!*\
-  !*** ./public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css ***!
+  !*** ./public/static/vendor/fonts/font-awesome/5.8.1-free-web/css/all.min.css ***!
   \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -832,8 +832,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_static_vendor_fonts_font_awesome_4_7_0_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css */ "./public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css");
-/* harmony import */ var _public_static_vendor_fonts_font_awesome_4_7_0_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_public_static_vendor_fonts_font_awesome_4_7_0_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _public_static_vendor_fonts_font_awesome_5_8_1_free_web_css_all_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/static/vendor/fonts/font-awesome/5.8.1-free-web/css/all.min.css */ "./public/static/vendor/fonts/font-awesome/5.8.1-free-web/css/all.min.css");
+/* harmony import */ var _public_static_vendor_fonts_font_awesome_5_8_1_free_web_css_all_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_public_static_vendor_fonts_font_awesome_5_8_1_free_web_css_all_min_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _heaneUI_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./heaneUI.scss */ "./src/heanes/heaneUI.scss");
 /* harmony import */ var _heaneUI_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_heaneUI_scss__WEBPACK_IMPORTED_MODULE_1__);
 /**
@@ -842,6 +842,7 @@ __webpack_require__.r(__webpack_exports__);
  * @time 2018-12-10 18:48:53 周一
  */
 // font-awesome图标
+// import '../../public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css';
  // UI
 
 
