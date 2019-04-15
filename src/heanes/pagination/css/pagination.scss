@@ -44,6 +44,11 @@ $paginationItemPadding:8px 12px;
           color: #666;
         }
       }
+      &.ellipsis {
+        .page-link {
+          border: 0;
+        }
+      }
 
       &.disabled {
         .page-link{

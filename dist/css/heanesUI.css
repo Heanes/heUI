@@ -1,7 +1,7 @@
 /*!
  * ui.heanes.com 1.0.1
  * @author: Heanes
- * @time: 2019-03-31 17:37:22 周天
+ * @time: 2019-04-13 21:07:18 周六
  * (c) 2014-2019 Heanes
  * Released under the MIT License.
  */
@@ -5647,6 +5647,8 @@ table {
       .pagination .pagination-link .page-item.current .page-link, .pagination .pagination-link .page-item.ellipsis .page-link, .pagination .pagination-link .page-item.disabled .page-link {
         cursor: default;
         color: #666; }
+      .pagination .pagination-link .page-item.ellipsis .page-link {
+        border: 0; }
       .pagination .pagination-link .page-item.disabled .page-link {
         opacity: .8; }
       .pagination .pagination-link .page-item.current .page-link, .pagination .pagination-link .page-item:not(.disabled):not(.ellipsis):hover .page-link {

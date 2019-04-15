@@ -7,5 +7,6 @@
 // import '../../public/static/vendor/fonts/font-awesome/4.7.0/css/font-awesome.min.css';
 // font-awesome图标5.8.1-free-web版 @see https://fontawesome.com/icons
 import '../../public/static/vendor/fonts/font-awesome/5.8.1-free-web/css/all.min.css';
+//import '../../public/static/vendor/fonts/font-awesome/5.8.1-pro/css/all.css';
 // UI
 import './heaneUI.scss';
