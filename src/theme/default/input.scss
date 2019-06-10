@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/**
+ * @doc input 输入框
+ * @author Heanes
+ * @time 2019-08-03 15:06:55 Saturday
+ */
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(input-container) {
+  position: relative;
+  display: inline-block;
+  margin: 0 8px 10px 0;
+
+  @include b(input) {
+    width: 100%;
+    height: $--input-height;
+    line-height: $--input-height;
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: 1px solid $--border-color-base;
+    outline: none;
+    transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    vertical-align: middle;
+    -webkit-appearance: none;
+
+    &[type="button"] {
+      -webkit-appearance: button;
+      line-height: unset;
+    }
+
+    // 激活时样式
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      border: 1px solid $--color-primary;
+      outline: none;
+      //box-shadow: 0 0 4px 0 $--color-primary;
+    }
+
+    // 禁用时样式
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $--disabled-fill-base;
+    }
+
+    @include m(size-large) {
+      height: $--input-height-large;
+      line-height: $--input-height-large;
+    }
+    @include m(size-medium) {
+      height: $--input-height-medium;
+      line-height: $--input-height-medium;
+    }
+    @include m(size-small) {
+      height: $--input-height-small;
+      line-height: $--input-height-small;
+    }
+    @include m(size-mini) {
+      height: $--input-height-mini;
+      line-height: $--input-height-mini;
+    }
+
+    // 前置内容
+    /*@include e(prefix){
+    }*/
+    // 后置内容
+    @include e(suffix){
+      position: absolute;
+      right: 4px;
+      top: 0;
+      height: 100%;
+    }
+
+    &__icon{
+      line-height: $--input-height;
+      font-size: 12px;
+    }
+  }
+
+}

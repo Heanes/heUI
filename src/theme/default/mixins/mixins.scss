@@ -1,8 +1,9 @@
+@charset "UTF-8";
+
 @import "function";
 @import "../common/var";
 
-/* Break-points
- -------------------------- */
+/* ****************************** Break-points ****************************** */
 @mixin res($key, $map: $--breakpoints) {
   // 循环断点Map，如果存在则返回
   @if map-has-key($map, $key) {
@@ -14,8 +15,7 @@
   }
 }
 
-/* Scrollbar
- -------------------------- */
+/* ****************************** Scrollbar ****************************** */
 @mixin scroll-bar {
   $--scrollbar-thumb-background: #b4bccc;
   $--scrollbar-track-background: #fff;
@@ -49,8 +49,7 @@
   }
 }
 
-/* Placeholder
- -------------------------- */
+/* ****************************** Placeholder ****************************** */
 @mixin placeholder {
   &::-webkit-input-placeholder {
     @content
@@ -65,12 +64,43 @@
   }
 }
 
-/* BEM
- -------------------------- */
+/* ****************************** BEM ****************************** */
+// 区块
 @mixin b($block) {
-  $B: $namespace+'-'+$block !global;
+  $B: $namespace + '-' + $block !global;
 
   .#{$B} {
     @content;
+  }
+}
+
+// 元素
+@mixin e($element) {
+  $currentSelector: & + $element-separator + $element;
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+/// 修饰符，todo 支持多个修饰符列表
+@mixin m($modifier) {
+  $currentSelector: & + $modifier-separator + $modifier;
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+/* ****************************** 状态修饰 ****************************** */
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
   }
 }

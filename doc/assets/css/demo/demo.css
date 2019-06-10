@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/**
+ * @doc demo示例展示样式
+ * @author Heanes
+ * @time 2019-05-17 19:15:34周五
+ */
+.demo-wrap .page-title .title {
+  font-size: 20px; }
+.demo-wrap .demo-group .demo-group__title .group-title {
+  font-size: 18px; }
+.demo-wrap .demo-group .demo-group__content .demo-item {
+  margin: 10px auto;
+  padding: 14px 18px;
+  box-shadow: 0 0 4px 1px rgba(206, 206, 206, 0.66);
+  border-radius: 2px; }
+  .demo-wrap .demo-group .demo-group__content .demo-item:hover {
+    box-shadow: 0 0 4px 2px rgba(170, 170, 170, 0.66); }
+  .demo-wrap .demo-group .demo-group__content .demo-item .demo-item__title .item-title {
+    font-size: 16px; }
+  .demo-wrap .demo-group .demo-group__content .demo-item .demo-item__content .demo-line {
+    margin-bottom: 10px; }
+.demo-wrap.demo-pagination {
+  /*.pagination{
+    .page-item,
+    .pagination-btn{
+      background-color: #dbebff;
+    }
+  }*/ }
+
+/*# sourceMappingURL=demo.css.map */

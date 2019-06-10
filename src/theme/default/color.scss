@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/**
+ * @doc color 颜色
+ * @author Heanes
+ * @time 2019-05-21 11:26:55 周二
+ */
+@import "mixins/mixins";
+@import "common/var";
+@include b(color){
+  @include m(primary){
+    background-color: $--color-primary;
+  }
+  @include m(success){
+    background-color: $--color-success;
+  }
+  @include m(info){
+    background-color: $--color-info;
+  }
+  @include m(warning){
+    background-color: $--color-warning;
+  }
+  @include m(danger){
+    background-color: $--color-danger;
+  }
+
+  @include m(primary-light-1){
+    background-color: $--color-primary-light-1;
+  }
+  @include m(primary-light-2){
+    background-color: $--color-primary-light-2;
+  }
+  @include m(primary-light-3){
+    background-color: $--color-primary-light-3;
+  }
+  @include m(primary-light-4){
+    background-color: $--color-primary-light-4;
+  }
+  @include m(primary-light-5){
+    background-color: $--color-primary-light-5;
+  }
+  @include m(primary-light-6){
+    background-color: $--color-primary-light-6;
+  }
+  @include m(primary-light-7){
+    background-color: $--color-primary-light-7;
+  }
+  @include m(primary-light-8){
+    background-color: $--color-primary-light-8;
+  }
+  @include m(primary-light-9){
+    background-color: $--color-primary-light-9;
+  }
+
+  @include m(success-light){
+    background-color: $--color-success-light;
+  }
+  @include m(info-light){
+    background-color: $--color-info-light;
+  }
+  @include m(danger-light){
+    background-color: $--color-danger-light;
+  }
+  @include m(warning-light){
+    background-color: $--color-warning-light;
+  }
+
+  @include m(success-lighter){
+    background-color: $--color-success-lighter;
+  }
+  @include m(info-lighter){
+    background-color: $--color-info-lighter;
+  }
+  @include m(danger-lighter){
+    background-color: $--color-danger-lighter;
+  }
+  @include m(warning-lighter){
+    background-color: $--color-warning-lighter;
+  }
+
+  // 中性色
+
+  @include m(text-primary){
+    background-color: $--color-text-primary;
+  }
+  @include m(text-primary-light-1){
+    background-color: $--color-text-primary-light-1;
+  }
+  @include m(text-primary-light-2){
+    background-color: $--color-text-primary-light-2;
+  }
+  @include m(text-primary-light-3){
+    background-color: $--color-text-primary-light-3;
+  }
+  @include m(text-primary-light-4){
+    background-color: $--color-text-primary-light-4;
+  }
+  @include m(text-primary-light-5){
+    background-color: $--color-text-primary-light-5;
+  }
+  @include m(text-primary-light-6){
+    background-color: $--color-text-primary-light-6;
+  }
+  @include m(text-primary-light-7){
+    background-color: $--color-text-primary-light-7;
+  }
+  @include m(text-primary-light-8){
+    background-color: $--color-text-primary-light-8;
+  }
+  @include m(text-primary-light-9){
+    background-color: $--color-text-primary-light-9;
+  }
+
+  @include m(text-regular){
+    background-color: $--color-text-regular;
+  }
+  @include m(text-secondary){
+    background-color: $--color-text-secondary;
+  }
+  @include m(text-placeholder){
+    background-color: $--color-text-placeholder;
+  }
+  @include m(border-base){
+    background-color: $--border-color-base;
+  }
+  @include m(border-light){
+    background-color: $--border-color-light;
+  }
+  @include m(border-lighter){
+    background-color: $--border-color-lighter;
+  }
+  @include m(border-extra-light){
+    background-color: $--border-color-extra-light;
+  }
+
+  @include m(black){
+    background-color: $--color-black;
+  }
+  @include m(white){
+    background-color: $--color-white;
+  }
+  @include m(transparent){
+    background-color: $--color-transparent;
+  }
+}

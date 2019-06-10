@@ -1,8 +1,241 @@
+@charset "UTF-8";
+/**
+ * @doc button 按钮样式
+ * @author Heanes
+ * @time 2019-05-19 00:29:38周日
+ */
 @import "mixins/mixins";
 @import "common/var";
+@import "mixins/button";
 
 @include b(button) {
-  border: 1px solid #ddd;
-  padding: 4px;
+  display: inline-block;
+  padding: $--button-padding-vertical $--button-padding-horizontal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid $--border-color-base;
+  border-radius: 4px;
+  -webkit-appearance: none;
   outline: none;
+
+  // 相邻button设置margin
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+
+  &:active {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    outline: none;
+  }
+
+  // 无背景plain型
+  @include when(plain) {
+    &:hover,
+    &:focus {
+      background: $--color-white;
+      border-color: $--color-primary;
+      color: $--color-primary;
+    }
+
+    &:active {
+      background: $--color-white;
+      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      outline: none;
+    }
+  }
+
+  // 不同属性修饰符
+  // -- 圆角
+  @include when(round) {
+    border-radius: $--button-round-border-radius;
+  }
+
+  // -- 圆形
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
+  }
+
+  // 不同状态
+  // -- 激活状态
+  @include when(active) {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+  }
+  // -- 不可用
+  @include when(disabled) {
+    user-select: none;
+    cursor: not-allowed;
+    &,
+    &:hover,
+    &:focus {
+      color: $--button-disabled-font-color;
+      cursor: not-allowed;
+      background-image: none;
+      background-color: $--button-disabled-background-color;
+      border-color: $--button-disabled-border-color;
+    }
+  }
+  // -- 加载中
+  @include when(loading) {
+    position: relative;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    // -- 添加蒙层，避免鼠标点击到
+    &:before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: rgba(255, 255, 255, .35);
+    }
+  }
+
+  // 不同type修饰符
+  @include m(primary) {
+    @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+  }
+  @include m(info) {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+  }
+  @include m(success) {
+    @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+  }
+  @include m(warning) {
+    @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+  }
+  @include m(danger) {
+    @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+  }
+  // 文字按钮
+  @include m(text) {
+    background: transparent;
+    border-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    color: $--color-primary;
+
+    &:hover,
+    &:focus {
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+    &:active {
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus {
+      border-color: transparent;
+    }
+  }
+
+  // 不同尺寸
+  @include m(ex-large) {
+    @include button-size($--button-ex-large-padding-vertical, $--button-ex-large-padding-horizontal, $--button-ex-large-font-size, $--button-ex-large-border-radius);
+    @include when(round){
+      border-radius: $--button-ex-large-circle-border-radius;
+    }
+    @include when(circle){
+      padding: $--button-ex-large-padding-vertical;
+    }
+  }
+  @include m(large) {
+    @include button-size($--button-large-padding-vertical, $--button-large-padding-horizontal, $--button-large-font-size, $--button-large-border-radius);
+    @include when(round){
+      border-radius: $--button-large-circle-border-radius;
+    }
+    @include when(circle){
+      padding: $--button-large-padding-vertical;
+    }
+  }
+
+  @include m(medium) {
+    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+    @include when(round){
+      border-radius: $--button-medium-circle-border-radius;
+    }
+    @include when(circle){
+      padding: $--button-medium-padding-vertical;
+    }
+  }
+  @include m(small) {
+    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
+    @include when(round){
+      border-radius: $--button-small-circle-border-radius;
+    }
+    @include when(circle){
+      padding: $--button-small-padding-vertical;
+    }
+  }
+  @include m(mini) {
+    @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, $--button-mini-border-radius);
+    @include when(round){
+      border-radius: $--button-mini-circle-border-radius;
+    }
+    @include when(circle){
+      padding: $--button-mini-padding-vertical;
+    }
+  }
+}
+
+// button-group 按钮组
+@include b(button-group){
+  display: inline-block;
+  vertical-align: middle;
+
+  & + &{
+    margin-left: 10px;
+  }
+
+  // 去除非首尾button的圆角
+  @include b(button){
+    &:not(:first-child),
+    &:not(:last-child){
+      border-radius: 0;
+    }
+    float: left;
+
+    & + .#{$namespace}-button{
+      margin-left: 1px;
+    }
+
+    &:first-child{
+      border-top-left-radius: $--button-border-radius;
+      border-bottom-left-radius: $--button-border-radius;
+    }
+    &:last-child{
+      border-top-right-radius: $--button-border-radius;
+      border-bottom-right-radius: $--button-border-radius;
+    }
+  }
+  > + .he-button {
+    margin-left: 2px;
+  }
 }

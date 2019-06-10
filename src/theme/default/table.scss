@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/**
+ * @doc table 表格样式
+ * @author Heanes
+ * @time 2019-08-03 23:31:43 Sat
+ */
+@include b(table) {
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}

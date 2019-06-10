@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/**
+ * @doc 风格样式
+ * @author Heanes
+ * @time 2019-05-20 22:37:55 周一
+ */
+a {
+  text-decoration: none; }
+  a:link {
+    color: inherit; }
+  a:visited {
+    color: inherit; }
+  a:hover {
+    color: inherit; }
+  a:active {
+    color: inherit; }
+  a:focus {
+    color: inherit; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=style_2019.css.map */

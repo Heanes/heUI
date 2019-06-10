@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+ * @doc 文档布局样式
+ * @author Heanes
+ * @time 2019-05-19 22:38:10 周日
+ */
+@import "../common/mixins/mixins.scss";
+.doc-container{
+
+  .header{
+    ;
+  }
+
+  .main{
+    padding: 10px;
+    // 左侧导航
+    .left-menu{
+      position: fixed;
+      width: 240px;
+      .menu-nav__ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .nav-item__li{
+          padding: 4px 0;
+          line-height: 2em;
+        }
+      }
+    }
+
+    // 右侧内容
+    .right-content{
+      padding-left: 240px;
+    }
+  }
+
+  .footer{
+    ;
+  }
+
+}
+
+@include res(lg){
+  .main-width{
+    width: 1092px;
+    margin: 0 auto;
+  }
+}
+

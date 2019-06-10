@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/**
+ * @doc 一些快速样式
+ * @author Heanes
+ * @time 2019-07-31 20:46:04 周三
+ */
+@for $i from 1 through 50 {
+  .mg-b-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .mg-t-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .pd-b-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+}

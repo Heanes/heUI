@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/**
+ * @doc utils
+ * @author Heanes
+ * @time 2019-05-19 22:28:16 周日
+ */
+/* ****************************** text over ellipsis ****************************** */
+@mixin utils-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ****************************** clear float ****************************** */
+@mixin utils-clearfix{
+
+  @at-root {
+    &::before,
+    &::after{
+      display: table;
+      content: "";
+    }
+    &::after{
+      clear: both;
+    }
+  }
+}

@@ -1,12 +1,19 @@
 <template>
-  <div class="about">
-    <h2>Yeah, this is about page.</h2>
-  </div>
+  <hed-layout>
+    <div class="about-page main-width" slot="main">
+      <h2>About</h2>
+    </div>
+  </hed-layout>
 </template>
 
 <script>
+import Layout from '../_layout/Layout.vue';
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    'hed-layout': Layout
+  }
 }
 </script>
 

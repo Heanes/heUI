@@ -13,6 +13,11 @@ export default new Router({
       component: Index
     },
     {
+      path: '/demo.html',
+      name: 'demo',
+      component: () => import(/* webpackChunkName: "demo" */ '../views/demo/Demo.vue')
+    },
+    {
       path: '/about.html',
       name: 'about',
       // route level code-splitting
@@ -21,12 +26,23 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ '../views/about/About.vue')
     },
     {
-      path: '/button.html',
-      name: 'button',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ '../views/button/Button.vue')
+      path: '/component.html',
+      name: 'pageComponent',
+      component: () => import(/* webpackChunkName: "component" */ '../views/component/PageComponent.vue'),
+      children: [
+        {
+          path: 'color.html',
+          component: () => import(/* webpackChunkName: "color" */ '../views/color/Color.vue')
+        },
+        {
+          path: 'button.html',
+          component: () => import(/* webpackChunkName: "button" */ '../views/button/Button.vue')
+        },
+        {
+          path: 'pagination.html',
+          component: () => import(/* webpackChunkName: "pagination" */ '../views/pagination/Pagination.vue')
+        }
+      ]
     }
   ],
   // 记录之前保存的滚动条位置

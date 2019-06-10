@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * @doc demo-color 颜色示例样式
+ * @author Heanes
+ * @time 2019-05-21 18:11:31 周二
+ */
+
+$border-radius: 4px;
+$named-color-item-width: 128px;
+
+.demo-color-row{
+  max-width: 400px;
+  &--col4{
+    max-width: 800px;
+  }
+}
+
+.he-col{
+  .demo-color-box,
+  .demo-color-box--one-row{
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+}
+.demo-color-box,
+.demo-color-box--one-row{
+  border-radius: $border-radius;
+  height: 120px;
+  position: relative;
+
+  .color-desc{
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+
+    &.color-desc--text-dark{
+      color: #555;
+
+    }
+
+    .color-type{
+    }
+    .color-value{
+      font-size: 13px;
+      background-color: rgba(0,0,0, .2);
+      padding: 0 4px;
+    }
+  }
+}
+.demo-color-box{
+  &--one-row{
+    height: 80px;
+  }
+  &--border{
+    border: 1px solid #eee
+  }
+  &--transparent{
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 98 L100 0 L100 1 L1 98' fill='%23FCC3C3' /></svg>");
+    border-color: #fcc3c3;
+  }
+  &--named-color{
+    height: auto;
+    font-size: 0;
+    text-align: center;
+    &.vertical{
+      display:inline-block;
+      width: $named-color-item-width;
+      margin-right:50px;
+    }
+  }
+}
+
+.demo-color-sub{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0;
+  [class^="color-sub-item"],
+  [class*=" color-sub-item"]{
+    display: inline-block;
+    height: 40px;
+    &:first-child{
+      border-bottom-left-radius: $border-radius;
+    }
+    &:last-child{
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+  .color-sub-item--col2{
+    width: 50%;
+  }
+  .color-sub-item--col9{
+    width: 11.1111111%
+  }
+
+}
+
+.demo-color-sub--named{
+  display:inline-block;
+  width:$named-color-item-width;
+  height:24px;
+  line-height:24px;
+  font-size:12px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+

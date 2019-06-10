@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/**
+ * @doc 侧边导航栏
+ * @author Heanes
+ * @time 2019-05-20 22:33:16 周一
+ */
+@import "../common/color.scss";
+$nav-link-active-color: $color-primary;
+
+.left-menu {
+  opacity: .5;
+  transition: all 3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .menu-nav__ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-item__li {
+      line-height: 2em;
+
+      .active {
+        color: $nav-link-active-color;
+      }
+
+      > .nav-link {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 8px 0;
+      }
+
+      .nav-group {
+        margin: 4px 0;
+
+        .nav-group__title {
+          color: #888;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * @doc 头部样式
+ * @author Heanes
+ * @time 2019-05-24 17:01:10 周五
+ */
+$headerBorderBottomColor: #ddd;
+.header{
+  border-bottom: 1px solid $headerBorderBottomColor;
+
+  .top-nav{
+    text-align: right;
+    font-size: 18px;
+
+    &__ul{
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+
+      .nav-item{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 20px;
+        line-height: 2em;
+        font-size: 18px;
+
+        &:hover{
+          color: #03b8cf;
+        }
+      }
+    }
+  }
+}

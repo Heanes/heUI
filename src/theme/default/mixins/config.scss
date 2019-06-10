@@ -1,4 +1,10 @@
+@charset "UTF-8";
+
+// 命名前缀
 $namespace: 'he';
+$separator: '-';
 $element-separator: '__';
 $modifier-separator: '--';
+
+// 状态描述前缀
 $state-prefix: 'is-';

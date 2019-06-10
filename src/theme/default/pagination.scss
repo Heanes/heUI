@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/**
+ * @doc 分页样式
+ * @author Heanes
+ * @time 2017-01-07 18:28:05 周六
+ */
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(pagination) {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+
+  // 页码
+  .pagination-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pagination-btn,
+  .page-item {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    background-color: $--pagination-bg-color;
+    color: $--pagination-font-color;
+    font-size: 14px;
+    line-height: 1;
+    vertical-align: middle;
+
+    .page-link {
+      display: block;
+      padding: $--pagination-item-padding;
+      color: inherit;
+    }
+
+    &.current,
+    &.ellipsis,
+    &.disabled {
+      .page-link{
+        cursor: default;
+      }
+    }
+    &.ellipsis,
+    &.disabled {
+      .page-link{
+        color: $--pagination-font-color-disabled;
+      }
+    }
+
+    &.ellipsis {
+      border: 0;
+    }
+
+    &.disabled {
+      opacity: .8;
+    }
+
+    &.current,
+    &:not(.disabled):not(.ellipsis):hover {
+      z-index: 2;
+      color: $--pagination-font-color-current;
+    }
+
+    // 有多个时才设置外边距
+    & + .page-item {
+      margin-left: $--pagination-item-margin;
+    }
+
+  }
+
+  // 前一页后一页
+  .pagination-btn{
+    border: 0;
+    @include m(prev){
+      margin-right: $--pagination-item-margin;
+      .disabled{
+        pointer-events: none;
+      }
+    }
+    @include m(next){
+      margin-left: $--pagination-item-margin;
+      .disabled{
+        pointer-events: none;
+      }
+    }
+  }
+
+  /**
+   * @doc 有边框型
+   * @author Heanes
+   * @time 2019-05-27 11:04:12 周一
+   */
+  @include when(border){
+    .pagination-btn,
+    .page-item {
+      border: $--pagination-border-width $--pagination-border-style $--pagination-border-color;
+    }
+  }
+
+  /**
+   * @doc 紧缩型
+   * @author Heanes
+   * @time 2018-12-21 15:00:22 周五
+   */
+  @include when(tight){
+    .page-item {
+      margin: 0 0 0 -1px;
+
+      &.current{
+        border-color: $--pagination-hover-border-color;
+      }
+    }
+    .pagination-btn{
+      @include m(prev){
+        margin-right: -1px;
+      }
+      @include m(next){
+        margin-left: -1px;
+      }
+    }
+  }
+
+  /**
+   * @doc 有边框型
+   * @author Heanes
+   * @time 2019-05-27 11:04:12 周一
+   */
+  @include when(background){
+    .pagination-btn,
+    .page-item {
+      background-color: $--pagination-has-bg-color;
+
+      &.current,
+      &:not(.disabled):not(.ellipsis):hover{
+        background: $--pagination-has-bg-color-current;
+        color: $--pagination-has-bg-font-color-current
+      }
+    }
+  }
+
+  /**
+   * @doc 更多操作功能型
+   * @author Heanes
+   * @time 2018-12-21 15:04:08 周五
+   */
+  // 输入跳转
+
+  .pagination-quick-jump{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+  }
+  .he-pagination-input{
+    font-size: 14px;
+    width: 50px;
+    margin: 0 0 0 4px;
+    vertical-align: middle;
+  }
+
+}

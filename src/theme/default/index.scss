@@ -1,7 +1,17 @@
+@charset "UTF-8";
+
 /**
  * @doc 汇集所有组件样式
  * @author Heanes
  * @time 2019-05-07 12:27:37 周二
  */
 @import "./base.scss";
+@import "./row.scss";
+@import "./col.scss";
+@import "./color.scss";
+@import "./icon.scss";
 @import "./button.scss";
+@import "./input.scss";
+@import "./select.scss";
+@import "./table.scss";
+@import "./pagination.scss";

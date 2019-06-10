@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/**
+ * @doc select 下拉
+ * @author Heanes
+ * @time 2019-08-03 15:11:01 Sat
+ */
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(select){
+  border: 1px solid $__color-primary;
+
+  outline: none;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+}
