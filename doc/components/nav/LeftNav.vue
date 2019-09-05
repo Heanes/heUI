@@ -22,7 +22,7 @@
               active-class="active"
               exact-active-class="active"
               :to="navItem.path"
-            >{{navItem.name}}item
+            >{{navItem.name}}
             </router-link>
           </li>
         </ul>

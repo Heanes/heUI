@@ -11,6 +11,7 @@ lib
 # idea auto build file
 src/**/*.css
 src/**/*.map
+doc/**/*.css
 doc/**/*.map
 
 # Logs
