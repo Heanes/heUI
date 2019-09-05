@@ -1,6 +1,6 @@
 <template>
   <hed-layout>
-    <div class="index" slot="rightContent">
+    <div class="index">
       <h2 class="title">Welcome! This is index page.</h2>
       <p>{{baseCommon}}</p>
       <router-link to="/button.html">button</router-link>
@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import common from '@/assets/js/common.js';
-import '@/assets/css/common/common.scss';
 
 import Layout from '../_layout/Layout.vue';
 
@@ -28,7 +26,6 @@ export default {
   },
 
   created () {
-    common.common();
   }
 }
 </script>

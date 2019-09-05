@@ -28,6 +28,17 @@ module.exports = {
   /*
    * @doc Navigation 导航
    */
+  navigation: './src/components/navigation/index.js',
   // tabs 标签页
-  tabs: './src/components/tabs/index.js'
+  tabs: './src/components/tabs/index.js',
+
+  /**
+   * @doc Notice 通知
+   */
+  // Alert 警告
+  alert: './src/components/alert/index.js',
+  // Message 消息提示，全局
+  message: './src/components/message/index.js',
+  // Notification 通知
+  notification: './src/components/notification/index.js'
 };

@@ -18,12 +18,12 @@ export default {
   },
   computed: {
     getComputedStyle () {
-      let style = {};
+      const style = {};
       if (this.size) {
-        style['fontSize'] = this.size;
+        style.fontSize = this.size;
       }
       if (this.color) {
-        style['color'] = this.color;
+        style.color = this.color;
       }
       return style
     }

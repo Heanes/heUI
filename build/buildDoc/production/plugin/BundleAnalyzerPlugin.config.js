@@ -4,7 +4,7 @@
  * @time 2019-05-03 16:31:30 周五
  */
 
-  // @see https://github.com/webpack-contrib/webpack-bundle-analyzer
+// @see https://github.com/webpack-contrib/webpack-bundle-analyzer
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const bundleAnalyzerPlugin = new BundleAnalyzerPlugin({

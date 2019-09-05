@@ -28,10 +28,10 @@ export default {
   },
 
   render (h) {
-    let classList = [];
+    const classList = [];
     classList.push(`he-col-${this.col}`);
 
-    let style = {};
+    const style = {};
     if(this.margin > 0){
       style.paddingLeft = `${this.margin / 2}px`;
       style.paddingRight = style.paddingLeft;

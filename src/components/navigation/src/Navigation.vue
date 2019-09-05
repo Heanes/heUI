@@ -24,9 +24,12 @@ export default {
     }
   },
   components: {
-    // 主列表组件-明细组件间互相递归调用，必须使用动态导入
+    // 'he-navigation-item': this.$options.components.HeNavigationItem
+  },
+  beforeCreate: function () {
+    // 主列表组件-明细组件间互相递归调用，必须使用动态导入或提前注册
     // @see https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8
-    'he-navigation-item': () => import('./NavigationItem.vue')
+    this.$options.components.HeNavigationItem = require('./NavigationItem.vue').default
   },
   watch: {}
 }

@@ -10,7 +10,11 @@ import Select from './components/select/index.js';
 import Option from './components/option/index.js';
 import Table from './components/table/index.js';
 import Pagination from './components/pagination/index.js';
+import Navigation from './components/navigation/index.js';
 import Tabs from './components/tabs/index.js';
+import Alert from './components/alert/index.js';
+import Message from './components/message/index.js';
+import Notification from './components/notification/index.js';
 
 const components = [
   Row,
@@ -23,7 +27,11 @@ const components = [
   Option,
   Table,
   Pagination,
-  Tabs
+  Navigation,
+  Tabs,
+  Alert,
+  Message,
+  Notification
 ];
 
 const install = function(Vue, opts = {}) {
@@ -49,5 +57,9 @@ export default {
   Option,
   Table,
   Pagination,
-  Tabs
+  Navigation,
+  Tabs,
+  Alert,
+  Message,
+  Notification
 }

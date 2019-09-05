@@ -138,7 +138,8 @@
   @include m(white){
     background-color: $--color-white;
   }
-  @include m(transparent){
+  // transparent 必须用引号引起来
+  @include m('transparent'){
     background-color: $--color-transparent;
   }
 }

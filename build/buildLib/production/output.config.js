@@ -1,7 +1,7 @@
 const config = require('../config/config.js');
 
 module.exports = {
-  filename: `heUI.js`,
+  filename: 'heUI.js',
   path: config.dirs.distDir,
   publicPath: '/',
   library: 'he-ui-vue', // 指定的就是你使用require时的模块名

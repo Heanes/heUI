@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * @doc
+ * @author Heanes
+ * @time
+ */
+/* S 链接样式 S */
+a {
+  color: #326eb4;
+  text-decoration: none; }
+
+/* a标签还未被访问的状态 */
+/* a标签已被访问过的状态 */
+a:visited {
+  color: #326eb4; }
+
+a:hover {
+  color: #326eb4;
+  text-decoration: none; }
+
+a:active {
+  color: #8f001e; }
+
+/* E 链接样式 E */
+/* S 文字被选中样式 S */
+::selection {
+  background-color: #447099;
+  color: #fff; }
+
+::-moz-selection {
+  background: #447099;
+  color: #fff; }
+
+/* E 文字被选中样式 E */
+
+/*# sourceMappingURL=style.css.map */

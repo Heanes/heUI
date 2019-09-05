@@ -68,10 +68,36 @@ const nav = {
             {
               name: 'Pagination 分页',
               path: '/component/pagination'
+            }
+          ]
+        },
+        {
+          groupName: 'Notice 提示',
+          groupList: [
+            {
+              name: 'Alert 警告提示',
+              path: '/component/alert'
             },
+            {
+              name: 'Message 消息提示',
+              path: '/component/message'
+            },
+            {
+              name: 'Notice 通知',
+              path: '/component/notice'
+            }
+          ]
+        },
+        {
+          groupName: 'Navigation 导航',
+          groupList: [
             {
               name: 'Tabs 标签页',
               path: '/component/tabs'
+            },
+            {
+              name: 'Navigation 导航',
+              path: '/component/navigation'
             }
           ]
         }

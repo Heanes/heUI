@@ -18,20 +18,18 @@
 /* ****************************** Break-points ****************************** */
 /* ****************************** Scrollbar ****************************** */
 /* ****************************** Placeholder ****************************** */
+/**
+ * @doc 定义的变量
+ * @author Heanes
+ * @time 2019-05-24 18:01:27 周五
+ */
+/* ****************************** Break-point 响应式断点 ****************************** */
+.doc-container .header {
+  height: 60px; }
 .doc-container .main {
   padding: 10px; }
-  .doc-container .main .left-menu {
-    position: fixed;
-    width: 240px; }
-    .doc-container .main .left-menu .menu-nav__ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      .doc-container .main .left-menu .menu-nav__ul .nav-item__li {
-        padding: 4px 0;
-        line-height: 2em; }
   .doc-container .main .right-content {
-    padding-left: 240px; }
+    padding-left: 258px; }
 
 @media only screen and (min-width: 1200px) {
   .main-width {

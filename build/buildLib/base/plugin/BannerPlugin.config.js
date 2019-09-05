@@ -6,17 +6,17 @@
 
 const webpack = require('webpack');
 
-let config = require('../../config/config.js');
+const config = require('../../config/config.js');
 
 // 生成文件添加自定义banner
 // @see
-let BannerPluginConfig = new webpack.BannerPlugin({
+const BannerPluginConfig = new webpack.BannerPlugin({
   banner: (options) => {
     return `${config.appName} ${config.appVersion}\n` +
       `@author: ${config.appAuthor}\n` +
       `@time: ${config.generateTime}\n` +
       `(c) 2014-${config.copyrightYear} ${config.appAuthor}\n` +
-      `Released under the MIT License.`;
+      'Released under the MIT License.';
   },
   exclude: [
     /vendors.*/     // 排除vendors

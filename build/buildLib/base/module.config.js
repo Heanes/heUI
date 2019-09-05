@@ -15,9 +15,9 @@ module.exports = {
       ],
       include: config.dirs.srcRootDir,
       exclude: /node_modules|vendor/
-    },
+    }
     // 图片等资源文件
-    /*{
+    /* {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       use: [
         {
@@ -57,6 +57,6 @@ module.exports = {
           }
         }
       ]
-    }*/
+    } */
   ]
 };

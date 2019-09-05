@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-wrap demo-pagination" slot="rightContent">
+  <div class="demo-wrap demo-pagination">
     <div class="page-title">
       <h1 class="title">Pagination 分页</h1>
     </div>
@@ -112,7 +112,7 @@
               <he-pagination :total="120" :page-link="pageNumber" background></he-pagination>
             </he-row>
             <he-row>
-              <he-pagination :total="120" :page-link="pageNumber" background page-link-target="_blank"></he-pagination>
+              <!--<he-pagination :total="120" :page-link="pageNumber" background page-link-target="_blank"></he-pagination>-->
             </he-row>
           </div>
         </div>
@@ -184,7 +184,7 @@ export default {
   },
   methods: {
     pageNumber(pageNumber){
-      return `${pageNumber}.html`;
+      return `http://localhost:8080/#/component/pagination#${pageNumber}.html`;
     }
   },
 

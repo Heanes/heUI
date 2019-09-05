@@ -7,7 +7,7 @@
 const config = require('../config/config.js');
 
 module.exports = {
-  filename: `[name].js`,
+  filename: '[name].js',
   publicPath: '/',
   chunkFilename: '[id].js',
   path: config.dirs.distDir,

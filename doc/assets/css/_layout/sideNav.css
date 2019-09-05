@@ -33,27 +33,45 @@
 /* ****************************** Pagination 分页 ****************************** */
 /* ****************************** Break-point 响应式断点 ****************************** */
 /* ****************************** Break-point 响应式断点 ****************************** */
-.left-menu {
-  opacity: .5;
-  transition: all 3s; }
-  .left-menu:hover {
+/**
+ * @doc 定义的变量
+ * @author Heanes
+ * @time 2019-05-24 18:01:27 周五
+ */
+/* ****************************** Break-point 响应式断点 ****************************** */
+.left-menu-wrap {
+  position: fixed;
+  width: 240px;
+  top: 0;
+  bottom: 0;
+  margin-top: 61px; }
+  .left-menu-wrap:hover {
     opacity: 1; }
-  .left-menu .menu-nav__ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .left-menu .menu-nav__ul .nav-item__li {
-      line-height: 2em; }
-      .left-menu .menu-nav__ul .nav-item__li .active {
-        color: #428bca; }
-      .left-menu .menu-nav__ul .nav-item__li > .nav-link {
-        font-weight: 600;
-        font-size: 16px;
-        margin: 8px 0; }
-      .left-menu .menu-nav__ul .nav-item__li .nav-group {
-        margin: 4px 0; }
-        .left-menu .menu-nav__ul .nav-item__li .nav-group .nav-group__title {
-          color: #888;
-          font-size: 12px; }
+  .left-menu-wrap .menu-nav-wrap {
+    height: 100%;
+    overflow: auto; }
+    .left-menu-wrap .menu-nav-wrap .menu-nav__ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-item__li {
+        padding: 4px 0;
+        line-height: 2em; }
+        .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-item__li .active {
+          color: #428bca; }
+        .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-item__li .nav-link {
+          font-weight: 600;
+          color: #333;
+          font-size: 15px;
+          margin: 8px 0; }
+        .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-item__li .nav-group {
+          margin: 4px 0; }
+          .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-item__li .nav-group .nav-group__title {
+            color: #888;
+            font-size: 12px; }
+      .left-menu-wrap .menu-nav-wrap .menu-nav__ul--sub .nav-item__li .nav-link,
+      .left-menu-wrap .menu-nav-wrap .menu-nav__ul .nav-group .nav-item__li .nav-link {
+        font-weight: 400;
+        font-size: 14px; }
 
 /*# sourceMappingURL=sideNav.css.map */

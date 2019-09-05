@@ -23,7 +23,7 @@
       <a v-if="innerPageNumber > 1"
          class="page-link prev-page"
          :class="{disabled: innerPageNumber === 1}"
-         :href="pageLink(innerPageNumber - 1)"
+         :href="pageLink(innerPageNumber)"
          :target="pageLinkTarget"
          v-html="prevPageStr"></a>
       <a v-else
@@ -38,7 +38,9 @@
            page.extraClass,
            {'current': innerPageNumber === page.pageNumber}]"
       >
-        <a class="page-link"
+        <a :class="['page-link',
+            {'current': innerPageNumber === page.pageNumber}
+          ]"
            :href="pageLink(page.pageNumber)"
            :target="pageLinkTarget"
         >{{page.pageStr}}</a>
@@ -47,11 +49,11 @@
     <button type="button" class="pagination-btn pagination-btn--next"
             :class="{'disabled': innerPageNumber === totalPage}"
             :disabled="innerPageNumber === totalPage"
-            @click="nextPage"
     >
       <a class="page-link next-page"
          :class="{'disabled': innerPageNumber === totalPage}"
-         :href="pageLink(innerPageNumber + 1)"
+         :href="pageLink(innerPageNumber)"
+         @click="nextPage"
          v-html="nextPageStr"></a>
     </button>
     <div class="pagination-quick-jump" v-if="showQuickJump">
@@ -186,7 +188,7 @@ export default {
               });
             }
             renderPage.push({
-              pageNumber: -1,
+              pageNumber: 0,
               pageStr: '...',
               extraClass: 'ellipsis'
             });
@@ -200,7 +202,7 @@ export default {
               pageStr: 1
             });
             renderPage.push({
-              pageNumber: -1,
+              pageNumber: 0,
               pageStr: '...',
               extraClass: 'ellipsis'
             });
@@ -214,7 +216,7 @@ export default {
                 });
               }
               renderPage.push({
-                pageNumber: -1,
+                pageNumber: 0,
                 pageStr: '...',
                 extraClass: 'ellipsis'
               });
@@ -261,7 +263,7 @@ export default {
       }
       if (target.className.indexOf('disabled') > 0) return;
 
-      console.log(target);
+      // console.log(target);
 
       let newPage = this.pageNumber;
       // 第一页和最后一页
@@ -305,6 +307,7 @@ export default {
     },
     // 后一页
     nextPage () {
+      // 如果是自定义链接，则不走方法中的功能
       if (this.innerPageNumber < this.totalPage) {
         this.innerPageNumberFrom = this.innerPageNumber;
         this.innerPageNumber++;
@@ -326,11 +329,11 @@ export default {
     this.innerPageLimitShow = this.innerPageLimitShow < 7 ? 7 : this.innerPageLimitShow;
   },
   watch: {
-    innerPageNumber: {
+    /* innerPageNumber: {
       handler (newVal, oldVal) {
         this.goPage(newVal, oldVal);
       }
-    },
+    }, */
     pageNumber: {
       immediate: true,
       handler (val) {

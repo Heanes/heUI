@@ -1,48 +1,107 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '../views/index/Index.vue';
+import PageIndex from '../views/index/PageIndex.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'index',
-      component: Index
+      component: PageIndex
     },
     {
-      path: '/demo.html',
-      name: 'demo',
-      component: () => import(/* webpackChunkName: "demo" */ '../views/demo/Demo.vue')
+      path: '/guide',
+      name: 'guide',
+      component: () => import(/* webpackChunkName: "guide" */ '../views/guide/Guide.vue')
     },
     {
-      path: '/about.html',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ '../views/about/About.vue')
-    },
-    {
-      path: '/component.html',
-      name: 'pageComponent',
+      path: '/component',
+      // name: 'pageComponent',
       component: () => import(/* webpackChunkName: "component" */ '../views/component/PageComponent.vue'),
       children: [
         {
-          path: 'color.html',
+          path: '/',
+          component: () => import(/* webpackChunkName: "pageComponentIndex" */ '../views/component/ComponentIndex.vue')
+        },
+        {
+          path: 'changelog',
+          component: () => import(/* webpackChunkName: "changelog" */ '../views/changelog/ChangeLog.vue')
+        },
+        {
+          path: 'installation',
+          component: () => import(/* webpackChunkName: "installation" */ '../views/installation/Installation.vue')
+        },
+        {
+          path: 'start',
+          component: () => import(/* webpackChunkName: "start" */ '../views/start/Start.vue')
+        },
+        // basic 基础
+        {
+          path: 'color',
           component: () => import(/* webpackChunkName: "color" */ '../views/color/Color.vue')
         },
         {
-          path: 'button.html',
-          component: () => import(/* webpackChunkName: "button" */ '../views/button/Button.vue')
+          path: 'icon',
+          component: () => import(/* webpackChunkName: "icon" */ '../views/icon/Icon.vue')
         },
         {
-          path: 'pagination.html',
+          path: 'layout',
+          component: () => import(/* webpackChunkName: "layout" */ '../views/layout/layout.vue')
+        },
+        {
+          path: 'button',
+          component: () => import(/* webpackChunkName: "button" */ '../views/button/Button.vue')
+        },
+        // # form 表单
+        {
+          path: 'input',
+          component: () => import(/* webpackChunkName: "input" */ '../views/input/Input.vue')
+        },
+        // ## select 下拉选项
+        {
+          path: 'select',
+          component: () => import(/* webpackChunkName: "select" */ '../views/select/Select.vue')
+        },
+        {
+          path: 'form',
+          component: () => import(/* webpackChunkName: "form" */ '../views/form/Form.vue')
+        },
+        // # data 数据
+        // ## 分页
+        {
+          path: 'pagination',
           component: () => import(/* webpackChunkName: "pagination" */ '../views/pagination/Pagination.vue')
+        },
+        {
+          path: 'table',
+          component: () => import(/* webpackChunkName: "table" */ '../views/table/Table.vue')
+        },
+        {
+          path: 'modal',
+          component: () => import(/* webpackChunkName: "modal" */ '../views/tabs/Tabs.vue')
+        },
+        // notice 提示
+        {
+          path: 'message',
+          component: () => import(/* webpackChunkName: "message" */ '../views/message/Message.vue')
+        },
+        // navigation 导航
+        {
+          path: 'navigation',
+          component: () => import(/* webpackChunkName: "navigation" */ '../views/navigation/Navigation.vue')
+        },
+        {
+          path: 'tabs',
+          component: () => import(/* webpackChunkName: "tabs" */ '../views/tabs/Tabs.vue')
         }
       ]
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import(/* webpackChunkName: "about" */ '../views/about/About.vue')
     }
   ],
   // 记录之前保存的滚动条位置

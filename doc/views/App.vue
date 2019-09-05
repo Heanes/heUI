@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import '@/assets/css/common/common.scss';
 export default {
   name: 'App.vue'
 }

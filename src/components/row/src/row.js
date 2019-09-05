@@ -23,7 +23,7 @@ export default {
 
   computed: {
     style () {
-      let ret = {};
+      const ret = {};
 
       if (this.margin > 0) {
         ret.marginLeft = `-${this.margin / 2}px`;
@@ -34,7 +34,7 @@ export default {
   },
 
   render (h) {
-    let classList = [];
+    const classList = [];
     classList.push('he-row');
 
     return h(this.tag, {

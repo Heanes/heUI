@@ -1,3 +1,3 @@
-let optimization = {
+const optimization = {
 };
 module.exports = optimization;

@@ -4,6 +4,12 @@
  * @author Heanes
  * @time 2019-05-24 17:01:10 周五
  */
+/**
+ * @doc 定义的变量
+ * @author Heanes
+ * @time 2019-05-24 18:01:27 周五
+ */
+/* ****************************** Break-point 响应式断点 ****************************** */
 .header {
   border-bottom: 1px solid #ddd; }
   .header .top-nav {
@@ -16,8 +22,8 @@
       .header .top-nav__ul .nav-item {
         list-style: none;
         display: inline-block;
-        padding: 10px 20px;
-        line-height: 2em;
+        padding: 0 20px;
+        line-height: 60px;
         font-size: 18px; }
         .header .top-nav__ul .nav-item:hover {
           color: #03b8cf; }

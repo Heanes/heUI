@@ -1,8 +1,10 @@
 <template>
   <hed-layout>
     <div class="component main-width" slot="main">
-      <div class="left-menu">
-        <hed-left-nav :nav-group-lit="navConfig['zh-cn']"></hed-left-nav>
+      <div class="left-content">
+        <div class="left-menu-wrap">
+          <hed-left-nav :nav-group-lit="navConfig['zh-cn']"></hed-left-nav>
+        </div>
       </div>
       <div class="right-content">
         <router-view/>

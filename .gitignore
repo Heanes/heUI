@@ -9,8 +9,9 @@ lib
 .sass-cache
 
 # idea auto build file
-src/views/static/css/**/*.css
+src/**/*.css
 src/**/*.map
+doc/**/*.map
 
 # Logs
 logs

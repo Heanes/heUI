@@ -4,6 +4,7 @@
  * @author Heanes
  * @time 2019-05-24 17:01:10 周五
  */
+@import "../common/var.scss";
 $headerBorderBottomColor: #ddd;
 .header{
   border-bottom: 1px solid $headerBorderBottomColor;
@@ -20,8 +21,8 @@ $headerBorderBottomColor: #ddd;
       .nav-item{
         list-style: none;
         display: inline-block;
-        padding: 10px 20px;
-        line-height: 2em;
+        padding: 0 20px;
+        line-height: $--header-height;
         font-size: 18px;
 
         &:hover{

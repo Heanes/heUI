@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * @doc
+ * @author Heanes
+ * @time
+ */
+// S 链接样式
+$aTextDecoration: none;
+$aColor: #326eb4;
+$aColorVisited: #326eb4;
+$aColorHover: #326eb4;
+$aColorActive: #8f001e;
+// E 链接样式
+
+// S 文字被选中样式
+$selectionBgColor: #447099;
+$selectionColor: #fff;
+// E 文字被选中样式
+
+/* S 链接样式 S */
+a {
+  color: $aColor;
+  text-decoration: none
+}
+
+/* a标签还未被访问的状态 */
+a:link {
+
+}
+
+/* a标签已被访问过的状态 */
+a:visited {
+  color: $aColorVisited;
+}
+
+a:hover {
+  color: $aColorHover;
+  text-decoration: none;
+}
+
+a:active {
+  color: $aColorActive
+}
+
+/* E 链接样式 E */
+
+/* S 文字被选中样式 S */
+::selection {
+  background-color: $selectionBgColor;
+  color: $selectionColor;
+}
+
+::-moz-selection {
+  background: $selectionBgColor;
+  color: $selectionColor;
+}
+
+/* E 文字被选中样式 E */

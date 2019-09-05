@@ -4,6 +4,366 @@
  * @author Heanes
  * @time 2019-05-07 12:27:37 周二
  */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/**
+ * @doc 重设样式
+ * @author Heanes
+ * @time 2019-09-05 11:54:26 周四
+ */
+/**
+ * @doc Variables
+ * @author Heanes
+ * @time 2019-05-13 16:33:52 周一
+ */
+/* ****************************** Color 颜色 ****************************** */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Disabled base -------------------------- */
+/*  ****************************** Link 链接 ****************************** */
+/*  ****************************** Border 边框 ****************************** */
+/*  ****************************** Typography 书写 ****************************** */
+/*  ****************************** Size 大小 ****************************** */
+/* ****************************** Button 按钮 ****************************** */
+/* ****************************** Pagination 分页 ****************************** */
+/* ****************************** Break-point 响应式断点 ****************************** */
+/* ****************************** Break-point 响应式断点 ****************************** */
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+ol,
+ul,
+dl {
+  padding: 0;
+  margin: 0; }
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0; }
+
 /**
  * @doc 基础样式
  * @author Heanes
@@ -2990,18 +3350,20 @@ a {
     background-color: #fff;
     color: #303133;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.1em;
     vertical-align: middle; }
     .he-pagination .pagination-btn .page-link,
     .he-pagination .page-item .page-link {
       display: block;
       padding: 8px 12px;
-      color: inherit; }
+      color: inherit;
+      font-weight: 500; }
     .he-pagination .pagination-btn.current .page-link, .he-pagination .pagination-btn.ellipsis .page-link, .he-pagination .pagination-btn.disabled .page-link,
     .he-pagination .page-item.current .page-link,
     .he-pagination .page-item.ellipsis .page-link,
     .he-pagination .page-item.disabled .page-link {
-      cursor: default; }
+      cursor: default;
+      pointer-events: none; }
     .he-pagination .pagination-btn.ellipsis .page-link, .he-pagination .pagination-btn.disabled .page-link,
     .he-pagination .page-item.ellipsis .page-link,
     .he-pagination .page-item.disabled .page-link {
@@ -3058,5 +3420,111 @@ a {
     width: 50px;
     margin: 0 0 0 4px;
     vertical-align: middle; }
+
+/**
+ * @doc message 提示消息
+ * @author Heanes
+ * @time 2019-09-02 23:58:08 周一
+ */
+/************************ 局部消息样式 ************************/
+.message-wrap {
+  margin-bottom: 10px;
+  word-break: break-all;
+  /*&:last-child{
+    margin-bottom:0
+  }*/ }
+
+.message {
+  position: relative;
+  display: block;
+  border: 1px solid;
+  text-align: initial;
+  min-width: 300px;
+  /**
+   * @doc success 成功样式
+   */
+  /**
+   * @doc info 信息样式
+   */
+  /**
+   * @doc warning 警告样式
+   */
+  /**
+   * @doc error 错误样式
+   */ }
+  .message.message-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #c5e2ac; }
+    .message.message-success .message-content-section .message-icon-wrap {
+      background-color: #13ce66; }
+  .message.message-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1; }
+    .message.message-info .message-content-section .message-icon-wrap {
+      background-color: #50bfff; }
+  .message.message-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc; }
+    .message.message-warning .message-content-section .message-icon-wrap {
+      background-color: #f7ba2a; }
+  .message.message-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1; }
+    .message.message-error .message-content-section .message-icon-wrap {
+      background-color: #ff4949; }
+  .message .message-content-section {
+    display: table;
+    width: 100%; }
+    .message .message-content-section p {
+      margin: 0; }
+    .message .message-content-section .message-icon-wrap,
+    .message .message-content-section .message-content-wrap {
+      display: table-cell;
+      vertical-align: middle; }
+    .message .message-content-section .message-icon-wrap {
+      width: 64px;
+      height: 64px;
+      text-align: center;
+      padding: 14px; }
+      .message .message-content-section .message-icon-wrap .icon-background {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto; }
+    .message .message-content-section .message-content-wrap {
+      padding: 14px 40px 14px 14px; }
+      .message .message-content-section .message-content-wrap .message-title {
+        font-size: 1.4em;
+        line-height: 1em;
+        margin-bottom: 10px; }
+        .message .message-content-section .message-content-wrap .message-title h2 {
+          font-size: 1em;
+          margin-bottom: 0;
+          line-height: 1em; }
+  .message .message-handle-section .btn-close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 17px;
+    font-weight: 300;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #e48784;
+    color: #fff; }
+    .message .message-handle-section .btn-close:hover {
+      background-color: #d9534f;
+      color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

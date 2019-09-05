@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-wrap" slot="rightContent">
+  <div class="demo-wrap">
     <div class="page-title">
       <h1 class="title">Icon 图标</h1>
     </div>

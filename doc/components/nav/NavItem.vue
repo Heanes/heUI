@@ -5,7 +5,9 @@
 -->
 <template>
   <li class="nav-item__li">
-    <router-link v-if="path"
+    <router-link
+      v-if="path"
+      class="nav-link"
       active-class="active"
       exact-active-class="active"
       :to="path"
@@ -36,8 +38,7 @@ export default {
       default: ''
     }
   },
-  components: {
-  }
+  components: {}
 }
 </script>
 

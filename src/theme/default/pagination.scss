@@ -28,13 +28,14 @@
     background-color: $--pagination-bg-color;
     color: $--pagination-font-color;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.1em;
     vertical-align: middle;
 
     .page-link {
       display: block;
       padding: $--pagination-item-padding;
       color: inherit;
+      font-weight: 500;
     }
 
     &.current,
@@ -42,6 +43,7 @@
     &.disabled {
       .page-link{
         cursor: default;
+        pointer-events: none;
       }
     }
     &.ellipsis,

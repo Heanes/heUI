@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-wrap demo-layout" slot="rightContent">
+  <div class="demo-wrap demo-layout">
     <div class="page-title">
       <h1 class="title">Layout 布局</h1>
     </div>

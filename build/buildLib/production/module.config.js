@@ -1,6 +1,6 @@
 const config = require('../config/config.js');
 
-let modulesConfig = require('../base/module.config.js');
+const modulesConfig = require('../base/module.config.js');
 
 // @see https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -19,7 +19,7 @@ modulesConfig.rules.push(
       {
         loader: 'css-loader',
         options: {
-          sourceMap: true,
+          sourceMap: true
         }
       },
       // @see https://github.com/postcss/postcss-loader
@@ -30,7 +30,7 @@ modulesConfig.rules.push(
             path: 'build/config/'
 
           },
-          sourceMap: true,
+          sourceMap: true
         }
       },
       'sass-loader'

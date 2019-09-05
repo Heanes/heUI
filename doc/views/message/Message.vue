@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-wrap" slot="rightContent">
+  <div class="demo-wrap">
     <div class="page-title">
       <h1 class="title">标题</h1>
     </div>
@@ -22,7 +22,7 @@
             <p>示例项描述</p>
           </div>
           <div class="demo-item__content">
-            <p>示例内容</p>
+            <he-message></he-message>
           </div>
         </div>
         <div class="demo-item">

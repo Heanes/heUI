@@ -31,3 +31,6 @@ $--breakpoints-spec: (
   'lg-and-down': (max-width: $--xl - 1),
   'xl-only' : (min-width: $--xl),
 );
+
+$--header-height: 60px;
+$--left-side-width: 240px;

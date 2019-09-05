@@ -1,5 +1,5 @@
 const path = require('path');
-let dirs = {};
+const dirs = {};
 
 dirs.distDirName        = 'dist';
 dirs.srcRootDirName     = 'src';
@@ -23,7 +23,7 @@ dirs.publicDir     = path.resolve(dirs.srcRootDir, './' + dirs.publicDirName);  
 dirs.componentsDir = path.resolve(dirs.srcRootDir, './' + dirs.componentsDirName);  // 存放组件，可以是纯HTML，也可以包含js/css/image等，看自己需要
 
 // 生成文件目录
-dirs.distDir = path.resolve(dirs.rootDir, './' + dirs.distDirName);                 // 存放编译后生成的所有代码、资源（图片、字体等，虽然只是简单的从源目录迁移过来）
+dirs.distDir = path.resolve(dirs.docRootDir, './' + dirs.distDirName);                 // 存放编译后生成的所有代码、资源（图片、字体等，虽然只是简单的从源目录迁移过来）
 
 // console.log('----------------------------------------');
 // console.log('dirs:\n', dirs);

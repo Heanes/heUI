@@ -99,18 +99,20 @@
     background-color: #fff;
     color: #303133;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.1em;
     vertical-align: middle; }
     .he-pagination .pagination-btn .page-link,
     .he-pagination .page-item .page-link {
       display: block;
       padding: 8px 12px;
-      color: inherit; }
+      color: inherit;
+      font-weight: 500; }
     .he-pagination .pagination-btn.current .page-link, .he-pagination .pagination-btn.ellipsis .page-link, .he-pagination .pagination-btn.disabled .page-link,
     .he-pagination .page-item.current .page-link,
     .he-pagination .page-item.ellipsis .page-link,
     .he-pagination .page-item.disabled .page-link {
-      cursor: default; }
+      cursor: default;
+      pointer-events: none; }
     .he-pagination .pagination-btn.ellipsis .page-link, .he-pagination .pagination-btn.disabled .page-link,
     .he-pagination .page-item.ellipsis .page-link,
     .he-pagination .page-item.disabled .page-link {
