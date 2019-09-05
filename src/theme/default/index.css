@@ -354,7 +354,9 @@ html {
 
 ol,
 ul,
-dl {
+dl,
+dt,
+dd {
   padding: 0;
   margin: 0; }
 
