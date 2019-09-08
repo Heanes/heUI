@@ -54,6 +54,10 @@ export default new Router({
           path: 'button',
           component: () => import(/* webpackChunkName: "button" */ '../views/button/Button.vue')
         },
+        {
+          path: 'scrollbar',
+          component: () => import(/* webpackChunkName: "scrollbar" */ '../views/scrollbar/Scrollbar.vue')
+        },
         // # form 表单
         {
           path: 'input',

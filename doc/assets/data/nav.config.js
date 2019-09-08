@@ -38,6 +38,10 @@ const nav = {
             {
               name: 'Button 按钮',
               path: '/component/button'
+            },
+            {
+              name: 'Scrollbar 滚动条',
+              path: '/component/scrollbar'
             }
           ]
         },

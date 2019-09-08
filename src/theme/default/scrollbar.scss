@@ -1,6 +1,106 @@
 @charset "UTF-8";
 /**
- * @doc scrollbar 滚动条样式
+ * @doc scrollbar 滚动条
+ * @see CSS3自定义滚动条样式 -webkit-scrollbar - 轩枫阁 – 前端开发 | web前端技术博客
+ * @see http://www.xuanfengge.com/css3-webkit-scrollbar.html
+ * @see 移动端隐藏scroll滚动条::-webkit-scrollbar - 杨博客 - 博客园
+ * @see http://www.cnblogs.com/520yang/articles/5098352.html
  * @author Heanes
  * @time 2019-09-05 17:05:47 周四
  */
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+@include b(scrollbar){
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $scrollbar-box-shadow-color;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background: $scrollbar-bg;
+    border-radius: 10px;
+    background-clip: padding-box;
+  }
+
+  /**
+   * @doc 窄小型的
+   * @author Heanes
+   * @time 2017-03-01 11:11:07 周三
+   */
+  @include m(small){
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px $scrollbar-box-shadow-color;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      min-height: 20px;
+      background: $scrollbar-bg;
+      border-radius: 3px;
+    }
+  }
+
+  /**
+   * @doc 窄小型的
+   * @author Heanes
+   * @time 2017-03-01 11:11:07 周三
+   */
+  @include m(mini){
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px $scrollbar-box-shadow-color;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      min-height: 20px;
+      background: $scrollbar-bg;
+      border-radius: 3px;
+    }
+  }
+
+  /**
+   * doc 鼠标浮上时才显示
+   * @author Heanes
+   * @time 2017-03-01 12:02:26 周三
+   */
+  @include m(hover) {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track {
+      visibility: hidden;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-button,
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar-track {
+        visibility: visible;
+      }
+    }
+  }
+}

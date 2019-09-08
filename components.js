@@ -12,6 +12,9 @@ module.exports = {
   // Icon 图标
   icon: './src/components/icon/index.js',
 
+  // Scrollbar 滚动条
+  scrollbar: './src/components/scrollbar/index.js',
+
   /*
    * @doc Form 表单
    */

@@ -191,6 +191,12 @@ $--input-height-mini: 24px;
 $--input-disabled-fill: $--disabled-fill-base !default;
 
 
+// scrollbar 滚动条相关
+$scrollbar-bg:              rgba(0,0,0,.39);
+$scrollbar-box-shadow-color:rgba(0, 0, 0,.3);
+
+// 不同粗细的滚动条
+
 /* ****************************** Break-point 响应式断点 ****************************** */
 $--sm: 768px !default;
 $--md: 992px !default;

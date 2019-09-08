@@ -5,6 +5,7 @@ import Col from './components/col/index.js';
 import ButtonGroup from './components/button-group/index.js';
 import Button from './components/button/index.js';
 import Icon from './components/icon/index.js';
+import Scrollbar from './components/scrollbar/index.js';
 import Input from './components/input/index.js';
 import Select from './components/select/index.js';
 import Option from './components/option/index.js';
@@ -22,6 +23,7 @@ const components = [
   ButtonGroup,
   Button,
   Icon,
+  Scrollbar,
   Input,
   Select,
   Option,
@@ -52,6 +54,7 @@ export default {
   ButtonGroup,
   Button,
   Icon,
+  Scrollbar,
   Input,
   Select,
   Option,
