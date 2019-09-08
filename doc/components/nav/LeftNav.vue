@@ -4,7 +4,7 @@
   @time 2019-06-14 22:48:22 周五
 -->
 <template>
-  <div class="menu-nav-wrap">
+  <div class="menu-nav-wrap he-scrollbar--mini he-scrollbar--hover">
     <ul class="menu-nav__ul">
       <li class="nav-item__li" v-for="(item, index) in navGroupLit" :key="index">
         <a class="nav-link" v-if="!item.path && !item.href">{{item.name}}</a>
