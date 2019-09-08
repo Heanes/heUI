@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";AACA;;;;GAIG;ACJH;;;;GAIG;AACH,4EAA4E;AAaG,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AACZ,YAAY;AAqC3F,8CAA8C;AAM9C,4EAA4E;AAE5E,8EAA8E;AAQ9E,kFAAkF;AAQlF,4EAA4E;AAG5E,6EAA6E;AAuE7E,iFAAiF;AAoBjF,qFAAqF;AAWrF,qFAAqF",
-"sources": ["color.scss","../../../../src/theme/default/common/var.scss"],
-"names": [],
-"file": "color.css"
-}
