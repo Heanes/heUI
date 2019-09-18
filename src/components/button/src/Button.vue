@@ -1,7 +1,7 @@
 <template>
   <button
-    class="he-button"
     :class="[
+    'he-button',
     type ? 'he-button' + '--' + type : '',
     buttonSize ? 'he-button--' + buttonSize : '',
       {

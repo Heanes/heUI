@@ -4,168 +4,168 @@
  * @author Heanes
  * @time 2019-09-02 23:58:08 周一
  */
-$messageSuccessColor: #3c763d;
-$messageSuccessBgColor: #dff0d8;
-$messageSuccessBorderColor: #c5e2ac;
-$messageSuccessIconBgColor: #13ce66;
+@import "./mixins/mixins.scss";
+@import "common/var";
 
-$messageInfoColor: #31708f;
-$messageInfoBgColor: #d9edf7;
-$messageInfoBorderColor: #bce8f1;
-$messageInfoIconBgColor: #50bfff;
+$--message-border-radius: 4px;
+$--message-success-color: #3c763d;
+$--message-success-bg-color: #dff0d8;
+$--message-success-border-color: #c5e2ac;
+$--message-success-icon-bg-color: #13ce66;
 
-$messageWarnColor: #8a6d3b;
-$messageWarnBgColor: #fcf8e3;
-$messageWarnBorderColor: #faebcc;
-$messageWarnIconBgColor: #f7ba2a;
+$--message-info-color: #31708f;
+$--message-info-bg-color: #d9edf7;
+$--message-info-border-color: #bce8f1;
+$--message-info-icon-bg-color: #50bfff;
 
-$messageErrorColor: #a94442;
-$messageErrorBgColor: #f2dede;
-$messageErrorBorderColor: #ebccd1;
-$messageErrorIconBgColor: #ff4949;
+$--message-warn-color: #8a6d3b;
+$--message-warn-bg-color: #fcf8e3;
+$--message-warn-border-color: #faebcc;
+$--message-warn-icon-bg-color: #f7ba2a;
 
-/************************ 局部消息样式 ************************/
+$--message-error-color: #a94442;
+$--message-error-bg-color: #f2dede;
+$--message-error-border-color: #ebccd1;
+$--message-error-icon-bg-color: #ff4949;
 
-.message-wrap{
-  margin-bottom:10px;
-  word-break:break-all;
-  /*&:last-child{
-    margin-bottom:0
-  }*/
+// 进入的动画时间
+$--message-transition-opacity-seconds: 0.3s;
+$--message-transition-transform-seconds: 0.4s;
+$--message-transition-top-seconds: 0.4s;
+
+/************************ message 消息样式 ************************/
+@include b(message-global-container) {
+  word-break: break-all;
+  position: fixed;
+  width: 100%;
+  top: 20px;
+  text-align: center;
+  pointer-events: none; // 此处很重要，避免100%宽度的div遮挡底下内容
 }
 
-.message{
-  position:relative;
-  display:block;
-  border:1px solid;
-  text-align:initial;
-  min-width:300px;
-
-  // success 成功样式
-  /**
-   * @doc success 成功样式
-   */
-  &.message-success{
-    color:$messageSuccessColor;
-    background-color:$messageSuccessBgColor;
-    border-color:$messageSuccessBorderColor;
-    .message-content-section{
-      .message-icon-wrap{
-        background-color:$messageSuccessIconBgColor;
-      }
-    }
+@include b(message-fade) {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translate(0, -100%);
   }
 
-  // info 信息样式
-  /**
-   * @doc info 信息样式
-   */
-  &.message-info{
-    color:$messageInfoColor;
-    background-color:$messageInfoBgColor;
-    border-color:$messageInfoBorderColor;
-    .message-content-section{
-      .message-icon-wrap{
-        background-color:$messageInfoIconBgColor;
-      }
-    }
-  }
+}
 
-  // warning 警告样式
-  /**
-   * @doc warning 警告样式
-   */
-  &.message-warning{
-    color:$messageWarnColor;
-    background-color:$messageWarnBgColor;
-    border-color:$messageWarnBorderColor;
-    .message-content-section{
-      .message-icon-wrap{
-        background-color:$messageWarnIconBgColor;
-      }
-    }
-  }
+@include b(message-container) {
+  margin-bottom: 4px;
+  position: relative;
+  transition: opacity $--message-transition-opacity-seconds, transform $--message-transition-transform-seconds, top $--message-transition-top-seconds;
 
-  // error 错误样式
-  /**
-   * @doc error 错误样式
-   */
-  &.message-error{
-    color:$messageErrorColor;
-    background-color:$messageErrorBgColor;
-    border-color:$messageErrorBorderColor;
-    .message-content-section{
-      .message-icon-wrap{
-        background-color:$messageErrorIconBgColor;
-      }
-    }
-  }
+  @include b(message) {
+    position: relative;
+    display: inline-block;
+    border: 1px solid;
+    text-align: initial;
+    pointer-events: all; // 此处很重要
+    //left: 50%;
+    //transform: translateX(-50%);
+    min-width: 300px;
+    max-width: 96%;
+    min-height: 30px;
+    padding: 8px 30px 8px 8px;
+    border-radius: $--message-border-radius;
+    //box-shadow: 0 0 6px rgba(152, 152, 152, 0.3);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 
-  // message 内容
-  .message-content-section{
-    display:table;
-    width:100%;
-    p{
-      margin:0;
-    }
+    /**
+     * @doc success 成功样式
+     */
+    @include m(success) {
+      color: $--message-success-color;
+      background-color: $--message-success-bg-color;
+      border-color: $--message-success-border-color;
 
-    .message-icon-wrap,
-    .message-content-wrap{
-      display:table-cell;
-      vertical-align:middle;
-    }
-
-    .message-icon-wrap{
-      width:64px;
-      height:64px;
-      text-align:center;
-      padding:14px;
-      .icon-background{
-        width:30px;
-        height:30px;
-        line-height:30px;
-        border-radius:50%;
-        background-color:#fff;
-        margin:0 auto;
-      }
-    }
-
-    .message-content-wrap{
-      padding:14px 40px 14px 14px;
-      .message-title{
-        font-size:1.4em;
-        line-height:1em;
-        margin-bottom:10px;
-        & h2{
-          font-size:1em;
-          margin-bottom:0;
-          line-height:1em;
+      .he-message-content-section {
+        .he-message-icon-wrap {
+          background-color: $--message-success-icon-bg-color;
         }
       }
     }
-  }
 
-  // message 操作区
-  .message-handle-section{
-    .btn-close{
-      position:absolute;
-      right:2px;
-      top:2px;
-      font-size:17px;
-      font-weight:300;
-      height:20px;
-      width:20px;
-      line-height:20px;
-      text-align:center;
-      vertical-align:middle;
-      font-family:arial, sans-serif;
-      cursor:pointer;
-      border-radius:50%;
-      background-color:#e48784;
-      color:#fff;
-      &:hover{
-        background-color:#d9534f;
-        color:#fff
+    /**
+     * @doc info 信息样式
+     */
+    @include m(info) {
+      color: $--message-info-color;
+      background-color: $--message-info-bg-color;
+      border-color: $--message-info-border-color;
+
+      .he-message-content-section {
+        .he-message-icon-wrap {
+          background-color: $--message-info-icon-bg-color;
+        }
+      }
+    }
+
+    /**
+     * @doc warning 警告样式
+     */
+    @include m(warning) {
+      color: $--message-warn-color;
+      background-color: $--message-warn-bg-color;
+      border-color: $--message-warn-border-color;
+
+      .he-message-content-section {
+        .he-message-icon-wrap {
+          background-color: $--message-warn-icon-bg-color;
+        }
+      }
+    }
+
+    // error 错误样式
+    /**
+     * @doc error 错误样式
+     */
+    @include m(error) {
+      color: $--message-error-color;
+      background-color: $--message-error-bg-color;
+      border-color: $--message-error-border-color;
+
+      .he-message-content-section {
+        .he-message-icon-wrap {
+          background-color: $--message-error-icon-bg-color;
+        }
+      }
+    }
+
+    // message 内容
+    .he-message-content-section {
+      display: inline-block;
+
+      .he-message-type-icon{
+        vertical-align: middle;
+      }
+      .he-message-content {
+        display: inline;
+        vertical-align: middle;
+        word-break: break-all;
+      }
+    }
+
+    // message 操作区
+    .he-message-handle-section {
+      .handle-btn-close {
+        position: absolute;
+        right: 4px;
+        top: 10px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 50%;
+        color: #888;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #d9534f;
+          color: #fff;
+          font-weight: 600;
+          font-size: 12px;
+        }
       }
     }
   }

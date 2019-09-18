@@ -82,14 +82,22 @@ export default new Router({
           path: 'table',
           component: () => import(/* webpackChunkName: "table" */ '../views/table/Table.vue')
         },
-        {
-          path: 'modal',
-          component: () => import(/* webpackChunkName: "modal" */ '../views/tabs/Tabs.vue')
-        },
         // notice 提示
+        {
+          path: 'alert',
+          component: () => import(/* webpackChunkName: "alert" */ '../views/alert/Alert.vue')
+        },
         {
           path: 'message',
           component: () => import(/* webpackChunkName: "message" */ '../views/message/Message.vue')
+        },
+        {
+          path: 'notification',
+          component: () => import(/* webpackChunkName: "notification" */ '../views/notification/Notification.vue')
+        },
+        {
+          path: 'modal',
+          component: () => import(/* webpackChunkName: "modal" */ '../views/tabs/Tabs.vue')
         },
         // navigation 导航
         {

@@ -40,6 +40,8 @@ const install = function(Vue, opts = {}) {
   components.forEach(component => {
     Vue.component(component.name, component);
   });
+
+  Vue.prototype.$message = Message;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {

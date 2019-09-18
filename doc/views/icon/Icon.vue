@@ -42,7 +42,7 @@
                 <he-icon name="Dollar"></he-icon>
               </li>
               <li class="icon-list-item">
-                <he-icon name=""></he-icon>
+                <he-icon name="close"></he-icon>
               </li>
               <li class="icon-list-item">
                 <he-icon name=""></he-icon>

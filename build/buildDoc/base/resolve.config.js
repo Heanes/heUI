@@ -7,7 +7,8 @@ module.exports = {
   alias: {
     // 定义src源目录别名
     '@': config.dirs.docRootDir,
-    '~': config.dirs.rootDir
+    '~': config.dirs.rootDir,
+    'he-ui-vue': config.dirs.rootDir  // 这里可以在doc中import he-ui-vue
   },
   extensions: ['.js', '.json', '.vue']
 };

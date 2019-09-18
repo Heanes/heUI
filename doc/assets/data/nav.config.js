@@ -87,8 +87,8 @@ const nav = {
               path: '/component/message'
             },
             {
-              name: 'Notice 通知',
-              path: '/component/notice'
+              name: 'Notification 通知',
+              path: '/component/notification'
             }
           ]
         },
