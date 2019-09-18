@@ -49,10 +49,10 @@ const components = [
 const install = function(Vue, opts = {}) {
   components.forEach(component => {
     Vue.component(component.name, component);
-    Vue.prototype.$message = Message;
-    Vue.prototype.$alert = Alert;
-    Vue.prototype.$tip = Alert;
   });
+  Vue.prototype.$message = Message;
+  Vue.prototype.$alert = Alert;
+  Vue.prototype.$tip = Alert;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
