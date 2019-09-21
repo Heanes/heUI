@@ -21,5 +21,10 @@ npm run clean 清空编译目标目录
 ```
 
 ## 构建库相关说明
+
 1. 先buildLibEntry，根据`./components.js`生成入口`./src/index.js`
 2. 
+
+## todo
+
+1. css构建生成

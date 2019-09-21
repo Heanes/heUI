@@ -7,32 +7,6 @@
 @import "./mixins/mixins.scss";
 @import "common/var";
 
-$--message-border-radius: 4px;
-$--message-success-color: #3c763d;
-$--message-success-bg-color: #dff0d8;
-$--message-success-border-color: #c5e2ac;
-$--message-success-icon-bg-color: #13ce66;
-
-$--message-info-color: #31708f;
-$--message-info-bg-color: #d9edf7;
-$--message-info-border-color: #bce8f1;
-$--message-info-icon-bg-color: #50bfff;
-
-$--message-warn-color: #8a6d3b;
-$--message-warn-bg-color: #fcf8e3;
-$--message-warn-border-color: #faebcc;
-$--message-warn-icon-bg-color: #f7ba2a;
-
-$--message-error-color: #a94442;
-$--message-error-bg-color: #f2dede;
-$--message-error-border-color: #ebccd1;
-$--message-error-icon-bg-color: #ff4949;
-
-// 进入的动画时间
-$--message-transition-opacity-seconds: 0.3s;
-$--message-transition-transform-seconds: 0.4s;
-$--message-transition-top-seconds: 0.4s;
-
 /************************ message 消息样式 ************************/
 @include b(message-global-container) {
   word-break: break-all;
@@ -41,15 +15,6 @@ $--message-transition-top-seconds: 0.4s;
   top: 20px;
   text-align: center;
   pointer-events: none; // 此处很重要，避免100%宽度的div遮挡底下内容
-}
-
-@include b(message-fade) {
-  &-enter,
-  &-leave-to {
-    opacity: 0;
-    transform: translate(0, -100%);
-  }
-
 }
 
 @include b(message-container) {
@@ -68,7 +33,7 @@ $--message-transition-top-seconds: 0.4s;
     min-width: 300px;
     max-width: 96%;
     min-height: 30px;
-    padding: 8px 30px 8px 8px;
+    padding: 8px 30px 8px 14px;
     border-radius: $--message-border-radius;
     //box-shadow: 0 0 6px rgba(152, 152, 152, 0.3);
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
@@ -107,13 +72,13 @@ $--message-transition-top-seconds: 0.4s;
      * @doc warning 警告样式
      */
     @include m(warning) {
-      color: $--message-warn-color;
-      background-color: $--message-warn-bg-color;
-      border-color: $--message-warn-border-color;
+      color: $--message-warning-color;
+      background-color: $--message-warning-bg-color;
+      border-color: $--message-warning-border-color;
 
       .he-message-content-section {
         .he-message-icon-wrap {
-          background-color: $--message-warn-icon-bg-color;
+          background-color: $--message-warning-icon-bg-color;
         }
       }
     }
@@ -168,5 +133,14 @@ $--message-transition-top-seconds: 0.4s;
         }
       }
     }
+  }
+}
+
+// 过渡动画样式
+@include b(message-fade) {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translate(0, -100%);
   }
 }

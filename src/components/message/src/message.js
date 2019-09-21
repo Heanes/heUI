@@ -41,6 +41,19 @@ const Message = function(options) {
   return instance;
 };
 
+// 补充快捷方法
+['info', 'success', 'warning', 'error'].forEach(type => {
+  Message[type] = options => {
+    if (typeof options === 'string') {
+      options = {
+        message: options
+      };
+    }
+    options.type = type;
+    return Message(options);
+  };
+});
+
 /**
  * @doc 关闭方法
  */

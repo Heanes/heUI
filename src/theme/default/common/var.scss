@@ -9,29 +9,116 @@ $--color-white: #fff !default;
 $--color-black: #000 !default;
 $--color-transparent: transparent !default;
 $--color-default: #333 !default;
-$--color-primary: #40a9ff !default;
+$--color-primary: #1890ff !default;
 /// 场景色
 $--color-success: #38b03f !default;
-$--color-info: #03b8cf !default;
-$--color-warning: #f1a325 !default;
-$--color-danger: #ca6451 !default;
+$--color-info: #13c2c2 !default;
+$--color-warning: #faad14 !default;
+$--color-danger: #ff4d4f !default;
 
 /// 不同级别的主色颜色
-$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
-$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
-$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
-$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
-$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
-$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
-$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
-$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
-$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+$--color-primary-dark-9: darken($--color-primary, 90%) !default;
+$--color-primary-dark-8: darken($--color-primary, 80%) !default;
+$--color-primary-dark-7: darken($--color-primary, 70%) !default;
+$--color-primary-dark-6: darken($--color-primary, 60%) !default;
+$--color-primary-dark-5: darken($--color-primary, 50%) !default;
+$--color-primary-dark-4: darken($--color-primary, 40%) !default;
+$--color-primary-dark-3: darken($--color-primary, 30%) !default;
+$--color-primary-dark-2: darken($--color-primary, 20%) !default;
+$--color-primary-dark-1: darken($--color-primary, 10%) !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
 /// 不同级别的场景色
-//// 浅色
+//// success
+$--color-success-dark-9: darken($--color-success, 90%) !default;
+$--color-success-dark-8: darken($--color-success, 80%) !default;
+$--color-success-dark-7: darken($--color-success, 70%) !default;
+$--color-success-dark-6: darken($--color-success, 60%) !default;
+$--color-success-dark-5: darken($--color-success, 50%) !default;
+$--color-success-dark-4: darken($--color-success, 40%) !default;
+$--color-success-dark-3: darken($--color-success, 30%) !default;
+$--color-success-dark-2: darken($--color-success, 20%) !default;
+$--color-success-dark-1: darken($--color-success, 10%) !default;
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-light-1: mix($--color-white, $--color-success, 10%) !default;
+$--color-success-light-2: mix($--color-white, $--color-success, 20%) !default;
+$--color-success-light-3: mix($--color-white, $--color-success, 30%) !default;
+$--color-success-light-4: mix($--color-white, $--color-success, 40%) !default;
+$--color-success-light-5: mix($--color-white, $--color-success, 50%) !default;
+$--color-success-light-6: mix($--color-white, $--color-success, 60%) !default;
+$--color-success-light-7: mix($--color-white, $--color-success, 70%) !default;
+$--color-success-light-8: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-light-9: mix($--color-white, $--color-success, 90%) !default;
+
+//// info
+$--color-info-dark-9: darken($--color-info, 90%) !default;
+$--color-info-dark-8: darken($--color-info, 80%) !default;
+$--color-info-dark-7: darken($--color-info, 70%) !default;
+$--color-info-dark-6: darken($--color-info, 60%) !default;
+$--color-info-dark-5: darken($--color-info, 50%) !default;
+$--color-info-dark-4: darken($--color-info, 40%) !default;
+$--color-info-dark-3: darken($--color-info, 30%) !default;
+$--color-info-dark-2: darken($--color-info, 20%) !default;
+$--color-info-dark-1: darken($--color-info, 10%) !default;
 $--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-light-1: mix($--color-white, $--color-info, 10%) !default;
+$--color-info-light-2: mix($--color-white, $--color-info, 20%) !default;
+$--color-info-light-3: mix($--color-white, $--color-info, 30%) !default;
+$--color-info-light-4: mix($--color-white, $--color-info, 40%) !default;
+$--color-info-light-5: mix($--color-white, $--color-info, 50%) !default;
+$--color-info-light-6: mix($--color-white, $--color-info, 60%) !default;
+$--color-info-light-7: mix($--color-white, $--color-info, 70%) !default;
+$--color-info-light-8: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-light-9: mix($--color-white, $--color-info, 90%) !default;
+
+//// warning
+$--color-warning-dark-9: darken($--color-warning, 90%) !default;
+$--color-warning-dark-8: darken($--color-warning, 80%) !default;
+$--color-warning-dark-7: darken($--color-warning, 70%) !default;
+$--color-warning-dark-6: darken($--color-warning, 60%) !default;
+$--color-warning-dark-5: darken($--color-warning, 50%) !default;
+$--color-warning-dark-4: darken($--color-warning, 40%) !default;
+$--color-warning-dark-3: darken($--color-warning, 30%) !default;
+$--color-warning-dark-2: darken($--color-warning, 20%) !default;
+$--color-warning-dark-1: darken($--color-warning, 10%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-light-1: mix($--color-white, $--color-warning, 10%) !default;
+$--color-warning-light-2: mix($--color-white, $--color-warning, 20%) !default;
+$--color-warning-light-3: mix($--color-white, $--color-warning, 30%) !default;
+$--color-warning-light-4: mix($--color-white, $--color-warning, 40%) !default;
+$--color-warning-light-5: mix($--color-white, $--color-warning, 50%) !default;
+$--color-warning-light-6: mix($--color-white, $--color-warning, 60%) !default;
+$--color-warning-light-7: mix($--color-white, $--color-warning, 70%) !default;
+$--color-warning-light-8: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-light-9: mix($--color-white, $--color-warning, 90%) !default;
+
+//// danger
+$--color-danger-dark-9: darken($--color-danger, 90%) !default;
+$--color-danger-dark-8: darken($--color-danger, 80%) !default;
+$--color-danger-dark-7: darken($--color-danger, 70%) !default;
+$--color-danger-dark-6: darken($--color-danger, 60%) !default;
+$--color-danger-dark-5: darken($--color-danger, 50%) !default;
+$--color-danger-dark-4: darken($--color-danger, 40%) !default;
+$--color-danger-dark-3: darken($--color-danger, 30%) !default;
+$--color-danger-dark-2: darken($--color-danger, 20%) !default;
+$--color-danger-dark-1: darken($--color-danger, 10%) !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-light-1: mix($--color-white, $--color-danger, 10%) !default;
+$--color-danger-light-2: mix($--color-white, $--color-danger, 20%) !default;
+$--color-danger-light-3: mix($--color-white, $--color-danger, 30%) !default;
+$--color-danger-light-4: mix($--color-white, $--color-danger, 40%) !default;
+$--color-danger-light-5: mix($--color-white, $--color-danger, 50%) !default;
+$--color-danger-light-6: mix($--color-white, $--color-danger, 60%) !default;
+$--color-danger-light-7: mix($--color-white, $--color-danger, 70%) !default;
+$--color-danger-light-8: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-light-9: mix($--color-white, $--color-danger, 90%) !default;
 //// 更浅色
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
 $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
@@ -179,6 +266,63 @@ $--pagination-border-radius: 4px;
 
 $--pagination-item-margin: 6px !default;
 $--pagination-item-padding: 8px 12px !default;
+
+/* ****************************** Message 反馈 ****************************** */
+// ** Message 提示
+$--message-border-radius: 4px !default;
+$--message-success-color: $--color-success !default;
+$--message-success-bg-color: $--color-success-light-9 !default;
+$--message-success-border-color: $--color-success-light-7 !default;
+$--message-success-icon-bg-color: $--color-success-light-7 !default;
+
+$--message-info-color: $--color-info;
+$--message-info-bg-color: $--color-info-light-9 !default;
+$--message-info-border-color: $--color-info-light-7 !default;
+$--message-info-icon-bg-color: $--color-info-light-7 !default;
+
+$--message-warning-color: $--color-warning;
+$--message-warning-bg-color: $--color-warning-light-9 !default;
+$--message-warning-border-color: $--color-warning-light-7 !default;
+$--message-warning-icon-bg-color: $--color-warning-light-7 !default;
+
+$--message-error-color: $--color-danger !default;
+$--message-error-bg-color: $--color-danger-light-9 !default;
+$--message-error-border-color: $--color-danger-light-7 !default;
+$--message-error-icon-bg-color: $--color-danger-light-7 !default;
+
+// 进入的动画时间
+$--message-transition-opacity-seconds: 0.3s;
+$--message-transition-transform-seconds: 0.4s;
+$--message-transition-top-seconds: 0.4s;
+
+// ** Alert 警告
+$--alert-between-margin-bottom: 10px;
+$--alert-border-radius: 4px;
+
+$--alert-success-color: $--color-success;
+$--alert-success-bg-color: $--color-success-light-9;
+$--alert-success-border-color: $--color-success-light-4;
+$--alert-success-icon-bg-color: $--color-success-light-4;
+
+$--alert-info-color: $--color-primary;
+$--alert-info-bg-color: $--color-primary-light-9;
+$--alert-info-border-color: $--color-primary-light-4;
+$--alert-info-icon-bg-color: $--color-primary-light-4;
+
+$--alert-warning-color: $--color-warning;
+$--alert-warning-bg-color: $--color-warning-light-9;
+$--alert-warning-border-color: $--color-warning-light-4;
+$--alert-warning-icon-bg-color: $--color-warning-light-4;
+
+$--alert-error-color: $--color-danger;
+$--alert-error-bg-color: $--color-danger-light-9;
+$--alert-error-border-color: $--color-danger-light-4;
+$--alert-error-icon-bg-color: $--color-danger-light-4;
+
+// 进入的动画时间
+$--alert-transition-opacity-seconds: 0.3s;
+$--alert-transition-transform-seconds: 0.4s;
+$--alert-transition-top-seconds: 0.4s;
 
 /* ****************************** Break-point 响应式断点 ****************************** */
 $--input-height-large: 42px;

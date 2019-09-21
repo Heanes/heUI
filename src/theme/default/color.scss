@@ -23,6 +23,7 @@
     background-color: $--color-danger;
   }
 
+  // ---------- primary
   @include m(primary-light-1){
     background-color: $--color-primary-light-1;
   }
@@ -51,17 +52,96 @@
     background-color: $--color-primary-light-9;
   }
 
+  // ---------- success
   @include m(success-light){
     background-color: $--color-success-light;
   }
+  @include m(success-light-1){
+    background-color: $--color-success-light-1;
+  }
+  @include m(success-light-2){
+    background-color: $--color-success-light-2;
+  }
+  @include m(success-light-3){
+    background-color: $--color-success-light-3;
+  }
+  @include m(success-light-4){
+    background-color: $--color-success-light-4;
+  }
+  @include m(success-light-5){
+    background-color: $--color-success-light-5;
+  }
+  @include m(success-light-6){
+    background-color: $--color-success-light-6;
+  }
+
+  // ---------- info
   @include m(info-light){
     background-color: $--color-info-light;
   }
+  @include m(info-light-1){
+    background-color: $--color-info-light-1;
+  }
+  @include m(info-light-2){
+    background-color: $--color-info-light-2;
+  }
+  @include m(info-light-3){
+    background-color: $--color-info-light-3;
+  }
+  @include m(info-light-4){
+    background-color: $--color-info-light-4;
+  }
+  @include m(info-light-5){
+    background-color: $--color-info-light-5;
+  }
+  @include m(info-light-6){
+    background-color: $--color-info-light-6;
+  }
+
+  // ---------- danger
   @include m(danger-light){
     background-color: $--color-danger-light;
   }
+  @include m(danger-light-1){
+    background-color: $--color-danger-light-1;
+  }
+  @include m(danger-light-2){
+    background-color: $--color-danger-light-2;
+  }
+  @include m(danger-light-3){
+    background-color: $--color-danger-light-3;
+  }
+  @include m(danger-light-4){
+    background-color: $--color-danger-light-4;
+  }
+  @include m(danger-light-5){
+    background-color: $--color-danger-light-5;
+  }
+  @include m(danger-light-6){
+    background-color: $--color-danger-light-6;
+  }
+
+  // ---------- warning
   @include m(warning-light){
     background-color: $--color-warning-light;
+  }
+  @include m(warning-light-1){
+    background-color: $--color-warning-light-1;
+  }
+  @include m(warning-light-2){
+    background-color: $--color-warning-light-2;
+  }
+  @include m(warning-light-3){
+    background-color: $--color-warning-light-3;
+  }
+  @include m(warning-light-4){
+    background-color: $--color-warning-light-4;
+  }
+  @include m(warning-light-5){
+    background-color: $--color-warning-light-5;
+  }
+  @include m(warning-light-6){
+    background-color: $--color-warning-light-6;
   }
 
   @include m(success-lighter){

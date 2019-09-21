@@ -8,31 +8,68 @@
 @import "common/var";
 
 @include b(alert){
-  padding: 8px 15px 8px 37px;
+  position: relative;
+  padding: 8px 30px 8px 14px;
   border-radius: 4px;
+  border: 1px solid;
+  transition: opacity $--alert-transition-opacity-seconds;
 
   & + .he-alert{
-    margin-top: 10px;
+    margin-top: $--alert-between-margin-bottom;
   }
 
   @include m(success){
-    background-color: #f6ffed;
-    border: 1px solid #b7eb8f;
+    color: $--alert-success-color;
+    background-color: $--alert-success-bg-color;
+    border-color: $--alert-success-border-color;
+    .he-alert-type-icon{
+      color: $--alert-success-icon-bg-color;
+    }
   }
 
   @include m(info){
-    background-color: #e6f7ff;
-    border: 1px solid #91d5ff;
+    color: $--alert-info-color;
+    background-color: $--alert-info-bg-color;
+    border-color: $--alert-info-border-color;
+    .he-alert-type-icon{
+      color: $--alert-info-icon-bg-color;
+    }
   }
 
   @include m(warning){
-    background-color: #fffbe6;
-    border: 1px solid #ffe58f;
+    color: $--alert-warning-color;
+    background-color: $--alert-warning-bg-color;
+    border-color: $--alert-warning-border-color;
+    .he-alert-type-icon{
+      color: $--alert-warning-icon-bg-color;
+    }
   }
 
   @include m(error){
-    background-color: #fff1f0;
-    border: 1px solid #ffa39e;
+    color: $--alert-error-color;
+    background-color: $--alert-error-bg-color;
+    border-color: $--alert-error-border-color;
+    .he-alert-type-icon{
+      color: $--alert-error-icon-bg-color;
+    }
   }
 
+  .he-alert-type-icon,
+  .he-alert-custom-content{
+    vertical-align: middle;
+  }
+
+  .he-alert-handle-btn-close{
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    cursor: pointer;
+  }
+}
+
+@include b(alert-fade) {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
 }
