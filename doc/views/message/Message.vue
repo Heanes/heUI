@@ -35,7 +35,7 @@
       <div class="demo-group__content">
         <div class="demo-item">
           <div class="demo-item__content">
-            <he-button type="info" size="small" @click="openMessageFromStatic">info</he-button>
+            <he-button type="danger" size="small" @click="openMessageFromStatic">error</he-button>
           </div>
         </div>
       </div>
@@ -83,9 +83,15 @@
 
 <script>
 import {Message} from 'he-ui-vue';
-
+import pageCommonMixin from '@/mixins/pageCommon';
 export default {
   name: 'HedMessage',
+  mixins: [pageCommonMixin],
+  data() {
+    return {
+      pageTitle: 'Message 消息提示'
+    }
+  },
   methods: {
     openMessage () {
       this.$message('这是一条消息提示');
@@ -146,6 +152,9 @@ export default {
         message: '这是一条错误提示消息hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello'
       });
     }
+  },
+  created () {
+    this.setPageTitle();
   }
 }
 </script>
