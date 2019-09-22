@@ -184,7 +184,7 @@ export default {
   },
   methods: {
     customPageLink(pageNumber){
-      return `http://localhost:8081/#/component/pagination/p/${pageNumber}`;
+      return `/#/component/pagination/p/${pageNumber}`;
     }
   },
 
