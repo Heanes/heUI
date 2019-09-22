@@ -62,7 +62,7 @@
 
     <div class="demo-group">
       <div class="demo-group__title">
-        <h2 class="group-title">允许关闭</h2>
+        <h2 class="group-title">允许手动关闭</h2>
       </div>
       <div class="demo-group__desc">
         <p>可以点击关闭。</p>

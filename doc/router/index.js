@@ -75,7 +75,7 @@ export default new Router({
         // # data 数据
         // ## 分页
         {
-          path: 'pagination',
+          path: 'pagination(/p/)?:pageNumber?',
           component: () => import(/* webpackChunkName: "pagination" */ '../views/pagination/Pagination.vue')
         },
         {
@@ -114,6 +114,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "about" */ '../views/about/About.vue')
+    },
+
+    {
+      path: '*',
+      component: () => import(/* webpackChunkName: "404" */ '../views/common/404/style1.vue')
     }
   ],
   // 记录之前保存的滚动条位置

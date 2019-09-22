@@ -109,7 +109,7 @@
         <div class="demo-item">
           <div class="demo-item__content">
             <he-row class="mg-b-20">
-              <he-pagination :total="120" :page-link="pageNumber" background></he-pagination>
+              <he-pagination :total="120" :page-number="pageData.pageNumber" :page-link="customPageLink" background></he-pagination>
             </he-row>
             <he-row>
               <!--<he-pagination :total="120" :page-link="pageNumber" background page-link-target="_blank"></he-pagination>-->
@@ -175,7 +175,7 @@ export default {
   data(){
     return {
       pageData: {
-        pageNumber: 1,
+        pageNumber: parseInt(this.$route.params.pageNumber || 1),
         pageSize: 10,
         total: 127
       },
@@ -183,14 +183,21 @@ export default {
     }
   },
   methods: {
-    pageNumber(pageNumber){
-      return `http://localhost:8080/#/component/pagination#${pageNumber}.html`;
+    customPageLink(pageNumber){
+      return `http://localhost:8081/#/component/pagination/p/${pageNumber}`;
     }
   },
 
   components: {
   },
-
+  watch: {
+    $route: {
+      immediate: true,
+      handler (val) {
+        this.pageData.pageNumber = parseInt(val.params.pageNumber || 1);
+      }
+    }
+  },
   created () {
   }
 }

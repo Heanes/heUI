@@ -20,16 +20,16 @@
             :disabled="innerPageNumber === 1"
             @click="prevPage"
     >
+      <a  v-if="innerPageNumber === 1"
+          class="page-link prev-page"
+          :class="{disabled: innerPageNumber === 1}"
+          href="javascript:;"
+          v-html="prevPageStr"></a>
       <a v-if="innerPageNumber > 1"
          class="page-link prev-page"
          :class="{disabled: innerPageNumber === 1}"
-         :href="pageLink(innerPageNumber)"
+         :href="getPageLink(innerPageNumber - 1)"
          :target="pageLinkTarget"
-         v-html="prevPageStr"></a>
-      <a v-else
-         class="page-link prev-page"
-         :class="{disabled: innerPageNumber === 1}"
-         href="javascript:;"
          v-html="prevPageStr"></a>
     </button>
     <ul class="pagination-list" @click="changePage">
@@ -41,7 +41,7 @@
         <a :class="['page-link',
             {'current': innerPageNumber === page.pageNumber}
           ]"
-           :href="pageLink(page.pageNumber)"
+           :href="getPageLink(page.pageNumber)"
            :target="pageLinkTarget"
         >{{page.pageStr}}</a>
       </li>
@@ -52,7 +52,7 @@
     >
       <a class="page-link next-page"
          :class="{'disabled': innerPageNumber === totalPage}"
-         :href="pageLink(innerPageNumber)"
+         :href="getPageLink(innerPageNumber + 1)"
          @click="nextPage"
          v-html="nextPageStr"></a>
     </button>
@@ -127,9 +127,7 @@ export default {
     // 分页链接，自定义链接点击
     pageLink: {
       type: Function,
-      default (pageNumber) {
-        return 'javascript:;';
-      }
+      default: undefined
     },
     pageLinkTarget: {
       type: String,
@@ -299,6 +297,8 @@ export default {
     },
     // 前一页
     prevPage () {
+      // 如果是自定义链接，则不走方法中的功能
+      if(this.pageLink) return false;
       if (this.innerPageNumber > 1) {
         this.innerPageNumberFrom = this.innerPageNumber;
         this.innerPageNumber--;
@@ -308,6 +308,7 @@ export default {
     // 后一页
     nextPage () {
       // 如果是自定义链接，则不走方法中的功能
+      if(this.pageLink) return false;
       if (this.innerPageNumber < this.totalPage) {
         this.innerPageNumberFrom = this.innerPageNumber;
         this.innerPageNumber++;
@@ -323,6 +324,12 @@ export default {
       this.$nextTick(() => {
         ;
       });
+    },
+    getPageLink (pageNumber){
+      if(this.pageLink){
+        return this.pageLink(pageNumber);
+      }
+      return 'javascript:;';
     }
   },
   created () {
