@@ -48,7 +48,7 @@ export default new Router({
         },
         {
           path: 'layout',
-          component: () => import(/* webpackChunkName: "layout" */ '../views/layout/layout.vue')
+          component: () => import(/* webpackChunkName: "layout" */ '../views/layout/Layout.vue')
         },
         {
           path: 'button',
